@@ -1,7 +1,7 @@
 # OH_Huks_CertChain
 
 ```c
-typedef struct OH_Huks_CertChain {...} OH_Huks_CertChain
+struct OH_Huks_CertChain {...}
 ```
 
 ## 概述

@@ -1,0 +1,52 @@
+# AbilityResult
+
+The module defines the result code and data returned to the caller when a started UIAbility is terminated.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-export interface AbilityResult--><!--Device-unnamed-export interface AbilityResult-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## resultCode
+
+```TypeScript
+resultCode: int
+```
+
+Indicates the result code returned after the ability is destroyed. You can define the result code to identify an error.
+
+**Type:** int
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityResult-resultCode: int--><!--Device-AbilityResult-resultCode: int-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## want
+
+```TypeScript
+want?: Want
+```
+
+Indicates the data returned after the ability is destroyed. You can define the data returned.This parameter can be null.
+
+**Type:** Want
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityResult-want?: Want--><!--Device-AbilityResult-want?: Want-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+

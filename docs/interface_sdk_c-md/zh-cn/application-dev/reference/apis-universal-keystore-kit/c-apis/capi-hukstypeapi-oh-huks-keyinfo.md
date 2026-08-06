@@ -1,7 +1,7 @@
 # OH_Huks_KeyInfo
 
 ```c
-typedef struct OH_Huks_KeyInfo {...} OH_Huks_KeyInfo
+struct OH_Huks_KeyInfo {...}
 ```
 
 ## 概述

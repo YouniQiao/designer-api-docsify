@@ -1,0 +1,45 @@
+# RenderResourceFactory
+
+The render resource factory. RenderResourceFactory is used to create resources that can be shared across Scenes that share a RenderContext
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## createScene
+
+```TypeScript
+createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>
+```
+
+Create a new scene from a SceneLoadParams.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RenderResourceFactory-createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>--><!--Device-RenderResourceFactory-createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uri | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the resource of creating a scene |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the params for scene load |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return a scene |
+

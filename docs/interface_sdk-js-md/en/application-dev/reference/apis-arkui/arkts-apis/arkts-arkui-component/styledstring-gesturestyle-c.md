@@ -1,0 +1,36 @@
+# GestureStyle
+
+Defines GestureStyle.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare class GestureStyle--><!--Device-unnamed-export declare class GestureStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## constructor
+
+```TypeScript
+constructor(value?: GestureStyleInterface)
+```
+
+constructor.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GestureStyle-constructor(value?: GestureStyleInterface)--><!--Device-GestureStyle-constructor(value?: GestureStyleInterface)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | gesture event object. |
+

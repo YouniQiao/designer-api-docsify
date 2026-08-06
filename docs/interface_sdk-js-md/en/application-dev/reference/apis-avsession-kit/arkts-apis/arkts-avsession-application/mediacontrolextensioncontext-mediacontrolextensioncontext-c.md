@@ -1,0 +1,18 @@
+# MediaControlExtensionContext (System API)
+
+The context of media control extension. It allows access to UIExtension-specific resources.
+
+**Inheritance/Implementation:** MediaControlExtensionContext extends [UIExtensionContext](../../../apis-ability-kit/arkts-apis/arkts-ability-application/uiextensioncontext-uiextensioncontext-c.md)
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-export default class MediaControlExtensionContext extends UIExtensionContext--><!--Device-unnamed-export default class MediaControlExtensionContext extends UIExtensionContext-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**System API:** This is a system API.
+

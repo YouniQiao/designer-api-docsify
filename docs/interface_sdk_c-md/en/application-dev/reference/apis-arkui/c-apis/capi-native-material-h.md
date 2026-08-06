@@ -40,8 +40,8 @@ Declares the immersive material types and APIs for ArkUI on the native side.
 | [void OH_ArkUI_NativeModule_ImmersiveMaterial_Destroy(ArkUI_ImmersiveMaterialHandle material)](#oh_arkui_nativemodule_immersivematerial_destroy) | Destroys an immersive material object. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_ImmersiveMaterial_SetStyle(ArkUI_ImmersiveMaterialHandle material, ArkUI_ImmersiveStyle style)](#oh_arkui_nativemodule_immersivematerial_setstyle) | Sets the style. Only effective for exquisite and gentle materials. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_ImmersiveMaterial_GetStyle(ArkUI_ImmersiveMaterialHandle material, ArkUI_ImmersiveStyle* style)](#oh_arkui_nativemodule_immersivematerial_getstyle) | Gets the style of an immersive material object. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_ImmersiveMaterial_SetMaterialColor(ArkUI_ImmersiveMaterialHandle material, uint32_t color)](#oh_arkui_nativemodule_immersivematerial_setmaterialcolor) | Sets the material color of an immersive material object. This parameter is effective for all levels ofmaterials. If not set, the default visual behavior varies by material level: for exquisite and gentle levels,the material color appears transparent; for smooth level, the default background color of that level is used.When set, the specified color takes effect on all levels. Calling[OH_ArkUI_NativeModule_ImmersiveMaterial_GetMaterialColor](capi-native-material-h.md#oh_arkui_nativemodule_immersivematerial_getmaterialcolor) on an unset value will return[ARKUI_ERROR_CODE_PARAM_ERROR](capi-error-code-h.md#arkui_errorcode). |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_ImmersiveMaterial_GetMaterialColor(ArkUI_ImmersiveMaterialHandle material, uint32_t* color)](#oh_arkui_nativemodule_immersivematerial_getmaterialcolor) | Gets the material color of an immersive material object.If the value is never set, the function will return [ARKUI_ERROR_CODE_PARAM_ERROR](capi-error-code-h.md#arkui_errorcode). |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_ImmersiveMaterial_SetMaterialColor(ArkUI_ImmersiveMaterialHandle material, uint32_t color)](#oh_arkui_nativemodule_immersivematerial_setmaterialcolor) | Sets the material color of an immersive material object. This parameter is only effective for exquisiteand gentle materials. If not set, the default value is 0 which means transparent color. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_ImmersiveMaterial_GetMaterialColor(ArkUI_ImmersiveMaterialHandle material, uint32_t* color)](#oh_arkui_nativemodule_immersivematerial_getmaterialcolor) | Gets the material color of an immersive material object. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_ImmersiveMaterial_SetApplyShadow(ArkUI_ImmersiveMaterialHandle material, bool applyShadow)](#oh_arkui_nativemodule_immersivematerial_setapplyshadow) | Sets the apply shadow attribute of an immersive material object. This parameter is effective for all levelsof materials. When this parameter is true, the shadow effect in the material takes effect, taking precedence overthe shadow general property. When this parameter is false, the shadow general property takes effect, and thematerial has no shadow effect. If not set, the default value is true. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_ImmersiveMaterial_GetApplyShadow(ArkUI_ImmersiveMaterialHandle material, bool* applyShadow)](#oh_arkui_nativemodule_immersivematerial_getapplyshadow) | Gets the apply shadow attribute of an immersive material object. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_ImmersiveMaterial_SetInteractive(ArkUI_ImmersiveMaterialHandle material, bool interactive)](#oh_arkui_nativemodule_immersivematerial_setinteractive) | Sets the interactive attribute of an immersive material object. This parameter is effective for all levelsof materials. When this parameter is true, the material is interactive. When this parameter is false,the material is not interactive. If not set, it follows the behavior of the component. |
@@ -231,7 +231,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_ImmersiveMaterial_SetMaterialColor(ArkUI_I
 
 **Description**
 
-Sets the material color of an immersive material object. This parameter is effective for all levels ofmaterials. If not set, the default visual behavior varies by material level: for exquisite and gentle levels,the material color appears transparent; for smooth level, the default background color of that level is used.When set, the specified color takes effect on all levels. Calling[OH_ArkUI_NativeModule_ImmersiveMaterial_GetMaterialColor](capi-native-material-h.md#oh_arkui_nativemodule_immersivematerial_getmaterialcolor) on an unset value will return[ARKUI_ERROR_CODE_PARAM_ERROR](capi-error-code-h.md#arkui_errorcode).
+Sets the material color of an immersive material object. This parameter is only effective for exquisiteand gentle materials. If not set, the default value is 0 which means transparent color.
 
 **Since**: 26.0.0
 
@@ -240,7 +240,7 @@ Sets the material color of an immersive material object. This parameter is effec
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md) material | The pointer to the immersive material object. The parametertype is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md). |
-| uint32_t color | The material color in 0xAARRGGBB format. |
+| uint32_t color | The material color in 0xAARRGGBB format. Pass 0 for transparent (default value). |
 
 **Returns**:
 
@@ -256,7 +256,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_ImmersiveMaterial_GetMaterialColor(ArkUI_I
 
 **Description**
 
-Gets the material color of an immersive material object.If the value is never set, the function will return [ARKUI_ERROR_CODE_PARAM_ERROR](capi-error-code-h.md#arkui_errorcode).
+Gets the material color of an immersive material object.
 
 **Since**: 26.0.0
 
@@ -271,7 +271,7 @@ Gets the material color of an immersive material object.If the value is never se
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_ERROR](capi-error-code-h.md#arkui_errorcode) if the value is never set.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
 
 ### OH_ArkUI_NativeModule_ImmersiveMaterial_SetApplyShadow()
 

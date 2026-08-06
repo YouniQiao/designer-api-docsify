@@ -36,7 +36,7 @@
 | 名称 | 描述 |
 | -- | -- |
 | [OH_AVErrCode OH_AudioVividMetaBuilder_Create(OH_AudioVividMetaBuilder **builder, const OH_AVFormat *format)](#oh_audiovividmetabuilder_create) | 创建Audio Vivid元数据构建器。 |
-| [OH_AVErrCode OH_AudioVividMetaBuilder_UpdateObjectPos(OH_AudioVividMetaBuilder *builder, int32_t objectIndex, OH_AudioObjectPosition pos)](#oh_audiovividmetabuilder_updateobjectpos) | 更新Audio Vivid信号格式为[OH_AudioVividSignalFormat](capi-native-audio-vivid-h.md#oh_audiovividsignalformat).OH_AUDIO_VIVID_SIGNAL_FORMAT_MIX时的音频对象位置。在此信号格式下，输入编码的PCM（Pulse Code Modulation）数据中，声道排列顺序为：声床声道在前，对象声道在后。<br>对象声道按顺序与objectIndex对应，从0开始编号。 |
+| [OH_AVErrCode OH_AudioVividMetaBuilder_UpdateObjectPos(OH_AudioVividMetaBuilder *builder, int32_t objectIndex, OH_AudioObjectPosition pos)](#oh_audiovividmetabuilder_updateobjectpos) | 更新Audio Vivid信号格式为[OH_AudioVividSignalFormat](capi-native-audio-vivid-h.md#oh_audiovividsignalformat).OH_AUDIO_VIVID_SIGNAL_FORMAT_MIX时的音频对象位置。在此信号格式下，输入编码的PCM（Pulse Code Modulation）数据中，声道排列顺序为：声床声道在前，对象声道在后。<br> 对象声道按顺序与objectIndex对应，从0开始编号。 |
 | [OH_AVErrCode OH_AudioVividMetaBuilder_UpdateObjectGain(OH_AudioVividMetaBuilder *builder, int32_t objectIndex, float gain)](#oh_audiovividmetabuilder_updateobjectgain) | 更新Audio Vivid信号格式为[OH_AudioVividSignalFormat](capi-native-audio-vivid-h.md#oh_audiovividsignalformat).OH_AUDIO_VIVID_SIGNAL_FORMAT_MIX时的音频对象渲染的线性增益。 |
 | [OH_AVErrCode OH_AudioVividMetaBuilder_GetMetaLen(const OH_AudioVividMetaBuilder *builder, bool withStaticMeta, int32_t *len)](#oh_audiovividmetabuilder_getmetalen) | 获取元数据长度。 |
 | [OH_AVErrCode OH_AudioVividMetaBuilder_GetMeta(const OH_AudioVividMetaBuilder *builder, bool withStaticMeta, uint8_t *buffer, int32_t len)](#oh_audiovividmetabuilder_getmeta) | 获取元数据缓冲区。 |
@@ -62,10 +62,10 @@ Audio Vivid编码器信号格式枚举。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_AUDIO_VIVID_SIGNAL_FORMAT_MONO = 0 | Audio Vivid信号格式为单声道，编码器接收单声道数据，内部标记声道布局为{@link OH_AudioChannelLayout}.CH_LAYOUT_MONO。<br>**起始版本：** 26.0.0 |
-| OH_AUDIO_VIVID_SIGNAL_FORMAT_STEREO = 1 | Audio Vivid信号格式为立体声，编码器接收双声道数据，内部标记声道布局为{@link OH_AudioChannelLayout}.CH_LAYOUT_STEREO。<br>**起始版本：** 26.0.0 |
-| OH_AUDIO_VIVID_SIGNAL_FORMAT_MC = 2 | Audio Vivid信号格式为多声道，编码器支持声道布局{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1、{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1POINT2、{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1POINT4、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1POINT2、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1POINT4。<br>**起始版本：** 26.0.0 |
-| OH_AUDIO_VIVID_SIGNAL_FORMAT_MIX = 4 | Audio Vivid信号格式为混合模式，包含声床（Bed）和对象（object）。声床的声道布局支持{@link OH_AudioChannelLayout}.CH_LAYOUT_STEREO、{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1、{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1POINT2、{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1POINT4、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1POINT2、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1POINT4。<br>**起始版本：** 26.0.0 |
+| OH_AUDIO_VIVID_SIGNAL_FORMAT_MONO = 0 | Audio Vivid信号格式为单声道，编码器接收单声道数据，内部标记声道布局为{@link OH_AudioChannelLayout}.CH_LAYOUT_MONO。 |
+| OH_AUDIO_VIVID_SIGNAL_FORMAT_STEREO = 1 | Audio Vivid信号格式为立体声，编码器接收双声道数据，内部标记声道布局为{@link OH_AudioChannelLayout}.CH_LAYOUT_STEREO。 |
+| OH_AUDIO_VIVID_SIGNAL_FORMAT_MC = 2 | Audio Vivid信号格式为多声道，编码器支持声道布局{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1、{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1POINT2、{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1POINT4、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1POINT2、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1POINT4。 |
+| OH_AUDIO_VIVID_SIGNAL_FORMAT_MIX = 4 | Audio Vivid信号格式为混合模式，包含声床（Bed）和对象（object）。声床的声道布局支持{@link OH_AudioChannelLayout}.CH_LAYOUT_STEREO、{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1、{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1POINT2、{@link OH_AudioChannelLayout}.CH_LAYOUT_5POINT1POINT4、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1POINT2、{@link OH_AudioChannelLayout}.CH_LAYOUT_7POINT1POINT4。 |
 
 
 ## 函数说明
@@ -81,8 +81,8 @@ OH_AVErrCode OH_AudioVividMetaBuilder_Create(OH_AudioVividMetaBuilder **builder,
 创建Audio Vivid元数据构建器。
 
 >**说明：** 
->生命周期管理：**<br>
- * 	   通过本函数创建的实例不再使用时，必须调用[OH_AudioVividMetaBuilder_Destroy](capi-native-audio-vivid-h.md#oh_audiovividmetabuilder_destroy)手动释放，以避免内存泄漏。
+>生命周期管理：**
+ * 通过本函数创建的实例不再使用时，必须调用[OH_AudioVividMetaBuilder_Destroy](capi-native-audio-vivid-h.md#oh_audiovividmetabuilder_destroy)手动释放，以避免内存泄漏。
 
 **起始版本：** 26.0.0
 
@@ -97,7 +97,7 @@ OH_AVErrCode OH_AudioVividMetaBuilder_Create(OH_AudioVividMetaBuilder **builder,
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)：执行成功。<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)：参数builder或format为空指针或无效。<br>     <br>[AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode)：当前设备不支持此功能。<br>     <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode)：创建构建器失败，属于未知错误，请查看日志获取详细信息。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>         AV_ERR_INVALID_VAL：参数builder或format为空指针或无效。<br>         AV_ERR_UNSUPPORT：当前设备不支持此功能。<br>         AV_ERR_UNKNOWN：创建构建器失败，属于未知错误，请查看日志获取详细信息。 |
 
 ### OH_AudioVividMetaBuilder_UpdateObjectPos()
 
@@ -107,7 +107,7 @@ OH_AVErrCode OH_AudioVividMetaBuilder_UpdateObjectPos(OH_AudioVividMetaBuilder *
 
 **描述**
 
-更新Audio Vivid信号格式为[OH_AudioVividSignalFormat](capi-native-audio-vivid-h.md#oh_audiovividsignalformat).OH_AUDIO_VIVID_SIGNAL_FORMAT_MIX时的音频对象位置。在此信号格式下，输入编码的PCM（Pulse Code Modulation）数据中，声道排列顺序为：声床声道在前，对象声道在后。<br>对象声道按顺序与objectIndex对应，从0开始编号。
+更新Audio Vivid信号格式为[OH_AudioVividSignalFormat](capi-native-audio-vivid-h.md#oh_audiovividsignalformat).OH_AUDIO_VIVID_SIGNAL_FORMAT_MIX时的音频对象位置。在此信号格式下，输入编码的PCM（Pulse Code Modulation）数据中，声道排列顺序为：声床声道在前，对象声道在后。<br> 对象声道按顺序与objectIndex对应，从0开始编号。
 
 **起始版本：** 26.0.0
 
@@ -123,7 +123,7 @@ OH_AVErrCode OH_AudioVividMetaBuilder_UpdateObjectPos(OH_AudioVividMetaBuilder *
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)：执行成功。<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)：参数builder为空指针或无效，objectIndex或pos无效。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>         AV_ERR_INVALID_VAL：参数builder为空指针或无效，objectIndex或pos无效。 |
 
 ### OH_AudioVividMetaBuilder_UpdateObjectGain()
 
@@ -149,7 +149,7 @@ OH_AVErrCode OH_AudioVividMetaBuilder_UpdateObjectGain(OH_AudioVividMetaBuilder 
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)：执行成功。<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)：参数builder为空指针或无效，objectIndex或gain无效。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>         AV_ERR_INVALID_VAL：参数builder为空指针或无效，objectIndex或gain无效。 |
 
 ### OH_AudioVividMetaBuilder_GetMetaLen()
 
@@ -175,7 +175,7 @@ OH_AVErrCode OH_AudioVividMetaBuilder_GetMetaLen(const OH_AudioVividMetaBuilder 
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)：执行成功。<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)：参数builder为空指针或无效，len为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>         AV_ERR_INVALID_VAL：参数builder为空指针或无效，len为空指针。 |
 
 ### OH_AudioVividMetaBuilder_GetMeta()
 
@@ -202,7 +202,7 @@ OH_AVErrCode OH_AudioVividMetaBuilder_GetMeta(const OH_AudioVividMetaBuilder *bu
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)：执行成功。<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)：builder为空指针或无效，buffer为空指针或len不足。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>         AV_ERR_INVALID_VAL：builder为空指针或无效，buffer为空指针或len不足。 |
 
 ### OH_AudioVividMetaBuilder_Destroy()
 
@@ -226,7 +226,7 @@ OH_AVErrCode OH_AudioVividMetaBuilder_Destroy(OH_AudioVividMetaBuilder *builder)
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)：执行成功。<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)：参数builder为空指针。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br>         AV_ERR_INVALID_VAL：参数builder为空指针。 |
 
 ### OH_AudioVividMetaBuilder_CreateEmptyBuilder()
 
@@ -254,7 +254,7 @@ OH_AVErrCode OH_AudioVividMetaBuilder_CreateEmptyBuilder(OH_AudioVividMetaBuilde
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)：执行成功。<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)：参数builder为空指针或无效。<br>     <br>[AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode)：当前设备不支持此功能。<br>     <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode)：创建构建器失败，属于未知错误，请查看日志获取详细信息。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | <ul><br>         <li>AV_ERR_OK：执行成功。</li><br>         <li>AV_ERR_INVALID_VAL：参数builder为空指针或无效。</li><br>         <li>AV_ERR_UNSUPPORT：当前设备不支持此功能。</li><br>         <li>AV_ERR_UNKNOWN：创建构建器失败，属于未知错误，请查看日志获取详细信息。</li><br>         </ul> |
 
 ### OH_AudioVividMetaBuilder_UpdateBaseMeta()
 
@@ -284,7 +284,7 @@ OH_AVErrCode OH_AudioVividMetaBuilder_UpdateBaseMeta(OH_AudioVividMetaBuilder *b
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)：执行成功。<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)：参数builder、format为空指针或无效。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | <ul><br>         <li>AV_ERR_OK：执行成功。</li><br>         <li>AV_ERR_INVALID_VAL：参数builder、format为空指针或无效。</li><br>         </ul> |
 
 ### OH_AudioVividMetaBuilder_AddObject()
 
@@ -313,7 +313,7 @@ Audio Vivid元数据构造器内添加一个音频对象。添加音频对象后
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)：执行成功。<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)：参数builder、objectIndex为空指针或无效。<br>     <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode)：添加对象失败，属于未知错误，请查看日志获取详细信息。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | <ul><br>         <li>AV_ERR_OK：执行成功。</li><br>         <li>AV_ERR_INVALID_VAL：参数builder、objectIndex为空指针或无效。</li><br>         <li>AV_ERR_UNKNOWN：添加对象失败，属于未知错误，请查看日志获取详细信息。</li><br>         </ul> |
 
 ### OH_AudioVividMetaBuilder_RemoveObject()
 
@@ -338,6 +338,6 @@ OH_AVErrCode OH_AudioVividMetaBuilder_RemoveObject(OH_AudioVividMetaBuilder *bui
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)：执行成功。<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)：参数builder为空指针或无效,参数objectIndex无效。 |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | <ul><br>         <li>AV_ERR_OK：执行成功。</li><br>         <li>AV_ERR_INVALID_VAL：</li><br>         <li>    1. 参数builder为空指针或无效；</li><br>         <li>    2. 参数objectIndex无效。</li><br>         </ul> |
 
 

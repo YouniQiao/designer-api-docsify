@@ -1,0 +1,44 @@
+# StepCounterResponse
+
+Callback invoked when the step counter sensor data changes.
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 8
+
+**Substitutes:** ohos.sensor/sensor#PedometerResponse
+
+**Required permissions:** ohos.permission.ACTIVITY_MOTION
+
+<!--Device-unnamed-export interface StepCounterResponse--><!--Device-unnamed-export interface StepCounterResponse-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor.Lite
+
+## steps
+
+```TypeScript
+steps: number
+```
+
+Number of counted steps after the sensor is restarted.
+
+**Type:** number
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 8
+
+**Substitutes:** ohos.sensor/sensor#PedometerResponse.steps
+
+**Required permissions:** ohos.permission.ACTIVITY_MOTION
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-StepCounterResponse-steps: number--><!--Device-StepCounterResponse-steps: number-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor.Lite
+

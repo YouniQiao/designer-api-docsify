@@ -6,7 +6,7 @@ typedef struct TimeZoneRules {...} TimeZoneRules
 
 ## Overview
 
-A complete time zone rule includes the start time zone rule, time zone rule defined by the start timestamparray, and time zone rule that takes effect every year. It can comprehensively describe both the historical andfuture rules of a time zone.
+Defines a set of timezone rules of a timezone.
 
 **Since**: 22
 
@@ -23,7 +23,7 @@ A complete time zone rule includes the start time zone rule, time zone rule defi
 | [InitialTimeZoneRule](capi-i18n-initialtimezonerule.md) initial | Indicates the InitialTimeZoneRule of a timezone. |
 | [TimeArrayTimeZoneRule*](capi-i18n-timearraytimezonerule.md) timeArrayRules | Indicates the TimeArrayTimeZoneRules of a timezone. The caller is responsible for releasing the array. |
 | [AnnualTimeZoneRule*](capi-i18n-annualtimezonerule.md) annualRules | Indicates the AnnualTimeZoneRules of a timezone. The caller is responsible for releasing the array. |
-| size_t numTimeArrayRules | Indicates the size of the time zone rule array defined by the start timestamp array. |
-| size_t numAnnualRules | Indicates the size of the time zone rule array that takes effect annually. |
+| size_t numTimeArrayRules | Indicates the num of TimeArrayTimeZoneRules. |
+| size_t numAnnualRules | Indicates the num of AnnualTimeZoneRules. |
 
 

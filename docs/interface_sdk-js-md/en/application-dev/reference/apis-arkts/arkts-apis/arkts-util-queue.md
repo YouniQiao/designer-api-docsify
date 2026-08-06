@@ -1,0 +1,29 @@
+# @ohos.util.Queue
+
+Queue follows the principle of First In First Out (FIFO). It supports insertion of elements at the end and removal
+ from the front of the queue. Queue is implemented based on the queue data structure.
+ Unlike [Deque](arkts-util-deque.md), which supports insertion and removal at both the ends, **Queue** supports
+ insertion at one end and removal at the other end.
+ **Recommended use case**: Use Queue in FIFO scenarios.
+ This topic uses the following to identify the use of generics:<br>
+ - T: Type
+ > **NOTE**
+ >
+ > - Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
+ > not support custom properties or methods.
+
+
+## Summary
+
+### Classes
+
+| Name | Description |
+| --- | --- |
+| [Queue](arkts-arkts-util-queue-queue-c.md) | Queue follows the principle of First In First Out (FIFO).It supports insertion of elements at the end and removal from the front of the queue.Queue is implemented based on the queue data structure. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [QueueForEachCb](arkts-arkts-queueforeachcb-t.md) | The type of Queue callback function. |
+

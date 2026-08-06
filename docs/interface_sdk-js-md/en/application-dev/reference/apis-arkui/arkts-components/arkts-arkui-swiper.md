@@ -1,0 +1,78 @@
+# Swiper
+
+The **Swiper** component is able to display child components in a carousel-like manner.
+
+> **NOTE**
+
+> - The **Swiper** component implements the scrolling carousel effect through the built-in
+> [PanGesture]{@link gesture} gesture. When the [disableSwipe]{@link SwiperAttribute#disableSwipe} attribute is set
+> to **true**, the gesture listening is disabled, thereby preventing the scrolling operation.
+>
+> - When [NodeContainer]{@link node_container} is reused in the **Swiper** component, recursive updates of parent
+> component state variables by child nodes are prohibited.
+
+## Child Components
+
+Supported
+    **NOTE**  
+    
+    - Allowed child component types: built-in and custom components, including rendering control types (  
+    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_,  
+    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_,  
+    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_, and  
+    \_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_). To maximize the benefits of lazy  
+    loading, avoid mixing lazy loading components (including **LazyForEach** and **Repeat**) and non-lazy loading  
+    components, and exercise caution when using multiple lazy loading components. Avoid modifying the data source while  
+    an animation is in progress, as doing so can lead to layout issues.  
+    
+    - If a child component has its  
+    \_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_ attribute  
+    set to **Visibility.None** and the **Swiper** component has its **displayCount** attribute set to **'auto'**, the  
+    child component does not take up space in the viewport, but does not affect the number of navigation points. If a  
+    child component has its **visibility** attribute set to **Visibility.None** or **Visibility.Hidden**, it takes up  
+    space in the viewport, but is not displayed.  
+    
+    - Child components of the **Swiper** component are drawn based on their level if they have the  
+    [offset]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_ attribute set. A child component with a higher level overwrites one with a  
+    lower level. For example, if the **Swiper** contains three child components and **offset({ x: 100 })** is set for  
+    the third child component, the third child component overwrites the first child component during horizontal loop  
+    playback. To prevent the first child component from being overwritten, set its [zIndex]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_  
+    attribute to a value greater than that of the third child component.  
+    
+    - When focus is moved to a custom child node, navigation indicators and arrows may be obscured by  
+    \_\_\_MD\_LINK\_DESC\_USD\_5\_\_\_ modifications that change **zIndex**.  
+    
+    - For a **Swiper** component with many child components, you can optimize the performance and reduce memory  
+    consumption by using lazy loading, data caching, preloading, and component reuse techniques. For best practices,  
+    see  
+    \_\_\_MD\_LINK\_DESC\_USD\_6\_\_\_.  
+    
+
+## Swiper
+
+```TypeScript
+Swiper(controller?: SwiperController)
+```
+
+Creates a **Swiper** component.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-SwiperInterface-(controller?: SwiperController): SwiperAttribute--><!--Device-SwiperInterface-(controller?: SwiperController): SwiperAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| controller | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Controller to bind to the component to manage page switching and preload specific child components.  |
+
+## Summary
+

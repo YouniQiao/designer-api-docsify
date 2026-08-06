@@ -18,13 +18,13 @@ Defines a set of text common enum and interface.
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) | ArkUI_StyledString_Descriptor | 定义文本组件支持的属性字符串的数据对象，支持对文本内容进行样式设置与管理，适用于需要富文本展示、样式定制等场景。 |
-| [ArkUI_ShowCounterConfig](capi-arkui-nativemodule-arkui-showcounterconfig.md) | ArkUI_ShowCounterConfig | 定义文本输入框的计数器配置，用于管理字符计数。适用于需要对用户输入进行字符数限制与实时提示的场景，帮助用户了解输入进度，防止超出字符限制。 |
-| [ArkUI_TextContentBaseController](capi-arkui-nativemodule-arkui-textcontentbasecontroller.md) | ArkUI_TextContentBaseController | 定义文本内容基础控制器，为文本类组件提供内容控制能力，支持文本内容的获取、设置和更新等操作，适用于需要对文本组件进行动态内容管理和实时控制的场景，可帮助开发者更灵活地管理文本显示内容。 |
-| [ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md) | ArkUI_TextMenuItem | 定义文本菜单项结构体，用于在文本选择菜单中表示单个菜单项，支持设置菜单项的标题、图标、启用状态等属性，适用于开发者需要自定义文本选择菜单内容、扩展菜单项功能的场景，帮助开发者灵活定制文本选择菜单，提升用户交互体验。 |
-| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md) | ArkUI_TextMenuItemArray | 定义文本菜单项数组结构体，用于在文本选择菜单或上下文菜单场景中承载多个文本菜单项数据。 |
-| [ArkUI_TextEditMenuOptions](capi-arkui-nativemodule-arkui-texteditmenuoptions.md) | ArkUI_TextEditMenuOptions | 定义可编辑文本菜单扩展项结构体类型，用于扩展文本编辑菜单的功能，适用于开发者需要自定义文本编辑菜单操作的场景。 |
-| [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md) | ArkUI_TextSelectionMenuOptions | 定义自定义文本选择菜单的选项配置，支持菜单内容、样式和行为等自定义配置，适用于需要定制文本选择菜单交互的场景。 |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) | ArkUI_StyledString_Descriptor | Define the data objects of styled string supported by text components. |
+| [ArkUI_ShowCounterConfig](capi-arkui-nativemodule-arkui-showcounterconfig.md) | ArkUI_ShowCounterConfig | 定义textField的计数器配置。 |
+| [ArkUI_TextContentBaseController](capi-arkui-nativemodule-arkui-textcontentbasecontroller.md) | ArkUI_TextContentBaseController | 定义文本内容基础控制器。 |
+| [ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md) | ArkUI_TextMenuItem | 为菜单定义文本菜单项. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md) | ArkUI_TextMenuItemArray | 定义菜单数组结构体 |
+| [ArkUI_TextEditMenuOptions](capi-arkui-nativemodule-arkui-texteditmenuoptions.md) | ArkUI_TextEditMenuOptions | 文本默认菜单配置项结构体定义 |
+| [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md) | ArkUI_TextSelectionMenuOptions | 定义文本自定义选择菜单结构体 |
 | [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) | OH_ArkUI_DecorationStyleOptions | 定义装饰线样式。 |
 
 ### 枚举
@@ -34,7 +34,7 @@ Defines a set of text common enum and interface.
 | [ArkUI_TextAlignment](#arkui_textalignment) | ArkUI_TextAlignment | 定义字体水平对齐样式枚举值。 |
 | [ArkUI_TextVerticalAlignment](#arkui_textverticalalignment) | ArkUI_TextVerticalAlignment | 定义文本垂直对齐样式枚举值。 |
 | [ArkUI_TextContentAlign](#arkui_textcontentalign) | ArkUI_TextContentAlign | 定义文本内容区垂直对齐样式枚举值。 |
-| [ArkUI_TextDirection](#arkui_textdirection) | ArkUI_TextDirection | 定义文本排版方向枚举值。 |
+| [ArkUI_TextDirection](#arkui_textdirection) | ArkUI_TextDirection | 定义文本方向枚举值。 |
 | [ArkUI_EnterKeyType](#arkui_enterkeytype) | ArkUI_EnterKeyType | 定义单行文本输入法回车键类型枚举值。 |
 | [ArkUI_TextDecorationType](#arkui_textdecorationtype) | ArkUI_TextDecorationType | 定义装饰线类型枚举值。 |
 | [ArkUI_TextDecorationStyle](#arkui_textdecorationstyle) | ArkUI_TextDecorationStyle | 定义装饰线样式枚举值。 |
@@ -54,11 +54,11 @@ Defines a set of text common enum and interface.
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [typedef void (\*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray*    items, void*                       userData
-)](#arkui_textcreatemenucallback) | ArkUI_TextCreateMenuCallback | 文本菜单创建事件回调函数，在文本菜单创建时会触发此回调函数，开发者可在此函数中设置菜单数据。 |
+)](#arkui_textcreatemenucallback) | ArkUI_TextCreateMenuCallback |  |
 | [typedef void (\*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray*    items, void*                       userData
-)](#arkui_textpreparemenucallback) | ArkUI_TextPrepareMenuCallback | 文本菜单准备事件回调函数，当文本选择区域变化后显示菜单之前会触发此回调函数，开发者可在此函数中配置菜单数据。 |
+)](#arkui_textpreparemenucallback) | ArkUI_TextPrepareMenuCallback |  |
 | [typedef bool (\*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem*    item, int32_t                      start, int32_t                      end, void*                        userData
-)](#arkui_textmenuitemclickcallback) | ArkUI_TextMenuItemClickCallback | 文本菜单项点击事件回调函数，在菜单项被点击时触发此回调函数，开发者可在此函数中对系统默认处理行为进行拦截。 |
+)](#arkui_textmenuitemclickcallback) | ArkUI_TextMenuItemClickCallback |  |
 | [ArkUI_ShowCounterConfig* OH_ArkUI_ShowCounterConfig_Create()](#oh_arkui_showcounterconfig_create) | - | 创建文本输入框计数器的配置对象。 |
 | [void OH_ArkUI_ShowCounterConfig_Dispose(ArkUI_ShowCounterConfig* config)](#oh_arkui_showcounterconfig_dispose) | - | 销毁文本输入框计数器的配置对象。 |
 | [void OH_ArkUI_ShowCounterConfig_SetCounterTextColor(ArkUI_ShowCounterConfig* config, uint32_t color)](#oh_arkui_showcounterconfig_setcountertextcolor) | - | 设置文本输入框未达到最大字符数时计数器的颜色。 |
@@ -146,7 +146,7 @@ enum ArkUI_TextDirection
 
 **描述**
 
-定义文本排版方向枚举值。
+定义文本方向枚举值。
 
 **起始版本：** 23
 
@@ -155,7 +155,7 @@ enum ArkUI_TextDirection
 | ARKUI_TEXT_DIRECTION_LTR = 0 | 文本排版方向从左到右。 |
 | ARKUI_TEXT_DIRECTION_RTL = 1 | 文本排版方向从右到左。 |
 | ARKUI_TEXT_DIRECTION_DEFAULT = 2 | 文本排版方向遵循组件布局。 |
-| ARKUI_TEXT_DIRECTION_AUTO = 3 | 遵循自身实际文本内容的排版方向，如果文本为     RTL（Right-to-Left）类语言（如藏文、维吾尔文），文本排版方向为从右到左。如果为 |
+| ARKUI_TEXT_DIRECTION_AUTO = 3 | 遵循自身实际文本内容的排版方向，如果文本为RTL（Right-to-Left）类语言（如藏文、维吾尔文），文本排版方向为从右到左。如果为 |
 
 ### ArkUI_EnterKeyType
 
@@ -327,10 +327,10 @@ enum ArkUI_KeyboardAppearance
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_KEYBOARD_APPEARANCE_NONE_IMMERSIVE = 0 | 默认模式，不使用沉浸式样式。 |
-| ARKUI_KEYBOARD_APPEARANCE_IMMERSIVE = 1 | 沉浸式模式，由系统决定采用的样式。 |
-| ARKUI_KEYBOARD_APPEARANCE_LIGHT_IMMERSIVE = 2 | 浅色沉浸式样式。 |
-| ARKUI_KEYBOARD_APPEARANCE_DARK_IMMERSIVE = 3 | 深色沉浸式样式。 |
+| ARKUI_KEYBOARD_APPEARANCE_NONE_IMMERSIVE = 0 |  |
+| ARKUI_KEYBOARD_APPEARANCE_IMMERSIVE = 1 |  |
+| ARKUI_KEYBOARD_APPEARANCE_LIGHT_IMMERSIVE = 2 |  |
+| ARKUI_KEYBOARD_APPEARANCE_DARK_IMMERSIVE = 3 |  |
 
 ### ArkUI_TextMenuItemId
 
@@ -435,16 +435,14 @@ typedef void (*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray*    items, 
 
 **描述**
 
-文本菜单创建事件回调函数，在文本菜单创建时会触发此回调函数，开发者可在此函数中设置菜单数据。
-
 **起始版本：** 22
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| (ArkUI_TextMenuItemArray\*    items | 指向ArkUI_TextMenuItemArray对象的指针，该数组对象由系统内部创建并释放，                在回调函数中开发者可以调用{@link OH_ArkUI_TextMenuItemArray_Insert}，{@link OH_ArkUI_TextMenuItemArray_Erase}进行数组修改。 |
-| void\*                       userData | 用户自定义数据。 |
+| (ArkUI_TextMenuItemArray\*    items | 框架创建并释放数组，在回调函数中开发者可以调用{@link OH_ArkUI_TextMenuItemArray_Insert},{@link OH_ArkUI_TextMenuItemArray_Erase}进行数组修改。开发者不能释放数组，统一由框架管理 |
+| void\*                       userData | 自定义数据 |
 
 ### ArkUI_TextPrepareMenuCallback()
 
@@ -455,16 +453,14 @@ typedef void (*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray*    items,
 
 **描述**
 
-文本菜单准备事件回调函数，当文本选择区域变化后显示菜单之前会触发此回调函数，开发者可在此函数中配置菜单数据。
-
 **起始版本：** 22
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| (ArkUI_TextMenuItemArray\*    items | 指向ArkUI_TextMenuItemArray对象的指针，该数组对象由系统内部创建并释放，                在回调函数中开发者可以调用{@link OH_ArkUI_TextMenuItemArray_Insert}，{@link OH_ArkUI_TextMenuItemArray_Erase}进行数组修改。 |
-| void\*                       userData | 用户自定义数据。 |
+| (ArkUI_TextMenuItemArray\*    items | 框架创建并释放数组，在回调函数中开发者可以调用{@link OH_ArkUI_TextMenuItemArray_Insert},{@link OH_ArkUI_TextMenuItemArray_Erase}进行数组修改。开发者不能释放数组，统一由框架管理 |
+| void\*                       userData | 自定义数据 |
 
 ### ArkUI_TextMenuItemClickCallback()
 
@@ -475,24 +471,22 @@ typedef bool (*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem*    ite
 
 **描述**
 
-文本菜单项点击事件回调函数，在菜单项被点击时触发此回调函数，开发者可在此函数中对系统默认处理行为进行拦截。
-
 **起始版本：** 22
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| (const ArkUI_TextMenuItem\*    item | 指向ArkUI_TextMenuItem对象的指针，表示被点击的文本菜单项。 |
-| int32_t                      start | 选中文本起始索引。 |
-| int32_t                      end | 选中文本结束索引。 |
-| void\*                        userData | 用户自定义数据。 |
+| (const ArkUI_TextMenuItem\*    item | 点击的菜单项 |
+| int32_t                      start | 选中文本起始位置 |
+| int32_t                      end | 选中文本结束位置 |
+| void\*                        userData | 自定义数据 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| bool | 是否拦截系统默认处理行为。<br>         true：拦截系统默认处理行为，如点击"粘贴"、"复制"等文本菜单项时不再执行系统默认处理行为，仅执行开发者自定义处理行为。<br>         false：不拦截系统默认处理行为，如点击"粘贴"、"复制"等文本菜单项时先执行开发者自定义处理行为，再执行系统默认处理行为。 |
+| bool | 返回true表示已消费，false表示事件未消费 |
 
 ### OH_ArkUI_ShowCounterConfig_Create()
 
@@ -758,7 +752,7 @@ void OH_ArkUI_TextContentBaseController_Dispose(ArkUI_TextContentBaseController*
 
 | 参数项 | 描述 |
 | -- | -- |
-| {ArkUI_TextContentBaseController*} | controller 待销毁的控制器对象指针。 |
+| {ArkUI_TextContentBaseController*} | controller Pointer to the controller object to be disposed. |
 
 ### OH_ArkUI_TextContentBaseController_DeleteBackward()
 
@@ -776,7 +770,7 @@ void OH_ArkUI_TextContentBaseController_DeleteBackward(ArkUI_TextContentBaseCont
 
 | 参数项 | 描述 |
 | -- | -- |
-| {ArkUI_TextContentBaseController*} | controller 待修改的配置对象指针。 |
+| {ArkUI_TextContentBaseController*} | controller Pointer to the configuration object to be modified. |
 
 ### OH_ArkUI_TextContentBaseController_ScrollToVisible()
 
@@ -794,9 +788,9 @@ void OH_ArkUI_TextContentBaseController_ScrollToVisible(ArkUI_TextContentBaseCon
 
 | 参数项 | 描述 |
 | -- | -- |
-| {ArkUI_TextContentBaseController*} | controller 待修改的配置对象指针。通过此controller将起始索引与结束索引传递给与其绑定的输入框组件并进行滚动操作。 |
-| {int32_t} | start 起始文字索引值。起始索引应小于等于结束索引，否则接口调用无效。取值范围[0, 输入框文本总长度]，起始索引小于0视为0，大于总长度视为总长度。 |
-| {int32_t} | end 结束文字索引值。结束索引应大于等于起始索引，否则接口调用无效。取值范围[0, 输入框文本总长度]，结束索引小于0视为0，大于总长度视为总长度。 |
+| {ArkUI_TextContentBaseController*} | controller Pointer to theconfiguration object to be modified. |
+| {int32_t} | start The start offset of the content to be made visible. |
+| {int32_t} | end The end offset of the content to be made visible |
 
 ### OH_ArkUI_DecorationStyleOptions_Create()
 

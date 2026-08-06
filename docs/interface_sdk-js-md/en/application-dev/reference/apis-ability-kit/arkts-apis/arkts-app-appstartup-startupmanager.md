@@ -1,0 +1,30 @@
+# @ohos.app.appstartup.startupManager
+
+The module provides the capability to manage startup tasks in  
+\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. The APIs of this module can be called only on the main thread.
+    **NOTE**  
+    
+    This module supports .so file preloading since API version 18.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-declare namespace startupManager--><!--Device-unnamed-declare namespace startupManager-End-->
+
+**System capability:** SystemCapability.Ability.AppStartup
+
+## Summary
+
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md#getstartuptaskresult) | Obtains the execution result of a startup task or .so file preloading task. |
+| [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md#getstartuptaskresult-1) | Obtains specific startup task result. |
+| [isStartupTaskInitialized](arkts-ability-startupmanager-isstartuptaskinitialized-f.md#isstartuptaskinitialized) | Checks whether a startup task or .so file preloading task is initialized. |
+| [removeAllStartupTaskResults](arkts-ability-startupmanager-removeallstartuptaskresults-f.md#removeallstartuptaskresults) | Removes all startup task results.If there are preloading tasks for .so files, the corresponding .so files is set to the unloaded state. However, .so files that have already been loaded in the cache will not be removed. |
+| [removeStartupTaskResult](arkts-ability-startupmanager-removestartuptaskresult-f.md#removestartuptaskresult) | Removes the initialization result of a startup task or .so file preloading task.  - If a startup task name is passed, the initialization result of that startup task is removed.  - If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not  removed. |
+| [run](arkts-ability-startupmanager-run-f.md#run) | Runs startup tasks or loads .so files. |
+| [run](arkts-ability-startupmanager-run-f.md#run-1) | Runs startup tasks or loads .so files. You can specify  [AbilityStageContext]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ for loading startup tasks. This API uses a promise to return the result. |
+

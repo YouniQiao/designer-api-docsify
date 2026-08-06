@@ -1,0 +1,20 @@
+# WebviewController
+
+```TypeScript
+declare type WebviewController = import('../api/@ohos.web.webview').default.WebviewController
+```
+
+Provides methods for controlling the web controller.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-unnamed-declare type WebviewController = import('../api/@ohos.web.webview').default.WebviewController--><!--Device-unnamed-declare type WebviewController = import('../api/@ohos.web.webview').default.WebviewController-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Property type:** import('../api/@ohos.web.webview').default.WebviewController
+

@@ -12,5 +12,5 @@ Sets the size constraints of a component during component layout.
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**Header file**: [common_type.h](capi-common-type-h.md)
+**Header file**: [native_type.h](capi-native-type-h.md)
 

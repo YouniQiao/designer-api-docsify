@@ -1,0 +1,122 @@
+# BlurStyleOptions
+
+Defines the options of blurStyle
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+<!--Device-unnamed-declare interface BlurStyleOptions--><!--Device-unnamed-declare interface BlurStyleOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## adaptiveColor
+
+```TypeScript
+adaptiveColor?: AdaptiveColor
+```
+
+Adaptive color mode.
+
+Default value: **AdaptiveColor.DEFAULT
+
+**Type:** AdaptiveColor
+
+**Default:** AdaptiveColor.DEFAULT
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BlurStyleOptions-adaptiveColor?: AdaptiveColor--><!--Device-BlurStyleOptions-adaptiveColor?: AdaptiveColor-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## blurOptions
+
+```TypeScript
+blurOptions?: BlurOptions
+```
+
+Grayscale blur parameters.
+
+Default value: **grayscale: [0,0]
+
+**Type:** BlurOptions
+
+**Default:** { grayScale: [0,0] }
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BlurStyleOptions-blurOptions?: BlurOptions--><!--Device-BlurStyleOptions-blurOptions?: BlurOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## colorMode
+
+```TypeScript
+colorMode?: ThemeColorMode
+```
+
+Color mode used for the foreground blur.
+
+Default value: **ThemeColorMode.SYSTEM
+
+**Type:** ThemeColorMode
+
+**Default:** ThemeColorMode.SYSTEM
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BlurStyleOptions-colorMode?: ThemeColorMode--><!--Device-BlurStyleOptions-colorMode?: ThemeColorMode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## scale
+
+```TypeScript
+scale?: number
+```
+
+Foreground blur scale.
+
+Default value: **1.0**
+
+Value range: [0.0, 1.0]
+
+**1.0** indicates the highest blur degree.
+
+**0.0** indicates the lowest blur degree.
+
+**Type:** number
+
+**Default:** 1.0
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BlurStyleOptions-scale?: number--><!--Device-BlurStyleOptions-scale?: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

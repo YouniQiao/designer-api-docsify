@@ -18,6 +18,6 @@ Defines the names of all the configuration items of the event logging configurat
 
 | Name | Description |
 | -- | -- |
-| DISABLE "disable" | Whether to disable event logging. The default value is false. The value true means to disable the eventlogging function, and the value false means the opposite.<br>**Since**: 8 |
-| MAX_STORAGE "max_storage" | Event file directory storage quota size. The default value is 10MB.<br>**Since**: 8 |
+| DISABLE "disable" | Event logging switch.<br>**Since**: 8 |
+| MAX_STORAGE "max_storage"#ifdef __cplusplus} | Event file directory storage quota size.<br>**Since**: 8 |
 

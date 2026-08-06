@@ -55,14 +55,14 @@ Enumerates the error codes available for a transient task.
 
 | Enum item | Description |
 | -- | -- |
-| ERR_TRANSIENT_TASK_OK = 0 | Operation successful.<br>**Since**: 13 |
-| ERR_TRANSIENT_TASK_INVALID_PARAM = 401 | Parameter check failed. Possible causes:1. Mandatory parameters are not passed.2. Incorrect parameter types.<br>**Since**: 13 |
-| ERR_TRANSIENT_TASK_PARCEL_FAILED = 9800002 | Parcel read/write operation failed.<br>**Since**: 13 |
-| ERR_TRANSIENT_TASK_TRANSACTION_FAILED = 9800003 | IPC failed.<br>**Since**: 13 |
-| ERR_TRANSIENT_TASK_SYS_NOT_READY = 9800004 | System service failed.<br>**Since**: 13 |
-| ERR_TRANSIENT_TASK_CLIENT_INFO_VERIFICATION_FAILED = 9900001 | Failed to verify the client information of the transient task.<br>**Since**: 13 |
-| ERR_TRANSIENT_TASK_SERVICE_VERIFICATION_FAILED = 9900002 | Failed to verify the server information of the transient task.<br>**Since**: 13 |
-| ERR_TRANSIENT_TASK_PARCELABLE_FAILED = 9900003 | Parcel read/write operation failed for the transient task. Possible causes:1. The parameter is invalid.2. Memory allocation fails.<br>**Since**: 13 |
+| ERR_TRANSIENT_TASK_OK = 0 |  |
+| ERR_TRANSIENT_TASK_INVALID_PARAM = 401 |  |
+| ERR_TRANSIENT_TASK_PARCEL_FAILED = 9800002 |  |
+| ERR_TRANSIENT_TASK_TRANSACTION_FAILED = 9800003 |  |
+| ERR_TRANSIENT_TASK_SYS_NOT_READY = 9800004 |  |
+| ERR_TRANSIENT_TASK_CLIENT_INFO_VERIFICATION_FAILED = 9900001 |  |
+| ERR_TRANSIENT_TASK_SERVICE_VERIFICATION_FAILED = 9900002 |  |
+| ERR_TRANSIENT_TASK_PARCELABLE_FAILED = 9900003 |  |
 | ERR_TRANSIENT_TASK_SERVICE_NOT_READY = 9900004 |  |
 
 

@@ -1,0 +1,34 @@
+# lstatSync
+
+## lstatSync
+
+```TypeScript
+declare function lstatSync(path: string): Stat
+```
+
+Obtains information about a symbolic link that is used to refer to a file or directory. This API returns the result synchronously.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:lstatSync](arkts-corefile-fileio-lstatsync-f.md#lstatsync)
+
+<!--Device-unnamed-declare function lstatSync(path: string): Stat--><!--Device-unnamed-declare function lstatSync(path: string): Stat-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the target file. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | File information obtained. |
+

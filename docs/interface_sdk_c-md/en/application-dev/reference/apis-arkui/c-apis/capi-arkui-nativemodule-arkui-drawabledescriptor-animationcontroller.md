@@ -6,7 +6,7 @@ typedef struct ArkUI_DrawableDescriptor_AnimationController ArkUI_DrawableDescri
 
 ## Overview
 
-Defines the DrawableDescriptor animation controller object.
+Defines the animation controller of arkui drawable descriptor.
 
 **Since**: 22
 

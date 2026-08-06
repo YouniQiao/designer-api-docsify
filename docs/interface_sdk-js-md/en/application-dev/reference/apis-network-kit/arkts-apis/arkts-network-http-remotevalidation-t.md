@@ -1,0 +1,24 @@
+# RemoteValidation
+
+```TypeScript
+export type RemoteValidation = 'system' | 'skip' | ValidationCallback
+```
+
+Remote Validation Type.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-http-export type RemoteValidation = 'system' | 'skip' | ValidationCallback--><!--Device-http-export type RemoteValidation = 'system' | 'skip' | ValidationCallback-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+| Type | Description |
+| --- | --- |
+| 'system' | use system validation. |
+| 'skip' | skip validation. |
+| ValidationCallback | [since 26.0.0] use custom validation. |
+

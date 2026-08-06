@@ -1,0 +1,26 @@
+# ParamsInterface
+
+```TypeScript
+type ParamsInterface = {
+  [key: string]: Object;
+}
+```
+
+List of routing parameters.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 8
+
+**Substitutes:** ohos.router.RouterOptions#params
+
+<!--Device-unnamed-type ParamsInterface = {  [key: string]: Object;}--><!--Device-unnamed-type ParamsInterface = {  [key: string]: Object;}-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Property type:** {
+  [key: string]: Object;
+}
+

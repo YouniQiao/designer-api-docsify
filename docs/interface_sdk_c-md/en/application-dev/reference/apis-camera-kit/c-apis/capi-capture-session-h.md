@@ -475,7 +475,7 @@ Adds a Camera_Input instance to a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| Camera_Input* cameraInput | Pointer to the Camera_Input instance to add. |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | Pointer to the Camera_Input instance to add. |
 
 **Returns**:
 
@@ -500,7 +500,7 @@ Removes a Camera_Input instance from a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| Camera_Input* cameraInput | Pointer to the Camera_Input instance to remove. |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | Pointer to the Camera_Input instance to remove. |
 
 **Returns**:
 
@@ -575,7 +575,7 @@ Adds a PhotoOutput instance to a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | Pointer to the PhotoOutput instance to add. |
+| Camera_PhotoOutput* photoOutput | Pointer to the PhotoOutput instance to add. |
 
 **Returns**:
 
@@ -600,7 +600,7 @@ Removes a PhotoOutput instance from a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | Pointer to the PhotoOutput instance to remove. |
+| Camera_PhotoOutput* photoOutput | Pointer to the PhotoOutput instance to remove. |
 
 **Returns**:
 
@@ -2215,7 +2215,7 @@ Checks whether a Camera_Input instance can be added to a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| Camera_Input* cameraInput | Pointer to the Camera_Input instance to check. |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | Pointer to the Camera_Input instance to check. |
 | bool* isSuccessful | Pointer to the check result for whether the Camera_Input instance can be added to the session. true** if it can be added to the session, **false** otherwise. |
 
 **Returns**:
@@ -2267,7 +2267,7 @@ Checks whether a PhotoOutput instance can be added to a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* cameraOutput | Pointer to the PhotoOutput instance to check. |
+| Camera_PhotoOutput* cameraOutput | Pointer to the PhotoOutput instance to check. |
 | bool* isSuccessful | Pointer to the check result for whether the PhotoOutput instance can be added to the session. true** if it can be added to the session, **false** otherwise. |
 
 **Returns**:

@@ -1,0 +1,164 @@
+# cancel
+
+## cancel
+
+```TypeScript
+function cancel(id: int, callback: AsyncCallback<void>): void
+```
+
+Cancels a notification with the specified ID. This API uses an asynchronous callback to return the result.
+
+After cancellation, the corresponding notification will be removed from the notification center, status bar, etc., and will no longer be visible to the user.
+
+Compared with notificationManager.cancel(id, label, callback), which includes the label parameter,this API does not pass in a label and will cancel the notification matching the specified ID.When a notification is published with a non-empty label, the\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ API must be used to cancel it.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-notificationManager-function cancel(id: int, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancel(id: int, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Notification ID, used to identify the target notification. This value is specified by the **id** field of NotificationRequest when a notification is published. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// cancel callback
+let cancelCallback = (err: BusinessError): void => {
+  if (err) {
+    console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in canceling notification.`);
+  }
+}
+notificationManager.cancel(0, cancelCallback);
+```
+
+
+## cancel
+
+```TypeScript
+function cancel(id: int, label: string, callback: AsyncCallback<void>): void
+```
+
+Cancels a published notification based on the notification ID and label. This API uses an asynchronous callback to return the result.
+
+After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios where a specific notification with a particular tag needs to be precisely canceled.
+
+Compared with notificationManager.cancel(id, callback), which requires only the notification ID, this API additionally has the **label** parameter, allowing precise cancellation of notifications with the same ID but different labels.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-notificationManager-function cancel(id: int, label: string, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancel(id: int, label: string, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Notification ID, used to identify the target notification. This value is specified by the **id** field of NotificationRequest when a notification is published. |
+| label | string | Yes | Notification label. This value is specified by the **label** field of NotificationRequest during the notification publishment. If the **label** field is empty, the published notification that matches the specified notification ID and has an empty label is canceled. If the **label** field is not empty, the published notification that matches both the specified notification ID and label is canceled. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// cancel callback
+let cancelCallback = (err: BusinessError): void => {
+  if (err) {
+    console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in canceling notification.`);
+  } 
+}
+notificationManager.cancel(0, "label", cancelCallback);
+```
+
+
+## cancel
+
+```TypeScript
+function cancel(id: int, label?: string): Promise<void>
+```
+
+Cancels a published notification based on the notification ID and label. This API uses a promise to return the result.
+
+After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-notificationManager-function cancel(id: int, label?: string): Promise<void>--><!--Device-notificationManager-function cancel(id: int, label?: string): Promise<void>-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Notification ID, used to identify the target notification. This value is specified by the id field of NotificationRequest when publishing a notification. |
+| label | string | No | Notification label. The default value is empty. This value is specified by the **label** field of NotificationRequest during the notification publishment. If the **label** field is empty, the published notification that matches the specified notification ID and has an empty label is canceled. If the **label** field is not empty, the published notification that matches both the specified notification ID and label is canceled. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.cancel(0).then(() => {
+  console.info(`Succeeded in canceling notification.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
+});
+```
+

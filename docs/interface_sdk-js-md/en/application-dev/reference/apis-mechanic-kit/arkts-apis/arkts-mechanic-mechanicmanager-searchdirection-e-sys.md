@@ -1,0 +1,68 @@
+# SearchDirection (System API)
+
+Search direction.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
+<!--Device-mechanicManager-export enum SearchDirection--><!--Device-mechanicManager-export enum SearchDirection-End-->
+
+**System capability:** SystemCapability.Mechanic.Core
+
+**System API:** This is a system API.
+
+## DEFAULT
+
+```TypeScript
+DEFAULT = 0
+```
+
+System Default Direction.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
+<!--Device-SearchDirection-DEFAULT = 0--><!--Device-SearchDirection-DEFAULT = 0-End-->
+
+**System capability:** SystemCapability.Mechanic.Core
+
+**System API:** This is a system API.
+
+## LEFTWARD
+
+```TypeScript
+LEFTWARD = 1
+```
+
+Leftward direction. Also indicates clockwise direction.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
+<!--Device-SearchDirection-LEFTWARD = 1--><!--Device-SearchDirection-LEFTWARD = 1-End-->
+
+**System capability:** SystemCapability.Mechanic.Core
+
+**System API:** This is a system API.
+
+## RIGHTWARD
+
+```TypeScript
+RIGHTWARD = 2
+```
+
+Rightward direction. Also indicates the counterclockwise direction.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
+<!--Device-SearchDirection-RIGHTWARD = 2--><!--Device-SearchDirection-RIGHTWARD = 2-End-->
+
+**System capability:** SystemCapability.Mechanic.Core
+
+**System API:** This is a system API.
+

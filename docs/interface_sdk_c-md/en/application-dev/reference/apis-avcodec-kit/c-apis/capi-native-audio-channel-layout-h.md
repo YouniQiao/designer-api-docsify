@@ -4,8 +4,6 @@
 
 The file declares the functions related to the speaker layout during recording and playback.
 
-**Include**: <multimedia/native_audio_channel_layout.h>
-
 **Library**: NA
 
 **System capability**: SystemCapability.Multimedia.Media.Core
@@ -20,7 +18,7 @@ The file declares the functions related to the speaker layout during recording a
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AudioChannelSet](#oh_audiochannelset) | OH_AudioChannelSet | Enumerates the audio channels.Each channel is mapped to a variable of uint64_t. |
+| [OH_AudioChannelSet](#oh_audiochannelset) | OH_AudioChannelSet | Enumerates the audio channels.Each channel is mapped to a variable of int64_t. |
 | [OH_AmbAttributeSet](#oh_ambattributeset) | OH_AmbAttributeSet | Ambisonic attribute set.A set of 64-bit integers indicate the ambisonic attributes. |
 | [OH_AudioChannelLayout](#oh_audiochannellayout) | OH_AudioChannelLayout | Enumerates the layouts of audio channels.Int64 integers are used to indicate the appearance and sequence of speakers during recording or playback. |
 
@@ -34,7 +32,7 @@ enum OH_AudioChannelSet
 
 **Description**
 
-Enumerates the audio channels.Each channel is mapped to a variable of uint64_t.
+Enumerates the audio channels.Each channel is mapped to a variable of int64_t.
 
 **Since**: 11
 
@@ -81,18 +79,20 @@ enum OH_AmbAttributeSet
 
 Ambisonic attribute set.A set of 64-bit integers indicate the ambisonic attributes.
 
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 11
 
 | Enum item | Description |
 | -- | -- |
-| AMB_ORD_1 = 1ULL << 0U |  |
-| AMB_ORD_2 = 2ULL << 0U |  |
-| AMB_ORD_3 = 3ULL << 0U |  |
-| AMB_COM_ACN = 0ULL << 8U |  |
-| AMB_COM_FUMA = 1ULL << 8U |  |
-| AMB_NOR_N3D = 0ULL << 12U |  |
-| AMB_NOR_SN3D = 1ULL << 12U |  |
-| AMB_MODE = 1ULL << 44U |  |
+| AMB_ORD_1 = 1ULL << 0U | Ambisonic attribute: order 1 |
+| AMB_ORD_2 = 2ULL << 0U | Ambisonic attribute: order 2 |
+| AMB_ORD_3 = 3ULL << 0U | Ambisonic attribute: order 3 |
+| AMB_COM_ACN = 0ULL << 8U | Ambisonic attribute: ACN Component Ordering |
+| AMB_COM_FUMA = 1ULL << 8U | Ambisonic attribute: FUMA Component Ordering |
+| AMB_NOR_N3D = 0ULL << 12U | Ambisonic attribute: N3D Normalization |
+| AMB_NOR_SN3D = 1ULL << 12U | Ambisonic attribute: SN3D Normalization |
+| AMB_MODE = 1ULL << 44U | Channel layout: Ambisonic mode |
 
 ### OH_AudioChannelLayout
 

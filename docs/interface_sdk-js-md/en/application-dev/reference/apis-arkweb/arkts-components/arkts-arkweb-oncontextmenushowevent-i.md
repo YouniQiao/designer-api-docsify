@@ -1,0 +1,52 @@
+# OnContextMenuShowEvent
+
+Represents the callback invoked during a call to allow for the display of a custom context menu.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-unnamed-declare interface OnContextMenuShowEvent--><!--Device-unnamed-declare interface OnContextMenuShowEvent-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## param
+
+```TypeScript
+param: WebContextMenuParam
+```
+
+Parameters related to the context menu.
+
+**Type:** WebContextMenuParam
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnContextMenuShowEvent-param: WebContextMenuParam--><!--Device-OnContextMenuShowEvent-param: WebContextMenuParam-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## result
+
+```TypeScript
+result: WebContextMenuResult
+```
+
+Result of the context menu.
+
+**Type:** WebContextMenuResult
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnContextMenuShowEvent-result: WebContextMenuResult--><!--Device-OnContextMenuShowEvent-result: WebContextMenuResult-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+

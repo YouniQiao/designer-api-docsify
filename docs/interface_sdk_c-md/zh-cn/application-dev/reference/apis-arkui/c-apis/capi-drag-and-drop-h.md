@@ -18,6 +18,9 @@ Declares the APIs of **NativeDrag**.
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
+| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) | ArkUI_NodeEvent | 定义组件事件的通用结构类型。 |
+| [ArkUI_Context](capi-arkui-nativemodule-arkui-context.md) | ArkUI_Context | native UI的上下文实例对象。 |
+| [ArkUI_Context*](capi-arkui-nativemodule-arkui-context8h.md) | ArkUI_ContextHandle | 定义ArkUI native UI的上下文实例对象指针定义。 |
 | [ArkUI_DragEvent](capi-arkui-nativemodule-arkui-dragevent.md) | ArkUI_DragEvent | 拖拽事件。 |
 | [ArkUI_DragPreviewOption](capi-arkui-nativemodule-arkui-dragpreviewoption.md) | ArkUI_DragPreviewOption | 定义拖拽跟手图的相关自定义参数。 |
 | [ArkUI_DragAction](capi-arkui-nativemodule-arkui-dragaction.md) | ArkUI_DragAction | 拖拽行为，用于主动发起拖拽。 |
@@ -1110,7 +1113,7 @@ int32_t OH_ArkUI_SetNodeDragPreview(ArkUI_NodeHandle node, OH_PixelmapNative* pr
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 目标组件节点指针。 |
-| [OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* preview | 自定义跟手图，使用 pixelmap 格式。 |
+| OH_PixelmapNative* preview | 自定义跟手图，使用 pixelmap 格式。 |
 
 **返回：**
 
@@ -1437,7 +1440,7 @@ int32_t OH_ArkUI_DragAction_SetPixelMaps(ArkUI_DragAction* dragAction, OH_Pixelm
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_DragAction](capi-arkui-nativemodule-arkui-dragaction.md)* dragAction | 拖拽行为对象。 |
-| [OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* pixelmapArray[] | Indicates the array of the drag previews to set, which must be pixel maps. |
+| OH_PixelmapNative* pixelmapArray[] | Indicates the array of the drag previews to set, which must be pixel maps. |
 | int32_t size | 拖拽跟手图数量。 |
 
 **返回：**

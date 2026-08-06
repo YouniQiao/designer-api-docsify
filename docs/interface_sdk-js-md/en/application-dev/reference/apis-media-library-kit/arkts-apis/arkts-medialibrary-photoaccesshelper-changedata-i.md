@@ -1,0 +1,66 @@
+# ChangeData
+
+Defines the return value of the listener callback.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-photoAccessHelper-interface ChangeData--><!--Device-photoAccessHelper-interface ChangeData-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## extraUris
+
+```TypeScript
+extraUris: Array<string>
+```
+
+URIs of the changed files in the album. The value may be undefined. Check whether the value is undefined before using it.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-ChangeData-extraUris: Array<string>--><!--Device-ChangeData-extraUris: Array<string>-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## type
+
+```TypeScript
+type: NotifyType
+```
+
+Notification type.
+
+**Type:** NotifyType
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-ChangeData-type: NotifyType--><!--Device-ChangeData-type: NotifyType-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## uris
+
+```TypeScript
+uris: Array<string>
+```
+
+All URIs with the same [NotifyType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, which can be **PhotoAsset** or **Album**.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-ChangeData-uris: Array<string>--><!--Device-ChangeData-uris: Array<string>-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+

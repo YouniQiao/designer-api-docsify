@@ -1,0 +1,124 @@
+# GeneratorNodeGraphOptions (System API)
+
+Parameters used to open the NodeGraphComponent.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+<!--Device-imageGeneration-interface GeneratorNodeGraphOptions--><!--Device-imageGeneration-interface GeneratorNodeGraphOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## customIcons
+
+```TypeScript
+customIcons?: Array<GeneratorResultPageIcon>
+```
+
+Custom icons used on the AI generated image results page.
+
+**Type:** Array&lt;GeneratorResultPageIcon&gt;
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneratorNodeGraphOptions-customIcons?: Array<GeneratorResultPageIcon>--><!--Device-GeneratorNodeGraphOptions-customIcons?: Array<GeneratorResultPageIcon>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## customImportIcon
+
+```TypeScript
+customImportIcon?: CustomImportIcon
+```
+
+The following configuration parameters are used to customize the imported icon.
+
+**Type:** CustomImportIcon
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneratorNodeGraphOptions-customImportIcon?: CustomImportIcon--><!--Device-GeneratorNodeGraphOptions-customImportIcon?: CustomImportIcon-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## imageGenerationModel
+
+```TypeScript
+imageGenerationModel?: ImageGenerationModel
+```
+
+Model used for AI generate image tasks.
+
+**Type:** ImageGenerationModel
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneratorNodeGraphOptions-imageGenerationModel?: ImageGenerationModel--><!--Device-GeneratorNodeGraphOptions-imageGenerationModel?: ImageGenerationModel-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## liveViewInfo
+
+```TypeScript
+liveViewInfo?: LiveViewInfo
+```
+
+Information for LiveView in AI image generation.
+
+**Type:** LiveViewInfo
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneratorNodeGraphOptions-liveViewInfo?: LiveViewInfo--><!--Device-GeneratorNodeGraphOptions-liveViewInfo?: LiveViewInfo-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## textGenerationModel
+
+```TypeScript
+textGenerationModel?: TextGenerationModel
+```
+
+Text polishing model used in AI generate image tasks.
+
+**Type:** TextGenerationModel
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneratorNodeGraphOptions-textGenerationModel?: TextGenerationModel--><!--Device-GeneratorNodeGraphOptions-textGenerationModel?: TextGenerationModel-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+

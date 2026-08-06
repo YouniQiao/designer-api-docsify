@@ -9,4 +9,4 @@ provides memory management capabilitiesprovides features include operations such
 
 | Name | Description |
 | -- | -- |
-| [purgeable_memory.h](capi-purgeable-memory-h.md) | Provides APIs for managing the purgeable memory.<br>For example, you can create a purgeable memory, start or end the memory reading/writing, and rebuild the memory.<br>Link to the **libpurgeable_memory_ndk.z.so** file when you use the API. |
+| [purgeable_memory.h](capi-purgeable-memory-h.md) | provides memory management capabilities of purgeable memory.provides features include create, begin read ,end read, begin write, end write, rebuild, and so on.when using, it is necessary to link libpurgeable_memory_ndk.z.so |

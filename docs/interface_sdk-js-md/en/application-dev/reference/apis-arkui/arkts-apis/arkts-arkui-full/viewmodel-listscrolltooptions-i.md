@@ -1,0 +1,32 @@
+# ListScrollToOptions
+
+ListScrollToOptions
+
+**Since:** 4
+
+**ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+<!--Device-unnamed-export interface ListScrollToOptions--><!--Device-unnamed-export interface ListScrollToOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## index
+
+```TypeScript
+index: number
+```
+
+specified position.
+
+**Type:** number
+
+**Since:** 4
+
+**ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-ListScrollToOptions-index: number--><!--Device-ListScrollToOptions-index: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Lite
+

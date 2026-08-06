@@ -1,0 +1,84 @@
+# Rect
+
+Defines a rectangle.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-export interface Rect--><!--Device-unnamed-export interface Rect-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+## height
+
+```TypeScript
+height: int
+```
+
+Height of the rectangle, in pixels.
+
+**Type:** int
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-Rect-height: int--><!--Device-Rect-height: int-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+## left
+
+```TypeScript
+left: int
+```
+
+Left boundary of the rectangle, in pixels.
+
+**Type:** int
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-Rect-left: int--><!--Device-Rect-left: int-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+## top
+
+```TypeScript
+top: int
+```
+
+Top boundary of the rectangle, in pixels.
+
+**Type:** int
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-Rect-top: int--><!--Device-Rect-top: int-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+## width
+
+```TypeScript
+width: int
+```
+
+Width of the rectangle, in pixels.
+
+**Type:** int
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-Rect-width: int--><!--Device-Rect-width: int-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+

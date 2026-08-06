@@ -6,7 +6,7 @@ typedef struct ffrt_fiber_t {...} ffrt_fiber_t
 
 ## Overview
 
-Defines the fiber structure used to store fiber execution context.
+Defines the fiber structure.
 
 **Since**: 20
 
@@ -20,6 +20,6 @@ Defines the fiber structure used to store fiber execution context.
 
 | Name | Description |
 | -- | -- |
-| uintptr_t storage[ffrt_fiber_storage_size] | Internal storage backing the fiber execution context. Do not access directly;use {@link ffrt_fiber_init} to initialize and {@link ffrt_fiber_switch} to switch. |
+| uintptr_t storage[ffrt_fiber_storage_size] | An array of uint32_t used to store the fiber. |
 
 

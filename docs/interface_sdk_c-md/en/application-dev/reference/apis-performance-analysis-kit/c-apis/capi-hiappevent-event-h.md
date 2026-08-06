@@ -35,5 +35,5 @@ Defines the event names of all predefined events.In addition to custom events as
 | DOMAIN_OS "OS" | OS domain.<br>**Since**: 12 |
 | EVENT_APP_KILLED "APP_KILLED" | app killed event.<br>**Since**: 20 |
 | EVENT_AUDIO_JANK_FRAME "AUDIO_JANK_FRAME" | audio jank frame event.<br>**Since**: 21 |
-| OH_EVENT_APP_FREEZE_WARNING "APPFREEZE_WARNING"#ifdef __cplusplus} // HIVIEWDFX_HIAPPEVENT_EVENT_H | appfreeze warning event.<br>**Since**: 26.0.0 |
+| OH_EVENT_APP_FREEZE_WARNING "APPFREEZE_WARNING"#ifdef __cplusplus} | appfreeze warning event.<br>**Since**: 26.0.0 |
 

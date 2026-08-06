@@ -6,7 +6,7 @@ typedef struct ffrt_task_attr_t {...} ffrt_task_attr_t
 
 ## Overview
 
-Defines the task attribute structure used to store task attribute information.
+Defines the task attribute structure.
 
 **Since**: 10
 
@@ -20,7 +20,7 @@ Defines the task attribute structure used to store task attribute information.
 
 | Name | Description |
 | -- | -- |
-| [uint32_t storage[(ffrt_task_attr_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)]](#sizeof) | Internal storage backing the task attribute. Do not access directly; use the{@link ffrt_task_attr_init} and `ffrt_task_attr_set_*` APIs to manage contents. |
+| [uint32_t storage[(ffrt_task_attr_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)]](#sizeof) | An array of uint32_t used to store the task attribute. |
 
 ## Member function description
 
@@ -32,6 +32,6 @@ uint32_t storage[(ffrt_task_attr_storage_size + sizeof(uint32_t) - 1) / sizeof(u
 
 **Description**
 
-Internal storage backing the task attribute. Do not access directly; use the{@link ffrt_task_attr_init} and `ffrt_task_attr_set_*` APIs to manage contents.
+An array of uint32_t used to store the task attribute.
 
 

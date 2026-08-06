@@ -71,7 +71,7 @@ Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_C
 | -- | -- |
 | ani_env* env | ndicates the ANI environment pointer. |
 | ani_object context | Indicates the <b>UIContext</b> object created on the ArkTS side. |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md)* handle | Indicates the pointer to the <b>ArkUI_ContextHandle</b> object. |
+| ArkUI_ContextHandle* handle | Indicates the pointer to the <b>ArkUI_ContextHandle</b> object. |
 
 **Returns**:
 

@@ -20,7 +20,7 @@ Represents the sync result of an asset.
 
 | Name | Description |
 | -- | -- |
-| int32_t resultCode | Sync result code of an asset.If the synchronization is successful, the result code is 0.For details about the result code when the synchronization fails, see Asset_ResultCode. |
+| int32_t resultCode | Sync result code of an asset. |
 | uint32_t totalCount | Total number of assets to be synced. |
 | uint32_t failedCount | Number of assets that fail to be synced. |
 

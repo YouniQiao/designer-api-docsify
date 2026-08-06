@@ -22,8 +22,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [native_type.h](capi-native-type-h.md) | Defines the common types for the native module. |
 | [native_dialog.h](capi-native-dialog-h.md) | Defines a set of custom dialog box APIs of ArkUI on the native side. |
 | [error_code.h](capi-error-code-h.md) | Defines the error code for the native module. |
-| [common_type.h](capi-common-type-h.md) | Defines the common types for ArkUI native APIs. |
-| [drawable_descriptor.h](capi-drawable-descriptor-h.md) | Declares the APIs of **NativeDrawableDescriptor**. |
+| [drawable_descriptor.h](capi-drawable-descriptor-h.md) | Defines theNativeDrawableDescriptor for the native module. |
 | [native_node_napi.h](capi-native-node-napi-h.md) | Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects onthe native side. |
 | [styled_string.h](capi-styled-string-h.md) | Defines the text style and layout manager for the component whose {@link type} is set to **ARKUI_NODE_TEXTon the native side. |
 | [custom_span.h](capi-custom-span-h.md) | Defines a set of CustomSpan enum and interface. |

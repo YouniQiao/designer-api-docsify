@@ -6,7 +6,7 @@ typedef struct Asset_ResultSet {...} Asset_ResultSet
 
 ## 概述
 
-多条关键资产的查询结果。
+关键资产查询结果集合，用于定义多条关键资产。
 
 **起始版本：** 11
 

@@ -1,0 +1,35 @@
+# MaxLinesOptions
+
+Configures the display effect of the **TextArea** component when the text exceeds the maximum number of lines.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+<!--Device-unnamed-declare interface MaxLinesOptions--><!--Device-unnamed-declare interface MaxLinesOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## overflowMode
+
+```TypeScript
+overflowMode?: MaxLinesMode
+```
+
+overflowMode** can be used to set the non-inline mode for the [TextArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ component. When the text exceeds the set value of **maxLines** (maximum number of lines), a scroll effect is enabled. This requires configuration of [textOverflow]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and **MaxLinesMode** takes effect only when  
+**textOverflow** is set to **None** or **Clip**. The default value of **MaxLinesMode** is **Clip**, indicating that text is truncated when it exceeds the value of **maxLines**.
+
+**Type:** MaxLinesMode
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-MaxLinesOptions-overflowMode?: MaxLinesMode--><!--Device-MaxLinesOptions-overflowMode?: MaxLinesMode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

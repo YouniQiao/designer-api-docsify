@@ -1,0 +1,50 @@
+# component/menu
+
+以垂直列表形式显示的菜单。
+ > **说明：**
+ >
+ > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
+ > - Menu组件需和
+ > [bindMenu](../arkts-arkui-component/common-commonmethod-i.md#bindmenu)或
+ > [bindContextMenu](../arkts-arkui-component/common-commonmethod-i.md#bindcontextmenu)
+ > 方法配合使用，不支持作为普通组件单独使用。
+ ###### 子组件
+ 包含[MenuItem](menu_item)、[MenuItemGroup](menu_item_group)子组件。
+ ###### 接口
+ Menu()
+ 作为菜单的固定容器，无参数。
+ > **说明：**
+ >
+ > - 菜单和菜单项宽度计算规则：
+ > >
+ > >   - 布局过程中，期望每个菜单项的宽度一致。若子组件设置了宽度，则以[constraintSize](../arkts-arkui-component/common-commonmethod-i.md#constraintsize)为准。
+ > >
+ > >   - Menu不设置宽度的情况：Menu会对子组件MenuItem、MenuItemGroup设置默认2栅格的宽度，若菜单项内容区比2栅格宽，则会自适应撑开。
+ > >
+ > >   - Menu设置宽度的情况：Menu会对子组件MenuItem、MenuItemGroup设置减去padding后的固定宽度。
+ > >
+ > >   - Menu支持设置的最小宽度为64vp。
+ >
+ > - Menu不支持的通用属性：[外描边设置](../../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)下的属性、[shadow](../arkts-arkui-component/common-commonmethod-i.md#shadow)。
+
+
+## 汇总
+
+### 函数
+
+| 名称 | 说明 |
+| --- | --- |
+| [Menu](menu-menu-f.md#menu) | Defines Menu Component. |
+
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [MenuAttribute](menu-menuattribute-i.md) | 除支持[通用属性]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_外，还支持以下属性： |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [SubMenuExpandingMode](menu-submenuexpandingmode-e.md) | Menu子菜单展开样式枚举。 |
+

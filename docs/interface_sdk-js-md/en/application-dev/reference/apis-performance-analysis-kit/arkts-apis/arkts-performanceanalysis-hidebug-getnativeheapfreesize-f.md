@@ -1,0 +1,33 @@
+# getNativeHeapFreeSize
+
+## getNativeHeapFreeSize
+
+```TypeScript
+function getNativeHeapFreeSize() : bigint
+```
+
+Obtains the total number of bytes occupied by the total free space (**fordblks**, which is obtained from  
+**mallinfo**) held by a process, which is measured by the memory allocator.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+<!--Device-hidebug-function getNativeHeapFreeSize() : bigint--><!--Device-hidebug-function getNativeHeapFreeSize() : bigint-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| bigint | Size of the memory occupied by the total free space held by the process, in bytes. |
+
+**Example**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let nativeHeapFreeSize: bigint = hidebug.getNativeHeapFreeSize();
+```
+

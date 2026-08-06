@@ -21,7 +21,6 @@ Defines the functions for obtaining and using a native window.
 | [Region](capi-nativewindow-region.md) | Region | indicates a dirty region where content is updated. |
 | [OHHDRMetaData](capi-nativewindow-ohhdrmetadata.md) | OHHDRMetaData | Defines the HDR metadata.(Deprecated in API10) |
 | [OHExtDataHandle](capi-nativewindow-ohextdatahandle.md) | OHExtDataHandle | Defines the ExtData Handle(Deprecated in API10) |
-| [OH_NativeBuffer](capi-nativewindow-oh-nativebuffer.md) | OH_NativeBuffer | Provides native buffer capability. |
 | [OHIPCParcel](capi-nativewindow-ohipcparcel.md) | OHIPCParcel | Defines the ipc parcel. |
 | [NativeWindow](capi-nativewindow-nativewindow.md) | - | native window. |
 | [NativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) | - | native window buffer. |
@@ -299,7 +298,7 @@ Creates a <b>OHNativeWindowBuffer</b> instance.<br> A new <b>OHNativeWindowBuffe
 
 | Parameter | Description |
 | -- | -- |
-| [OH_NativeBuffer](capi-nativewindow-oh-nativebuffer.md)* nativeBuffer | Indicates the pointer to a native buffer. The type is <b>OH_NativeBuffer*</b>. |
+| OH_NativeBuffer* nativeBuffer | Indicates the pointer to a native buffer. The type is <b>OH_NativeBuffer*</b>. |
 
 **Returns**:
 
@@ -1184,7 +1183,7 @@ Set the 3D metadata of the native window.<br> This interface is a non-thread-saf
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window or metadata is NULL.<br>     {@link NATIVE_ERROR_UNKNOWN} 50002000 - set 3D metadata failed.<br>     {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - unsupported metadata key. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window or metadata is NULL.<br>     {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.<br>     {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
 
 ### OH_NativeWindow_Get3DMetadataValue()
 
@@ -1213,6 +1212,6 @@ Get the 3D metadata of the native window.<br> This interface is a non-thread-saf
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window, metadata, or size is NULL.<br>     {@link NATIVE_ERROR_UNKNOWN} 50002000 - copy or allocate memory failed, otherwise get 3D metadata failed.<br>     {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - unsupported metadata key. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window, metadata, or size is NULL.<br>     {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.<br>     {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
 
 

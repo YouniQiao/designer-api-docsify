@@ -1,0 +1,108 @@
+# CustomSpanDrawInfo
+
+Defines the CustomSpanDrawInfo interface.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-unnamed-declare interface CustomSpanDrawInfo--><!--Device-unnamed-declare interface CustomSpanDrawInfo-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## baseline
+
+```TypeScript
+baseline: number
+```
+
+Baseline offset of the line where the custom span is located.
+
+Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+
+**Type:** number
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CustomSpanDrawInfo-baseline: number--><!--Device-CustomSpanDrawInfo-baseline: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## lineBottom
+
+```TypeScript
+lineBottom: number
+```
+
+Bottom margin of the custom span relative to the **Text** component.
+
+Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+
+**Type:** number
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CustomSpanDrawInfo-lineBottom: number--><!--Device-CustomSpanDrawInfo-lineBottom: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## lineTop
+
+```TypeScript
+lineTop: number
+```
+
+Top margin of the custom span relative to the **Text** component.
+
+Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+
+**Type:** number
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CustomSpanDrawInfo-lineTop: number--><!--Device-CustomSpanDrawInfo-lineTop: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## x
+
+```TypeScript
+x: number
+```
+
+Offset of the custom span relative to the mounted component.
+
+Unit: [px]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+
+**Type:** number
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CustomSpanDrawInfo-x: number--><!--Device-CustomSpanDrawInfo-x: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

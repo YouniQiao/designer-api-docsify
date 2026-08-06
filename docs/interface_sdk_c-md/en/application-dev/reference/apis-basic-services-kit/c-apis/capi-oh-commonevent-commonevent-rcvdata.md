@@ -6,7 +6,7 @@ typedef struct CommonEvent_RcvData CommonEvent_RcvData
 
 ## Overview
 
-Defines a struct for the common event data. When a common event triggers a callback,this struct is used to pass the received event data to the developer.
+Defines a struct for the common event data.
 
 **Since**: 12
 

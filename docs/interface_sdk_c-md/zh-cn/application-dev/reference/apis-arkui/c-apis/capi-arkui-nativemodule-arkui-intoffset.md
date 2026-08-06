@@ -6,13 +6,13 @@ typedef struct ArkUI_IntOffset {...} ArkUI_IntOffset
 
 ## 概述
 
-定义组件位置。
+Describes the position of a component.
 
 **起始版本：** 12
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**所在头文件：** [common_type.h](capi-common-type-h.md)
+**所在头文件：** [native_type.h](capi-native-type-h.md)
 
 ## 汇总
 
@@ -20,7 +20,7 @@ typedef struct ArkUI_IntOffset {...} ArkUI_IntOffset
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t x |  |
-| int32_t y |  |
+| int32_t x | Horizontal coordinate, in px. |
+| int32_t y | Vertical coordinate, in px. |
 
 

@@ -1,0 +1,58 @@
+# GenerateTextTaskResult (System API)
+
+Configuration result for AI-generated text tasks.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-imageGeneration-interface GenerateTextTaskResult--><!--Device-imageGeneration-interface GenerateTextTaskResult-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## content
+
+```TypeScript
+content: string
+```
+
+Final data in AI-generated text task.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GenerateTextTaskResult-content: string--><!--Device-GenerateTextTaskResult-content: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## reasoningContent
+
+```TypeScript
+reasoningContent: string
+```
+
+Think information in AI-generated text task.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GenerateTextTaskResult-reasoningContent: string--><!--Device-GenerateTextTaskResult-reasoningContent: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+

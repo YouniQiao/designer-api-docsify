@@ -1,0 +1,135 @@
+# XComponentNode
+
+Defines XComponent Node.
+
+**Inheritance/Implementation:** XComponentNode extends [FrameNode](framenode-framenode-c.md)
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** 12
+
+**Substitutes:** ohos.arkui.node/typeNode#XComponent
+
+<!--Device-unnamed-export declare class XComponentNode extends FrameNode--><!--Device-unnamed-export declare class XComponentNode extends FrameNode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## changeRenderType
+
+```TypeScript
+changeRenderType(type: NodeRenderType): boolean
+```
+
+Set the render type of the builderNode.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** 12
+
+**Substitutes:** ohos.arkui.node/FrameNode#appendChild
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XComponentNode-changeRenderType(type: NodeRenderType): boolean--><!--Device-XComponentNode-changeRenderType(type: NodeRenderType): boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | render type |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean |  Returns if change the render type successfully. |
+
+## constructor
+
+```TypeScript
+constructor(uiContext: UIContext, options: RenderOptions,
+    id: string, type: XComponentType, libraryName?: string)
+```
+
+constructor.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** 12
+
+**Substitutes:** ohos.arkui.node/typeNode#createNode
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XComponentNode-constructor(uiContext: UIContext, options: RenderOptions,    id: string, type: XComponentType, libraryName?: string)--><!--Device-XComponentNode-constructor(uiContext: UIContext, options: RenderOptions,    id: string, type: XComponentType, libraryName?: string)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uiContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | UIContext used to create the FrameNode |
+| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Render options of the Builder Node |
+| id | string | Yes | XComponent id defined by the application |
+| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | XComponent type |
+| libraryName | string | No | The name of the library to be loaded by XComponent |
+
+## onCreate
+
+```TypeScript
+onCreate(event?: Object): void
+```
+
+Called when the XComponent surface has been created.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** 12
+
+**Substitutes:** XComponent/XComponentAttribute#onLoad
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XComponentNode-onCreate(event?: Object): void--><!--Device-XComponentNode-onCreate(event?: Object): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | Object | No | event from native when the library loaded |
+
+## onDestroy
+
+```TypeScript
+onDestroy(): void
+```
+
+Called when the XComponent surface has been destroyed.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** 12
+
+**Substitutes:** XComponent/XComponentAttribute#onDestroy
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XComponentNode-onDestroy(): void--><!--Device-XComponentNode-onDestroy(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

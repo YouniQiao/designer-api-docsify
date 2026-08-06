@@ -1,0 +1,97 @@
+# TextResponseType
+
+Response type of the menu.
+    **NOTE**  
+    
+    The system follows the priority order below when determining the menu type to display during text interactions:  
+    
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+<!--Device-unnamed-declare enum TextResponseType--><!--Device-unnamed-declare enum TextResponseType-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## RIGHT_CLICK
+
+```TypeScript
+RIGHT_CLICK = 0
+```
+
+The menu is displayed when the component is right-clicked.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextResponseType-RIGHT_CLICK = 0--><!--Device-TextResponseType-RIGHT_CLICK = 0-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## LONG_PRESS
+
+```TypeScript
+LONG_PRESS = 1
+```
+
+The menu is displayed when the component is long-pressed.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextResponseType-LONG_PRESS = 1--><!--Device-TextResponseType-LONG_PRESS = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## SELECT
+
+```TypeScript
+SELECT = 2
+```
+
+The menu is displayed when the component is selected.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextResponseType-SELECT = 2--><!--Device-TextResponseType-SELECT = 2-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## DEFAULT
+
+```TypeScript
+DEFAULT = 3
+```
+
+When this type is registered but **RIGHT\_CLICK**, **LONG\_PRESS**, or **SELECT** types are not registered, this type will be triggered and displayed for right-click, long press, mouse selection, and  
+[selection]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API calls.
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-TextResponseType-DEFAULT = 3--><!--Device-TextResponseType-DEFAULT = 3-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

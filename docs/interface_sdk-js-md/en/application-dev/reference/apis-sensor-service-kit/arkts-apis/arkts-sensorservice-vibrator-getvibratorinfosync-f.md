@@ -1,0 +1,45 @@
+# getVibratorInfoSync
+
+## getVibratorInfoSync
+
+```TypeScript
+function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>
+```
+
+Queries the vibrator list of one or all devices.
+
+**Since:** 19
+
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+
+<!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>--><!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>-End-->
+
+**System capability:** SystemCapability.Sensors.MiscDevice
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Vibrator parameters, such as the specified device and vibrator. If this parameter is left unspecified, this API applies to all vibrators of the local device by default. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;VibratorInfo&gt; | Vibrator information. |
+
+**Example**
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const vibratorInfoList: vibrator.VibratorInfo[] = vibrator.getVibratorInfoSync({ deviceId: 1, vibratorId: 3 });
+  console.info(`vibratorInfoList: ${JSON.stringify(vibratorInfoList)}`);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```
+

@@ -4,8 +4,6 @@
 
 本模块提供了后台子进程管控接口。开发者可以通过本模块接口对子进程进行压制、解压制，避免子进程过多占用系统资源，导致系统使用卡顿。本模块接口仅对通过{@link OH_Ability_StartNativeChildProcess}接口创建的子进程生效。
 
-**引用文件：** <background_process_manager/background_process_manager.h>
-
 **库：** libbackground_process_manager.z.so
 
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
@@ -63,9 +61,9 @@ enum BackgroundProcessManager_ErrorCode
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ERR_BACKGROUND_PROCESS_MANAGER_SUCCESS = 0 | 压制参数发送成功。<br>**起始版本：** 17 |
-| ERR_BACKGROUND_PROCESS_MANAGER_INVALID_PARAM = 401 | 参数检查失败。<br>**起始版本：** 17 |
-| ERR_BACKGROUND_PROCESS_MANAGER_REMOTE_ERROR = 31800001 | 客户端进程请求系统服务进程，获取系统服务操作失败。<br>**起始版本：** 17 |
+| ERR_BACKGROUND_PROCESS_MANAGER_SUCCESS = 0 |  result is OK.<br>**起始版本：** 17 |
+| ERR_BACKGROUND_PROCESS_MANAGER_INVALID_PARAM = 401 |  invalid parameter. Possible causes:1. priority is out of range.<br>**起始版本：** 17 |
+| ERR_BACKGROUND_PROCESS_MANAGER_REMOTE_ERROR = 31800001 |  remote error. Possible causes:1. remote is not work.<br>**起始版本：** 17 |
 
 
 ## 函数说明

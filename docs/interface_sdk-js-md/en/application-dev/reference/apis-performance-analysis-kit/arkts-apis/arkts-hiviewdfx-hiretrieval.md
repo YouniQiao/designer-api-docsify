@@ -1,0 +1,32 @@
+# @ohos.hiviewdfx.hiRetrieval
+
+Provide interfaces and functions for HiRetrieval feature.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-unnamed-declare namespace hiRetrieval--><!--Device-unnamed-declare namespace hiRetrieval-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiRetrieval
+
+## Summary
+
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [getCurrentConfig](arkts-performanceanalysis-hiretrieval-getcurrentconfig-f.md#getcurrentconfig) | Query the current HiRetrieval config. |
+| [getLastParticipationTimestamp](arkts-performanceanalysis-hiretrieval-getlastparticipationtimestamp-f.md#getlastparticipationtimestamp) | Query the UNIX timestamp of the last participating time. |
+| [init](arkts-performanceanalysis-hiretrieval-init-f.md#init) | Init the HiRetrieval functionality. |
+| [isParticipant](arkts-performanceanalysis-hiretrieval-isparticipant-f.md#isparticipant) | Query if the app is participating the HiRetrieval project. |
+| [participate](arkts-performanceanalysis-hiretrieval-participate-f.md#participate) | Participate the HiRetrieval project with given HiRetrievalConfig. |
+| [quit](arkts-performanceanalysis-hiretrieval-quit-f.md#quit) | Quit the HiRetrieval project. This operation clears the current HiRetrieval config.Invoking init function again is required after invoking quit function. |
+| [run](arkts-performanceanalysis-hiretrieval-run-f.md#run) | Trigger the HiRetrieval functionality, make it start working. |
+
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [HiRetrievalConfig](arkts-performanceanalysis-hiretrieval-hiretrievalconfig-i.md) | HiRetrieval functionality config. |
+

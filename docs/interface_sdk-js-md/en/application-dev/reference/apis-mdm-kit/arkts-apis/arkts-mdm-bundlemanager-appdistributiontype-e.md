@@ -1,0 +1,121 @@
+# AppDistributionType
+
+Defines the distribution type of the application signing certificate. For details, please refer to the  
+**appDistributionType** attribute of [ApplicationInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+<!--Device-bundleManager-enum AppDistributionType--><!--Device-bundleManager-enum AppDistributionType-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## APP_GALLERY
+
+```TypeScript
+APP_GALLERY = 1
+```
+
+Application installed from AppGallery.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppDistributionType-APP_GALLERY = 1--><!--Device-AppDistributionType-APP_GALLERY = 1-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## ENTERPRISE
+
+```TypeScript
+ENTERPRISE = 2
+```
+
+Enterprise application.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppDistributionType-ENTERPRISE = 2--><!--Device-AppDistributionType-ENTERPRISE = 2-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## ENTERPRISE_NORMAL
+
+```TypeScript
+ENTERPRISE_NORMAL = 3
+```
+
+Common enterprise application.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3--><!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## ENTERPRISE_MDM
+
+```TypeScript
+ENTERPRISE_MDM = 4
+```
+
+Enterprise MDM application.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppDistributionType-ENTERPRISE_MDM = 4--><!--Device-AppDistributionType-ENTERPRISE_MDM = 4-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## INTERNALTESTING
+
+```TypeScript
+INTERNALTESTING = 5
+```
+
+Application under internal testing of AppGallery.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppDistributionType-INTERNALTESTING = 5--><!--Device-AppDistributionType-INTERNALTESTING = 5-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## CROWDTESTING
+
+```TypeScript
+CROWDTESTING = 6
+```
+
+Crowdtesting application.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppDistributionType-CROWDTESTING = 6--><!--Device-AppDistributionType-CROWDTESTING = 6-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+

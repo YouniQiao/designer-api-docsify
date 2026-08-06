@@ -1,0 +1,103 @@
+# ContextMenuEditStateFlags
+
+Enumerates the context menu edit state flags. This enum can be used in bitwise OR mode. For example, to support  
+**CAN\_CUT**, **CAN\_COPY**, and **CAN\_SELECT\_ALL** at the same time, use **CAN\_CUT | CAN\_COPY | CAN\_SELECT\_ALL**.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-unnamed-declare enum ContextMenuEditStateFlags--><!--Device-unnamed-declare enum ContextMenuEditStateFlags-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## NONE
+
+```TypeScript
+NONE = 0
+```
+
+Editing is not allowed.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContextMenuEditStateFlags-NONE = 0--><!--Device-ContextMenuEditStateFlags-NONE = 0-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## CAN_CUT
+
+```TypeScript
+CAN_CUT = 1 << 0
+```
+
+Cutting is supported.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContextMenuEditStateFlags-CAN_CUT = 1 << 0--><!--Device-ContextMenuEditStateFlags-CAN_CUT = 1 << 0-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## CAN_COPY
+
+```TypeScript
+CAN_COPY = 1 << 1
+```
+
+Copying is supported.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContextMenuEditStateFlags-CAN_COPY = 1 << 1--><!--Device-ContextMenuEditStateFlags-CAN_COPY = 1 << 1-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## CAN_PASTE
+
+```TypeScript
+CAN_PASTE = 1 << 2
+```
+
+Pasting is supported.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContextMenuEditStateFlags-CAN_PASTE = 1 << 2--><!--Device-ContextMenuEditStateFlags-CAN_PASTE = 1 << 2-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## CAN_SELECT_ALL
+
+```TypeScript
+CAN_SELECT_ALL = 1 << 3
+```
+
+Selecting all is supported.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContextMenuEditStateFlags-CAN_SELECT_ALL = 1 << 3--><!--Device-ContextMenuEditStateFlags-CAN_SELECT_ALL = 1 << 3-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+

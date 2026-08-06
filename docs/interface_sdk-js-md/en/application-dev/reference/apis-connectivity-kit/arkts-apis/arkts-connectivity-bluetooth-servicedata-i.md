@@ -1,0 +1,60 @@
+# ServiceData
+
+Describes the service data.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.ServiceData
+
+<!--Device-bluetooth-interface ServiceData--><!--Device-bluetooth-interface ServiceData-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## serviceUuid
+
+```TypeScript
+serviceUuid: string
+```
+
+Indicates the UUID of the service data to add
+
+**Type:** string
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.ServiceData.serviceUuid
+
+<!--Device-ServiceData-serviceUuid: string--><!--Device-ServiceData-serviceUuid: string-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## serviceValue
+
+```TypeScript
+serviceValue: ArrayBuffer
+```
+
+Indicates the service data to add
+
+**Type:** ArrayBuffer
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.ServiceData.serviceValue
+
+<!--Device-ServiceData-serviceValue: ArrayBuffer--><!--Device-ServiceData-serviceValue: ArrayBuffer-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+

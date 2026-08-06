@@ -6,7 +6,7 @@ typedef struct ResourceManager_Configuration {...} ResourceManager_Configuration
 
 ## Overview
 
-Structure of the device status.
+Enumerates device states.
 
 **Since**: 12
 
@@ -21,7 +21,7 @@ Structure of the device status.
 | Name | Description |
 | -- | -- |
 | [ResourceManager_Direction](capi-resmgr-common-h.md#resourcemanager_direction) direction | Screen orientation. |
-| char* locale | Language, script, country or region, for example, `zh_Hans_CN`. |
+| char* locale | Locale, for example, zh-Hans-CN. |
 | [ResourceManager_DeviceType](capi-resmgr-common-h.md#resourcemanager_devicetype) deviceType | Device type. |
 | [ScreenDensity](capi-resmgr-common-h.md#screendensity) screenDensity | Screen density. |
 | [ResourceManager_ColorMode](capi-resmgr-common-h.md#resourcemanager_colormode) colorMode | Color mode. |

@@ -1,0 +1,181 @@
+# getRunningFormInfoById (System API)
+
+## getRunningFormInfoById
+
+```TypeScript
+function getRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>
+```
+
+Obtains the RunningFormInfo object by formId.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-formObserver-function getRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>--><!--Device-formObserver-function getRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formId | string | Yes | Indicates the form provider formId. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;formInfo.RunningFormInfo&gt; | The promise returned by the function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+
+## getRunningFormInfoById
+
+```TypeScript
+function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Promise<formInfo.RunningFormInfo>
+```
+
+Obtains the RunningFormInfo object by formId.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-formObserver-function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Promise<formInfo.RunningFormInfo>--><!--Device-formObserver-function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Promise<formInfo.RunningFormInfo>-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formId | string | Yes | Indicates the form provider formId. |
+| isUnusedIncluded | boolean | Yes | Indicates whether to include unused form. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;formInfo.RunningFormInfo&gt; | The promise returned by the function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+
+## getRunningFormInfoById
+
+```TypeScript
+function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo.RunningFormInfo>): void
+```
+
+Obtains the RunningFormInfo object by formId.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-formObserver-function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo.RunningFormInfo>): void-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formId | string | Yes | Indicates the form provider formId. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;formInfo.RunningFormInfo&gt; | Yes | The callback of getFormInstancesById. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+
+## getRunningFormInfoById
+
+```TypeScript
+function getRunningFormInfoById(
+    formId: string,
+    isUnusedIncluded: boolean,
+    callback: AsyncCallback<formInfo.RunningFormInfo>
+  ): void
+```
+
+Obtains the RunningFormInfo object by formId.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-formObserver-function getRunningFormInfoById(    formId: string,    isUnusedIncluded: boolean,    callback: AsyncCallback<formInfo.RunningFormInfo>  ): void--><!--Device-formObserver-function getRunningFormInfoById(    formId: string,    isUnusedIncluded: boolean,    callback: AsyncCallback<formInfo.RunningFormInfo>  ): void-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| formId | string | Yes | Indicates the form provider formId. |
+| isUnusedIncluded | boolean | Yes | Indicates whether to include unused form. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;formInfo.RunningFormInfo&gt; | Yes | The callback of getFormInstancesById. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+

@@ -1,0 +1,35 @@
+# stopProfiling
+
+## stopProfiling
+
+```TypeScript
+function stopProfiling(): void
+```
+
+Stops the VM profiling method. **stopProfiling()** and **startProfiling(filename: string)** are called in pairs.  
+**startProfiling(filename: string)** always occurs before **stopProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [hidebug.stopJsCpuProfiling](arkts-performanceanalysis-hidebug-stopjscpuprofiling-f.md#stopjscpuprofiling)
+
+<!--Device-hidebug-function stopProfiling(): void--><!--Device-hidebug-function stopProfiling(): void-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**Example**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+hidebug.startProfiling("cpuprofiler-20220216");
+// code block
+// ...
+// code block
+hidebug.stopProfiling();
+```
+

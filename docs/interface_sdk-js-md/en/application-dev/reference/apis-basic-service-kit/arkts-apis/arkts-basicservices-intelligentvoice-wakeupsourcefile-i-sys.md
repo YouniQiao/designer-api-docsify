@@ -1,0 +1,54 @@
+# WakeupSourceFile (System API)
+
+Describes wakeup source file information.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-intelligentVoice-interface WakeupSourceFile--><!--Device-intelligentVoice-interface WakeupSourceFile-End-->
+
+**System capability:** SystemCapability.AI.IntelligentVoice.Core
+
+**System API:** This is a system API.
+
+## fileContent
+
+```TypeScript
+fileContent: ArrayBuffer
+```
+
+File content.
+
+**Type:** ArrayBuffer
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-WakeupSourceFile-fileContent: ArrayBuffer--><!--Device-WakeupSourceFile-fileContent: ArrayBuffer-End-->
+
+**System capability:** SystemCapability.AI.IntelligentVoice.Core
+
+**System API:** This is a system API.
+
+## filePath
+
+```TypeScript
+filePath: string
+```
+
+File path.
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-WakeupSourceFile-filePath: string--><!--Device-WakeupSourceFile-filePath: string-End-->
+
+**System capability:** SystemCapability.AI.IntelligentVoice.Core
+
+**System API:** This is a system API.
+

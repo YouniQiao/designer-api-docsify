@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declares the FFRT task C APIs, including task attribute initialization and destruction,task QoS configuration, task delay time management, concurrent queue task priority management,task stack size management, task submission and scheduling, task handle reference counting,and task wait operations.
+Declares the task interfaces in C.
 
 **Library**: libffrt.z.so
 
@@ -18,11 +18,11 @@ Declares the FFRT task C APIs, including task attribute initialization and destr
 
 | Name | Description |
 | -- | -- |
-| [FFRT_C_API int ffrt_task_attr_init(ffrt_task_attr_t* attr)](#ffrt_task_attr_init) | Initializes a task attribute.After the call, the task attribute is set to its default values (for example, the QoSdefaults to [ffrt_qos_default](capi-type-def-h.md#ffrt_qos_default_t)). The caller is expected to invoke[ffrt_task_attr_destroy](capi-task-h.md#ffrt_task_attr_destroy) to release the attribute when it is no longer needed. |
+| [FFRT_C_API int ffrt_task_attr_init(ffrt_task_attr_t* attr)](#ffrt_task_attr_init) | Initializes a task attribute. |
 | [FFRT_C_API void ffrt_task_attr_set_name(ffrt_task_attr_t* attr, const char* name)](#ffrt_task_attr_set_name) | Sets the name of a task attribute. |
 | [FFRT_C_API const char* ffrt_task_attr_get_name(const ffrt_task_attr_t* attr)](#ffrt_task_attr_get_name) | Gets the name of a task attribute. |
-| [FFRT_C_API void ffrt_task_attr_destroy(ffrt_task_attr_t* attr)](#ffrt_task_attr_destroy) | Destroys a task attribute.This interface must be called on a task attribute that was previously initialized with[ffrt_task_attr_init](capi-task-h.md#ffrt_task_attr_init), and is used to release the resources held by the attribute.The attribute must not be used again after destruction. |
-| [FFRT_C_API void ffrt_task_attr_set_qos(ffrt_task_attr_t* attr, ffrt_qos_t qos)](#ffrt_task_attr_set_qos) | Sets the QoS of a task attribute.The QoS controls the scheduling priority of the task. For example, assign ahigher QoS to user-facing work to keep the response time low, and a lower QoS tobackground or housekeeping work to reduce its impact on system resources. |
+| [FFRT_C_API void ffrt_task_attr_destroy(ffrt_task_attr_t* attr)](#ffrt_task_attr_destroy) | Destroys a task attribute, the user needs to invoke this interface. |
+| [FFRT_C_API void ffrt_task_attr_set_qos(ffrt_task_attr_t* attr, ffrt_qos_t qos)](#ffrt_task_attr_set_qos) | Sets the QoS of a task attribute. |
 | [FFRT_C_API ffrt_qos_t ffrt_task_attr_get_qos(const ffrt_task_attr_t* attr)](#ffrt_task_attr_get_qos) | Gets the QoS of a task attribute. |
 | [FFRT_C_API void ffrt_task_attr_set_delay(ffrt_task_attr_t* attr, uint64_t delay_us)](#ffrt_task_attr_set_delay) | Sets the delay time of a task attribute. |
 | [FFRT_C_API uint64_t ffrt_task_attr_get_delay(const ffrt_task_attr_t* attr)](#ffrt_task_attr_get_delay) | Gets the delay time of a task attribute. |
@@ -30,17 +30,17 @@ Declares the FFRT task C APIs, including task attribute initialization and destr
 | [FFRT_C_API ffrt_queue_priority_t ffrt_task_attr_get_queue_priority(const ffrt_task_attr_t* attr)](#ffrt_task_attr_get_queue_priority) | Gets the priority of a task attribute. |
 | [FFRT_C_API void ffrt_task_attr_set_stack_size(ffrt_task_attr_t* attr, uint64_t size)](#ffrt_task_attr_set_stack_size) | Sets the stack size of a task attribute. |
 | [FFRT_C_API uint64_t ffrt_task_attr_get_stack_size(const ffrt_task_attr_t* attr)](#ffrt_task_attr_get_stack_size) | Gets the stack size of a task attribute. |
-| [FFRT_C_API int ffrt_this_task_update_qos(ffrt_qos_t qos)](#ffrt_this_task_update_qos) | Updates the QoS of this task.Use this interface to adjust the scheduling priority of the currently running taskwhen its priority needs to change during execution, for example when a backgroundtask starts to handle a user-initiated operation and requires faster response. |
+| [FFRT_C_API int ffrt_this_task_update_qos(ffrt_qos_t qos)](#ffrt_this_task_update_qos) | Updates the QoS of this task. |
 | [FFRT_C_API ffrt_qos_t ffrt_this_task_get_qos(void)](#ffrt_this_task_get_qos) | Gets the QoS of this task. |
 | [FFRT_C_API uint64_t ffrt_this_task_get_id(void)](#ffrt_this_task_get_id) | Gets the ID of this task. |
-| [FFRT_C_API void* ffrt_alloc_auto_managed_function_storage_base(ffrt_function_kind_t kind)](#ffrt_alloc_auto_managed_function_storage_base) | Allocates memory for the function execution structure.The allocated memory is used as the task executor wrapper passed to[ffrt_submit_base](capi-task-h.md#ffrt_submit_base) or [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base) when submitting a task.The memory is automatically released by the FFRT runtime after the submitted taskfinishes execution, so the caller does not need to free it manually. |
-| [FFRT_C_API void ffrt_submit_base(ffrt_function_header_t* f, const ffrt_deps_t* in_deps, const ffrt_deps_t* out_deps, const ffrt_task_attr_t* attr)](#ffrt_submit_base) | Submits a task.The task is submitted to the FFRT scheduler together with its input and output dependenciesand the task attribute. The scheduler uses the dependencies and the task QoS to determinewhen the task becomes ready to run and which worker executes it. This is the underlyingsubmission interface; the simplified wrapper [ffrt_submit_f](capi-task-h.md#ffrt_submit_f) can be used when notask destroy callback is required. Unlike [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base), this interfacedoes not return a task handle and should be used when the caller does not need to trackthe task after submission.If a task delay has been set on the attribute with [ffrt_task_attr_set_delay](capi-task-h.md#ffrt_task_attr_set_delay), theinput and output dependencies are ignored and the task is scheduled after the delay elapses. |
-| [FFRT_C_API ffrt_task_handle_t ffrt_submit_h_base(ffrt_function_header_t* f, const ffrt_deps_t* in_deps, const ffrt_deps_t* out_deps, const ffrt_task_attr_t* attr)](#ffrt_submit_h_base) | Submits a task, and obtains a task handle.The task is submitted to the FFRT scheduler together with its input and output dependenciesand the task attribute. The scheduler uses the dependencies to determine when the taskbecomes ready to run. The returned handle can be used with [ffrt_wait_deps](capi-task-h.md#ffrt_wait_deps) to waitfor the task, or passed as an input dependency to other submitted tasks to build adependency chain. This is the underlying submission interface that returns a task handle;the simplified wrapper [ffrt_submit_h_f](capi-task-h.md#ffrt_submit_h_f) can be used when no task destroy callbackis required. The returned handle should be released with [ffrt_task_handle_destroy](capi-task-h.md#ffrt_task_handle_destroy)when it is no longer needed, and its reference count can be managed with[ffrt_task_handle_inc_ref](capi-task-h.md#ffrt_task_handle_inc_ref) and [ffrt_task_handle_dec_ref](capi-task-h.md#ffrt_task_handle_dec_ref). |
-| [FFRT_C_API void ffrt_submit_f(ffrt_function_t func, void* arg, const ffrt_deps_t* in_deps, const ffrt_deps_t* out_deps, const ffrt_task_attr_t* attr)](#ffrt_submit_f) | Submits a task, simplified from the [ffrt_submit_base](capi-task-h.md#ffrt_submit_base) interface.This interface wraps the provided task function and its argument into a task wrapperdesignated as a general task (`ffrt_function_kind_general`). During wrapper creation, thetask destroy callback (after_func), which is intended to handle any post-execution cleanup,is set to NULL, thus omitting any additional cleanup actions. The resulting task wrapper isthen submitted using the underlying [ffrt_submit_base](capi-task-h.md#ffrt_submit_base) interface.If a task delay has been set on the attribute with [ffrt_task_attr_set_delay](capi-task-h.md#ffrt_task_attr_set_delay), theinput and output dependencies are ignored and the task is scheduled after the delay elapses. |
-| [FFRT_C_API ffrt_task_handle_t ffrt_submit_h_f(ffrt_function_t func, void* arg, const ffrt_deps_t* in_deps, const ffrt_deps_t* out_deps, const ffrt_task_attr_t* attr)](#ffrt_submit_h_f) | Submits a task, and obtains a handle, simplified from the [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base) interface.This interface wraps the provided task function and its argument into a task wrapperdesignated as a general task (`ffrt_function_kind_general`). During wrapper creation, thetask destroy callback (after_func), which is intended to handle any post-execution cleanup,is set to NULL, thus omitting any additional cleanup actions. The resulting task wrapper isthen submitted using the underlying [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base) interface.If a task delay has been set on the attribute with [ffrt_task_attr_set_delay](capi-task-h.md#ffrt_task_attr_set_delay), theinput and output dependencies are ignored and the task is scheduled after the delay elapses.The returned task handle should be released with [ffrt_task_handle_destroy](capi-task-h.md#ffrt_task_handle_destroy) when itis no longer needed. |
-| [FFRT_C_API uint32_t ffrt_task_handle_inc_ref(ffrt_task_handle_t handle)](#ffrt_task_handle_inc_ref) | Increases the reference count of a task handle.The reference count of the task handle is incremented by one, and the value of thereference count before the increment is returned. |
-| [FFRT_C_API uint32_t ffrt_task_handle_dec_ref(ffrt_task_handle_t handle)](#ffrt_task_handle_dec_ref) | Decreases the reference count of a task handle.The reference count of the task handle is decremented by one, and the value of thereference count before the decrement is returned. Pair this call with[ffrt_task_handle_inc_ref](capi-task-h.md#ffrt_task_handle_inc_ref) and use [ffrt_task_handle_destroy](capi-task-h.md#ffrt_task_handle_destroy) to releasethe handle when it is no longer needed. |
-| [FFRT_C_API void ffrt_task_handle_destroy(ffrt_task_handle_t handle)](#ffrt_task_handle_destroy) | Destroys a task handle.After the call, the task handle is destroyed and the resources associated with it arereleased. The handle must not be used again after destruction. |
+| [FFRT_C_API void *ffrt_alloc_auto_managed_function_storage_base(ffrt_function_kind_t kind)](#ffrt_alloc_auto_managed_function_storage_base) | Applies memory for the function execution structure. |
+| [FFRT_C_API void ffrt_submit_base(ffrt_function_header_t* f, const ffrt_deps_t* in_deps, const ffrt_deps_t* out_deps, const ffrt_task_attr_t* attr)](#ffrt_submit_base) | Submits a task. |
+| [FFRT_C_API ffrt_task_handle_t ffrt_submit_h_base(ffrt_function_header_t* f, const ffrt_deps_t* in_deps, const ffrt_deps_t* out_deps, const ffrt_task_attr_t* attr)](#ffrt_submit_h_base) | Submits a task, and obtains a task handle. |
+| [FFRT_C_API void ffrt_submit_f(ffrt_function_t func, void* arg, const ffrt_deps_t* in_deps, const ffrt_deps_t* out_deps, const ffrt_task_attr_t* attr)](#ffrt_submit_f) | Submits a task, simplified from the ffrt_submit_base interface.This interface wraps the provided task function and its argument into a task wrapperdesignated as a general task (ffrt_function_kind_general). During wrapper creation, thetask destroy callback (after_func), which is intended to handle any post-execution cleanup,is simplified to NULL. The resulting task wrapper is then submitted using the underlyingffrt_submit_base interface. |
+| [FFRT_C_API ffrt_task_handle_t ffrt_submit_h_f(ffrt_function_t func, void* arg, const ffrt_deps_t* in_deps, const ffrt_deps_t* out_deps, const ffrt_task_attr_t* attr)](#ffrt_submit_h_f) | Submits a task, and obtains a task handle, simplified from the ffrt_submit_h_base interface.This interface wraps the provided task function and its argument into a task wrapperdesignated as a general task (ffrt_function_kind_general). During wrapper creation, thetask destroy callback (after_func), which is intended to handle any post-execution cleanup,is simplified to NULL. The resulting task wrapper is then submitted using the underlyingffrt_submit_h_base interface. |
+| [FFRT_C_API uint32_t ffrt_task_handle_inc_ref(ffrt_task_handle_t handle)](#ffrt_task_handle_inc_ref) | Increases reference count of a task. |
+| [FFRT_C_API uint32_t ffrt_task_handle_dec_ref(ffrt_task_handle_t handle)](#ffrt_task_handle_dec_ref) | Decreases reference count of a task. |
+| [FFRT_C_API void ffrt_task_handle_destroy(ffrt_task_handle_t handle)](#ffrt_task_handle_destroy) | Destroys a task handle, the user needs to invoke this interface. |
 | [FFRT_C_API void ffrt_wait_deps(const ffrt_deps_t* deps)](#ffrt_wait_deps) | Waits until the dependent tasks are complete. |
 | [FFRT_C_API void ffrt_wait(void)](#ffrt_wait) | Waits until all submitted tasks are complete. |
 
@@ -54,7 +54,7 @@ FFRT_C_API int ffrt_task_attr_init(ffrt_task_attr_t* attr)
 
 **Description**
 
-Initializes a task attribute.After the call, the task attribute is set to its default values (for example, the QoSdefaults to [ffrt_qos_default](capi-type-def-h.md#ffrt_qos_default_t)). The caller is expected to invoke[ffrt_task_attr_destroy](capi-task-h.md#ffrt_task_attr_destroy) to release the attribute when it is no longer needed.
+Initializes a task attribute.
 
 **Since**: 10
 
@@ -68,7 +68,7 @@ Initializes a task attribute.After the call, the task attribute is set to its de
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `0` if the task attribute is initialized;<br>         `-1` otherwise. |
+| FFRT_C_API int | <b>0</b> if the task attribute is initialized;<br>         <b>-1</b> otherwise. |
 
 ### ffrt_task_attr_set_name()
 
@@ -121,7 +121,7 @@ FFRT_C_API void ffrt_task_attr_destroy(ffrt_task_attr_t* attr)
 
 **Description**
 
-Destroys a task attribute.This interface must be called on a task attribute that was previously initialized with[ffrt_task_attr_init](capi-task-h.md#ffrt_task_attr_init), and is used to release the resources held by the attribute.The attribute must not be used again after destruction.
+Destroys a task attribute, the user needs to invoke this interface.
 
 **Since**: 10
 
@@ -139,7 +139,7 @@ FFRT_C_API void ffrt_task_attr_set_qos(ffrt_task_attr_t* attr, ffrt_qos_t qos)
 
 **Description**
 
-Sets the QoS of a task attribute.The QoS controls the scheduling priority of the task. For example, assign ahigher QoS to user-facing work to keep the response time low, and a lower QoS tobackground or housekeeping work to reduce its impact on system resources.
+Sets the QoS of a task attribute.
 
 **Since**: 10
 
@@ -148,7 +148,7 @@ Sets the QoS of a task attribute.The QoS controls the scheduling priority of the
 | Parameter | Description |
 | -- | -- |
 | [ffrt_task_attr_t](capi-ffrt-ffrt-task-attr-t.md)* attr | Indicates a pointer to the task attribute. |
-| ffrt_qos_t qos | Indicates the QoS level to set. The available levels are defined by {@link ffrt_qos_t}. |
+| ffrt_qos_t qos | Indicates the QoS. |
 
 ### ffrt_task_attr_get_qos()
 
@@ -172,7 +172,7 @@ Gets the QoS of a task attribute.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_qos_t | The QoS, which is `ffrt_qos_default` by default. |
+| FFRT_C_API ffrt_qos_t | The QoS, which is ffrt_qos_default by default. |
 
 ### ffrt_task_attr_set_delay()
 
@@ -215,7 +215,7 @@ Gets the delay time of a task attribute.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API uint64_t | The delay time, in microseconds. |
+| FFRT_C_API uint64_t | The delay time. |
 
 ### ffrt_task_attr_set_queue_priority()
 
@@ -234,7 +234,7 @@ Sets the priority of a task attribute.
 | Parameter | Description |
 | -- | -- |
 | [ffrt_task_attr_t](capi-ffrt-ffrt-task-attr-t.md)* attr | Indicates a pointer to the task attribute. |
-| [ffrt_queue_priority_t](capi-type-def-h.md#ffrt_queue_priority_t) priority | Indicates the priority of a concurrent queue task.The available priorities are defined by [ffrt_queue_priority_t](capi-type-def-h.md#ffrt_queue_priority_t); higher prioritiesare scheduled before lower priorities within the same concurrent queue. Values outsidethe valid range are silently ignored. |
+| [ffrt_queue_priority_t](capi-type-def-h.md#ffrt_queue_priority_t) priority | Indicates the execute priority of concurrent queue task. |
 
 ### ffrt_task_attr_get_queue_priority()
 
@@ -258,7 +258,7 @@ Gets the priority of a task attribute.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_queue_priority_t | The priority of a concurrent queue task. |
+| FFRT_C_API ffrt_queue_priority_t | The priority of concurrent queue task. |
 
 ### ffrt_task_attr_set_stack_size()
 
@@ -277,7 +277,7 @@ Sets the stack size of a task attribute.
 | Parameter | Description |
 | -- | -- |
 | [ffrt_task_attr_t](capi-ffrt-ffrt-task-attr-t.md)* attr | Indicates a pointer to the task attribute. |
-| uint64_t size | Indicates the task stack size, in bytes. The value must be greater than theminimum stack size supported by the system, or stack overflow may occur. Setting it toolarge may result in memory allocation failure. |
+| uint64_t size | Indicates the task stack size, unit is byte. |
 
 ### ffrt_task_attr_get_stack_size()
 
@@ -301,7 +301,7 @@ Gets the stack size of a task attribute.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API uint64_t | The task stack size, in bytes. |
+| FFRT_C_API uint64_t | The task stack size, unit is byte. |
 
 ### ffrt_this_task_update_qos()
 
@@ -311,7 +311,7 @@ FFRT_C_API int ffrt_this_task_update_qos(ffrt_qos_t qos)
 
 **Description**
 
-Updates the QoS of this task.Use this interface to adjust the scheduling priority of the currently running taskwhen its priority needs to change during execution, for example when a backgroundtask starts to handle a user-initiated operation and requires faster response.
+Updates the QoS of this task.
 
 **Since**: 10
 
@@ -319,18 +319,13 @@ Updates the QoS of this task.Use this interface to adjust the scheduling priorit
 
 | Parameter | Description |
 | -- | -- |
-| ffrt_qos_t qos | Indicates the new QoS level for this task. The available levels are defined by {@link ffrt_qos_t}. |
+| ffrt_qos_t qos | Indicates the new QoS. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `0` if the QoS is updated, or if the new QoS is the same as the current QoS;<br>         `1` if the QoS map is not registered, the current task is null, or the<br>         current task is not a general-type task (i.e., not submitted through<br>         [ffrt_submit_base](capi-task-h.md#ffrt_submit_base) or [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base)). |
-
-**Reference**:
-
-[ffrt_this_task_get_qos](capi-task-h.md#ffrt_this_task_get_qos)
-
+| FFRT_C_API int | <b>0</b> if the QoS is updated;<br>         <b>-1</b> otherwise. |
 
 ### ffrt_this_task_get_qos()
 
@@ -366,17 +361,17 @@ Gets the ID of this task.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API uint64_t | The unique task ID of the currently running task. |
+| FFRT_C_API uint64_t | The task ID. |
 
 ### ffrt_alloc_auto_managed_function_storage_base()
 
 ```c
-FFRT_C_API void* ffrt_alloc_auto_managed_function_storage_base(ffrt_function_kind_t kind)
+FFRT_C_API void *ffrt_alloc_auto_managed_function_storage_base(ffrt_function_kind_t kind)
 ```
 
 **Description**
 
-Allocates memory for the function execution structure.The allocated memory is used as the task executor wrapper passed to[ffrt_submit_base](capi-task-h.md#ffrt_submit_base) or [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base) when submitting a task.The memory is automatically released by the FFRT runtime after the submitted taskfinishes execution, so the caller does not need to free it manually.
+Applies memory for the function execution structure.
 
 **Since**: 10
 
@@ -384,19 +379,13 @@ Allocates memory for the function execution structure.The allocated memory is us
 
 | Parameter | Description |
 | -- | -- |
-| [ffrt_function_kind_t](capi-type-def-h.md#ffrt_function_kind_t) kind | Indicates the type of the function execution structure.Use a common (general) kind for tasks submitted through [ffrt_submit_base](capi-task-h.md#ffrt_submit_base) or[ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base), and a queue kind for tasks submitted through the concurrentqueue submit interface. |
+| [ffrt_function_kind_t](capi-type-def-h.md#ffrt_function_kind_t) kind | Indicates the type of the function execution structure, which can be common or queue. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API void* | A non-null pointer if the memory is allocated;<br>         a null pointer otherwise. |
-
-**Reference**:
-
-[ffrt_submit_base](capi-task-h.md#ffrt_submit_base)
-[ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base)
-
+| FFRT_C_API void * | A non-null pointer if the memory is allocated;<br>         a null pointer otherwise. |
 
 ### ffrt_submit_base()
 
@@ -406,7 +395,7 @@ FFRT_C_API void ffrt_submit_base(ffrt_function_header_t* f, const ffrt_deps_t* i
 
 **Description**
 
-Submits a task.The task is submitted to the FFRT scheduler together with its input and output dependenciesand the task attribute. The scheduler uses the dependencies and the task QoS to determinewhen the task becomes ready to run and which worker executes it. This is the underlyingsubmission interface; the simplified wrapper [ffrt_submit_f](capi-task-h.md#ffrt_submit_f) can be used when notask destroy callback is required. Unlike [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base), this interfacedoes not return a task handle and should be used when the caller does not need to trackthe task after submission.If a task delay has been set on the attribute with [ffrt_task_attr_set_delay](capi-task-h.md#ffrt_task_attr_set_delay), theinput and output dependencies are ignored and the task is scheduled after the delay elapses.
+Submits a task.
 
 **Since**: 10
 
@@ -414,15 +403,10 @@ Submits a task.The task is submitted to the FFRT scheduler together with its inp
 
 | Parameter | Description |
 | -- | -- |
-| [ffrt_function_header_t](capi-ffrt-ffrt-function-header-t.md)* f | Indicates a pointer to the task executor wrapper. The wrapper must be allocatedwith [ffrt_alloc_auto_managed_function_storage_base](capi-task-h.md#ffrt_alloc_auto_managed_function_storage_base) and must include a task destroy callback. |
+| [ffrt_function_header_t](capi-ffrt-ffrt-function-header-t.md)* f | Indicates a pointer to the task executor. |
 | [const ffrt_deps_t](capi-ffrt-ffrt-deps-t.md)* in_deps | Indicates a pointer to the input dependencies. |
 | [const ffrt_deps_t](capi-ffrt-ffrt-deps-t.md)* out_deps | Indicates a pointer to the output dependencies. |
 | [const ffrt_task_attr_t](capi-ffrt-ffrt-task-attr-t.md)* attr | Indicates a pointer to the task attribute. |
-
-**Reference**:
-
-[ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base)
-
 
 ### ffrt_submit_h_base()
 
@@ -432,7 +416,7 @@ FFRT_C_API ffrt_task_handle_t ffrt_submit_h_base(ffrt_function_header_t* f, cons
 
 **Description**
 
-Submits a task, and obtains a task handle.The task is submitted to the FFRT scheduler together with its input and output dependenciesand the task attribute. The scheduler uses the dependencies to determine when the taskbecomes ready to run. The returned handle can be used with [ffrt_wait_deps](capi-task-h.md#ffrt_wait_deps) to waitfor the task, or passed as an input dependency to other submitted tasks to build adependency chain. This is the underlying submission interface that returns a task handle;the simplified wrapper [ffrt_submit_h_f](capi-task-h.md#ffrt_submit_h_f) can be used when no task destroy callbackis required. The returned handle should be released with [ffrt_task_handle_destroy](capi-task-h.md#ffrt_task_handle_destroy)when it is no longer needed, and its reference count can be managed with[ffrt_task_handle_inc_ref](capi-task-h.md#ffrt_task_handle_inc_ref) and [ffrt_task_handle_dec_ref](capi-task-h.md#ffrt_task_handle_dec_ref).
+Submits a task, and obtains a task handle.
 
 **Since**: 10
 
@@ -440,7 +424,7 @@ Submits a task, and obtains a task handle.The task is submitted to the FFRT sche
 
 | Parameter | Description |
 | -- | -- |
-| [ffrt_function_header_t](capi-ffrt-ffrt-function-header-t.md)* f | Indicates a pointer to the task executor wrapper. The wrapper must be allocatedwith [ffrt_alloc_auto_managed_function_storage_base](capi-task-h.md#ffrt_alloc_auto_managed_function_storage_base) and must include a task destroy callback. |
+| [ffrt_function_header_t](capi-ffrt-ffrt-function-header-t.md)* f | Indicates a pointer to the task executor. |
 | [const ffrt_deps_t](capi-ffrt-ffrt-deps-t.md)* in_deps | Indicates a pointer to the input dependencies. |
 | [const ffrt_deps_t](capi-ffrt-ffrt-deps-t.md)* out_deps | Indicates a pointer to the output dependencies. |
 | [const ffrt_task_attr_t](capi-ffrt-ffrt-task-attr-t.md)* attr | Indicates a pointer to the task attribute. |
@@ -451,11 +435,6 @@ Submits a task, and obtains a task handle.The task is submitted to the FFRT sche
 | -- | -- |
 | FFRT_C_API ffrt_task_handle_t | A non-null task handle if the task is submitted;<br>         a null pointer otherwise. |
 
-**Reference**:
-
-[ffrt_submit_base](capi-task-h.md#ffrt_submit_base)
-
-
 ### ffrt_submit_f()
 
 ```c
@@ -464,7 +443,7 @@ FFRT_C_API void ffrt_submit_f(ffrt_function_t func, void* arg, const ffrt_deps_t
 
 **Description**
 
-Submits a task, simplified from the [ffrt_submit_base](capi-task-h.md#ffrt_submit_base) interface.This interface wraps the provided task function and its argument into a task wrapperdesignated as a general task (`ffrt_function_kind_general`). During wrapper creation, thetask destroy callback (after_func), which is intended to handle any post-execution cleanup,is set to NULL, thus omitting any additional cleanup actions. The resulting task wrapper isthen submitted using the underlying [ffrt_submit_base](capi-task-h.md#ffrt_submit_base) interface.If a task delay has been set on the attribute with [ffrt_task_attr_set_delay](capi-task-h.md#ffrt_task_attr_set_delay), theinput and output dependencies are ignored and the task is scheduled after the delay elapses.
+Submits a task, simplified from the ffrt_submit_base interface.This interface wraps the provided task function and its argument into a task wrapperdesignated as a general task (ffrt_function_kind_general). During wrapper creation, thetask destroy callback (after_func), which is intended to handle any post-execution cleanup,is simplified to NULL. The resulting task wrapper is then submitted using the underlyingffrt_submit_base interface.
 
 **Since**: 20
 
@@ -491,7 +470,7 @@ FFRT_C_API ffrt_task_handle_t ffrt_submit_h_f(ffrt_function_t func, void* arg, c
 
 **Description**
 
-Submits a task, and obtains a handle, simplified from the [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base) interface.This interface wraps the provided task function and its argument into a task wrapperdesignated as a general task (`ffrt_function_kind_general`). During wrapper creation, thetask destroy callback (after_func), which is intended to handle any post-execution cleanup,is set to NULL, thus omitting any additional cleanup actions. The resulting task wrapper isthen submitted using the underlying [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base) interface.If a task delay has been set on the attribute with [ffrt_task_attr_set_delay](capi-task-h.md#ffrt_task_attr_set_delay), theinput and output dependencies are ignored and the task is scheduled after the delay elapses.The returned task handle should be released with [ffrt_task_handle_destroy](capi-task-h.md#ffrt_task_handle_destroy) when itis no longer needed.
+Submits a task, and obtains a task handle, simplified from the ffrt_submit_h_base interface.This interface wraps the provided task function and its argument into a task wrapperdesignated as a general task (ffrt_function_kind_general). During wrapper creation, thetask destroy callback (after_func), which is intended to handle any post-execution cleanup,is simplified to NULL. The resulting task wrapper is then submitted using the underlyingffrt_submit_h_base interface.
 
 **Since**: 20
 
@@ -524,31 +503,7 @@ FFRT_C_API uint32_t ffrt_task_handle_inc_ref(ffrt_task_handle_t handle)
 
 **Description**
 
-Increases the reference count of a task handle.The reference count of the task handle is incremented by one, and the value of thereference count before the increment is returned.
-
-**Since**: 12
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| ffrt_task_handle_t handle | Indicates a task handle, obtained from [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base) or [ffrt_submit_h_f](capi-task-h.md#ffrt_submit_h_f). |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| FFRT_C_API uint32_t | The task handle reference count value before the increment;<br>         `UINT_MAX` if `handle` is null. |
-
-### ffrt_task_handle_dec_ref()
-
-```c
-FFRT_C_API uint32_t ffrt_task_handle_dec_ref(ffrt_task_handle_t handle)
-```
-
-**Description**
-
-Decreases the reference count of a task handle.The reference count of the task handle is decremented by one, and the value of thereference count before the decrement is returned. Pair this call with[ffrt_task_handle_inc_ref](capi-task-h.md#ffrt_task_handle_inc_ref) and use [ffrt_task_handle_destroy](capi-task-h.md#ffrt_task_handle_destroy) to releasethe handle when it is no longer needed.
+Increases reference count of a task.
 
 **Since**: 12
 
@@ -562,7 +517,31 @@ Decreases the reference count of a task handle.The reference count of the task h
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API uint32_t | The task handle reference count value before the decrement;<br>         `UINT_MAX` if `handle` is null. |
+| FFRT_C_API uint32_t | The task handle original reference count. |
+
+### ffrt_task_handle_dec_ref()
+
+```c
+FFRT_C_API uint32_t ffrt_task_handle_dec_ref(ffrt_task_handle_t handle)
+```
+
+**Description**
+
+Decreases reference count of a task.
+
+**Since**: 12
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| ffrt_task_handle_t handle | Indicates a task handle. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| FFRT_C_API uint32_t | The task handle original reference count. |
 
 ### ffrt_task_handle_destroy()
 
@@ -572,7 +551,7 @@ FFRT_C_API void ffrt_task_handle_destroy(ffrt_task_handle_t handle)
 
 **Description**
 
-Destroys a task handle.After the call, the task handle is destroyed and the resources associated with it arereleased. The handle must not be used again after destruction.
+Destroys a task handle, the user needs to invoke this interface.
 
 **Since**: 10
 
@@ -598,7 +577,7 @@ Waits until the dependent tasks are complete.
 
 | Parameter | Description |
 | -- | -- |
-| [const ffrt_deps_t](capi-ffrt-ffrt-deps-t.md)* deps | Indicates a pointer to the list of dependent tasks. The calling task isblocked until all tasks referenced by this dependency list have finished executing. |
+| [const ffrt_deps_t](capi-ffrt-ffrt-deps-t.md)* deps | Indicates a pointer to the dependent tasks. |
 
 ### ffrt_wait()
 

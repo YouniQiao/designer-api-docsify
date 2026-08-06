@@ -1,0 +1,103 @@
+# getStatsTotalBytes (System API)
+
+## getStatsTotalBytes
+
+```TypeScript
+function getStatsTotalBytes(callback: AsyncCallback<int>): void
+```
+
+Obtains the number of total data bytes of the sharing network interfaces.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
+
+<!--Device-sharing-function getStatsTotalBytes(callback: AsyncCallback<int>): void--><!--Device-sharing-function getStatsTotalBytes(callback: AsyncCallback<int>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.NetSharing
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Returns the number of total data bytes of the sharing network interfaces. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
+
+**Example**
+
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sharing.getStatsTotalBytes((error: BusinessError, data: number) => {
+  console.error(JSON.stringify(error));
+  console.info(JSON.stringify(data));
+});
+```
+
+
+## getStatsTotalBytes
+
+```TypeScript
+function getStatsTotalBytes(): Promise<int>
+```
+
+Obtains the number of total data bytes of the sharing network interfaces.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
+
+<!--Device-sharing-function getStatsTotalBytes(): Promise<int>--><!--Device-sharing-function getStatsTotalBytes(): Promise<int>-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.NetSharing
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | The promise returned by the function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
+
+**Example**
+
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sharing
+  .getStatsTotalBytes()
+  .then((data: number) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+

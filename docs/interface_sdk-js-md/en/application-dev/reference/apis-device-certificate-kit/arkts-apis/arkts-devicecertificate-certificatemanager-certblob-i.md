@@ -1,0 +1,72 @@
+# CertBlob
+
+Indicates the certificate file data.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-certificateManager-export interface CertBlob--><!--Device-certificateManager-export interface CertBlob-End-->
+
+**System capability:** SystemCapability.Security.CertificateManager
+
+## certData
+
+```TypeScript
+certData: Uint8Array
+```
+
+Certificate file data. When certFormat is transferred to PEM\_DER, the maximum length is 8 KB. When certFormat is set to P7B, the maximum length is 300 KB.
+
+**Type:** Uint8Array
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CertBlob-certData: Uint8Array--><!--Device-CertBlob-certData: Uint8Array-End-->
+
+**System capability:** SystemCapability.Security.CertificateManager
+
+## certFormat
+
+```TypeScript
+certFormat? : CertFileFormat
+```
+
+Indicates the certificate file format.Default value: PEM\_DER.
+
+**Type:** CertFileFormat
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CertBlob-certFormat? : CertFileFormat--><!--Device-CertBlob-certFormat? : CertFileFormat-End-->
+
+**System capability:** SystemCapability.Security.CertificateManager
+
+## certScope
+
+```TypeScript
+certScope? : CertScope
+```
+
+Indicates the storage location of the user CA certificate.Default value: Current\_USER.
+
+**Type:** CertScope
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CertBlob-certScope? : CertScope--><!--Device-CertBlob-certScope? : CertScope-End-->
+
+**System capability:** SystemCapability.Security.CertificateManager
+

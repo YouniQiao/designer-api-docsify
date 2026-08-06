@@ -1,0 +1,76 @@
+# SignatureCompareResult (System API)
+
+Signature verification result.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 10
+
+<!--Device-bundle-export enum SignatureCompareResult--><!--Device-bundle-export enum SignatureCompareResult-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+
+## SIGNATURE_MATCHED
+
+```TypeScript
+SIGNATURE_MATCHED = 0
+```
+
+Signatures match.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 10
+
+<!--Device-SignatureCompareResult-SIGNATURE_MATCHED = 0--><!--Device-SignatureCompareResult-SIGNATURE_MATCHED = 0-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+
+## SIGNATURE_NOT_MATCHED
+
+```TypeScript
+SIGNATURE_NOT_MATCHED = 1
+```
+
+Signatures do not match.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 10
+
+<!--Device-SignatureCompareResult-SIGNATURE_NOT_MATCHED = 1--><!--Device-SignatureCompareResult-SIGNATURE_NOT_MATCHED = 1-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+
+## SIGNATURE_UNKNOWN_BUNDLE
+
+```TypeScript
+SIGNATURE_UNKNOWN_BUNDLE = 2
+```
+
+The bundle corresponding to the signature is unknown.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 10
+
+<!--Device-SignatureCompareResult-SIGNATURE_UNKNOWN_BUNDLE = 2--><!--Device-SignatureCompareResult-SIGNATURE_UNKNOWN_BUNDLE = 2-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+

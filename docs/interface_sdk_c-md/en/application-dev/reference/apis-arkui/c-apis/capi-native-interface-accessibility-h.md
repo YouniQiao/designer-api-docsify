@@ -29,6 +29,7 @@ Declares the APIs used to access the native Accessibility.
 | [ArkUI_AccessibilityEventInfo](capi-arkui-accessibility-arkui-accessibilityeventinfo.md) | ArkUI_AccessibilityEventInfo | Defines a struct for accessibility event information. |
 | [ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md) | ArkUI_AccessibilityProvider | Defines a struct for the local provider of accessibility. |
 | [ArkUI_AccessibilityActionArguments](capi-arkui-accessibility-arkui-accessibilityactionarguments.md) | ArkUI_AccessibilityActionArguments | Defines a struct for accessibility action arguments. |
+| [ArkUI_Node*](capi-arkui-accessibility-arkui-node8h.md) | ArkUI_NodeHandle | Defines the pointer to the ArkUI native component object |
 | [ArkUI_AccessibilityElementInfoList](capi-arkui-accessibility-arkui-accessibilityelementinfolist.md) | ArkUI_AccessibilityElementInfoList | Defines a struct for the accessibility element information list. |
 
 ### Enum
@@ -1609,7 +1610,7 @@ Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b>instance of this <
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | Indicates the pointer to the <b>ArkUI_NodeHandle</b> instance. |
+| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md)* node | Indicates the pointer to the <b>ArkUI_NodeHandle</b> instance. |
 | [ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md)** provider | Indicates the pointer to the <b>ArkUI_AccessibilityProvider</b> instance. |
 
 **Returns**:

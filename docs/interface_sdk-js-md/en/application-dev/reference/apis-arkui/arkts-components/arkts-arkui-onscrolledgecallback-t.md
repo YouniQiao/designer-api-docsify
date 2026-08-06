@@ -1,0 +1,26 @@
+# OnScrollEdgeCallback
+
+```TypeScript
+declare type OnScrollEdgeCallback = (side: Edge) => void
+```
+
+Represents the callback triggered when scrolling reaches an edge.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-unnamed-declare type OnScrollEdgeCallback = (side: Edge) => void--><!--Device-unnamed-declare type OnScrollEdgeCallback = (side: Edge) => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| side | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Edge position to scroll to.  |
+

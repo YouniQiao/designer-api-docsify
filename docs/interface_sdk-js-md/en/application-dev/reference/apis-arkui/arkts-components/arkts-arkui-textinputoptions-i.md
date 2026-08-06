@@ -1,0 +1,80 @@
+# TextInputOptions
+
+TextInput** initialization parameters.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+<!--Device-unnamed-declare interface TextInputOptions--><!--Device-unnamed-declare interface TextInputOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## controller
+
+```TypeScript
+controller?: TextInputController
+```
+
+Text input controller.
+
+**Type:** TextInputController
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputOptions-controller?: TextInputController--><!--Device-TextInputOptions-controller?: TextInputController-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## placeholder
+
+```TypeScript
+placeholder?: ResourceStr
+```
+
+Text displayed when there is no input.
+
+**Type:** ResourceStr
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputOptions-placeholder?: ResourceStr--><!--Device-TextInputOptions-placeholder?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## text
+
+```TypeScript
+text?: ResourceStr
+```
+
+Current text input.
+
+You are advised to bind the state variable to the text in real time through the **onChange** event, so as to prevent display errors when the component is updated.
+
+Since API version 10, this parameter supports two-way binding through  
+\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+
+Since API version 18, this parameter supports two-way binding through  
+\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+
+**Type:** ResourceStr
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextInputOptions-text?: ResourceStr--><!--Device-TextInputOptions-text?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

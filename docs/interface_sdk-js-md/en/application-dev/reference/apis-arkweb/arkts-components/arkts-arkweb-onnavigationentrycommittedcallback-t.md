@@ -1,0 +1,24 @@
+# OnNavigationEntryCommittedCallback
+
+```TypeScript
+type OnNavigationEntryCommittedCallback = (loadCommittedDetails: LoadCommittedDetails) => void
+```
+
+The callback of load committed.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-unnamed-type OnNavigationEntryCommittedCallback = (loadCommittedDetails: LoadCommittedDetails) => void--><!--Device-unnamed-type OnNavigationEntryCommittedCallback = (loadCommittedDetails: LoadCommittedDetails) => void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| loadCommittedDetails | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | callback information of onNavigationEntryCommitted.  |
+

@@ -1,0 +1,54 @@
+# RichEditorUpdateTextSpanStyleOptions
+
+Defines text span style option of RichEditor.
+
+**Inheritance/Implementation:** RichEditorUpdateTextSpanStyleOptions extends [RichEditorSpanStyleOptions](richeditor-richeditorspanstyleoptions-i.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare interface RichEditorUpdateTextSpanStyleOptions extends RichEditorSpanStyleOptions--><!--Device-unnamed-export declare interface RichEditorUpdateTextSpanStyleOptions extends RichEditorSpanStyleOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## textStyle
+
+```TypeScript
+textStyle: RichEditorTextStyle
+```
+
+text style.
+
+**Type:** RichEditorTextStyle
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RichEditorUpdateTextSpanStyleOptions-textStyle: RichEditorTextStyle--><!--Device-RichEditorUpdateTextSpanStyleOptions-textStyle: RichEditorTextStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## urlStyle
+
+```TypeScript
+urlStyle?: RichEditorUrlStyle
+```
+
+RichEditor url style.
+
+**Type:** RichEditorUrlStyle
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RichEditorUpdateTextSpanStyleOptions-urlStyle?: RichEditorUrlStyle--><!--Device-RichEditorUpdateTextSpanStyleOptions-urlStyle?: RichEditorUrlStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

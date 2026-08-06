@@ -6,7 +6,7 @@ typedef struct ffrt_dependence_t {...} ffrt_dependence_t
 
 ## Overview
 
-Defines the dependency data structure used to describe a single dependency between tasks.
+Defines the dependency data structure.
 
 **Since**: 10
 
@@ -21,6 +21,6 @@ Defines the dependency data structure used to describe a single dependency betwe
 | Name | Description |
 | -- | -- |
 | [ffrt_dependence_type_t](capi-type-def-h.md#ffrt_dependence_type_t) type | Dependency type. |
-| const void* ptr | Dependency pointer. Points to the data (data dependency) or task handle (task dependency). |
+| const void* ptr | Dependency pointer. |
 
 

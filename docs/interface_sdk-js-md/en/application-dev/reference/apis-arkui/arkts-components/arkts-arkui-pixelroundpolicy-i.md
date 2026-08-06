@@ -1,0 +1,116 @@
+# PixelRoundPolicy
+
+Enumerates the directions of pixel rounding at the component level.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+<!--Device-unnamed-declare interface PixelRoundPolicy--><!--Device-unnamed-declare interface PixelRoundPolicy-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## bottom
+
+```TypeScript
+bottom?: PixelRoundCalcPolicy
+```
+
+Rounding alignment for the component's bottom edge.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Invalid values are rounded using the round-half-up rule.
+
+**Type:** PixelRoundCalcPolicy
+
+**Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PixelRoundPolicy-bottom?: PixelRoundCalcPolicy--><!--Device-PixelRoundPolicy-bottom?: PixelRoundCalcPolicy-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## end
+
+```TypeScript
+end?: PixelRoundCalcPolicy
+```
+
+Rounding alignment for the component's end edge.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Invalid values are rounded using the round-half-up rule.
+
+**Type:** PixelRoundCalcPolicy
+
+**Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PixelRoundPolicy-end?: PixelRoundCalcPolicy--><!--Device-PixelRoundPolicy-end?: PixelRoundCalcPolicy-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## start
+
+```TypeScript
+start?: PixelRoundCalcPolicy
+```
+
+Rounding alignment for the component's start edge.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Invalid values are rounded using the round-half-up rule.
+
+**Type:** PixelRoundCalcPolicy
+
+**Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PixelRoundPolicy-start?: PixelRoundCalcPolicy--><!--Device-PixelRoundPolicy-start?: PixelRoundCalcPolicy-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## top
+
+```TypeScript
+top?: PixelRoundCalcPolicy
+```
+
+Rounding alignment for the component's top edge.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Invalid values are rounded using the round-half-up rule.
+
+**Type:** PixelRoundCalcPolicy
+
+**Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PixelRoundPolicy-top?: PixelRoundCalcPolicy--><!--Device-PixelRoundPolicy-top?: PixelRoundCalcPolicy-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

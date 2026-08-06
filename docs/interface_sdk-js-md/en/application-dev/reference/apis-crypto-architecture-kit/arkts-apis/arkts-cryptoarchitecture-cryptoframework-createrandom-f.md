@@ -1,0 +1,52 @@
+# createRandom
+
+## createRandom
+
+```TypeScript
+function createRandom(): Random
+```
+
+Creates a **Random** instance.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** 
+- API version 12 and later: This API can be used in both the stage model and FA model.
+- API version 9 to 11: This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-cryptoFramework-function createRandom(): Random--><!--Device-cryptoFramework-function createRandom(): Random-End-->
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
+- API version 9 to 11: SystemCapability.Security.CryptoFramework
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the **Random** instance created. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+
+**Example**
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let rand = cryptoFramework.createRandom();
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```
+

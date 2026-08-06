@@ -1,0 +1,44 @@
+# WrapType
+
+Enumerates the encrypted import/export types supported by the asset.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+<!--Device-asset-enum WrapType--><!--Device-asset-enum WrapType-End-->
+
+**System capability:** SystemCapability.Security.Asset
+
+## NEVER
+
+```TypeScript
+NEVER = 0
+```
+
+Encrypted import/export is not allowed for the asset.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+<!--Device-WrapType-NEVER = 0--><!--Device-WrapType-NEVER = 0-End-->
+
+**System capability:** SystemCapability.Security.Asset
+
+## TRUSTED_ACCOUNT
+
+```TypeScript
+TRUSTED_ACCOUNT = 1
+```
+
+Encrypted import/export is allowed for the asset only on devices where a trusted account is logged in.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+<!--Device-WrapType-TRUSTED_ACCOUNT = 1--><!--Device-WrapType-TRUSTED_ACCOUNT = 1-End-->
+
+**System capability:** SystemCapability.Security.Asset
+

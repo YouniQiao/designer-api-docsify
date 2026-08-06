@@ -1,0 +1,83 @@
+# AudioInterrupt
+
+Describes input parameters of audio interruption events.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.multimedia.audio.AudioRendererOptions
+
+<!--Device-audio-interface AudioInterrupt--><!--Device-audio-interface AudioInterrupt-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+## contentType
+
+```TypeScript
+contentType: ContentType
+```
+
+Audio content type.
+
+**Type:** ContentType
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.multimedia.audio.AudioRendererOptions#rendererInfo
+
+<!--Device-AudioInterrupt-contentType: ContentType--><!--Device-AudioInterrupt-contentType: ContentType-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+## pauseWhenDucked
+
+```TypeScript
+pauseWhenDucked: boolean
+```
+
+Whether audio playback can be paused during an audio interruption. **true** if audio playback can be paused,  
+**false** otherwise.
+
+**Type:** boolean
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.multimedia.audio.InterruptEvent#hintType
+
+<!--Device-AudioInterrupt-pauseWhenDucked: boolean--><!--Device-AudioInterrupt-pauseWhenDucked: boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+## streamUsage
+
+```TypeScript
+streamUsage: StreamUsage
+```
+
+Audio stream usage.
+
+**Type:** StreamUsage
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.multimedia.audio.AudioRendererOptions#rendererInfo
+
+<!--Device-AudioInterrupt-streamUsage: StreamUsage--><!--Device-AudioInterrupt-streamUsage: StreamUsage-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+

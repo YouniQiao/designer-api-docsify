@@ -1,0 +1,34 @@
+# BackupPriority (System API)
+
+Control backup and restore priority sequence
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-backup-interface BackupPriority--><!--Device-backup-interface BackupPriority-End-->
+
+**System capability:** SystemCapability.FileManagement.StorageService.Backup
+
+**System API:** This is a system API.
+
+## priority
+
+```TypeScript
+priority?: int
+```
+
+Indicates the priority of a bundle.
+
+**Type:** int
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-BackupPriority-priority?: int--><!--Device-BackupPriority-priority?: int-End-->
+
+**System capability:** SystemCapability.FileManagement.StorageService.Backup
+
+**System API:** This is a system API.
+

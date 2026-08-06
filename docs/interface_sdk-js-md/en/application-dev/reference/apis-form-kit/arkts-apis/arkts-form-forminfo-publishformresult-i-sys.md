@@ -1,0 +1,58 @@
+# PublishFormResult (System API)
+
+The result of publish form.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-formInfo-interface PublishFormResult--><!--Device-formInfo-interface PublishFormResult-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## code
+
+```TypeScript
+code: PublishFormErrorCode
+```
+
+The error code.
+
+**Type:** PublishFormErrorCode
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PublishFormResult-code: PublishFormErrorCode--><!--Device-PublishFormResult-code: PublishFormErrorCode-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## message
+
+```TypeScript
+message: string
+```
+
+The message.
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PublishFormResult-message: string--><!--Device-PublishFormResult-message: string-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+

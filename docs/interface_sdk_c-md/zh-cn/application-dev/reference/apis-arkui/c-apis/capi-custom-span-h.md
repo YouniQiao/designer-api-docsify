@@ -18,9 +18,9 @@ Defines a set of CustomSpan enum and interface.
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [ArkUI_CustomSpanMeasureInfo](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md) | ArkUI_CustomSpanMeasureInfo | 自定义Span组件的测量信息。该结构体用于在自定义Span组件的测量回调中提供组件的测量数据，帮助开发者实现自定义文本组件的精确尺寸测量与布局排版。 |
-| [ArkUI_CustomSpanMetrics](capi-arkui-nativemodule-arkui-customspanmetrics.md) | ArkUI_CustomSpanMetrics | 自定义Span组件的度量指标，用于描述自定义Span的宽高、位置等布局信息。开发者可通过该结构体设置自定义Span的宽高数据，实现更精准的文本布局控制和排版优化。适用于需要精细控制文本显示效果的场景，如富文本编辑器中的图文混排、聊天应用中的表情内嵌、文档应用中的自定义标记等。 |
-| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md) | ArkUI_CustomSpanDrawInfo | 自定义段落组件的绘制信息，用于在该组件的绘制回调中向开发者传递绘制信息，开发者可在自定义绘制流程中获取并使用该信息，实现定制化的段落组件绘制效果。 |
+| [ArkUI_CustomSpanMeasureInfo](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md) | ArkUI_CustomSpanMeasureInfo | Defines a struct for the measurement information of a custom span. |
+| [ArkUI_CustomSpanMetrics](capi-arkui-nativemodule-arkui-customspanmetrics.md) | ArkUI_CustomSpanMetrics | Defines a struct for the measurement metrics of a custom span. |
+| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md) | ArkUI_CustomSpanDrawInfo | Defines a struct for the drawing information of a custom span. |
 
 ### 函数
 
@@ -58,7 +58,7 @@ void OH_ArkUI_CustomSpanMeasureInfo_Dispose(ArkUI_CustomSpanMeasureInfo* info)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_CustomSpanMeasureInfo](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md)* info |  自定义段落组件测量信息指针。 |
+| [ArkUI_CustomSpanMeasureInfo](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md)* info | 自定义段落组件测量信息指针。 |
 
 ### OH_ArkUI_CustomSpanMeasureInfo_GetFontSize()
 
@@ -76,13 +76,13 @@ float OH_ArkUI_CustomSpanMeasureInfo_GetFontSize(ArkUI_CustomSpanMeasureInfo* in
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_CustomSpanMeasureInfo](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md)* info |  自定义段落组件测量信息指针。 |
+| [ArkUI_CustomSpanMeasureInfo](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md)* info | 自定义段落组件测量信息指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| float | 父节点Text的字体大小，单位为fp。若函数参数异常，返回0.0f。 <br>         异常返回原因：传入参数验证失败，参数不能为空。 |
+| float | 父节点Text的字体大小，单位为fp。若函数参数异常，返回0.0f。<br> 异常返回原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_CustomSpanMetrics_Dispose()
 
@@ -125,7 +125,7 @@ int32_t OH_ArkUI_CustomSpanMetrics_SetWidth(ArkUI_CustomSpanMetrics* metrics, fl
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。 <br>         {@link ARKUI_ERROR_CODE_NO_ERROR} 成功。 <br>         {@link ARKUI_ERROR_CODE_PARAM_INVALID} 函数参数异常。 <br>         异常原因：传入参数验证失败，参数不能为空。 |
+| int32_t | 错误码。<br>         {@link ARKUI_ERROR_CODE_NO_ERROR} 成功。<br>         {@link ARKUI_ERROR_CODE_PARAM_INVALID} 函数参数异常。<br>         异常原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_CustomSpanMetrics_SetHeight()
 
@@ -144,13 +144,13 @@ int32_t OH_ArkUI_CustomSpanMetrics_SetHeight(ArkUI_CustomSpanMetrics* metrics, f
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_CustomSpanMetrics](capi-arkui-nativemodule-arkui-customspanmetrics.md)* metrics | CustomSpanMetrics实例。 |
-| float height | 高度大小，单位为vp。默认值为0.0f，负值与默认值效果一致。 |
+| width | Indicates the height, in px. The width should be greater than 0. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。 <br>         {@link ARKUI_ERROR_CODE_NO_ERROR} 成功。 <br>         {@link ARKUI_ERROR_CODE_PARAM_INVALID} 函数参数异常。 <br>         异常原因：传入参数验证失败，参数不能为空。 |
+| int32_t | 错误码。<br>         {@link ARKUI_ERROR_CODE_NO_ERROR} 成功。<br>         {@link ARKUI_ERROR_CODE_PARAM_INVALID} 函数参数异常。<br>         异常原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_CustomSpanDrawInfo_Dispose()
 
@@ -168,7 +168,7 @@ void OH_ArkUI_CustomSpanDrawInfo_Dispose(ArkUI_CustomSpanDrawInfo* info)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info |  自定义段落组件绘制信息指针。 |
+| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info | 自定义段落组件绘制信息指针。 |
 
 ### OH_ArkUI_CustomSpanDrawInfo_GetXOffset()
 
@@ -186,13 +186,13 @@ float OH_ArkUI_CustomSpanDrawInfo_GetXOffset(ArkUI_CustomSpanDrawInfo* info)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info |  自定义段落组件绘制信息指针。 |
+| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info | 自定义段落组件绘制信息指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| float | x轴偏移值，单位为px。若函数参数异常，返回0.0f。 <br>         异常返回原因：传入参数验证失败，参数不能为空。 |
+| float | x轴偏移值，单位为px。若函数参数异常，返回0.0f。<br> 异常返回原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_CustomSpanDrawInfo_GetLineTop()
 
@@ -210,13 +210,13 @@ float OH_ArkUI_CustomSpanDrawInfo_GetLineTop(ArkUI_CustomSpanDrawInfo* info)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info |  自定义段落组件绘制信息指针。 |
+| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info | 自定义段落组件绘制信息指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| float | 上边距值，单位为px。若函数参数异常，返回0.0f。 <br>         异常返回原因：传入参数验证失败，参数不能为空。 |
+| float | 上边距值，单位为px。若函数参数异常，返回0.0f。<br> 异常返回原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_CustomSpanDrawInfo_GetLineBottom()
 
@@ -234,13 +234,13 @@ float OH_ArkUI_CustomSpanDrawInfo_GetLineBottom(ArkUI_CustomSpanDrawInfo* info)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info |  自定义段落组件绘制信息指针。 |
+| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info | 自定义段落组件绘制信息指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| float | 下边距值，单位为px。若函数参数异常，返回0.0f。 <br>         异常返回原因：传入参数验证失败，参数不能为空。 |
+| float | 下边距值，单位为px。若函数参数异常，返回0.0f。<br> 异常返回原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_CustomSpanDrawInfo_GetBaseline()
 
@@ -258,13 +258,13 @@ float OH_ArkUI_CustomSpanDrawInfo_GetBaseline(ArkUI_CustomSpanDrawInfo* info)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info |  自定义段落组件绘制信息指针。 |
+| [ArkUI_CustomSpanDrawInfo](capi-arkui-nativemodule-arkui-customspandrawinfo.md)* info | 自定义段落组件绘制信息指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| float | 基线偏移量值，单位为px。若函数参数异常，返回0.0f。 <br>         异常返回原因：传入参数验证失败，参数不能为空。 |
+| float | 基线偏移量值，单位为px。若函数参数异常，返回0.0f。<br> 异常返回原因：传入参数验证失败，参数不能为空。 |
 
 ### OH_ArkUI_CustomSpanMeasureInfo_Create()
 
@@ -282,7 +282,7 @@ ArkUI_CustomSpanMeasureInfo* OH_ArkUI_CustomSpanMeasureInfo_Create(void)
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_CustomSpanMeasureInfo*](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md) | CustomSpanMeasureInfo实例。 <br>         如果返回空指针，可能是因为内存不足。 |
+| [ArkUI_CustomSpanMeasureInfo*](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md) | CustomSpanMeasureInfo实例。<br> 如果返回空指针，可能是因为内存不足。 |
 
 ### OH_ArkUI_CustomSpanMetrics_Create()
 
@@ -300,7 +300,7 @@ ArkUI_CustomSpanMetrics* OH_ArkUI_CustomSpanMetrics_Create(void)
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_CustomSpanMetrics*](capi-arkui-nativemodule-arkui-customspanmetrics.md) | CustomSpanMetrics实例。 <br>         如果返回空指针，可能是因为内存不足。 |
+| [ArkUI_CustomSpanMetrics*](capi-arkui-nativemodule-arkui-customspanmetrics.md) | CustomSpanMetrics实例。<br> 如果返回空指针，可能是因为内存不足。 |
 
 ### OH_ArkUI_CustomSpanDrawInfo_Create()
 
@@ -318,6 +318,6 @@ ArkUI_CustomSpanDrawInfo* OH_ArkUI_CustomSpanDrawInfo_Create(void)
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_CustomSpanDrawInfo*](capi-arkui-nativemodule-arkui-customspandrawinfo.md) | CustomSpanDrawInfo实例。 <br>         如果返回空指针，可能是因为内存不足。 |
+| [ArkUI_CustomSpanDrawInfo*](capi-arkui-nativemodule-arkui-customspandrawinfo.md) | CustomSpanDrawInfo实例。<br> 如果返回空指针，可能是因为内存不足。 |
 
 

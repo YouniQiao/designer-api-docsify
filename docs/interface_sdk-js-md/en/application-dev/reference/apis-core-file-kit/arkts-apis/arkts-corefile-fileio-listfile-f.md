@@ -1,0 +1,123 @@
+# listFile
+
+## listFile
+
+```TypeScript
+function listFile(
+  path: string,
+  options?: ListFileOptions
+): Promise<string[]>
+```
+
+Lists the names of all files and directories in the current directory. A file name array is returned, which can be filtered by file name or file name extension. This API uses a promise to return the result.
+
+This API supports recursively listing the relative paths of all files by setting **recursion** in  
+**ListFileOptions**. The relative path starts with a slash (/).
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-fileIo-function listFile(  path: string,  options?: ListFileOptions): Promise<string[]>--><!--Device-fileIo-function listFile(  path: string,  options?: ListFileOptions): Promise<string[]>-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the directory. |
+| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for filtering files. The files are not filtered by default. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string[]&gt; | Promise used to return the file name array, which is encoded in UTF-8 format by default. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
+
+
+## listFile
+
+```TypeScript
+function listFile(path: string, callback: AsyncCallback<string[]>): void
+```
+
+Lists the names of all files and directories in the current path. A file name array is returned. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-fileIo-function listFile(path: string, callback: AsyncCallback<string[]>): void--><!--Device-fileIo-function listFile(path: string, callback: AsyncCallback<string[]>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the directory. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string[]&gt; | Yes | Callback used to return the file name array, which is encoded in UTF-8 format by default. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
+
+
+## listFile
+
+```TypeScript
+function listFile(
+  path: string,
+  options: ListFileOptions,
+  callback: AsyncCallback<string[]>
+): void
+```
+
+Lists the names of all files and directories in the current directory. A file name array is returned, which can be filtered by file name or file name extension. This API uses an asynchronous callback to return the result.
+
+This API supports recursively listing the relative paths of all files by setting **recursion** in  
+**ListFileOptions**. The relative path starts with a slash (/).
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-fileIo-function listFile(  path: string,  options: ListFileOptions,  callback: AsyncCallback<string[]>): void--><!--Device-fileIo-function listFile(  path: string,  options: ListFileOptions,  callback: AsyncCallback<string[]>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Application sandbox path of the directory. |
+| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for filtering files. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string[]&gt; | Yes | Callback used to return the file name array, which is encoded in UTF-8 format by default. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900002 | No such file or directory |
+| 13900008 | Bad file descriptor |
+| 13900011 | Out of memory |
+| 13900018 | Not a directory |
+| 13900042 | Unknown error |
+

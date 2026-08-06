@@ -1,0 +1,58 @@
+# DistributedInfo (System API)
+
+Manages the distributed info of the table.
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+<!--Device-relationalStore-interface DistributedInfo--><!--Device-relationalStore-interface DistributedInfo-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**System API:** This is a system API.
+
+## flag
+
+```TypeScript
+flag?: DistributedOrigin
+```
+
+Specifies the data origin sources.
+
+**Type:** DistributedOrigin
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistributedInfo-flag?: DistributedOrigin--><!--Device-DistributedInfo-flag?: DistributedOrigin-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**System API:** This is a system API.
+
+## oriDevice
+
+```TypeScript
+oriDevice?: string
+```
+
+Specifies the data origin sources device ID.
+
+**Type:** string
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistributedInfo-oriDevice?: string--><!--Device-DistributedInfo-oriDevice?: string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**System API:** This is a system API.
+

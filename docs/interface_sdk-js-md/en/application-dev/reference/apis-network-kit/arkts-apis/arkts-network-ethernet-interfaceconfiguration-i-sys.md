@@ -1,0 +1,152 @@
+# InterfaceConfiguration (System API)
+
+Defines the network configuration for the Ethernet connection.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-ethernet-export interface InterfaceConfiguration--><!--Device-ethernet-export interface InterfaceConfiguration-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Ethernet
+
+**System API:** This is a system API.
+
+## dnsServers
+
+```TypeScript
+dnsServers: string
+```
+
+The Ethernet connection is configured with the dns service address.The address value range is 0-255.0-255.0-255.0-255.0-255(DHCP mode does not need to be configured, Multiple addresses are separated by ",")
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-InterfaceConfiguration-dnsServers: string--><!--Device-InterfaceConfiguration-dnsServers: string-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Ethernet
+
+**System API:** This is a system API.
+
+## gateway
+
+```TypeScript
+gateway: string
+```
+
+Ethernet connection static configuration gateway information.The address value range is 0-255.0-255.0-255.0-255.0-255(DHCP mode does not need to be configured)
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-InterfaceConfiguration-gateway: string--><!--Device-InterfaceConfiguration-gateway: string-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Ethernet
+
+**System API:** This is a system API.
+
+## httpProxy
+
+```TypeScript
+httpProxy?: HttpProxy
+```
+
+Indicates the HttpProxy settings, no proxy is to be used as default.
+
+**Type:** HttpProxy
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+<!--Device-InterfaceConfiguration-httpProxy?: HttpProxy--><!--Device-InterfaceConfiguration-httpProxy?: HttpProxy-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Ethernet
+
+**System API:** This is a system API.
+
+## ipAddr
+
+```TypeScript
+ipAddr: string
+```
+
+Ethernet connection static configuration IP information.The address value range is 0-255.0-255.0-255.0-255.0-255(DHCP mode does not need to be configured)
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-InterfaceConfiguration-ipAddr: string--><!--Device-InterfaceConfiguration-ipAddr: string-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Ethernet
+
+**System API:** This is a system API.
+
+## mode
+
+```TypeScript
+mode: IPSetMode
+```
+
+**Type:** IPSetMode
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-InterfaceConfiguration-mode: IPSetMode--><!--Device-InterfaceConfiguration-mode: IPSetMode-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Ethernet
+
+**System API:** This is a system API.
+
+## netMask
+
+```TypeScript
+netMask: string
+```
+
+Ethernet connection static configuration netMask information.The address value range is 0-255.0-255.0-255.0-255.0-255(DHCP mode does not need to be configured)
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-InterfaceConfiguration-netMask: string--><!--Device-InterfaceConfiguration-netMask: string-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Ethernet
+
+**System API:** This is a system API.
+
+## route
+
+```TypeScript
+route: string
+```
+
+Ethernet connection static configuration route information.The address value range is 0-255.0-255.0-255.0-255.0-255(DHCP mode does not need to be configured)
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-InterfaceConfiguration-route: string--><!--Device-InterfaceConfiguration-route: string-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Ethernet
+
+**System API:** This is a system API.
+

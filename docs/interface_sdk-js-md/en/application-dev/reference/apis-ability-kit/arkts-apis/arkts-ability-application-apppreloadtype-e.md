@@ -1,0 +1,102 @@
+# AppPreloadType
+
+Enumerates the preloading types of the current application process.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+
+<!--Device-application-export enum AppPreloadType--><!--Device-application-export enum AppPreloadType-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## UNSPECIFIED
+
+```TypeScript
+UNSPECIFIED = 0
+```
+
+No preloading has taken place, or the preloaded data has been cleared.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppPreloadType-UNSPECIFIED = 0--><!--Device-AppPreloadType-UNSPECIFIED = 0-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## TYPE_CREATE_PROCESS
+
+```TypeScript
+TYPE_CREATE_PROCESS = 1
+```
+
+Preloads the process up to the point of process creation completion.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppPreloadType-TYPE_CREATE_PROCESS = 1--><!--Device-AppPreloadType-TYPE_CREATE_PROCESS = 1-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## TYPE_CREATE_ABILITY_STAGE
+
+```TypeScript
+TYPE_CREATE_ABILITY_STAGE = 2
+```
+
+Preloads the process up to the point of [AbilityStage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_creation completion.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppPreloadType-TYPE_CREATE_ABILITY_STAGE = 2--><!--Device-AppPreloadType-TYPE_CREATE_ABILITY_STAGE = 2-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## TYPE_CREATE_WINDOW_STAGE
+
+```TypeScript
+TYPE_CREATE_WINDOW_STAGE = 3
+```
+
+Preloads the process up to the point of [WindowStage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ creation completion.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppPreloadType-TYPE_CREATE_WINDOW_STAGE = 3--><!--Device-AppPreloadType-TYPE_CREATE_WINDOW_STAGE = 3-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## TYPE_CREATE_BACKGROUND_ABILITY
+
+```TypeScript
+TYPE_CREATE_BACKGROUND_ABILITY = 4
+```
+
+Preloads the process up to the point of [onBackground]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_execution completion.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppPreloadType-TYPE_CREATE_BACKGROUND_ABILITY = 4--><!--Device-AppPreloadType-TYPE_CREATE_BACKGROUND_ABILITY = 4-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+

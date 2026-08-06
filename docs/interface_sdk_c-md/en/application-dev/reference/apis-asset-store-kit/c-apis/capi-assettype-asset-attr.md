@@ -20,7 +20,7 @@ Defines an asset attribute, which consists of a tag and a value in the form of a
 
 | Name | Description |
 | -- | -- |
-| uint32_t tag | The tag of an asset attribute. |
-| [Asset_Value](capi-assettype-asset-value.md) value | The value (content) of an asset attribute. |
+| uint32_t tag | Name of the asset attribute. The tag (the key in the KV pair) uniquely identifies an attribute. |
+| [Asset_Value](capi-assettype-asset-value.md) value | Defines the value of the asset attribute. |
 
 

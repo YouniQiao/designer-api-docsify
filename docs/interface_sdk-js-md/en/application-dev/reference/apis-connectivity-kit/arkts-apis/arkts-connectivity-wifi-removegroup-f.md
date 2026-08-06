@@ -1,0 +1,42 @@
+# removeGroup
+
+## removeGroup
+
+```TypeScript
+function removeGroup(): boolean
+```
+
+Removes a P2P group.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.wifiManager/wifiManager.removeP2pGroup
+
+**Required permissions:** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifi-function removeGroup(): boolean--><!--Device-wifi-function removeGroup(): boolean-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns { |
+
+**Example**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+	wifi.removeGroup();	
+}catch(error){
+	console.error("failed:" + JSON.stringify(error));
+}
+```
+

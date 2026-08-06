@@ -1,12 +1,12 @@
 # OH_Huks_KeyMaterialEcc
 
 ```c
-typedef struct OH_Huks_KeyMaterialEcc {...} OH_Huks_KeyMaterialEcc
+struct OH_Huks_KeyMaterialEcc {...}
 ```
 
 ## 概述
 
-定义ECC密钥的结构体类型。
+定义Ecc密钥的结构体类型。
 
 **起始版本：** 9
 
@@ -21,9 +21,9 @@ typedef struct OH_Huks_KeyMaterialEcc {...} OH_Huks_KeyMaterialEcc
 | 名称 | 描述 |
 | -- | -- |
 | enum [OH_Huks_KeyAlg](capi-native-huks-type-h.md#oh_huks_keyalg) keyAlg | 密钥的算法类型。 |
-| uint32_t keySize | 密钥的长度，单位：Bit。 |
-| uint32_t xSize | x值的长度，单位：Byte。 |
-| uint32_t ySize | y值的长度，单位：Byte。 |
-| uint32_t zSize | z值的长度，对应私钥d的数据大小，单位：Byte。 |
+| uint32_t keySize | 密钥的长度。 |
+| uint32_t xSize | x值的长度。 |
+| uint32_t ySize | y值的长度。 |
+| uint32_t zSize | z值的长度。 |
 
 

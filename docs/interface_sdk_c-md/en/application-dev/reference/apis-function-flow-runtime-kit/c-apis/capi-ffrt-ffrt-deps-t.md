@@ -6,7 +6,7 @@ typedef struct ffrt_deps_t {...} ffrt_deps_t
 
 ## Overview
 
-Defines the dependency structure, used to hold a list of dependencies for a task.
+Defines the dependency structure.
 
 **Since**: 10
 
@@ -21,6 +21,6 @@ Defines the dependency structure, used to hold a list of dependencies for a task
 | Name | Description |
 | -- | -- |
 | uint32_t len | Number of dependencies. |
-| const [ffrt_dependence_t*](capi-ffrt-ffrt-dependence-t.md) items | Dependency data array. |
+| const [ffrt_dependence_t*](capi-ffrt-ffrt-dependence-t.md) items | Dependency data. |
 
 

@@ -1,0 +1,134 @@
+# SectionOptions
+
+Describes the configuration of the water flow item section.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare class SectionOptions--><!--Device-unnamed-export declare class SectionOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onGetItemMainSizeByIndex
+
+```TypeScript
+onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
+```
+
+Callback used to obtain the main axis size,in vp, of the water flow item at a specified index during the layout process of the WaterFlow component.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_1. When both \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_onGetItemMainSizeByIndex\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_and the width or height attribute of the water flow item are used,the main axis size is determined by the return value of \_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_onGetItemMainSizeByIndex\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_,which will override the main axis length of water flow item.\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_2. Using \_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_onGetItemMainSizeByIndex\_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_ can improve the efficiency of jumping to a specific position or index in the \_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_WaterFlow\_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_ component.Avoid mixing the use of \_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_onGetItemMainSizeByIndex\_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_ with sections that do not have it set,as this can cause layout exceptions.\_\_\_HTML\_TAG\_DESC\_USD\_15\_\_\_3. If \_\_\_HTML\_TAG\_DESC\_USD\_16\_\_\_onGetItemMainSizeByIndex\_\_\_HTML\_TAG\_DESC\_USD\_17\_\_\_ returns a negative number, the height of the water flow item is 0.\_\_\_HTML\_TAG\_DESC\_USD\_18\_\_\_
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SectionOptions-onGetItemMainSizeByIndex?: GetItemMainSizeByIndex--><!--Device-SectionOptions-onGetItemMainSizeByIndex?: GetItemMainSizeByIndex-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## columnsGap
+
+```TypeScript
+columnsGap?: Dimension
+```
+
+Gap between columns. If this parameter is not set, the value of columnsGap for the water flow is used.If this parameter is set to an invalid value, 0 vp is used.
+
+**Type:** Dimension
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SectionOptions-columnsGap?: Dimension--><!--Device-SectionOptions-columnsGap?: Dimension-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## crossCount
+
+```TypeScript
+crossCount?: int
+```
+
+The columns of this section in vertical layout, or rows in horizontal layout.The value should be an integer.
+
+**Type:** int
+
+**Default:** 1 one column in vertical layout, or one row in horizontal layout
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SectionOptions-crossCount?: int--><!--Device-SectionOptions-crossCount?: int-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## itemsCount
+
+```TypeScript
+itemsCount: int
+```
+
+The number of FlowItems in this section.The value should be an integer.
+
+**Type:** int
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SectionOptions-itemsCount: int--><!--Device-SectionOptions-itemsCount: int-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## margin
+
+```TypeScript
+margin?: Margin | Dimension
+```
+
+Padding of the section. A value of the Length type specifies the margin for all the four sides.
+
+**Type:** Margin \| Dimension
+
+**Default:** {top: 0, right: 0, bottom: 0, left: 0}
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SectionOptions-margin?: Margin | Dimension--><!--Device-SectionOptions-margin?: Margin | Dimension-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## rowsGap
+
+```TypeScript
+rowsGap?: Dimension
+```
+
+Gap between rows. If this parameter is not set, the value of \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_rowsGap\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ for the water flow is used.If this parameter is set to an invalid value, 0 vp is used.
+
+**Type:** Dimension
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SectionOptions-rowsGap?: Dimension--><!--Device-SectionOptions-rowsGap?: Dimension-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

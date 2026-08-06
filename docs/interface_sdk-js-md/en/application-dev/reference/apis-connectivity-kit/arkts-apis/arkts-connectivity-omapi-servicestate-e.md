@@ -1,0 +1,44 @@
+# ServiceState
+
+Secure Element service state definition.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+<!--Device-omapi-enum ServiceState--><!--Device-omapi-enum ServiceState-End-->
+
+**System capability:** SystemCapability.Communication.SecureElement
+
+## DISCONNECTED
+
+```TypeScript
+DISCONNECTED = 0
+```
+
+Service is disconnected.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+<!--Device-ServiceState-DISCONNECTED = 0--><!--Device-ServiceState-DISCONNECTED = 0-End-->
+
+**System capability:** SystemCapability.Communication.SecureElement
+
+## CONNECTED
+
+```TypeScript
+CONNECTED = 1
+```
+
+Service is connected.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+<!--Device-ServiceState-CONNECTED = 1--><!--Device-ServiceState-CONNECTED = 1-End-->
+
+**System capability:** SystemCapability.Communication.SecureElement
+

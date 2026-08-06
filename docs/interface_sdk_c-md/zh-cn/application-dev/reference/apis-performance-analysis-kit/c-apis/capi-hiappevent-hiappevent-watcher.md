@@ -6,7 +6,7 @@ typedef struct HiAppEvent_Watcher HiAppEvent_Watcher
 
 ## 概述
 
-接收应用事件的事件观察者。用于对应用事件进行监听和处理。
+用于接收app事件的监听器。
 
 **起始版本：** 12
 

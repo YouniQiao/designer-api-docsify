@@ -1,0 +1,40 @@
+# SystemDefinedRecord
+
+Represents specific data types defined by OpenHarmony. It is a child class of  
+[UnifiedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and a base class of OpenHarmony-specific data types. You are advised to use the child class of **SystemDefinedRecord**, for example,  
+[SystemDefinedForm]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,  
+[SystemDefinedAppItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, and  
+[SystemDefinedPixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, to describe OpenHarmony-specific data.
+
+**Inheritance/Implementation:** SystemDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-unifiedDataChannel-class SystemDefinedRecord extends UnifiedRecord--><!--Device-unifiedDataChannel-class SystemDefinedRecord extends UnifiedRecord-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## details
+
+```TypeScript
+details?: Record<string, int | long | double | string | Uint8Array>
+```
+
+A dictionary type object, where the key is of the string type, and the value can be a number, a string, or a Uint8Array. The default value is an empty dictionary object.
+
+**Type:** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SystemDefinedRecord-details?: Record<string, int | long | double | string | Uint8Array>--><!--Device-SystemDefinedRecord-details?: Record<string, int | long | double | string | Uint8Array>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+

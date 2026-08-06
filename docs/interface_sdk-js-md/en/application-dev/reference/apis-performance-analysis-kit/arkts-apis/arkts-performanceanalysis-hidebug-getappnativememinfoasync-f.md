@@ -1,0 +1,35 @@
+# getAppNativeMemInfoAsync
+
+## getAppNativeMemInfoAsync
+
+```TypeScript
+function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
+```
+
+Obtains the memory information of application processes by reading the data of the **\/proc/{pid}/smaps\_rollup** and  
+**\/proc/{pid}/statm** nodes. This API uses a promise to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-hidebug-function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>--><!--Device-hidebug-function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;NativeMemInfo&gt; | Promise used to return the application process memory information. |
+
+**Example**
+
+```TypeScript
+hidebug.getAppNativeMemInfoAsync().then((nativeMemInfo: hidebug.NativeMemInfo)=>{
+  console.info(`pss: ${nativeMemInfo.pss}, vss: ${nativeMemInfo.vss}, rss: ${nativeMemInfo.rss}, ` +
+    `sharedDirty: ${nativeMemInfo.sharedDirty}, privateDirty: ${nativeMemInfo.privateDirty}, ` +
+    `sharedClean: ${nativeMemInfo.sharedClean}, privateClean: ${nativeMemInfo.privateClean}`);
+});
+```
+

@@ -1,0 +1,44 @@
+# ControllerAttachState
+
+Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for indicating the attach state of controller.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-webview-enum ControllerAttachState--><!--Device-webview-enum ControllerAttachState-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## UNATTACHED
+
+```TypeScript
+UNATTACHED = 0
+```
+
+Indicates webviewController is not attached a web component.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ControllerAttachState-UNATTACHED = 0--><!--Device-ControllerAttachState-UNATTACHED = 0-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## ATTACHED
+
+```TypeScript
+ATTACHED = 1
+```
+
+Indicates webviewController is attached a web component.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ControllerAttachState-ATTACHED = 1--><!--Device-ControllerAttachState-ATTACHED = 1-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+

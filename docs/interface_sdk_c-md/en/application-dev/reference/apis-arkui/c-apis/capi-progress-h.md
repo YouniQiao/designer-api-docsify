@@ -30,7 +30,6 @@ Defines a set of Progress enum and interface.
 
 | Name | Description |
 | -- | -- |
-| [ArkUI_ProgressLinearStyleOption* OH_ArkUI_ProgressLinearStyleOption_Create(void)](#oh_arkui_progresslinearstyleoption_create) | Create linear progress indicator style information. |
 | [void OH_ArkUI_ProgressLinearStyleOption_Destroy(ArkUI_ProgressLinearStyleOption* option)](#oh_arkui_progresslinearstyleoption_destroy) | Destroy linear progress indicator style information. |
 | [void OH_ArkUI_ProgressLinearStyleOption_SetScanEffectEnabled(ArkUI_ProgressLinearStyleOption* option, bool enabled)](#oh_arkui_progresslinearstyleoption_setscaneffectenabled) | Set whether the scan effect is enabled. |
 | [void OH_ArkUI_ProgressLinearStyleOption_SetSmoothEffectEnabled(ArkUI_ProgressLinearStyleOption* option, bool enabled)](#oh_arkui_progresslinearstyleoption_setsmootheffectenabled) | Set whether smoothing effect is enabled. |
@@ -40,6 +39,7 @@ Defines a set of Progress enum and interface.
 | [bool OH_ArkUI_ProgressLinearStyleOption_GetSmoothEffectEnabled(ArkUI_ProgressLinearStyleOption* option)](#oh_arkui_progresslinearstyleoption_getsmootheffectenabled) | Get whether smoothing effect is enabled. |
 | [float OH_ArkUI_ProgressLinearStyleOption_GetStrokeWidth(ArkUI_ProgressLinearStyleOption* option)](#oh_arkui_progresslinearstyleoption_getstrokewidth) | Get linear progress indicator stroke width. |
 | [float OH_ArkUI_ProgressLinearStyleOption_GetStrokeRadius(ArkUI_ProgressLinearStyleOption* option)](#oh_arkui_progresslinearstyleoption_getstrokeradius) | Get linear progress indicator stroke radius. |
+| [ArkUI_ProgressLinearStyleOption* OH_ArkUI_ProgressLinearStyleOption_Create(void)](#oh_arkui_progresslinearstyleoption_create) | Create linear progress indicator style information. |
 
 ## Enum type description
 
@@ -65,24 +65,6 @@ Enumerates the styles of the progress indicator.
 
 
 ## Function description
-
-### OH_ArkUI_ProgressLinearStyleOption_Create()
-
-```c
-ArkUI_ProgressLinearStyleOption* OH_ArkUI_ProgressLinearStyleOption_Create(void)
-```
-
-**Description**
-
-Create linear progress indicator style information.
-
-**Since**: 15
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [ArkUI_ProgressLinearStyleOption*](capi-arkui-nativemodule-arkui-progresslinearstyleoption.md) | Returns a <b>ProgressLinearStyleOption</b> instance.<br> <br> If the result returns nullptr, there may be out of memory. |
 
 ### OH_ArkUI_ProgressLinearStyleOption_Destroy()
 
@@ -273,5 +255,23 @@ Get linear progress indicator stroke radius.
 | Type | Description |
 | -- | -- |
 | float | Rounded corner radius of the progress indicator. |
+
+### OH_ArkUI_ProgressLinearStyleOption_Create()
+
+```c
+ArkUI_ProgressLinearStyleOption* OH_ArkUI_ProgressLinearStyleOption_Create(void)
+```
+
+**Description**
+
+Create linear progress indicator style information.
+
+**Since**: 15
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ProgressLinearStyleOption*](capi-arkui-nativemodule-arkui-progresslinearstyleoption.md) | Returns a <b>ProgressLinearStyleOption</b> instance.<br> <br> If the result returns nullptr, there may be out of memory. |
 
 

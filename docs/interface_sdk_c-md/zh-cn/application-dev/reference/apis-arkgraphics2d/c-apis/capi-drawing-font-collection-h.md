@@ -18,7 +18,7 @@ This file declares the functions related to the font collection in the drawing m
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)](#oh_drawing_createfontcollection) | 创建字体集对象[OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)。(API26.1.0废弃) |
+| [OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)](#oh_drawing_createfontcollection) | 创建字体集对象[OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)。 |
 | [void OH_Drawing_DestroyFontCollection(OH_Drawing_FontCollection* fontCollection)](#oh_drawing_destroyfontcollection) | 释放被字体集对象占据的内存。 |
 | [void OH_Drawing_DisableFontCollectionFallback(OH_Drawing_FontCollection* fontCollection)](#oh_drawing_disablefontcollectionfallback) | 禁用系统字体。(API18废弃) |
 | [void OH_Drawing_DisableFontCollectionSystemFont(OH_Drawing_FontCollection* fontCollection)](#oh_drawing_disablefontcollectionsystemfont) | 禁用系统字体。 |
@@ -41,10 +41,6 @@ OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 8
-
-**废弃版本：** 26.1.0
-
-**替代接口：** OH_Drawing_CreateSharedFontCollection
 
 **返回：**
 

@@ -19,7 +19,6 @@ Defines the functions for obtaining and using a native image.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_OnFrameAvailableListener](capi-oh-nativeimage-oh-onframeavailablelistener.md) | OH_OnFrameAvailableListener | A listener for native image, use <b>OH_NativeImage_SetOnFrameAvailableListener</b> to register <br> the listener object to <b>OH_NativeImage</b>, the callback will be triggered when there is available frame |
-| [NativeWindow](capi-oh-nativeimage-nativewindow.md) | OHNativeWindow | Defines the native window. |
 | [NativeWindowBuffer](capi-oh-nativeimage-nativewindowbuffer.md) | OHNativeWindowBuffer | define the new type name OHNativeWindowBuffer for struct NativeWindowBuffer. |
 
 ### Function
@@ -127,7 +126,7 @@ Acquire the OHNativeWindow for the OH_NativeImage.<br> This interface is a non-t
 
 | Type | Description |
 | -- | -- |
-| [OHNativeWindow*](capi-oh-nativeimage-nativewindow.md) | Returns the pointer to the OHNativeWindow if the operation is successful, returns <b>NULL</b> otherwise. |
+| OHNativeWindow* | Returns the pointer to the OHNativeWindow if the operation is successful, returns <b>NULL</b> otherwise. |
 
 ### OH_NativeImage_AttachContext()
 

@@ -1,0 +1,132 @@
+# HidDeviceQos
+
+Represents the Quality of Service (QoS) settings for a bluetooth hid device application.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+
+<!--Device-hid-interface HidDeviceQos--><!--Device-hid-interface HidDeviceQos-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## delayVariation
+
+```TypeScript
+delayVariation?: int
+```
+
+L2CAP delay variation, default = -1.
+
+**Type:** int
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HidDeviceQos-delayVariation?: int--><!--Device-HidDeviceQos-delayVariation?: int-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## latency
+
+```TypeScript
+latency?: int
+```
+
+L2CAP latency, default = -1.
+
+**Type:** int
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HidDeviceQos-latency?: int--><!--Device-HidDeviceQos-latency?: int-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## peakBandwidth
+
+```TypeScript
+peakBandwidth?: int
+```
+
+L2CAP peak bandwidth, default = 0.
+
+**Type:** int
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HidDeviceQos-peakBandwidth?: int--><!--Device-HidDeviceQos-peakBandwidth?: int-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## serviceType
+
+```TypeScript
+serviceType?: ServiceType
+```
+
+L2CAP service type, default = SERVICE\_BEST\_EFFORT.
+
+**Type:** ServiceType
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HidDeviceQos-serviceType?: ServiceType--><!--Device-HidDeviceQos-serviceType?: ServiceType-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## tokenBucketSize
+
+```TypeScript
+tokenBucketSize?: int
+```
+
+L2CAP token bucket size, default = 0.
+
+**Type:** int
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HidDeviceQos-tokenBucketSize?: int--><!--Device-HidDeviceQos-tokenBucketSize?: int-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## tokenRate
+
+```TypeScript
+tokenRate?: int
+```
+
+L2CAP tokenRate, means transmission rate, default = 0.
+
+**Type:** int
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HidDeviceQos-tokenRate?: int--><!--Device-HidDeviceQos-tokenRate?: int-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+

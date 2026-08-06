@@ -1,0 +1,190 @@
+# TemplateFormDetailInfo (System API)
+
+TemplateFormDetailInfo
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-formInfo-interface TemplateFormDetailInfo--><!--Device-formInfo-interface TemplateFormDetailInfo-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## abilityName
+
+```TypeScript
+abilityName: string
+```
+
+Obtains the ability name of the template form.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-abilityName: string--><!--Device-TemplateFormDetailInfo-abilityName: string-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## bundleName
+
+```TypeScript
+bundleName: string
+```
+
+Obtains the bundle name of the template form.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-bundleName: string--><!--Device-TemplateFormDetailInfo-bundleName: string-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## description
+
+```TypeScript
+description: string
+```
+
+Obtains the form description of the template form.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-description: string--><!--Device-TemplateFormDetailInfo-description: string-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## detailId
+
+```TypeScript
+detailId: string
+```
+
+Obtains the form detail Id of the template form.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-detailId: string--><!--Device-TemplateFormDetailInfo-detailId: string-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## dimension
+
+```TypeScript
+dimension: FormDimension
+```
+
+Obtains the form dimension of the template form.
+
+**Type:** FormDimension
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-dimension: FormDimension--><!--Device-TemplateFormDetailInfo-dimension: FormDimension-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## displayName
+
+```TypeScript
+displayName: string
+```
+
+Obtains the form display name of the template form.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-displayName: string--><!--Device-TemplateFormDetailInfo-displayName: string-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## formName
+
+```TypeScript
+formName: string
+```
+
+Obtains the form name of the template form.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-formName: string--><!--Device-TemplateFormDetailInfo-formName: string-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## moduleName
+
+```TypeScript
+moduleName: string
+```
+
+Obtains the module name of the template form.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-moduleName: string--><!--Device-TemplateFormDetailInfo-moduleName: string-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+

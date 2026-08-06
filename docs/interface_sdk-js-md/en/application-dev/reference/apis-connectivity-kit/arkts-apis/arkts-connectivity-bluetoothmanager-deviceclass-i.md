@@ -1,0 +1,82 @@
+# DeviceClass
+
+Describes the class of a bluetooth device.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 10
+
+**Substitutes:** ohos.bluetooth.connection/connection.DeviceClass
+
+<!--Device-bluetoothManager-interface DeviceClass--><!--Device-bluetoothManager-interface DeviceClass-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## classOfDevice
+
+```TypeScript
+classOfDevice: number
+```
+
+Class of the device.
+
+**Type:** number
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 10
+
+**Substitutes:** ohos.bluetooth.connection/connection.DeviceClass#classOfDevice
+
+<!--Device-DeviceClass-classOfDevice: number--><!--Device-DeviceClass-classOfDevice: number-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## majorClass
+
+```TypeScript
+majorClass: MajorClass
+```
+
+Major classes of Bluetooth devices.
+
+**Type:** MajorClass
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 10
+
+**Substitutes:** ohos.bluetooth.connection/connection.DeviceClass#majorClass
+
+<!--Device-DeviceClass-majorClass: MajorClass--><!--Device-DeviceClass-majorClass: MajorClass-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## majorMinorClass
+
+```TypeScript
+majorMinorClass: MajorMinorClass
+```
+
+Major and minor classes of Bluetooth devices.
+
+**Type:** MajorMinorClass
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 10
+
+**Substitutes:** ohos.bluetooth.connection/connection.DeviceClass#majorMinorClass
+
+<!--Device-DeviceClass-majorMinorClass: MajorMinorClass--><!--Device-DeviceClass-majorMinorClass: MajorMinorClass-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+

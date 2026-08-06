@@ -1,0 +1,28 @@
+# @ohos.application.formError
+
+interface of formError.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-declare namespace formError--><!--Device-unnamed-declare namespace formError-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+## Summary
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [FormError](arkts-form-formerror-formerror-e.md) | Error of form. |
+
+<!--Del-->
+### Enums（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [FormError](arkts-form-formerror-formerror-e-sys.md) | Error of form. |
+<!--DelEnd-->
+

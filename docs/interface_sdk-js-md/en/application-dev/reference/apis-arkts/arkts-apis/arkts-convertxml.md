@@ -1,0 +1,26 @@
+# @ohos.convertxml
+
+The convertxml module provides APIs for converting XML text into JavaScript objects.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+<!--Device-unnamed-declare namespace xml--><!--Device-unnamed-declare namespace xml-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## Summary
+
+### Classes
+
+| Name | Description |
+| --- | --- |
+| [ConvertXML](arkts-arkts-xml-convertxml-c.md) | ConvertXML representation refers to extensible markup language. |
+
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | Options for conversion. |
+

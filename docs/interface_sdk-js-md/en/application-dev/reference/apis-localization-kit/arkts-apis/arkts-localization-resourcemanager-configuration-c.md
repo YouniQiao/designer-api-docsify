@@ -1,0 +1,152 @@
+# Configuration
+
+Defines the device configuration.
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+
+<!--Device-resourceManager-export class Configuration--><!--Device-resourceManager-export class Configuration-End-->
+
+**System capability:** SystemCapability.Global.ResourceManager
+
+## colorMode
+
+```TypeScript
+colorMode: ColorMode
+```
+
+Color mode.
+
+**Type:** ColorMode
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Configuration-colorMode: ColorMode--><!--Device-Configuration-colorMode: ColorMode-End-->
+
+**System capability:** SystemCapability.Global.ResourceManager
+
+## deviceType
+
+```TypeScript
+deviceType: DeviceType
+```
+
+Device type.
+
+**Type:** DeviceType
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Configuration-deviceType: DeviceType--><!--Device-Configuration-deviceType: DeviceType-End-->
+
+**System capability:** SystemCapability.Global.ResourceManager
+
+## direction
+
+```TypeScript
+direction: Direction
+```
+
+Screen orientation modes.
+
+**Type:** Direction
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Configuration-direction: Direction--><!--Device-Configuration-direction: Direction-End-->
+
+**System capability:** SystemCapability.Global.ResourceManager
+
+## locale
+
+```TypeScript
+locale: string
+```
+
+Language locale.
+
+**Type:** string
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Configuration-locale: string--><!--Device-Configuration-locale: string-End-->
+
+**System capability:** SystemCapability.Global.ResourceManager
+
+## mcc
+
+```TypeScript
+mcc : int
+```
+
+Mobile country code (MCC).
+
+**Type:** int
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Configuration-mcc : int--><!--Device-Configuration-mcc : int-End-->
+
+**System capability:** SystemCapability.Global.ResourceManager
+
+## mnc
+
+```TypeScript
+mnc : int
+```
+
+Mobile network code (MNC).
+
+**Type:** int
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Configuration-mnc : int--><!--Device-Configuration-mnc : int-End-->
+
+**System capability:** SystemCapability.Global.ResourceManager
+
+## screenDensity
+
+```TypeScript
+screenDensity: ScreenDensity
+```
+
+Screen density
+
+**Type:** ScreenDensity
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Configuration-screenDensity: ScreenDensity--><!--Device-Configuration-screenDensity: ScreenDensity-End-->
+
+**System capability:** SystemCapability.Global.ResourceManager
+

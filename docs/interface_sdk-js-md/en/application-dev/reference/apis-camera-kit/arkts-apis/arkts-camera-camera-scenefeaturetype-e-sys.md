@@ -1,0 +1,68 @@
+# SceneFeatureType (System API)
+
+Enumerates the scene features.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-camera-enum SceneFeatureType--><!--Device-camera-enum SceneFeatureType-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+## MOON_CAPTURE_BOOST
+
+```TypeScript
+MOON_CAPTURE_BOOST = 0
+```
+
+Moon scene.This is a system API.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-SceneFeatureType-MOON_CAPTURE_BOOST = 0--><!--Device-SceneFeatureType-MOON_CAPTURE_BOOST = 0-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+## TRIPOD_DETECTION
+
+```TypeScript
+TRIPOD_DETECTION = 1
+```
+
+Scene where a tripod is used for photo capture.This is a system API.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+
+<!--Device-SceneFeatureType-TRIPOD_DETECTION = 1--><!--Device-SceneFeatureType-TRIPOD_DETECTION = 1-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+## LOW_LIGHT_BOOST
+
+```TypeScript
+LOW_LIGHT_BOOST = 2
+```
+
+Scene for long exposure photography.This is a system API.
+
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+
+<!--Device-SceneFeatureType-LOW_LIGHT_BOOST = 2--><!--Device-SceneFeatureType-LOW_LIGHT_BOOST = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+

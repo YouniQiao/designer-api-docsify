@@ -12,7 +12,7 @@ Describes the width and height of a component.
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**Header file**: [common_type.h](capi-common-type-h.md)
+**Header file**: [native_type.h](capi-native-type-h.md)
 
 ## Summary
 
@@ -20,7 +20,7 @@ Describes the width and height of a component.
 
 | Name | Description |
 | -- | -- |
-| int32_t width |  |
-| int32_t height |  |
+| int32_t width | Width, in px. |
+| int32_t height | Height, in px. |
 
 

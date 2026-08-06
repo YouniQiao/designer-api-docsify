@@ -1,0 +1,58 @@
+# onAudioMonoStateChange
+
+## onAudioMonoStateChange
+
+```TypeScript
+function onAudioMonoStateChange(callback: Callback<boolean>): void
+```
+
+Subscribes to the state changes in mono audio mode. This API uses an asynchronous callback to return the result.
+    **NOTE**  
+    
+    - The callback parameter for registering a listener must use a named function instead of an anonymous function.  
+    Otherwise, a new underlying object is created each time the function is called, causing memory leakage.  
+    
+    - After calling this method, you must use  
+    [accessibility.offAudioMonoStateChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
+    to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-accessibility-function onAudioMonoStateChange(callback: Callback<boolean>): void--><!--Device-accessibility-function onAudioMonoStateChange(callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback function. Returns **true** if mono audio mode is enabled; returns **false** otherwise. |
+
+**Example**
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+@Entry
+@Component
+struct Index {
+  callback: (data: boolean) => void = this.eventCallback;
+  eventCallback(data: boolean): void {
+    console.info(`subscribe audioMono state change, result: ${JSON.stringify(data)}`);
+  }
+
+  aboutToAppear(): void {
+    accessibility.onAudioMonoStateChange(this.callback);
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
+```
+

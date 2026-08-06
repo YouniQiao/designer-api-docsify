@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides the enumeration and structure definitions required by the `resourcemanager` module.<br>This header file defines enumerations such as error codes, screen orientations, color modes, device types, andscreen densities, as well as the device configuration structure, providing data type support for the resourceretrieval functions in `ohresmgr.h`.
+Provides the enum types and structures for resource manager APIs.
 
 **Library**: libohresmgr.so
 
@@ -18,7 +18,7 @@ Provides the enumeration and structure definitions required by the `resourcemana
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ResourceManager_Configuration](capi-resourcemanager-resourcemanager-configuration.md) | ResourceManager_Configuration | Structure of the device status. |
+| [ResourceManager_Configuration](capi-resourcemanager-resourcemanager-configuration.md) | ResourceManager_Configuration | Enumerates device states. |
 
 ### Enum
 
@@ -28,7 +28,7 @@ Provides the enumeration and structure definitions required by the `resourcemana
 | [ResourceManager_Direction](#resourcemanager_direction) | ResourceManager_Direction | Enumerates screen orientations. |
 | [ResourceManager_ColorMode](#resourcemanager_colormode) | ResourceManager_ColorMode | Enumerates color modes. |
 | [ResourceManager_DeviceType](#resourcemanager_devicetype) | ResourceManager_DeviceType | Enumerates device types. |
-| [ScreenDensity](#screendensity) | ScreenDensity | Enumerates the screen density types. |
+| [ScreenDensity](#screendensity) | ScreenDensity | Enumerates screen density types. |
 
 ## Enum type description
 
@@ -53,9 +53,9 @@ Enumerates resource manager error codes.
 | ERROR_CODE_RES_NAME_NOT_FOUND = 9001003 | Invalid resource name. |
 | ERROR_CODE_RES_NOT_FOUND_BY_NAME = 9001004 | No matching resource found based on the resource name. |
 | ERROR_CODE_RES_PATH_INVALID = 9001005 | Invalid relative path. |
-| ERROR_CODE_RES_REF_TOO_MUCH = 9001006 | Circular reference exists in the resource. |
-| ERROR_CODE_RES_ID_FORMAT_ERROR = 9001007 | Failed to format the resource obtained based on the resource ID. |
-| ERROR_CODE_RES_NAME_FORMAT_ERROR = 9001008 | Failed to format the resource obtained based on the resource name. |
+| ERROR_CODE_RES_REF_TOO_MUCH = 9001006 | Resource referenced cyclically. |
+| ERROR_CODE_RES_ID_FORMAT_ERROR = 9001007 | Failed to format the resource obtained based on the specified resource ID. |
+| ERROR_CODE_RES_NAME_FORMAT_ERROR = 9001008 | Failed to format the resource obtained based on the specified resource name. |
 | ERROR_CODE_SYSTEM_RES_MANAGER_GET_FAILED = 9001009 | Failed to access system resources. |
 | ERROR_CODE_OVERLAY_RES_PATH_INVALID = 9001010 | Invalid overlay path. |
 | ERROR_CODE_OUT_OF_MEMORY = 9001100 | A memory overflow occurs. |
@@ -74,8 +74,8 @@ Enumerates screen orientations.
 
 | Enum item | Description |
 | -- | -- |
-| DIRECTION_VERTICAL = 0 | Portrait orientation. |
-| DIRECTION_HORIZONTAL = 1 | Landscape orientation. |
+| DIRECTION_VERTICAL = 0 | Vertical direction. |
+| DIRECTION_HORIZONTAL = 1 | Horizontal direction. |
 
 ### ResourceManager_ColorMode
 
@@ -108,13 +108,13 @@ Enumerates device types.
 
 | Enum item | Description |
 | -- | -- |
-| DEVICE_TYPE_PHONE = 0X00 | Smartphone. |
-| DEVICE_TYPE_TABLET = 0x01 | Tablet. |
-| DEVICE_TYPE_CAR = 0x02 | Car head unit. |
-| DEVICE_TYPE_PC = 0x03 | PC. |
-| DEVICE_TYPE_TV = 0x04 | Smart screen. |
-| DEVICE_TYPE_WEARABLE = 0x06 | Wearable. |
-| DEVICE_TYPE_2IN1 = 0x07 | 2-in-1 device. |
+| DEVICE_TYPE_PHONE = 0X00 | Smartphone |
+| DEVICE_TYPE_TABLET = 0x01 | Tablet |
+| DEVICE_TYPE_CAR = 0x02 | Automobile |
+| DEVICE_TYPE_PC = 0x03 | Computer |
+| DEVICE_TYPE_TV = 0x04 | TV. |
+| DEVICE_TYPE_WEARABLE = 0x06 | Wearable |
+| DEVICE_TYPE_2IN1 = 0x07 | 2-in-1 device |
 
 ### ScreenDensity
 
@@ -124,7 +124,7 @@ enum ScreenDensity
 
 **Description**
 
-Enumerates the screen density types.
+Enumerates screen density types.
 
 **Since**: 12
 

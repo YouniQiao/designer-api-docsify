@@ -6,7 +6,7 @@ typedef struct Asset_Value {...} Asset_Value
 
 ## 概述
 
-关键资产属性的值（内容）。
+关键资产属性内容。
 
 **起始版本：** 11
 

@@ -1,0 +1,108 @@
+# @ohos.app.form.formHost
+
+The **formHost** module provides APIs related to the widget host, which is an application that displays the widget content and controls the position where the widget is displayed. You can use the APIs to delete, release, and update widgets installed by the same user, and obtain widget information and status.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-declare namespace formHost--><!--Device-unnamed-declare namespace formHost-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## Summary
+
+<!--Del-->
+### Functions（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [acquireFormData](arkts-form-formhost-acquireformdata-f-sys.md#acquireformdata) | Requests data from the widget provider. This API uses an asynchronous callback to return the result. |
+| [acquireFormData](arkts-form-formhost-acquireformdata-f-sys.md#acquireformdata-1) | Requests data from the widget provider. This API uses a promise to return the result. |
+| [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md#acquireformstate) | Obtains the widget state. This API uses an asynchronous callback to return the result. |
+| [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md#acquireformstate-1) | Obtains the widget state. This API uses a promise to return the result. |
+| [addForm](arkts-form-formhost-addform-f-sys.md#addform) | Add a form.  You can use this method to create a theme form. |
+| [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md#casttonormalform) | Converts a temporary widget to a normal one. This API uses an asynchronous callback to return the result. |
+| [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md#casttonormalform-1) | Converts a temporary widget to a normal one. This API uses a promise to return the result. |
+| [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md#clearrouterproxy) | Clears the router proxy set for widgets. This API uses an asynchronous callback to return the result. |
+| [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md#clearrouterproxy-1) | Clears the router proxy set for widgets. This API uses a promise to return the result. |
+| [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteform) | Deletes a widget. After this API is called, the application can no longer use the widget, and the Widget Manager will not retain the widget information. This API uses an asynchronous callback to return the result. |
+| [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteform-1) | Deletes a widget. After this API is called, the application can no longer use the widget, and the Widget Manager will not retain the widget information. This API uses a promise to return the result. |
+| [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md#deleteinvalidforms) | Deletes invalid widgets from the list. This API uses an asynchronous callback to return the result. |
+| [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md#deleteinvalidforms-1) | Deletes invalid widgets from the list. This API uses a promise to return the result. |
+| [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md#disableformsupdate) | Instructs the widget framework to make a widget not updatable. After this API is called, the widget cannot receive updates from the widget provider. This API uses an asynchronous callback to return the result. |
+| [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md#disableformsupdate-1) | Instructs the widget framework to make a widget not updatable. After this API is called, the widget cannot receive updates from the widget provider. This API uses a promise to return the result. |
+| [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md#enableformsupdate) | Instructs the widget framework to make a widget updatable. After this API is called, the widget is in the enabled state and can receive updates from the widget provider. This API uses an asynchronous callback to return the result. |
+| [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md#enableformsupdate-1) | Instructs the widget framework to make a widget updatable. After this API is called, the widget is in the enabled state and can receive updates from the widget provider. This API uses a promise to return the result. |
+| [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getallformsinfo) | Obtains the widget information provided by all applications on the device (excluding template widgets). This API uses an asynchronous callback to return the result. |
+| [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getallformsinfo-1) | Obtains the widget information provided by all applications on the device (excluding template widgets). This API uses a promise to return the result. |
+| [getAllTemplateFormsInfo](arkts-form-formhost-getalltemplateformsinfo-f-sys.md#getalltemplateformsinfo) | Obtains the template widget information provided by all applications on the device. This API uses a promise to return the result. |
+| [getFormIdsByFormLocation](arkts-form-formhost-getformidsbyformlocation-f-sys.md#getformidsbyformlocation) | Obtains the list of widget IDs at a specified location on the device. This API uses a promise to return the result. |
+| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo) | Obtains the widget information provided by a specified application on the device (excluding template widgets).This API uses an asynchronous callback to return the result. |
+| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo-1) | Obtains the widget information provided by a specified application on the device (excluding template widgets). This API uses an asynchronous callback to return the result. |
+| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo-2) | Obtains the widget information provided by a specified application on the device (excluding template widgets).This API uses a promise to return the result. |
+| [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo-3) | Obtains the widget information provided by a specified application on the device (excluding template widgets).This API uses a promise to return the result. |
+| [getTemplateFormsInfo](arkts-form-formhost-gettemplateformsinfo-f-sys.md#gettemplateformsinfo) | Obtains the template widget information provided by a specified application on the device. This API uses a promise to return the result. |
+| [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#issystemready) | Checks whether the system is ready. This API uses an asynchronous callback to return the result. |
+| [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#issystemready-1) | Checks whether the system is ready. This API uses a promise to return the result. |
+| [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyformsenableupdate) | Instructs the widgets to enable or disable updates. This API uses an asynchronous callback to return the result. |
+| [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyformsenableupdate-1) | Instructs the widgets to enable or disable updates. This API uses a promise to return the result. |
+| [notifyFormsPrivacyProtected](arkts-form-formhost-notifyformsprivacyprotected-f-sys.md#notifyformsprivacyprotected) | Notifies that the privacy protection status of the specified widgets changes. This API uses an asynchronous callback to return the result. |
+| [notifyFormsPrivacyProtected](arkts-form-formhost-notifyformsprivacyprotected-f-sys.md#notifyformsprivacyprotected-1) | Notifies that the privacy protection status of the specified widgets changes. This API uses a promise to return the result. |
+| [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyformsvisible) | Instructs the widgets to make themselves visible. This API uses an asynchronous callback to return the result. |
+| [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyformsvisible-1) | Instructs the widgets to make themselves visible. This API uses a promise to return the result. |
+| [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md#notifyinvisibleforms) | Instructs the widget framework to make a widget invisible. After this API is called, **onVisibilityChange** is invoked to notify the widget provider. This API uses an asynchronous callback to return the result. |
+| [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md#notifyinvisibleforms-1) | Instructs the widget framework to make a widget invisible. After this API is called, **onVisibilityChange** is invoked to notify the widget provider. This API uses a promise to return the result. |
+| [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyvisibleforms) | Instructs the widget framework to make a widget visible. After this API is called, **onVisibilityChange** is invoked to notify the widget provider. This API uses an asynchronous callback to return the result. |
+| [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyvisibleforms-1) | Instructs the widget framework to make a widget visible. After this API is called, **onVisibilityChange** is invoked to notify the widget provider. This API uses a promise to return the result. |
+| [off](arkts-form-formhost-off-f-sys.md#off) | Unsubscribes from widget uninstall events. This API uses an asynchronous callback to return the result. |
+| [off](arkts-form-formhost-off-f-sys.md#off-1) | Unsubscribes from the interactive widget animation request event. This API uses an asynchronous callback to return the result. |
+| [off](arkts-form-formhost-off-f-sys.md#off-2) | Unsubscribes from the event of switching the interactive widget state. An interactive widget can be in the active or inactive state. In the inactive state, the interactive widget is the same as a common widget. In the active state, the interactive widget can start the **LiveFormExtensionAbility** process developed by the widget host to implement interactive widget animations. This API uses an asynchronous callback to return the result. |
+| [off](arkts-form-formhost-off-f-sys.md#off-3) | Unsubscribes from the event of requesting widget position and dimension. This API uses an asynchronous callback to return the result. |
+| [off](arkts-form-formhost-off-f-sys.md#off-4) | Cancels Listening to the event of get live form status. |
+| [offChangeSceneAnimationState](arkts-form-formhost-offchangesceneanimationstate-f-sys.md#offchangesceneanimationstate) | Cancels listening to the event of change scene animation state.  You can use this method to cancel listening to the event of change scene animation state. |
+| [offDeleteFormsCallback](arkts-form-formhost-offdeleteformscallback-f-sys.md#offdeleteformscallback) | Unregister the callback for deleting forms. |
+| [offFormOverflow](arkts-form-formhost-offformoverflow-f-sys.md#offformoverflow) | Cancels listening to the event of formOverflow.  You can use this method to cancel listening to the event of formOverflow. |
+| [offFormUninstall](arkts-form-formhost-offformuninstall-f-sys.md#offformuninstall) | Cancels listening to the event of uninstall form.  You can use this method to cancel listening to the event of uninstall form. |
+| [offGetFormRect](arkts-form-formhost-offgetformrect-f-sys.md#offgetformrect) | Cancels listening to the event of get form rect.  You can use this method to cancel listening to the event of get form rect. |
+| [offGetLiveFormStatus](arkts-form-formhost-offgetliveformstatus-f-sys.md#offgetliveformstatus) | Cancels Listening to the event of get live form status. |
+| [offGetWantParamsCallback](arkts-form-formhost-offgetwantparamscallback-f-sys.md#offgetwantparamscallback) | Unregister callback of getting the want parameters of the form. |
+| [offTemplateFormDetailInfoChange](arkts-form-formhost-offtemplateformdetailinfochange-f-sys.md#offtemplateformdetailinfochange) | Unsubscribes from changes in the static configuration information of template widgets. This API uses an asynchronous callback to return the result. |
+| [offUpdateFormsConfigCallback](arkts-form-formhost-offupdateformsconfigcallback-f-sys.md#offupdateformsconfigcallback) | Unregister the callback for updating form config. |
+| [on](arkts-form-formhost-on-f-sys.md#on) | Subscribes to widget uninstall events. This API uses an asynchronous callback to return the result. |
+| [on](arkts-form-formhost-on-f-sys.md#on-1) | Subscribes to the interactive widget animation request event. This API uses an asynchronous callback to return the result. |
+| [on](arkts-form-formhost-on-f-sys.md#on-2) | Subscribes to the event of switching the interactive widget state. An interactive widget can be in the active or inactive state. In the inactive state, the interactive widget is the same as a common widget. In the active state,the interactive widget can start the **LiveFormExtensionAbility** process developed by the widget host to implement interactive widget animations. This API uses an asynchronous callback to return the result. |
+| [on](arkts-form-formhost-on-f-sys.md#on-3) | Subscribes to the event of requesting widget position and dimension. This API uses an asynchronous callback to return the result. |
+| [on](arkts-form-formhost-on-f-sys.md#on-4) | Listens to the event of get live form status. |
+| [onChangeSceneAnimationState](arkts-form-formhost-onchangesceneanimationstate-f-sys.md#onchangesceneanimationstate) | Listens to the event of change scene animation state.  You can use this method to listen to the event of change scene animation state. |
+| [onDeleteFormsCallback](arkts-form-formhost-ondeleteformscallback-f-sys.md#ondeleteformscallback) | Register the callback for deleting forms. |
+| [onFormOverflow](arkts-form-formhost-onformoverflow-f-sys.md#onformoverflow) | Listens to the event of formOverflow.  You can use this method to listen to the event of formOverflow. |
+| [onFormUninstall](arkts-form-formhost-onformuninstall-f-sys.md#onformuninstall) | Listens to the event of uninstall form.  You can use this method to listen to the event of uninstall form. |
+| [onGetFormRect](arkts-form-formhost-ongetformrect-f-sys.md#ongetformrect) | Listens to the event of get form rect.  You can use this method to listen to the event of get form rect. |
+| [onGetLiveFormStatus](arkts-form-formhost-ongetliveformstatus-f-sys.md#ongetliveformstatus) | Listens to the event of get live form status. |
+| [onGetWantParamsCallback](arkts-form-formhost-ongetwantparamscallback-f-sys.md#ongetwantparamscallback) | Register callback of getting the want parameters of the form. |
+| [onTemplateFormDetailInfoChange](arkts-form-formhost-ontemplateformdetailinfochange-f-sys.md#ontemplateformdetailinfochange) | Subscribes to changes in the static configuration information of template widgets. This API uses an asynchronous callback to return the result. |
+| [onUpdateFormsConfigCallback](arkts-form-formhost-onupdateformsconfigcallback-f-sys.md#onupdateformsconfigcallback) | Register the callback for updating form config. |
+| [recoverForms](arkts-form-formhost-recoverforms-f-sys.md#recoverforms) | Recovers recycled widgets and updates their status to non-recyclable, or updates the status of widgets to non-recyclable if the widgets are not recycled. This API uses a promise to return the result. |
+| [recoverForms](arkts-form-formhost-recoverforms-f-sys.md#recoverforms-1) | Recovers widgets. This API uses an asynchronous callback to return the result. |
+| [recycleForms](arkts-form-formhost-recycleforms-f-sys.md#recycleforms) | Recycles widgets, that is, reclaiming widget memory. This API uses a promise to return the result. |
+| [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform) | Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager still retains the widget cache and storage information. This API uses an asynchronous callback to return the result. |
+| [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-1) | Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager retains the storage information about the widget and retains or releases the cache information based on the setting. This API uses an asynchronous callback to return the result. |
+| [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-2) | Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager retains the storage information about the widget and retains or releases the cache information based on the setting. This API uses a promise to return the result. |
+| [requestForm](arkts-form-formhost-requestform-f-sys.md#requestform) | Requests a widget update. This API uses an asynchronous callback to return the result. |
+| [requestForm](arkts-form-formhost-requestform-f-sys.md#requestform-1) | Requests a widget update. This API uses a promise to return the result. |
+| [requestFormWithParams](arkts-form-formhost-requestformwithparams-f-sys.md#requestformwithparams) | Carries parameters to request a widget update. This API uses a promise to return the result. |
+| [setFormsRecyclable](arkts-form-formhost-setformsrecyclable-f-sys.md#setformsrecyclable) | Sets widgets to be recyclable. This API uses a promise to return the result. |
+| [setFormsRecyclable](arkts-form-formhost-setformsrecyclable-f-sys.md#setformsrecyclable-1) | Sets widgets to be recyclable. This API uses an asynchronous callback to return the result. |
+| [setPublishFormResult](arkts-form-formhost-setpublishformresult-f-sys.md#setpublishformresult) | Sets the result for the operation of adding a widget to the home screen. |
+| [setRouterProxy](arkts-form-formhost-setrouterproxy-f-sys.md#setrouterproxy) | Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an asynchronous callback to return the result. |
+| [setRouterProxy](arkts-form-formhost-setrouterproxy-f-sys.md#setrouterproxy-1) | Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result. |
+| [shareForm](arkts-form-formhost-shareform-f-sys.md#shareform) | Shares a specified widget with a remote device. This API uses an asynchronous callback to return the result. |
+| [shareForm](arkts-form-formhost-shareform-f-sys.md#shareform-1) | Shares a specified widget with a remote device. This API uses a promise to return the result. |
+| [updateFormLocation](arkts-form-formhost-updateformlocation-f-sys.md#updateformlocation) | Updates the widget location. |
+| [updateFormLockedState](arkts-form-formhost-updateformlockedstate-f-sys.md#updateformlockedstate) | Notifies the update of the widget lock state. This API uses a promise to return the result.If an application is locked, its widget will also be locked and masked in a locked style. To use the widget, you need to enter the password set for the widget. |
+| [updateFormSize](arkts-form-formhost-updateformsize-f-sys.md#updateformsize) | Updates the size of the widget. |
+<!--DelEnd-->
+

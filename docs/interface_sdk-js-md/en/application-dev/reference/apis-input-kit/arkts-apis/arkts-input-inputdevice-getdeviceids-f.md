@@ -1,0 +1,113 @@
+# getDeviceIds
+
+## getDeviceIds
+
+```TypeScript
+function getDeviceIds(callback: AsyncCallback<Array<number>>): void
+```
+
+Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result.
+    **NOTE**  
+    
+    This API is supported since API version 8 and deprecated since API version 9. Use  
+    [inputDevice.getDeviceList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.multimodalInput.inputDevice#getDeviceList
+
+<!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void--><!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.InputDevice
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;number&gt;&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**, and **data** is the ID list of all input devices. Otherwise, **err** is an error object. |
+
+**Example**
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputDevice.getDeviceIds((error: BusinessError, ids: Array<number>) => {
+            if (error) {
+              console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              return;
+            }
+            console.info(`Device id list: ${JSON.stringify(ids)}`);
+          });
+        })
+    }
+  }
+}
+```
+
+
+## getDeviceIds
+
+```TypeScript
+function getDeviceIds(): Promise<Array<number>>
+```
+
+Obtains the IDs of all input devices. This API uses a promise to return the result.
+    **NOTE**  
+    
+    This API is supported since API version 8 and deprecated since API version 9. Use  
+    [inputDevice.getDeviceList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.multimodalInput.inputDevice#getDeviceList
+
+<!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>--><!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.InputDevice
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the IDs of all input devices. **id** is the unique ID of an input device. |
+
+**Example**
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputDevice.getDeviceIds().then((ids: Array<number>) => {
+            console.info(`Device id list: ${JSON.stringify(ids)}`);
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          })
+        })
+    }
+  }
+}
+```
+

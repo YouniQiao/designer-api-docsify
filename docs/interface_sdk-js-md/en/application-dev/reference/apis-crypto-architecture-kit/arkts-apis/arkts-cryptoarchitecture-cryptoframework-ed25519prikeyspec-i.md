@@ -1,0 +1,41 @@
+# ED25519PriKeySpec
+
+Defines a child class of [AsyKeySpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ used to specify the parameters of the private key in the Ed25519 algorithm.
+
+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_To generate a key based on key parameters, pass it to  
+[createAsyKeyGeneratorBySpec()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to create a key generator.
+
+**Inheritance/Implementation:** ED25519PriKeySpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-cryptoFramework-interface ED25519PriKeySpec extends AsyKeySpec--><!--Device-cryptoFramework-interface ED25519PriKeySpec extends AsyKeySpec-End-->
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API version 11: SystemCapability.Security.CryptoFramework
+
+## sk
+
+```TypeScript
+sk: bigint
+```
+
+Private key **sk** in the Ed25519 algorithm.
+
+**Type:** bigint
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ED25519PriKeySpec-sk: bigint--><!--Device-ED25519PriKeySpec-sk: bigint-End-->
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API version 11: SystemCapability.Security.CryptoFramework
+

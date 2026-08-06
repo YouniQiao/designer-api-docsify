@@ -1,0 +1,56 @@
+# createNormalOsAccount
+
+## createNormalOsAccount
+
+```TypeScript
+function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsAccountInfo>
+```
+
+Creates a normal system account. A maximum of two normal system accounts (  
+[osAccount.OsAccountType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) can be created.
+    **NOTE**  
+    
+    The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application  
+    main thread must wait for the asynchronous return of this API.  
+    
+    Creating a system account has a significant impact on device performance. This API is supported only on phones  
+    and tablets with 12 GB or more of RAM.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_LOCAL_ACCOUNTS
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-accountManager-function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsAccountInfo>--><!--Device-accountManager-function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsAccountInfo>-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| name | string | Yes | System account name. The system account name must be unique and cannot be empty. Otherwise, error code 9200012 is reported. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;osAccount.OsAccountInfo&gt; | Promise used to return the information about the created system account. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [9201003](../errorcode-enterpriseDeviceManager.md#9201003-failed-to-add-an-account) | Failed to add an OS account. |
+| [9201040](../errorcode-enterpriseDeviceManager.md#9201040-system-account-count-has-reached-the-upper-limit) | The number of accounts reaches the upper limit. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+

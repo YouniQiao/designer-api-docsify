@@ -1,0 +1,44 @@
+# unbind
+
+## unbind
+
+```TypeScript
+function unbind(floatViewController: FloatViewController,
+    floatingBallController: floatingBall.FloatingBallController): Promise<void>
+```
+
+Unbinds the float view and floating ball. The unbinding can be performed only after both the  
+[float view controller]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
+[floating ball controller]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ are stopped. This API uses a promise to return the result.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-floatView-function unbind(floatViewController: FloatViewController,    floatingBallController: floatingBall.FloatingBallController): Promise<void>--><!--Device-floatView-function unbind(floatViewController: FloatViewController,    floatingBallController: floatingBall.FloatingBallController): Promise<void>-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| floatViewController | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Float view controller. |
+| floatingBallController | floatingBall.FloatingBallController | Yes | Floating ball controller. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported on this device. Possible cause: Call api on unsupported device. |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: 1. The floating ball has started but not stopped yet. 2. The floatingBallController has not been bound. |
+| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | The floatView state does not support this operation. Possible cause: 1. The float view has started but not stopped yet. 2. The floatViewController has not been bound. 3. The floatViewController and the floatingBallController are not bound together. |
+

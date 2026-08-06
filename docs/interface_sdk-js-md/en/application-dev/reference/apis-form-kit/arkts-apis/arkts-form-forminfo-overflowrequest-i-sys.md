@@ -1,0 +1,74 @@
+# OverflowRequest (System API)
+
+Provides OverflowRequest about request/cancel form's overflow
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-formInfo-interface OverflowRequest--><!--Device-formInfo-interface OverflowRequest-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## formId
+
+```TypeScript
+formId: string
+```
+
+The form id about request/cancel overflow animation
+
+**Type:** string
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-OverflowRequest-formId: string--><!--Device-OverflowRequest-formId: string-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## isOverflow
+
+```TypeScript
+isOverflow: boolean
+```
+
+Whether the form request or cancel overflow animation
+
+**Type:** boolean
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-OverflowRequest-isOverflow: boolean--><!--Device-OverflowRequest-isOverflow: boolean-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## overflowInfo
+
+```TypeScript
+overflowInfo?: OverflowInfo
+```
+
+The form's overflow animation parameter
+
+**Type:** OverflowInfo
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-OverflowRequest-overflowInfo?: OverflowInfo--><!--Device-OverflowRequest-overflowInfo?: OverflowInfo-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+

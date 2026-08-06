@@ -1,0 +1,39 @@
+# Collator
+
+**ArkTS mode:** ArkTS-Dyn only
+
+## compare
+
+```TypeScript
+compare(x: string, y: string): number
+```
+
+**ArkTS mode:** ArkTS-Dyn only
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | string | Yes |  |
+| y | string | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number |  |
+
+## resolvedOptions
+
+```TypeScript
+resolvedOptions(): ResolvedCollatorOptions
+```
+
+**ArkTS mode:** ArkTS-Dyn only
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+

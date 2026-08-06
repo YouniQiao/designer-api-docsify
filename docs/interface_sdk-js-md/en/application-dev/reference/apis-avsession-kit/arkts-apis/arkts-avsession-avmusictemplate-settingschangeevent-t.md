@@ -1,0 +1,30 @@
+# SettingsChangeEvent
+
+```TypeScript
+type SettingsChangeEvent = (settingItem: SettingItem) => Promise<SettingItem>
+```
+
+The settings change event.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-avMusicTemplate-type SettingsChangeEvent = (settingItem: SettingItem) => Promise<SettingItem>--><!--Device-avMusicTemplate-type SettingsChangeEvent = (settingItem: SettingItem) => Promise<SettingItem>-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| settingItem | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | setting item  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;SettingItem&gt; | (SettingItem) returned through promise  |
+

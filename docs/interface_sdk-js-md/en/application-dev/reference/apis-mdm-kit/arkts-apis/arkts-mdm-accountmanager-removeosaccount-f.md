@@ -1,0 +1,49 @@
+# removeOsAccount
+
+## removeOsAccount
+
+```TypeScript
+function removeOsAccount(admin: Want, accountId: number): Promise<void>
+```
+
+Removes a system account. Currently, this API is supported only on phones and tablets. It can remove normal system accounts (of the normal type) created via [createNormalOsAccount]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and system accounts (of the admin, normal, and guest types) created via  
+[addOsAccountAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. The default system account (ID: 100) cannot be removed.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_LOCAL_ACCOUNTS
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-accountManager-function removeOsAccount(admin: Want, accountId: number): Promise<void>--><!--Device-accountManager-function removeOsAccount(admin: Want, accountId: number): Promise<void>-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| accountId | number | Yes | ID of the system account to be removed. The default system account (ID: 100) cannot be removed. Otherwise, error code 9201041 is reported. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. If the operation fails., an error object is thrown. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-service-timeout) | Service timeout. |
+| [9201041](../errorcode-enterpriseDeviceManager.md#9201041-system-account-type-restricted) | Restricted account. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+

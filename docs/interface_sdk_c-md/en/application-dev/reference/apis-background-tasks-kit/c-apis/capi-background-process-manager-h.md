@@ -4,8 +4,6 @@
 
 The **background_process_manager.h** file declares the APIs for background child process management. You canuse these APIs to suppress and unsuppress child processes to prevent child processes from occupying too many systemresources and causing system stuttering. The APIs take effect only for the child processes created through{@link OH_Ability_StartNativeChildProcess}.
 
-**Include**: <background_process_manager/background_process_manager.h>
-
 **Library**: libbackground_process_manager.z.so
 
 **System capability**: SystemCapability.Resourceschedule.BackgroundProcessManager
@@ -63,9 +61,9 @@ Enumerates the error codes used by the background child process management.
 
 | Enum item | Description |
 | -- | -- |
-| ERR_BACKGROUND_PROCESS_MANAGER_SUCCESS = 0 | result is OK.<br>**Since**: 17 |
-| ERR_BACKGROUND_PROCESS_MANAGER_INVALID_PARAM = 401 | invalid parameter. Possible causes:1. priority is out of range.<br>**Since**: 17 |
-| ERR_BACKGROUND_PROCESS_MANAGER_REMOTE_ERROR = 31800001 | remote error. Possible causes:1. remote is not work.<br>**Since**: 17 |
+| ERR_BACKGROUND_PROCESS_MANAGER_SUCCESS = 0 |  result is OK.<br>**Since**: 17 |
+| ERR_BACKGROUND_PROCESS_MANAGER_INVALID_PARAM = 401 |  invalid parameter. Possible causes:1. priority is out of range.<br>**Since**: 17 |
+| ERR_BACKGROUND_PROCESS_MANAGER_REMOTE_ERROR = 31800001 |  remote error. Possible causes:1. remote is not work.<br>**Since**: 17 |
 
 
 ## Function description

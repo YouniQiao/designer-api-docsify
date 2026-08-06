@@ -1,0 +1,128 @@
+# EdgeLightParams (System API)
+
+Defines the parameters of the edge light effect.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+<!--Device-unnamed-declare interface EdgeLightParams--><!--Device-unnamed-declare interface EdgeLightParams-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## color
+
+```TypeScript
+color?: ResourceColor
+```
+
+The color of the light effect.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If not specified, the default color is white (#FFFFFF).
+
+**Type:** ResourceColor
+
+**Default:** #FFFFFF
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EdgeLightParams-color?: ResourceColor--><!--Device-EdgeLightParams-color?: ResourceColor-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## intensity
+
+```TypeScript
+intensity?: double
+```
+
+The luminous intensity of the Edge Streamer effect.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Valid range: [0.0, 1.0].Default value is 1.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Value 0.0 means the light effect is completely invisible.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_Value 1.0 means the light effect is at maximum brightness.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_Values exceeding 1.0 will be clamped to 1.0.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_Negative values are treated as 0.0.
+
+**Type:** double
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EdgeLightParams-intensity?: double--><!--Device-EdgeLightParams-intensity?: double-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## length
+
+```TypeScript
+length: Length
+```
+
+Projection length of the edge streamer along the flow direction.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Negative values are treated as 0.
+
+**Type:** Length
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EdgeLightParams-length: Length--><!--Device-EdgeLightParams-length: Length-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## position
+
+```TypeScript
+position: EdgeLightPosition
+```
+
+The location of the edge light effect.
+
+**Type:** EdgeLightPosition
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EdgeLightParams-position: EdgeLightPosition--><!--Device-EdgeLightParams-position: EdgeLightPosition-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## thickness
+
+```TypeScript
+thickness?: Length
+```
+
+The thickness (width) of the light effect line.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Negative values are treated as 0.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_If not specified, the default value is 0vp.
+
+**Type:** Length
+
+**Default:** 0vp
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EdgeLightParams-thickness?: Length--><!--Device-EdgeLightParams-thickness?: Length-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+

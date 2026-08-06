@@ -2,13 +2,13 @@
 
 ## Overview
 
-Through the `rawfile` module, you can access the `rawfile` directory or resource files in the directory atthe native layer, including traversing, opening, reading, seeking, and closing.<br>Traversing the directory: Open the `rawfile` directory, obtain the list of files under it, and iterate throughthe file names. Multi‑level directory traversal is supported.<br> Reading a file: Open a file, read file content, adjust the offset position of the file, obtain the file sizeand current offset, and obtain the file descriptor. Files larger than 2 GB are supported.
+Provides native functions for the resource manager to operate raw file directories and their raw files.You can use the resource manager to traverse, open, seek, read, and close raw files.
 
 **Since**: 8
 ## Files
 
 | Name | Description |
 | -- | -- |
-| [raw_file_manager.h](capi-raw-file-manager-h.md) | This module allows you to create and release `NativeResourceManager` objects, and open rawfiles anddirectories. |
-| [raw_dir.h](capi-raw-dir-h.md) | Provides functions related to `rawfile` directory operations, including directory traversal, file countretrieval, file name retrieval, and directory closing. |
-| [raw_file.h](capi-raw-file-h.md) | Provides the capabilities to operate on rawfiles, including reading files, obtaining the file length,obtaining the current offset, seeking to a specific position, obtaining the file descriptor, and closing the filedescriptor. |
+| [raw_file_manager.h](capi-raw-file-manager-h.md) | Provides file management functions for the **rawfile** directory. You can use the **ResourceManager** to opena rawfile and perform operations such as data search and reading. |
+| [raw_dir.h](capi-raw-dir-h.md) | Provides functions related to rawfile directories, including traversing and closing rawfile directories. |
+| [raw_file.h](capi-raw-file-h.md) | Provides functions related to rawfiles, including searching for, reading, and closing rawfiles. |

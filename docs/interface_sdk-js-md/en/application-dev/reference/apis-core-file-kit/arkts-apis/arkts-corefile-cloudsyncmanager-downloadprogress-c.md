@@ -1,0 +1,141 @@
+# DownloadProgress
+
+Describes the full download progress.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-cloudSyncManager-class DownloadProgress--><!--Device-cloudSyncManager-class DownloadProgress-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
+## downloadedSize
+
+```TypeScript
+downloadedSize: long
+```
+
+Size of the downloaded data, in bytes. The value range is  
+[0, INT64\_MAX). If the progress is abnormal, **INT64\_MAX** is returned.
+
+**Type:** long
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-DownloadProgress-downloadedSize: long--><!--Device-DownloadProgress-downloadedSize: long-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
+## failedCount
+
+```TypeScript
+failedCount: int
+```
+
+Number of files that fail to be downloaded. The value range is [0, INT32\_MAX]. If the progress is abnormal,  
+**-1** is returned.
+
+**Type:** int
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-DownloadProgress-failedCount: int--><!--Device-DownloadProgress-failedCount: int-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
+## state
+
+```TypeScript
+state: DownloadState
+```
+
+Download state.
+
+**Type:** DownloadState
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-DownloadProgress-state: DownloadState--><!--Device-DownloadProgress-state: DownloadState-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
+## stopReason
+
+```TypeScript
+stopReason: DownloadStopReason
+```
+
+Reason why the download stops.
+
+**Type:** DownloadStopReason
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-DownloadProgress-stopReason: DownloadStopReason--><!--Device-DownloadProgress-stopReason: DownloadStopReason-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
+## successfulCount
+
+```TypeScript
+successfulCount: int
+```
+
+Number of downloaded files. The value range is [0, INT32\_MAX]. If the progress is abnormal, **-1** is returned.
+
+**Type:** int
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-DownloadProgress-successfulCount: int--><!--Device-DownloadProgress-successfulCount: int-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
+## totalCount
+
+```TypeScript
+totalCount: int
+```
+
+Total number of files to be downloaded. The value range is [0, INT32\_MAX]. If the progress is abnormal, **-1** is returned.
+
+**Type:** int
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-DownloadProgress-totalCount: int--><!--Device-DownloadProgress-totalCount: int-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
+## totalSize
+
+```TypeScript
+totalSize: long
+```
+
+Total size of the files to be downloaded, in bytes. The value range is  
+[0, INT64\_MAX). If the progress is abnormal, **INT64\_MAX** is returned.
+
+**Type:** long
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-DownloadProgress-totalSize: long--><!--Device-DownloadProgress-totalSize: long-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+

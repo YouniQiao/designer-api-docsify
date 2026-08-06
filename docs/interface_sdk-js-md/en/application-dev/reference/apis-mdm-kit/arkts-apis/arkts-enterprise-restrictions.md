@@ -1,0 +1,86 @@
+# @ohos.enterprise.restrictions(Restrictions)
+
+This **restrictions** module provides APIs for disallowing general features of devices. You can globally disable and re-enable features such as Bluetooth, HDC, USB, Wi-Fi, cellular data, camera, and microphone.
+
+**Use cases**
+
+- In enterprise device management scenarios, administrators need to restrict functions on employee devices to prevent  
+data leaks or unauthorized use.  
+- In Bring Your Own Device (BYOD) scenarios, the enterprise space needs to restrict device functions to comply with  
+enterprise security policies.  
+- In device security control scenarios, specific functions need to be disabled to protect sensitive enterprise  
+information.
+
+**Problems that can be solved**
+
+- Prevent employees from transferring sensitive enterprise data via Bluetooth, USB, or other means.  
+- Restrict device debugging capabilities (HDC) to enhance device security.  
+- Control network access (Wi-Fi, cellular data, and so on) to comply with enterprise network policies.  
+- Manage device multimedia capabilities (camera, microphone, and so on) to protect privacy and enterprise  
+confidentiality
+
+**Benefits**
+
+- Enhance enterprise device security and reduces the risk of data leaks.  
+- Meet compliance requirements and align with security audit standards.  
+- Enable fine-grained device function control, balancing security and user experience.
+    **NOTE**  
+    
+    The APIs of this module can be called only by a device administrator application that is enabled. For details, see  
+    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+<!--Device-unnamed-declare namespace restrictions--><!--Device-unnamed-declare namespace restrictions-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## Summary
+
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [addDisallowedListForAccount](arkts-mdm-restrictions-adddisallowedlistforaccount-f.md#adddisallowedlistforaccount) | Adds a list of applications that are not allowed to use a feature for a specified user. |
+| [disableMicrophone](arkts-mdm-restrictions-disablemicrophone-f.md#disablemicrophone) | Enables or disables the microphone. |
+| [getDisallowedListForAccount](arkts-mdm-restrictions-getdisallowedlistforaccount-f.md#getdisallowedlistforaccount) | Obtains the list of applications that are not allowed to use a feature for a specified user. |
+| [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy) | Queries whether a feature is disabled. |
+| [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy-1) | Queries whether a specified device feature is disabled. |
+| [getDisallowedPolicyForAccount](arkts-mdm-restrictions-getdisallowedpolicyforaccount-f.md#getdisallowedpolicyforaccount) | Obtains the status of a feature for a specified user. |
+| [getDisallowedPolicyForAccount](arkts-mdm-restrictions-getdisallowedpolicyforaccount-f.md#getdisallowedpolicyforaccount-1) | Obtains the status of a feature for a specified user. |
+| [getUserRestricted](arkts-mdm-restrictions-getuserrestricted-f.md#getuserrestricted) | Obtains the disabled status of a setting item. |
+| [getUserRestricted](arkts-mdm-restrictions-getuserrestricted-f.md#getuserrestricted-1) | Obtains the disabled status of the specified device setting item. |
+| [getUserRestrictedForAccount](arkts-mdm-restrictions-getuserrestrictedforaccount-f.md#getuserrestrictedforaccount) | Obtains the disabled status of a setting item for a specified user. |
+| [getUserRestrictedForAccount](arkts-mdm-restrictions-getuserrestrictedforaccount-f.md#getuserrestrictedforaccount-1) | Obtains the disabled status of a setting item for a specified user. |
+| [isFingerprintAuthDisabled](arkts-mdm-restrictions-isfingerprintauthdisabled-f.md#isfingerprintauthdisabled) | Queries whether fingerprint authentication is disabled. |
+| [isHdcDisabled](arkts-mdm-restrictions-ishdcdisabled-f.md#ishdcdisabled) | Queries whether HDC is disabled. This API uses an asynchronous callback to return the result. |
+| [isHdcDisabled](arkts-mdm-restrictions-ishdcdisabled-f.md#ishdcdisabled-1) | Queries whether HDC is disabled. This API uses a promise to return the result. |
+| [isMicrophoneDisabled](arkts-mdm-restrictions-ismicrophonedisabled-f.md#ismicrophonedisabled) | Queries whether the microphone is disabled. |
+| [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f.md#isprinterdisabled) | Queries whether the printing capability of a device is disabled. This API uses an asynchronous callback to return the result. |
+| [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f.md#isprinterdisabled-1) | Queries whether the printing capability of a device is disabled. This API uses a promise to return the result. |
+| [removeDisallowedListForAccount](arkts-mdm-restrictions-removedisallowedlistforaccount-f.md#removedisallowedlistforaccount) | Removes the list of applications that are not allowed to use a feature for a specified user. |
+| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) | Disallows a feature. |
+| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1) | Enables or disables a specified device feature. Once disabled, the feature cannot be used. |
+| [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) | Disallows a feature for a specified user. |
+| [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) | Disallows a feature for a specified user. |
+| [setFingerprintAuthDisabled](arkts-mdm-restrictions-setfingerprintauthdisabled-f.md#setfingerprintauthdisabled) | Enables or disables fingerprint authentication. |
+| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f.md#sethdcdisabled) | Enables or disables \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. This API uses an asynchronous callback to return the result. |
+| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f.md#sethdcdisabled-1) | Enables or disables HDC on a device. This API uses a promise to return the result. |
+| [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f.md#setprinterdisabled) | Enables or disables the printing capability of the device. This API uses an asynchronous callback to return the result. |
+| [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f.md#setprinterdisabled-1) | Enables or disables the printing capability of the device. This API uses a promise to return the result. |
+| [setUserRestriction](arkts-mdm-restrictions-setuserrestriction-f.md#setuserrestriction) | Sets restrictions on user behaviors. |
+| [setUserRestriction](arkts-mdm-restrictions-setuserrestriction-f.md#setuserrestriction-1) | Restricts users from modifying specified device setting items. |
+| [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md#setuserrestrictionforaccount) | Sets restrictions on specified user behaviors. |
+| [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md#setuserrestrictionforaccount-1) | Restricts a specified user from modifying specified setting items. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [FeatureForAccount](arkts-mdm-restrictions-featureforaccount-e.md) | Enumerates the features that can be disabled or enabled for a specified user. |
+| [FeatureForDevice](arkts-mdm-restrictions-featurefordevice-e.md) | Enumerates device features. |
+| [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | Enumerates user setting items. |
+| [SettingsForDevice](arkts-mdm-restrictions-settingsfordevice-e.md) | Enumerates device setting items. |
+

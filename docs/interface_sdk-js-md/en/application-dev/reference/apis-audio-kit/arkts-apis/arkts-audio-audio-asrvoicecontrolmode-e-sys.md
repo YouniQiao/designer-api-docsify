@@ -1,0 +1,86 @@
+# AsrVoiceControlMode (System API)
+
+ASR voice control mode.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-audio-enum AsrVoiceControlMode--><!--Device-audio-enum AsrVoiceControlMode-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**System API:** This is a system API.
+
+## AUDIO_2_VOICE_TX
+
+```TypeScript
+AUDIO_2_VOICE_TX = 0
+```
+
+Send output stream to TX.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX = 0--><!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX = 0-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**System API:** This is a system API.
+
+## AUDIO_MIX_2_VOICE_TX
+
+```TypeScript
+AUDIO_MIX_2_VOICE_TX = 1
+```
+
+Send both output stream and MIC input to TX.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX = 1--><!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX = 1-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**System API:** This is a system API.
+
+## AUDIO_2_VOICE_TX_EX
+
+```TypeScript
+AUDIO_2_VOICE_TX_EX = 2
+```
+
+Based on the AUDIO\_2\_VOICE\_TX, Send output stream to voice call record.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX_EX = 2--><!--Device-AsrVoiceControlMode-AUDIO_2_VOICE_TX_EX = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**System API:** This is a system API.
+
+## AUDIO_MIX_2_VOICE_TX_EX
+
+```TypeScript
+AUDIO_MIX_2_VOICE_TX_EX = 3
+```
+
+Based on the AUDIO\_MIX\_2\_VOICE\_TX, Send output stream to voice call record.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX_EX = 3--><!--Device-AsrVoiceControlMode-AUDIO_MIX_2_VOICE_TX_EX = 3-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**System API:** This is a system API.
+

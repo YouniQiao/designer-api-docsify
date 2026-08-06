@@ -2,13 +2,12 @@
 
 ## 概述
 
-定义面向外部密钥管理扩展的结构体、枚举类型与宏定义。
-
-**引用文件：** <huks/native_huks_external_crypto_type.h>
+定义面向外部密钥管理扩展的结构体与枚举类型。
 
 **库：** libhuks_external_crypto.z.so
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
+  *     include "huks/include/native_huks_type.h"
 
 **起始版本：** 22
 
@@ -21,7 +20,7 @@
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [OH_Huks_ExternalCryptoParam](capi-huksexternalcryptotypeapi-oh-huks-externalcryptoparam.md) | OH_Huks_ExternalCryptoParam | 定义参数集合中单个参数的结构体。 |
-| [OH_Huks_ExternalCryptoParamSet](capi-huksexternalcryptotypeapi-oh-huks-externalcryptoparamset.md) | OH_Huks_ExternalCryptoParamSet | 定义外部加密参数集合的结构体。 |
+| [OH_Huks_ExternalCryptoParamSet](capi-huksexternalcryptotypeapi-oh-huks-externalcryptoparamset.md) | OH_Huks_ExternalCryptoParamSet | 定义外部加密参数集合的结构。 |
 
 ### 枚举
 
@@ -76,6 +75,6 @@ enum OH_Huks_ExternalPinAuthState
 | -- | -- |
 | OH_HUKS_EXT_CRYPTO_PIN_NO_AUTH = 0 | PIN码未认证。<br>**起始版本：** 22 |
 | OH_HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED = 1 | PIN码认证成功。<br>**起始版本：** 22 |
-| OH_HUKS_EXT_CRYPTO_PIN_LOCKED = 2 | PIN码被锁定。<br>**起始版本：** 22 |
+| OH_HUKS_EXT_CRYPTO_PIN_LOCKED = 2 | PIN码被锁。<br>**起始版本：** 22 |
 
 

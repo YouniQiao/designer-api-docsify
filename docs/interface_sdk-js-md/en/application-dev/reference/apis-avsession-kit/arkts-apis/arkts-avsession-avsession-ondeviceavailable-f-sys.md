@@ -1,0 +1,32 @@
+# onDeviceAvailable (System API)
+
+## onDeviceAvailable
+
+```TypeScript
+function onDeviceAvailable(callback: Callback<OutputDeviceInfo>): void
+```
+
+Register device discovery callback
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-avSession-function onDeviceAvailable(callback: Callback<OutputDeviceInfo>): void--><!--Device-avSession-function onDeviceAvailable(callback: Callback<OutputDeviceInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OutputDeviceInfo&gt; | Yes | Used to returns the device info |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+

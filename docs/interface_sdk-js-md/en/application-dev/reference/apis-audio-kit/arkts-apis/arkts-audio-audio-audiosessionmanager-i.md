@@ -1,0 +1,1220 @@
+# AudioSessionManager
+
+This interface implements audio session management.
+
+Before calling any API in AudioSessionManager, you must use  
+[getSessionManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain an AudioSessionManager instance.
+    **NOTE**  
+    
+    - The initial APIs of this interface are supported since API version 12.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-audio-interface AudioSessionManager--><!--Device-audio-interface AudioSessionManager-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+## activateAudioSession
+
+```TypeScript
+activateAudioSession(strategy: AudioSessionStrategy): Promise<void>
+```
+
+Activates an audio session. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioSessionManager-activateAudioSession(strategy: AudioSessionStrategy): Promise<void>--><!--Device-AudioSessionManager-activateAudioSession(strategy: AudioSessionStrategy): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio session strategy. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.Focus preemption failure. 2.Audio server process died. |
+
+## clearSelectedMediaInputDevice
+
+```TypeScript
+clearSelectedMediaInputDevice(): Promise<void>
+```
+
+Clears the media input device set by calling  
+[selectMediaInputDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+
+<!--Device-AudioSessionManager-clearSelectedMediaInputDevice(): Promise<void>--><!--Device-AudioSessionManager-clearSelectedMediaInputDevice(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## deactivateAudioSession
+
+```TypeScript
+deactivateAudioSession(): Promise<void>
+```
+
+Deactivates this audio session. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioSessionManager-deactivateAudioSession(): Promise<void>--><!--Device-AudioSessionManager-deactivateAudioSession(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.The audio session is not existed or has been released. 2.Audio server process died. |
+
+## enableMuteSuggestionWhenMixWithOthers
+
+```TypeScript
+enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
+```
+
+Enables mute suggestion notifications for mixed playback.
+
+Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience.
+
+If this feature is enabled, mute and unmute suggestions will be sent through the  
+[AudioSessionStateChangedEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed.
+
+This feature can be used only by audio sessions for which  
+[AudioSessionScene]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ has been set and the  
+**CONCURRENCY\_MIX\_WITH\_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session.
+
+For details, see  
+\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSessionManager-enableMuteSuggestionWhenMixWithOthers(enable: boolean): void--><!--Device-AudioSessionManager-enableMuteSuggestionWhenMixWithOthers(enable: boolean): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to enable mute suggestion notifications for mixed playback. **true** to enable, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Function is called without setting \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or called after audio session activation. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, system internal error. |
+
+## getAvailableDevices
+
+```TypeScript
+getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
+```
+
+Obtains the available audio devices.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+
+<!--Device-AudioSessionManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors--><!--Device-AudioSessionManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device type (classified by usage). |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Device list. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## getBluetoothAndNearlinkPreferredRecordCategory
+
+```TypeScript
+getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory
+```
+
+Obtains the preferred device category for recording with Bluetooth or NearLink, which is set by calling  
+[setBluetoothAndNearlinkPreferredRecordCategory]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+
+<!--Device-AudioSessionManager-getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory--><!--Device-AudioSessionManager-getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Preferred device category for recording with Bluetooth or NearLink. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## getDefaultOutputDevice
+
+```TypeScript
+getDefaultOutputDevice(): DeviceType
+```
+
+Obtains the default audio output device set by calling  
+[setDefaultOutputDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-AudioSessionManager-getDefaultOutputDevice(): DeviceType--><!--Device-AudioSessionManager-getDefaultOutputDevice(): DeviceType-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Device type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. Return by promise. |
+
+## getSelectedMediaInputDevice
+
+```TypeScript
+getSelectedMediaInputDevice(): AudioDeviceDescriptor
+```
+
+Obtains the media input device set by calling  
+[selectMediaInputDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. If no device has been specified, the device with **deviceType** set to **INVALID** is returned.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+
+<!--Device-AudioSessionManager-getSelectedMediaInputDevice(): AudioDeviceDescriptor--><!--Device-AudioSessionManager-getSelectedMediaInputDevice(): AudioDeviceDescriptor-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Media input device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## isAudioSessionActivated
+
+```TypeScript
+isAudioSessionActivated(): boolean
+```
+
+Checks whether this audio session is activated.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioSessionManager-isAudioSessionActivated(): boolean--><!--Device-AudioSessionManager-isAudioSessionActivated(): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result for whether the audio session is activated. **true** if activated, **false** otherwise. |
+
+## isOtherMediaPlaying
+
+```TypeScript
+isOtherMediaPlaying(): boolean
+```
+
+Check whether any other application is currently playing audio of the four media types: **MUSIC**, **MOVIE**,  
+**AUDIOBOOK**, and **GAME**. Audio sessions that have activated these media types will also be checked.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSessionManager-isOtherMediaPlaying(): boolean--><!--Device-AudioSessionManager-isOtherMediaPlaying(): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Whether another application is playing audio of certain media types. **true** means yes; **false** otherwise. |
+
+## off('audioSessionDeactivated')
+
+```TypeScript
+off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void
+```
+
+Unsubscribes from the audio session deactivation event. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered when the audio session is deactivated. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionDeactivatedEvent&gt; | No | Callback used to return the reason why the audio session is deactivated. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## off('audioSessionStateChanged')
+
+```TypeScript
+off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void
+```
+
+Unsubscribes from the audio session state change event. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+<!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggered when the audio session state is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionStateChangedEvent&gt; | No | Callback used to return the audio session change information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## off('currentOutputDeviceChanged')
+
+```TypeScript
+off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void
+```
+
+Unsubscribes from the current output device change event. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+<!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentOutputDeviceChangedEvent&gt; | No | Callback used to return the information about the current output device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## off('availableDeviceChange')
+
+```TypeScript
+off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void
+```
+
+Unsubscribes from the event indicating that the connection status of an available audio device is changed.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+<!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | No | Callback used to return the available device change details. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## off('currentInputDeviceChanged')
+
+```TypeScript
+off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void
+```
+
+Unsubscribes from the current input device change event.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+<!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggered when the current input device is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentInputDeviceChangedEvent&gt; | No | Callback used to return the information about the current input device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## offAudioSessionDeactivated
+
+```TypeScript
+offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): void
+```
+
+Unsubscribes to audio session deactivated event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioSessionManager-offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): void-End-->
+
+**System capability:** 
+- API version 23 and later: SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionDeactivatedEvent&gt; | No | Callback invoked for the audio session deactivated event.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 23 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+
+## offAudioSessionStateChanged
+
+```TypeScript
+offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void
+```
+
+Unsubscribes to audio session deactivated event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-AudioSessionManager-offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-offAudioSessionStateChanged(callback?: Callback<AudioSessionStateChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionStateChangedEvent&gt; | No | Callback invoked for the audio session state change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## offAvailableDeviceChange
+
+```TypeScript
+offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void
+```
+
+Unsubscribes to available device change events.
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
+
+<!--Device-AudioSessionManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-offAvailableDeviceChange(callback?: Callback<DeviceChangeAction>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | No | Callback used in subscribe. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## offCurrentInputDeviceChanged
+
+```TypeScript
+offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void
+```
+
+Unsubscribes current input device change events.
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
+
+<!--Device-AudioSessionManager-offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-offCurrentInputDeviceChanged(callback?: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentInputDeviceChangedEvent&gt; | No | Callback used in subscribe. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## offCurrentOutputDeviceChanged
+
+```TypeScript
+offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void
+```
+
+UnSubscribes output device change event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-AudioSessionManager-offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-offCurrentOutputDeviceChanged(callback?: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentOutputDeviceChangedEvent&gt; | No | Callback used to listen device change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## on('audioSessionDeactivated')
+
+```TypeScript
+on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void
+```
+
+Subscribes to the audio session deactivation event, which is triggered when an audio session is deactivated. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered when the audio session is deactivated. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionDeactivatedEvent&gt; | Yes | Callback used to return the reason why the audio session is deactivated. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## on('audioSessionStateChanged')
+
+```TypeScript
+on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void
+```
+
+Subscribes to the audio session state change event, which is triggered when the audio session focus is changed.This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+<!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggered when the audio session state is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionStateChangedEvent&gt; | Yes | Callback used to return the audio session change information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## on('currentOutputDeviceChanged')
+
+```TypeScript
+on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void
+```
+
+Subscribes to the current output device change event, which is triggered when the current output device is changed. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+<!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentOutputDeviceChangedEvent&gt; | Yes | Callback used to return the information about the current output device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## on('availableDeviceChange')
+
+```TypeScript
+on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
+```
+
+Subscribes to the event indicating that the connection status of an available audio device is changed.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+<!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
+| deviceUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device type (classified by usage). |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | Yes | Callback used to return the available device change details. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## on('currentInputDeviceChanged')
+
+```TypeScript
+on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void
+```
+
+Subscribes to the current input device change event, which is triggered when the current input device is changed.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+<!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggered when the current input device is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentInputDeviceChangedEvent&gt; | Yes | Callback used to return the information about the current input device. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## onAudioSessionDeactivated
+
+```TypeScript
+onAudioSessionDeactivated(callback: Callback<AudioSessionDeactivatedEvent>): void
+```
+
+Listens for audio session deactivated event. When the audio session is deactivated,registered clients will receive the callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioSessionManager-onAudioSessionDeactivated(callback: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-onAudioSessionDeactivated(callback: Callback<AudioSessionDeactivatedEvent>): void-End-->
+
+**System capability:** 
+- API version 23 and later: SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionDeactivatedEvent&gt; | Yes | Callback invoked for the audio session deactivated event.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 23 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 23 and later |
+
+## onAudioSessionStateChanged
+
+```TypeScript
+onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void
+```
+
+Listens for audio session state change event. When the audio session state change,registered clients will receive the callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-AudioSessionManager-onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-onAudioSessionStateChanged(callback: Callback<AudioSessionStateChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioSessionStateChangedEvent&gt; | Yes | Callback invoked for the audio session state change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## onAvailableDeviceChange
+
+```TypeScript
+onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
+```
+
+Subscribes to available device change events. When a device is connected/disconnected, registered clients will receive the callback.
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
+
+<!--Device-AudioSessionManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-onAvailableDeviceChange(deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio device usage to filter available devices. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceChangeAction&gt; | Yes | Callback used to obtain the device update details. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## onCurrentInputDeviceChanged
+
+```TypeScript
+onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void
+```
+
+Subscribes input device change event callback. The event is triggered when current input device change.
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
+
+<!--Device-AudioSessionManager-onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-onCurrentInputDeviceChanged(callback: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentInputDeviceChangedEvent&gt; | Yes | Callback used to listen input device change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## onCurrentOutputDeviceChanged
+
+```TypeScript
+onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void
+```
+
+Subscribes output device change event callback.The event is triggered when device change.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-AudioSessionManager-onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-onCurrentOutputDeviceChanged(callback: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CurrentOutputDeviceChangedEvent&gt; | Yes | Callback used to listen device change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## selectMediaInputDevice
+
+```TypeScript
+selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
+```
+
+Selects a media input device. This API uses a promise to return the result.
+    **NOTE**  
+    
+    - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where  
+    [SourceType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is **SOURCE\_TYPE\_VOICE\_COMMUNICATION**.  
+    
+    - Before calling this API, call [getAvailableDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to  
+    query the list of available input devices and select an input device from the list.  
+    
+    - If there are recording streams of other applications with higher priorities in the system, the actual input  
+    device used will follow the input device selected by these applications.  
+    
+    - Applications can listen for the  
+    [currentInputDeviceChanged]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
+    event to find out the actual input device being used.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+
+<!--Device-AudioSessionManager-selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>--><!--Device-AudioSessionManager-selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| inputAudioDevice | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Media input device. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example, the selected device does not exist. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## setAudioSessionBehavior
+
+ArkTS-Dyn:
+```TypeScript
+setAudioSessionBehavior(behavior: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+setAudioSessionBehavior(behavior: int): void
+```
+
+Sets audio session behavior parameters. (Multiple flags can be combined.)
+    **NOTE**  
+    
+    If this API is called while an audio session is active, you must call the  
+    [activateAudioSession]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API again  
+    for the settings to take effect.
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSessionManager-setAudioSessionBehavior(behavior: int): void--><!--Device-AudioSessionManager-setAudioSessionBehavior(behavior: int): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| behavior | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Specifies the audio session behavior.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This can be a single flag or a bitwise OR combination of multiple flags.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted in the current state. |
+
+## setAudioSessionScene
+
+```TypeScript
+setAudioSessionScene(scene: AudioSessionScene): void
+```
+
+Sets an audio session scene.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-AudioSessionManager-setAudioSessionScene(scene: AudioSessionScene): void--><!--Device-AudioSessionManager-setAudioSessionScene(scene: AudioSessionScene): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| scene | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio session scene. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## setBluetoothAndNearlinkPreferredRecordCategory
+
+```TypeScript
+setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>
+```
+
+Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return the result.
+    **NOTE**  
+    
+    - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system  
+    prioritizes using the device for recording when the device is connected.  
+    
+    - If there are recording streams of other applications with higher priorities in the system, the actual input  
+    device used will follow the input device selected by these applications.  
+    
+    - Applications can listen for the  
+    [currentInputDeviceChanged]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
+    event to find out the actual input device being used.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+
+<!--Device-AudioSessionManager-setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>--><!--Device-AudioSessionManager-setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| category | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Preferred device category for recording with Bluetooth or NearLink. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## setCapturerMuteHint
+
+```TypeScript
+setCapturerMuteHint(mute: boolean): Promise<void>
+```
+
+Set mute hint for all capturer streams in the current audio session. It dose not mute the recording stream, only affects internal processing strategy.
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSessionManager-setCapturerMuteHint(mute: boolean): Promise<void>--><!--Device-AudioSessionManager-setCapturerMuteHint(mute: boolean): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mute | boolean | Yes | Use true if application recording stream muted by application if self. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state, there is no audio capturer running. |
+
+## setDefaultOutputDevice
+
+```TypeScript
+setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
+```
+
+Sets the default audio output device. This API uses a promise to return the result.
+    **NOTE**  
+    
+    - This API applies to the following scenario: When  
+    [AudioSessionScene]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set to **VoIP**, the setting takes  
+    effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take  
+    effect upon AudioSession activation. Instead, the setting applies when  
+    [StreamUsage]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ for playback is voice message, VoIP voice call,  
+    or VoIP video call. Supported devices include the earpiece, speaker, and system default device.  
+    
+    - This API can be called at any time after an AudioSessionManager instance is created. The system records the  
+    device set by the application. However, the setting takes effect only after the AudioSession is activated. When  
+    the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected,  
+    the system prioritizes audio output through the external device. Otherwise, the system uses the device set by  
+    the application.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-AudioSessionManager-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioSessionManager-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. Return by promise. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
+
+## setMediaOutputDevice
+
+```TypeScript
+setMediaOutputDevice(deviceType: DeviceType): Promise<void>
+```
+
+Set the audio output device to the built-in speaker, when other audio peripherals are connected, such as bluetooth headphones or wired headsets. It should be noted that this interface only applies to media streams.In scenarios where there are concurrent playback streams with higher priority or user selects the output device through system UI, the actual output device used by the application may differ from the selected one. The application can obtain currently active output device by subscribing to the currentOutputDeviceChanged event.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSessionManager-setMediaOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioSessionManager-setMediaOutputDevice(deviceType: DeviceType): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the available deviceTypes are SPEAKER: Built-in speaker DEFAULT: Restore to system default output device |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example, the selected device type is not supported. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes: 1.Internal variable memory allocation failed. 2.Audio server process died. 3.Speaker device is not available. |
+

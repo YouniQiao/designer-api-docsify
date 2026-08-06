@@ -1,0 +1,377 @@
+# SelectionContainerAttribute
+
+Defines the attributes of SelectionContainer.
+
+**Inheritance/Implementation:** SelectionContainerAttribute extends [CommonMethod](arkts-arkui-component/common-commonmethod-i.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+<!--Device-unnamed-export declare interface SelectionContainerAttribute extends CommonMethod--><!--Device-unnamed-export declare interface SelectionContainerAttribute extends CommonMethod-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## attributeModifier
+
+```TypeScript
+default attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | AttributeModifier<CommonMethod>
+    | undefined): this
+```
+
+Set the attribute modifier.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | AttributeModifier<CommonMethod>    | undefined): this--><!--Device-SelectionContainerAttribute-default attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | AttributeModifier<CommonMethod>    | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modifier | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SelectionContainerAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+
+## bindSelectionMenu
+
+```TypeScript
+default bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | undefined,
+    responseType: TextResponseType | undefined, options?: SelectionContainerMenuOptions | undefined): this
+```
+
+Bind to the selection menu.
+
+\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The duration required for a long-press gesture is 600 ms for bindSelectionMenu and 800 ms for bindContextMenu.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_When both bindSelectionMenu and bindContextMenu are set and both are configured to be triggered by a long-press gesture, bindSelectionMenu is triggered first.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_If the custom menu is too long, embed a Scroll component to prevent the keyboard from being blocked.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | undefined,    responseType: TextResponseType | undefined, options?: SelectionContainerMenuOptions | undefined): this--><!--Device-SelectionContainerAttribute-default bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | undefined,    responseType: TextResponseType | undefined, options?: SelectionContainerMenuOptions | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| spanType | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Indicates the type of selection menu. Default value is TextSpanType.TEXT. |
+| content | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Indicates the content of selection menu. |
+| responseType | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Indicates response type of selection menu. Default value is TextResponseType.LONG\_\_\_ESCAPED\_UNDERSCORE\_\_\_PRESS. |
+| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | No | Indicates the options of selection menu. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+
+## caretColor
+
+```TypeScript
+default caretColor(color: ResourceColor | undefined): this
+```
+
+Set the caret color for selected text.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default caretColor(color: ResourceColor | undefined): this--><!--Device-SelectionContainerAttribute-default caretColor(color: ResourceColor | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Caret color. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+
+## copyOption
+
+```TypeScript
+default copyOption(value: CopyOptions | undefined): this
+```
+
+Set whether to allow copy and where data can be copied.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default copyOption(value: CopyOptions | undefined): this--><!--Device-SelectionContainerAttribute-default copyOption(value: CopyOptions | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Copy option for selected text. Default value is CopyOptions.InApp. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+
+## editMenuOptions
+
+```TypeScript
+default editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this
+```
+
+Set the custom text menu.Sets the extended options of the custom context menu on selection,including the text content, icon, and callback.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this--><!--Device-SelectionContainerAttribute-default editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| editMenu | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Customize text menu options. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+
+## enableHapticFeedback
+
+```TypeScript
+default enableHapticFeedback(isEnabled: boolean | undefined): this
+```
+
+Enable or disable haptic feedback.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default enableHapticFeedback(isEnabled: boolean | undefined): this--><!--Device-SelectionContainerAttribute-default enableHapticFeedback(isEnabled: boolean | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isEnabled | boolean \| undefined | Yes | Whether to enable haptic feedback. Default value is true. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+
+## onCopy
+
+```TypeScript
+default onCopy(callback: Callback<string> | undefined): this
+```
+
+Called when selected text is copied.Currently, only text can be copied.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default onCopy(callback: Callback<string> | undefined): this--><!--Device-SelectionContainerAttribute-default onCopy(callback: Callback<string> | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; \| undefined | Yes | Callback of copy event. The first callback parameter (string) is the selected text concatenated in the visual order of Text components. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+
+## onTextSelectionChange
+
+```TypeScript
+default onTextSelectionChange(callback: Callback<Array<string>> | undefined): this
+```
+
+Called when text selection changes in SelectionContainer.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default onTextSelectionChange(callback: Callback<Array<string>> | undefined): this--><!--Device-SelectionContainerAttribute-default onTextSelectionChange(callback: Callback<Array<string>> | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;string&gt;&gt; \| undefined | Yes | Callback of selection change event. The order of items in the first callback parameter array is consistent with the visual order of Text components. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+
+## onWillCopy
+
+```TypeScript
+default onWillCopy(callback: Callback<string, boolean> | undefined): this
+```
+
+Called before using the Clipboard copy menu.Currently, only text can be copied.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default onWillCopy(callback: Callback<string, boolean> | undefined): this--><!--Device-SelectionContainerAttribute-default onWillCopy(callback: Callback<string, boolean> | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, boolean&gt; \| undefined | Yes | Callback used to check whether copy is allowed. The first callback parameter (string) is the selected text concatenated in the visual order of Text components. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+
+## selectedBackgroundColor
+
+```TypeScript
+default selectedBackgroundColor(color: ResourceColor | undefined): this
+```
+
+Set selected text background color.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default selectedBackgroundColor(color: ResourceColor | undefined): this--><!--Device-SelectionContainerAttribute-default selectedBackgroundColor(color: ResourceColor | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Selected text background color. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+
+## setSelectionContainerOptions
+
+```TypeScript
+default setSelectionContainerOptions(): this
+```
+
+Set SelectionContainer Options.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default setSelectionContainerOptions(): this--><!--Device-SelectionContainerAttribute-default setSelectionContainerOptions(): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+
+## textJoinStyle
+
+```TypeScript
+default textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
+```
+
+Set text join style for aggregated text in SelectionContainer.
+
+\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_This setting affects the string value used in callbacks such as onWillCopy and onCopy.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_It also affects built-in text menu item logic that depends on string concatenation, such as copy.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_The default style is SelectionContainerTextJoinStyle.NEWLINE.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SelectionContainerAttribute-default textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this--><!--Device-SelectionContainerAttribute-default textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Yes | Text join style for aggregated text. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | returns the instance of the SelectionContainerAttribute. |
+

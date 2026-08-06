@@ -1,0 +1,49 @@
+# @ohos.app.businessAbilityRouter
+
+This module is used to obtain business ability information of various applications installed on the current device.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-declare namespace businessAbilityRouter--><!--Device-unnamed-declare namespace businessAbilityRouter-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+## Summary
+
+<!--Del-->
+### Functions（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md#querybusinessabilityinfo) | Query the business ability info of by the given filter. ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_INFO\_\_\_ESCAPED\_UNDERSCORE\_\_\_PRIVILEGED is required for cross user access. |
+| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md#querybusinessabilityinfo-1) | Query the business ability info of by the given filter. ohos.permission.GET\_\_\_ESCAPED\_UNDERSCORE\_\_\_BUNDLE\_\_\_ESCAPED\_UNDERSCORE\_\_\_INFO\_\_\_ESCAPED\_UNDERSCORE\_\_\_PRIVILEGED is required for cross user access. |
+<!--DelEnd-->
+
+<!--Del-->
+### Interfaces（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [BusinessAbilityFilter](arkts-ability-businessabilityrouter-businessabilityfilter-i-sys.md) | This filter value is used to filter business ability info |
+<!--DelEnd-->
+
+<!--Del-->
+### Enums（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md) | This enumeration value is used to identify various types of business ability info |
+<!--DelEnd-->
+
+<!--Del-->
+### Types（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [BusinessAbilityInfo](arkts-ability-businessabilityrouter-businessabilityinfo-t-sys.md) | Obtains business ability info. |
+<!--DelEnd-->
+

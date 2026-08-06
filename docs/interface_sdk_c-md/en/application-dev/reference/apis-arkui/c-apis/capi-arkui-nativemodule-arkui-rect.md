@@ -6,13 +6,13 @@ typedef struct ArkUI_Rect {...} ArkUI_Rect
 
 ## Overview
 
-Defines a rectangular area.
+Defines a mask area.
 
 **Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**Header file**: [common_type.h](capi-common-type-h.md)
+**Header file**: [native_type.h](capi-native-type-h.md)
 
 ## Summary
 
@@ -20,9 +20,9 @@ Defines a rectangular area.
 
 | Name | Description |
 | -- | -- |
-| float x |  |
-| float y |  |
-| float width |  |
-| float height |  |
+| float x | X coordinate of the mask area. |
+| float y | Y coordinate of the mask area. |
+| float width | Width of the mask area. |
+| float height | Height of the mask area. |
 
 

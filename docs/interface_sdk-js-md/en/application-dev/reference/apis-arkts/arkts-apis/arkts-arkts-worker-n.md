@@ -1,0 +1,36 @@
+# worker
+
+JS cross-thread communication tool
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+<!--Device-unnamed-declare namespace worker--><!--Device-unnamed-declare namespace worker-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## Summary
+
+### Classes
+
+| Name | Description |
+| --- | --- |
+| [ThreadWorker](arkts-arkts-worker-threadworker-c.md) | Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget. |
+| [Worker](arkts-arkts-worker-worker-c.md) | The Worker class contains all Worker functions. |
+
+<!--Del-->
+### Classes（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [RestrictedWorker](arkts-arkts-worker-restrictedworker-c-sys.md) | The RestrictedWorker class contains all Worker functions. |
+<!--DelEnd-->
+
+### Constants
+
+| Name | Description |
+| --- | --- |
+| [parentPort](arkts-arkts-worker-con.md#parentport) | The object used by the worker thread to communicate with the host thread. |
+| [workerPort](arkts-arkts-worker-con.md#workerport) | The object used by the worker thread to communicate with the host thread. |
+

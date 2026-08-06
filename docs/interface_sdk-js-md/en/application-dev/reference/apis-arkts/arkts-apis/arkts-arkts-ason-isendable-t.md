@@ -1,0 +1,20 @@
+# ISendable
+
+```TypeScript
+type ISendable = lang.ISendable
+```
+
+Redefines ISendable for convenience.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ASON-type ISendable = lang.ISendable--><!--Device-ASON-type ISendable = lang.ISendable-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Property type:** lang.ISendable
+

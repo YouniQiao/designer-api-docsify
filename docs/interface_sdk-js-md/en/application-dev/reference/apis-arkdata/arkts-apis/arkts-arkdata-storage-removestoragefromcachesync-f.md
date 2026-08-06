@@ -1,0 +1,26 @@
+# removeStorageFromCacheSync
+
+## removeStorageFromCacheSync
+
+```TypeScript
+function removeStorageFromCacheSync(path: string): void
+```
+
+Removes the singleton **Storage** instance of a file from the cache. The removed instance cannot be used for data operations. Otherwise, data inconsistency will occur.
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.preferences.preferences.removePreferencesFromCache
+
+<!--Device-storage-function removeStorageFromCacheSync(path: string): void--><!--Device-storage-function removeStorageFromCacheSync(path: string): void-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Indicates the path of storage file. |
+

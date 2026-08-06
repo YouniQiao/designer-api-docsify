@@ -6,7 +6,7 @@ typedef struct ffrt_mutexattr_t {...} ffrt_mutexattr_t
 
 ## Overview
 
-Defines the mutex attribute structure used to store mutex attribute information.
+Defines the mutex attribute structure.
 
 **Since**: 10
 
@@ -20,6 +20,6 @@ Defines the mutex attribute structure used to store mutex attribute information.
 
 | Name | Description |
 | -- | -- |
-| long storage | Internal storage backing the mutex attribute. Do not access directly;use {@link ffrt_mutexattr_init} to initialize. |
+| long storage | A long integer used to store the mutex attribute. |
 
 

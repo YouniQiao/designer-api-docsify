@@ -1,0 +1,114 @@
+# BundleInstaller (System API)
+
+The module provides APIs for you to install, uninstall, and recover bundles on devices.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.bundle.installer:installer.BundleInstaller](../arkts-ability-installer-bundleinstaller-i-sys.md)
+
+<!--Device-unnamed-export interface BundleInstaller--><!--Device-unnamed-export interface BundleInstaller-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+
+## install
+
+```TypeScript
+install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCallback<InstallStatus>): void
+```
+
+Install an application in a HAP.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.bundle.installer:installer.BundleInstaller.install](../arkts-ability-installer-bundleinstaller-i-sys.md#install)
+
+**Required permissions:** ohos.permission.INSTALL_BUNDLE
+
+<!--Device-BundleInstaller-install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleFilePaths | Array&lt;string&gt; | Yes | Sandbox path where the HAP files of the bundle are stored. |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for bundle installation. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback used to return the result. If install is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
+
+## recover
+
+```TypeScript
+recover(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void
+```
+
+recover an application.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.bundle.installer:installer.BundleInstaller.recover](../arkts-ability-installer-bundleinstaller-i-sys.md#recover)
+
+**Required permissions:** ohos.permission.INSTALL_BUNDLE
+
+<!--Device-BundleInstaller-recover(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-recover(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for bundle recovery. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback used to return the result. If recover is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
+
+## uninstall
+
+```TypeScript
+uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void
+```
+
+Uninstall an application.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.bundle.installer:installer.BundleInstaller.uninstall](../arkts-ability-installer-bundleinstaller-i-sys.md#uninstall)
+
+**Required permissions:** ohos.permission.INSTALL_BUNDLE
+
+<!--Device-BundleInstaller-uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name. |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters required for bundle uninstall. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback used to return the result. If uninstall is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
+

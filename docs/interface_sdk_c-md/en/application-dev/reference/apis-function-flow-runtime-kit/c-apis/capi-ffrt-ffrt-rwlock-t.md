@@ -6,7 +6,7 @@ typedef struct ffrt_rwlock_t {...} ffrt_rwlock_t
 
 ## Overview
 
-Defines the rwlock structure used to store internal data of the rwlock.
+Defines the rwlock structure.
 
 **Since**: 18
 
@@ -20,7 +20,7 @@ Defines the rwlock structure used to store internal data of the rwlock.
 
 | Name | Description |
 | -- | -- |
-| [uint32_t storage[(ffrt_rwlock_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)]](#sizeof) | Internal storage backing the rwlock. Do not access directly; use the `ffrt_rwlock_*` APIs. |
+| [uint32_t storage[(ffrt_rwlock_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)]](#sizeof) | An array of uint32_t used to store the rwlock. |
 
 ## Member function description
 
@@ -32,6 +32,6 @@ uint32_t storage[(ffrt_rwlock_storage_size + sizeof(uint32_t) - 1) / sizeof(uint
 
 **Description**
 
-Internal storage backing the rwlock. Do not access directly; use the `ffrt_rwlock_*` APIs.
+An array of uint32_t used to store the rwlock.
 
 

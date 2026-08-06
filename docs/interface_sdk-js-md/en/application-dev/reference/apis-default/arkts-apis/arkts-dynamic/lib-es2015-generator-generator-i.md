@@ -1,0 +1,78 @@
+# Generator
+
+**ArkTS mode:** ArkTS-Dyn only
+
+## [Symbol.iterator]
+
+```TypeScript
+[Symbol.iterator](): Generator<T, TReturn, TNext>
+```
+
+**ArkTS mode:** ArkTS-Dyn only
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Generator&lt;T, TReturn, TNext&gt; |  |
+
+## next
+
+```TypeScript
+next(...args: [] | [TNext]): IteratorResult<T, TReturn>
+```
+
+**ArkTS mode:** ArkTS-Dyn only
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| args | [] \| [TNext] | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T, TReturn&gt; |  |
+
+## return
+
+```TypeScript
+return(value: TReturn): IteratorResult<T, TReturn>
+```
+
+**ArkTS mode:** ArkTS-Dyn only
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | TReturn | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T, TReturn&gt; |  |
+
+## throw
+
+```TypeScript
+throw(e: any): IteratorResult<T, TReturn>
+```
+
+**ArkTS mode:** ArkTS-Dyn only
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| e | any | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T, TReturn&gt; |  |
+

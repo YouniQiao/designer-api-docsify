@@ -1,0 +1,50 @@
+# UploadFileType (System API)
+
+Enumerates upload file type.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-intelligentVoice-enum UploadFileType--><!--Device-intelligentVoice-enum UploadFileType-End-->
+
+**System capability:** SystemCapability.AI.IntelligentVoice.Core
+
+**System API:** This is a system API.
+
+## ENROLL_FILE
+
+```TypeScript
+ENROLL_FILE = 0
+```
+
+Enroll file.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-UploadFileType-ENROLL_FILE = 0--><!--Device-UploadFileType-ENROLL_FILE = 0-End-->
+
+**System capability:** SystemCapability.AI.IntelligentVoice.Core
+
+**System API:** This is a system API.
+
+## WAKEUP_FILE
+
+```TypeScript
+WAKEUP_FILE = 1
+```
+
+Wakeup file.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-UploadFileType-WAKEUP_FILE = 1--><!--Device-UploadFileType-WAKEUP_FILE = 1-End-->
+
+**System capability:** SystemCapability.AI.IntelligentVoice.Core
+
+**System API:** This is a system API.
+

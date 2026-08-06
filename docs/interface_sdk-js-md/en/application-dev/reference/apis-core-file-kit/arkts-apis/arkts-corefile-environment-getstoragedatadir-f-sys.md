@@ -1,0 +1,67 @@
+# getStorageDataDir (System API)
+
+## getStorageDataDir
+
+```TypeScript
+function getStorageDataDir(): Promise<string>
+```
+
+Obtains the root directory of the memory. This API uses a promise to return the result.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+<!--Device-Environment-function getStorageDataDir(): Promise<string>--><!--Device-Environment-function getStorageDataDir(): Promise<string>-End-->
+
+**System capability:** SystemCapability.FileManagement.File.Environment
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | Promise used to return the root directory of the memory. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
+| 13900020 | Invalid argument |
+| 13900042 | Unknown error |
+
+
+## getStorageDataDir
+
+```TypeScript
+function getStorageDataDir(callback: AsyncCallback<string>): void
+```
+
+Obtains the root directory of the memory. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+<!--Device-Environment-function getStorageDataDir(callback: AsyncCallback<string>): void--><!--Device-Environment-function getStorageDataDir(callback: AsyncCallback<string>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.Environment
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return the root directory of the memory. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application |
+| 13900020 | Invalid argument |
+| 13900042 | Unknown error |
+

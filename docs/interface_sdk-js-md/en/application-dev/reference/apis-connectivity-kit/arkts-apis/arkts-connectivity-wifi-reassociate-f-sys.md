@@ -1,0 +1,44 @@
+# reassociate (System API)
+
+## reassociate
+
+```TypeScript
+function reassociate(): boolean
+```
+
+Re-associate to current network.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.wifiManager/wifiManager.reassociate
+
+**Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
+
+<!--Device-wifi-function reassociate(): boolean--><!--Device-wifi-function reassociate(): boolean-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | { |
+
+**Example**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    wifi.reassociate();
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```
+

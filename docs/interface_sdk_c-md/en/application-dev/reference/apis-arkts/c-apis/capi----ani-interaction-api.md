@@ -61,34 +61,34 @@
 | [ani_status (\*Array_Get)(ani_env *env, ani_array array, ani_size index, ani_ref *result)](#array_get) | Retrieves a value from an Array.This function retrieves a value at a given index from Arraywith respect to possible override of the managed method. |
 | [ani_status (\*Array_Push)(ani_env *env, ani_array array, ani_ref ref)](#array_push) | Push a value to the end of Array.This function pushes a value to the end of Arraywith respect to possible override of the managed method. |
 | [ani_status (\*Array_Pop)(ani_env *env, ani_array array, ani_ref *result)](#array_pop) | Retrieves the last element and erases it from array.This function retrieves the last element and erases it from Arraywith respect to possible override of the managed method. |
-| [ani_status (\*FixedArray_GetLength)(ani_env *env, ani_fixedarray array, ani_size *result)](#fixedarray_getlength) | Retrieves the length of a FixedArray.This function retrieves the length of the specified FixedArray. |
-| [ani_status (\*ValueArray_New_Boolean)(ani_env *env, ani_size length, ani_valuearray_boolean *result)](#valuearray_new_boolean) | Creates a new ValueArray of booleans.This function creates a new ValueArray of the specified length for boolean values. |
-| [ani_status (\*ValueArray_New_Char)(ani_env *env, ani_size length, ani_valuearray_char *result)](#valuearray_new_char) | Creates a new ValueArray of characters.This function creates a new ValueArray of the specified length for character values. |
-| [ani_status (\*ValueArray_New_Byte)(ani_env *env, ani_size length, ani_valuearray_byte *result)](#valuearray_new_byte) | Creates a new ValueArray of bytes.This function creates a new ValueArray of the specified length for byte values. |
-| [ani_status (\*ValueArray_New_Short)(ani_env *env, ani_size length, ani_valuearray_short *result)](#valuearray_new_short) | Creates a new ValueArray of shorts.This function creates a new ValueArray of the specified length for short integer values. |
-| [ani_status (\*ValueArray_New_Int)(ani_env *env, ani_size length, ani_valuearray_int *result)](#valuearray_new_int) | Creates a new ValueArray of integers.This function creates a new ValueArray of the specified length for integer values. |
-| [ani_status (\*ValueArray_New_Long)(ani_env *env, ani_size length, ani_valuearray_long *result)](#valuearray_new_long) | Creates a new ValueArray of long integers.This function creates a new ValueArray of the specified length for long integer values. |
-| [ani_status (\*ValueArray_New_Float)(ani_env *env, ani_size length, ani_valuearray_float *result)](#valuearray_new_float) | Creates a new ValueArray of floats.This function creates a new ValueArray of the specified length for float values. |
-| [ani_status (\*ValueArray_New_Double)(ani_env *env, ani_size length, ani_valuearray_double *result)](#valuearray_new_double) | Creates a new ValueArray of doubles.This function creates a new ValueArray of the specified length for double values. |
-| [ani_status (\*ValueArray_GetRegion_Boolean)(ani_env *env, ani_valuearray_boolean array, ani_size offset,ani_size length, ani_boolean *native_buffer)](#valuearray_getregion_boolean) | Retrieves a region of boolean values from a ValueArray.This function retrieves a portion of the specified boolean ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Char)(ani_env *env, ani_valuearray_char array, ani_size offset, ani_size length,ani_char *native_buffer)](#valuearray_getregion_char) | Retrieves a region of character values from a ValueArray.This function retrieves a portion of the specified character ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Byte)(ani_env *env, ani_valuearray_byte array, ani_size offset, ani_size length,ani_byte *native_buffer)](#valuearray_getregion_byte) | Retrieves a region of byte values from a ValueArray.This function retrieves a portion of the specified byte ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Short)(ani_env *env, ani_valuearray_short array, ani_size offset, ani_size length,ani_short *native_buffer)](#valuearray_getregion_short) | Retrieves a region of short values from a ValueArray.This function retrieves a portion of the specified short ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Int)(ani_env *env, ani_valuearray_int array, ani_size offset, ani_size length,ani_int *native_buffer)](#valuearray_getregion_int) | Retrieves a region of integer values from a ValueArray.This function retrieves a portion of the specified integer ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Long)(ani_env *env, ani_valuearray_long array, ani_size offset, ani_size length,ani_long *native_buffer)](#valuearray_getregion_long) | Retrieves a region of long integer values from a ValueArray.This function retrieves a portion of the specified long integer ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Float)(ani_env *env, ani_valuearray_float array, ani_size offset, ani_size length,ani_float *native_buffer)](#valuearray_getregion_float) | Retrieves a region of float values from a ValueArray.This function retrieves a portion of the specified float ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Double)(ani_env *env, ani_valuearray_double array, ani_size offset,ani_size length, ani_double *native_buffer)](#valuearray_getregion_double) | Retrieves a region of double values from a ValueArray.This function retrieves a portion of the specified double ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Boolean)(ani_env *env, ani_valuearray_boolean array, ani_size offset,ani_size length, const ani_boolean *native_buffer)](#valuearray_setregion_boolean) | Sets a region of boolean values in a ValueArray.This function sets a portion of the specified boolean ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Char)(ani_env *env, ani_valuearray_char array, ani_size offset, ani_size length,const ani_char *native_buffer)](#valuearray_setregion_char) | Sets a region of character values in a ValueArray.This function sets a portion of the specified character ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Byte)(ani_env *env, ani_valuearray_byte array, ani_size offset, ani_size length,const ani_byte *native_buffer)](#valuearray_setregion_byte) | Sets a region of byte values in a ValueArray.This function sets a portion of the specified byte ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Short)(ani_env *env, ani_valuearray_short array, ani_size offset, ani_size length,const ani_short *native_buffer)](#valuearray_setregion_short) | Sets a region of short values in a ValueArray.This function sets a portion of the specified short ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Int)(ani_env *env, ani_valuearray_int array, ani_size offset, ani_size length,const ani_int *native_buffer)](#valuearray_setregion_int) | Sets a region of integer values in a ValueArray.This function sets a portion of the specified integer ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Long)(ani_env *env, ani_valuearray_long array, ani_size offset, ani_size length,const ani_long *native_buffer)](#valuearray_setregion_long) | Sets a region of long integer values in a ValueArray.This function sets a portion of the specified long integer ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Float)(ani_env *env, ani_valuearray_float array, ani_size offset, ani_size length,const ani_float *native_buffer)](#valuearray_setregion_float) | Sets a region of float values in a ValueArray.This function sets a portion of the specified float ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Double)(ani_env *env, ani_valuearray_double array, ani_size offset,ani_size length, const ani_double *native_buffer)](#valuearray_setregion_double) | Sets a region of double values in a ValueArray.This function sets a portion of the specified double ValueArray using a native buffer. |
-| [ani_status (\*FixedArray_New)(ani_env *env, ani_type type, ani_size length, ani_ref initial_element,ani_fixedarray *result)](#fixedarray_new) | Creates a new FixedArray of references.This function creates a new FixedArray of references, optionally initializing it with an initial_element ref. |
-| [ani_status (\*FixedArray_Set)(ani_env *env, ani_fixedarray array, ani_size index, ani_ref ref)](#fixedarray_set) | Sets a reference at a specific index in a FixedArray.This function sets the value of a reference at the specified index in the FixedArray. |
-| [ani_status (\*FixedArray_Get)(ani_env *env, ani_fixedarray array, ani_size index, ani_ref *result)](#fixedarray_get) | Retrieves a reference from a specific index in a FixedArray.This function retrieves the value of a reference at the specified index in the FixedArray. |
+| [ani_status (\*FixedArray_GetLength)(ani_env *env, ani_fixedarray array, ani_size *result)](#fixedarray_getlength) | Retrieves the length of an FixedArray.This function retrieves the length of the specified FixedArray. |
+| [ani_status (\*FixedArray_New_Boolean)(ani_env *env, ani_size length, ani_fixedarray_boolean *result)](#fixedarray_new_boolean) | Creates a new FixedArray of booleans.This function creates a new FixedArray of the specified length for boolean values. |
+| [ani_status (\*FixedArray_New_Char)(ani_env *env, ani_size length, ani_fixedarray_char *result)](#fixedarray_new_char) | Creates a new FixedArray of characters.This function creates a new FixedArray of the specified length for character values. |
+| [ani_status (\*FixedArray_New_Byte)(ani_env *env, ani_size length, ani_fixedarray_byte *result)](#fixedarray_new_byte) | Creates a new FixedArray of bytes.This function creates a new FixedArray of the specified length for byte values. |
+| [ani_status (\*FixedArray_New_Short)(ani_env *env, ani_size length, ani_fixedarray_short *result)](#fixedarray_new_short) | Creates a new FixedArray of shorts.This function creates a new FixedArray of the specified length for short integer values. |
+| [ani_status (\*FixedArray_New_Int)(ani_env *env, ani_size length, ani_fixedarray_int *result)](#fixedarray_new_int) | Creates a new FixedArray of integers.This function creates a new FixedArray of the specified length for integer values. |
+| [ani_status (\*FixedArray_New_Long)(ani_env *env, ani_size length, ani_fixedarray_long *result)](#fixedarray_new_long) | Creates a new FixedArray of long integers.This function creates a new FixedArray of the specified length for long integer values. |
+| [ani_status (\*FixedArray_New_Float)(ani_env *env, ani_size length, ani_fixedarray_float *result)](#fixedarray_new_float) | Creates a new FixedArray of floats.This function creates a new FixedArray of the specified length for float values. |
+| [ani_status (\*FixedArray_New_Double)(ani_env *env, ani_size length, ani_fixedarray_double *result)](#fixedarray_new_double) | Creates a new FixedArray of doubles.This function creates a new FixedArray of the specified length for double values. |
+| [ani_status (\*FixedArray_GetRegion_Boolean)(ani_env *env, ani_fixedarray_boolean array, ani_size offset,ani_size length, ani_boolean *native_buffer)](#fixedarray_getregion_boolean) | Retrieves a region of boolean values from an FixedArray.This function retrieves a portion of the specified boolean FixedArray into a native buffer. |
+| [ani_status (\*FixedArray_GetRegion_Char)(ani_env *env, ani_fixedarray_char array, ani_size offset, ani_size length,ani_char *native_buffer)](#fixedarray_getregion_char) | Retrieves a region of character values from an FixedArray.This function retrieves a portion of the specified character FixedArray into a native buffer. |
+| [ani_status (\*FixedArray_GetRegion_Byte)(ani_env *env, ani_fixedarray_byte array, ani_size offset, ani_size length,ani_byte *native_buffer)](#fixedarray_getregion_byte) | Retrieves a region of byte values from an FixedArray.This function retrieves a portion of the specified byte FixedArray into a native buffer. |
+| [ani_status (\*FixedArray_GetRegion_Short)(ani_env *env, ani_fixedarray_short array, ani_size offset, ani_size length,ani_short *native_buffer)](#fixedarray_getregion_short) | Retrieves a region of short values from an FixedArray.This function retrieves a portion of the specified short FixedArray into a native buffer. |
+| [ani_status (\*FixedArray_GetRegion_Int)(ani_env *env, ani_fixedarray_int array, ani_size offset, ani_size length,ani_int *native_buffer)](#fixedarray_getregion_int) | Retrieves a region of integer values from an FixedArray.This function retrieves a portion of the specified integer FixedArray into a native buffer. |
+| [ani_status (\*FixedArray_GetRegion_Long)(ani_env *env, ani_fixedarray_long array, ani_size offset, ani_size length,ani_long *native_buffer)](#fixedarray_getregion_long) | Retrieves a region of long integer values from an FixedArray.This function retrieves a portion of the specified long integer FixedArray into a native buffer. |
+| [ani_status (\*FixedArray_GetRegion_Float)(ani_env *env, ani_fixedarray_float array, ani_size offset, ani_size length,ani_float *native_buffer)](#fixedarray_getregion_float) | Retrieves a region of float values from an FixedArray.This function retrieves a portion of the specified float FixedArray into a native buffer. |
+| [ani_status (\*FixedArray_GetRegion_Double)(ani_env *env, ani_fixedarray_double array, ani_size offset,ani_size length, ani_double *native_buffer)](#fixedarray_getregion_double) | Retrieves a region of double values from an FixedArray.This function retrieves a portion of the specified double FixedArray into a native buffer. |
+| [ani_status (\*FixedArray_SetRegion_Boolean)(ani_env *env, ani_fixedarray_boolean array, ani_size offset,ani_size length, const ani_boolean *native_buffer)](#fixedarray_setregion_boolean) | Sets a region of boolean values in an FixedArray.This function sets a portion of the specified boolean FixedArray using a native buffer. |
+| [ani_status (\*FixedArray_SetRegion_Char)(ani_env *env, ani_fixedarray_char array, ani_size offset, ani_size length,const ani_char *native_buffer)](#fixedarray_setregion_char) | Sets a region of character values in an FixedArray.This function sets a portion of the specified character FixedArray using a native buffer. |
+| [ani_status (\*FixedArray_SetRegion_Byte)(ani_env *env, ani_fixedarray_byte array, ani_size offset, ani_size length,const ani_byte *native_buffer)](#fixedarray_setregion_byte) | Sets a region of byte values in an FixedArray.This function sets a portion of the specified byte FixedArray using a native buffer. |
+| [ani_status (\*FixedArray_SetRegion_Short)(ani_env *env, ani_fixedarray_short array, ani_size offset, ani_size length,const ani_short *native_buffer)](#fixedarray_setregion_short) | Sets a region of short values in an FixedArray.This function sets a portion of the specified short FixedArray using a native buffer. |
+| [ani_status (\*FixedArray_SetRegion_Int)(ani_env *env, ani_fixedarray_int array, ani_size offset, ani_size length,const ani_int *native_buffer)](#fixedarray_setregion_int) | Sets a region of integer values in an FixedArray.This function sets a portion of the specified integer FixedArray using a native buffer. |
+| [ani_status (\*FixedArray_SetRegion_Long)(ani_env *env, ani_fixedarray_long array, ani_size offset, ani_size length,const ani_long *native_buffer)](#fixedarray_setregion_long) | Sets a region of long integer values in an FixedArray.This function sets a portion of the specified long integer FixedArray using a native buffer. |
+| [ani_status (\*FixedArray_SetRegion_Float)(ani_env *env, ani_fixedarray_float array, ani_size offset, ani_size length,const ani_float *native_buffer)](#fixedarray_setregion_float) | Sets a region of float values in an FixedArray.This function sets a portion of the specified float FixedArray using a native buffer. |
+| [ani_status (\*FixedArray_SetRegion_Double)(ani_env *env, ani_fixedarray_double array, ani_size offset,ani_size length, const ani_double *native_buffer)](#fixedarray_setregion_double) | Sets a region of double values in an FixedArray.This function sets a portion of the specified double FixedArray using a native buffer. |
+| [ani_status (\*FixedArray_New_Ref)(ani_env *env, ani_type type, ani_size length, ani_ref initial_element,ani_fixedarray_ref *result)](#fixedarray_new_ref) | Creates a new FixedArray of references.This function creates a new FixedArray of references, optionally initializing it with an initial_element ref. |
+| [ani_status (\*FixedArray_Set_Ref)(ani_env *env, ani_fixedarray_ref array, ani_size index, ani_ref ref)](#fixedarray_set_ref) | Sets a reference at a specific index in an FixedArray.This function sets the value of a reference at the specified index in the FixedArray. |
+| [ani_status (\*FixedArray_Get_Ref)(ani_env *env, ani_fixedarray_ref array, ani_size index, ani_ref *result)](#fixedarray_get_ref) | Retrieves a reference from a specific index in an FixedArray.This function retrieves the value of a reference at the specified index in the FixedArray. |
 | [ani_status (\*Enum_GetEnumItemByName)(ani_env *env, ani_enum enm, const char *name, ani_enum_item *result)](#enum_getenumitembyname) | Retrieves an enum item by its name.This function retrieves an enum item associated with the specified name. |
 | [ani_status (\*Enum_GetEnumItemByIndex)(ani_env *env, ani_enum enm, ani_size index, ani_enum_item *result)](#enum_getenumitembyindex) | Retrieves an enum item by its index.This function retrieves an enum item located at the specified index. |
 | [ani_status (\*EnumItem_GetEnum)(ani_env *env, ani_enum_item enum_item, ani_enum *result)](#enumitem_getenum) | Retrieves the enum associated with an enum item.This function retrieves the enum to which the specified enum item belongs. |
@@ -411,7 +411,6 @@ void *reserved4void *reserved5void *reserved6void *reserved7void *reserved8void 
 | [ani_status (\*Primitive_Unbox_Float)(ani_env *env, ani_object obj, ani_float *result)](#primitive_unbox_float) | Unbox a float object into a float value.This function unboxes a float object into a float value. |
 | [ani_status (\*Primitive_Box_Double)(ani_env *env, ani_double value, ani_object *result)](#primitive_box_double) | Box a double value into an object.This function boxes a double value into an object. |
 | [ani_status (\*Primitive_Unbox_Double)(ani_env *env, ani_object obj, ani_double *result)](#primitive_unbox_double) | Unbox a double object into a double value.This function unboxes a double object into a double value. |
-| [ani_status (\*ValueArray_GetLength)(ani_env *env, ani_valuearray array, ani_size *result)](#valuearray_getlength) | Retrieves the length of a ValueArray.This function retrieves the length of the specified ValueArray. |
 
 ## Member function description
 
@@ -1818,7 +1817,7 @@ ani_status (*FixedArray_GetLength)(ani_env *env, ani_fixedarray array, ani_size 
 
 **Description**
 
-Retrieves the length of a FixedArray.This function retrieves the length of the specified FixedArray.
+Retrieves the length of an FixedArray.This function retrieves the length of the specified FixedArray.
 
 **Since**: 23
 
@@ -1836,15 +1835,15 @@ Retrieves the length of a FixedArray.This function retrieves the length of the s
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_New_Boolean()
+### FixedArray_New_Boolean()
 
 ```c
-ani_status (*ValueArray_New_Boolean)(ani_env *env, ani_size length, ani_valuearray_boolean *result)
+ani_status (*FixedArray_New_Boolean)(ani_env *env, ani_size length, ani_fixedarray_boolean *result)
 ```
 
 **Description**
 
-Creates a new ValueArray of booleans.This function creates a new ValueArray of the specified length for boolean values.
+Creates a new FixedArray of booleans.This function creates a new FixedArray of the specified length for boolean values.
 
 **Since**: 23
 
@@ -1853,8 +1852,8 @@ Creates a new ValueArray of booleans.This function creates a new ValueArray of t
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | length The length of the ValueArray to be created. |
-| [out] | result A pointer to store the created ValueArray. |
+| [in] | length The length of the FixedArray to be created. |
+| [out] | result A pointer to store the created FixedArray. |
 
 **Returns**:
 
@@ -1862,15 +1861,15 @@ Creates a new ValueArray of booleans.This function creates a new ValueArray of t
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_New_Char()
+### FixedArray_New_Char()
 
 ```c
-ani_status (*ValueArray_New_Char)(ani_env *env, ani_size length, ani_valuearray_char *result)
+ani_status (*FixedArray_New_Char)(ani_env *env, ani_size length, ani_fixedarray_char *result)
 ```
 
 **Description**
 
-Creates a new ValueArray of characters.This function creates a new ValueArray of the specified length for character values.
+Creates a new FixedArray of characters.This function creates a new FixedArray of the specified length for character values.
 
 **Since**: 23
 
@@ -1879,8 +1878,8 @@ Creates a new ValueArray of characters.This function creates a new ValueArray of
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | length The length of the ValueArray to be created. |
-| [out] | result A pointer to store the created ValueArray. |
+| [in] | length The length of the FixedArray to be created. |
+| [out] | result A pointer to store the created FixedArray. |
 
 **Returns**:
 
@@ -1888,15 +1887,15 @@ Creates a new ValueArray of characters.This function creates a new ValueArray of
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_New_Byte()
+### FixedArray_New_Byte()
 
 ```c
-ani_status (*ValueArray_New_Byte)(ani_env *env, ani_size length, ani_valuearray_byte *result)
+ani_status (*FixedArray_New_Byte)(ani_env *env, ani_size length, ani_fixedarray_byte *result)
 ```
 
 **Description**
 
-Creates a new ValueArray of bytes.This function creates a new ValueArray of the specified length for byte values.
+Creates a new FixedArray of bytes.This function creates a new FixedArray of the specified length for byte values.
 
 **Since**: 23
 
@@ -1905,8 +1904,8 @@ Creates a new ValueArray of bytes.This function creates a new ValueArray of the 
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | length The length of the ValueArray to be created. |
-| [out] | result A pointer to store the created ValueArray. |
+| [in] | length The length of the FixedArray to be created. |
+| [out] | result A pointer to store the created FixedArray. |
 
 **Returns**:
 
@@ -1914,15 +1913,15 @@ Creates a new ValueArray of bytes.This function creates a new ValueArray of the 
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_New_Short()
+### FixedArray_New_Short()
 
 ```c
-ani_status (*ValueArray_New_Short)(ani_env *env, ani_size length, ani_valuearray_short *result)
+ani_status (*FixedArray_New_Short)(ani_env *env, ani_size length, ani_fixedarray_short *result)
 ```
 
 **Description**
 
-Creates a new ValueArray of shorts.This function creates a new ValueArray of the specified length for short integer values.
+Creates a new FixedArray of shorts.This function creates a new FixedArray of the specified length for short integer values.
 
 **Since**: 23
 
@@ -1931,8 +1930,8 @@ Creates a new ValueArray of shorts.This function creates a new ValueArray of the
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | length The length of the ValueArray to be created. |
-| [out] | result A pointer to store the created ValueArray. |
+| [in] | length The length of the FixedArray to be created. |
+| [out] | result A pointer to store the created FixedArray. |
 
 **Returns**:
 
@@ -1940,15 +1939,15 @@ Creates a new ValueArray of shorts.This function creates a new ValueArray of the
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_New_Int()
+### FixedArray_New_Int()
 
 ```c
-ani_status (*ValueArray_New_Int)(ani_env *env, ani_size length, ani_valuearray_int *result)
+ani_status (*FixedArray_New_Int)(ani_env *env, ani_size length, ani_fixedarray_int *result)
 ```
 
 **Description**
 
-Creates a new ValueArray of integers.This function creates a new ValueArray of the specified length for integer values.
+Creates a new FixedArray of integers.This function creates a new FixedArray of the specified length for integer values.
 
 **Since**: 23
 
@@ -1957,8 +1956,8 @@ Creates a new ValueArray of integers.This function creates a new ValueArray of t
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | length The length of the ValueArray to be created. |
-| [out] | result A pointer to store the created ValueArray. |
+| [in] | length The length of the FixedArray to be created. |
+| [out] | result A pointer to store the created FixedArray. |
 
 **Returns**:
 
@@ -1966,15 +1965,15 @@ Creates a new ValueArray of integers.This function creates a new ValueArray of t
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_New_Long()
+### FixedArray_New_Long()
 
 ```c
-ani_status (*ValueArray_New_Long)(ani_env *env, ani_size length, ani_valuearray_long *result)
+ani_status (*FixedArray_New_Long)(ani_env *env, ani_size length, ani_fixedarray_long *result)
 ```
 
 **Description**
 
-Creates a new ValueArray of long integers.This function creates a new ValueArray of the specified length for long integer values.
+Creates a new FixedArray of long integers.This function creates a new FixedArray of the specified length for long integer values.
 
 **Since**: 23
 
@@ -1983,8 +1982,8 @@ Creates a new ValueArray of long integers.This function creates a new ValueArray
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | length The length of the ValueArray to be created. |
-| [out] | result A pointer to store the created ValueArray. |
+| [in] | length The length of the FixedArray to be created. |
+| [out] | result A pointer to store the created FixedArray. |
 
 **Returns**:
 
@@ -1992,15 +1991,15 @@ Creates a new ValueArray of long integers.This function creates a new ValueArray
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_New_Float()
+### FixedArray_New_Float()
 
 ```c
-ani_status (*ValueArray_New_Float)(ani_env *env, ani_size length, ani_valuearray_float *result)
+ani_status (*FixedArray_New_Float)(ani_env *env, ani_size length, ani_fixedarray_float *result)
 ```
 
 **Description**
 
-Creates a new ValueArray of floats.This function creates a new ValueArray of the specified length for float values.
+Creates a new FixedArray of floats.This function creates a new FixedArray of the specified length for float values.
 
 **Since**: 23
 
@@ -2009,8 +2008,8 @@ Creates a new ValueArray of floats.This function creates a new ValueArray of the
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | length The length of the ValueArray to be created. |
-| [out] | result A pointer to store the created ValueArray. |
+| [in] | length The length of the FixedArray to be created. |
+| [out] | result A pointer to store the created FixedArray. |
 
 **Returns**:
 
@@ -2018,15 +2017,15 @@ Creates a new ValueArray of floats.This function creates a new ValueArray of the
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_New_Double()
+### FixedArray_New_Double()
 
 ```c
-ani_status (*ValueArray_New_Double)(ani_env *env, ani_size length, ani_valuearray_double *result)
+ani_status (*FixedArray_New_Double)(ani_env *env, ani_size length, ani_fixedarray_double *result)
 ```
 
 **Description**
 
-Creates a new ValueArray of doubles.This function creates a new ValueArray of the specified length for double values.
+Creates a new FixedArray of doubles.This function creates a new FixedArray of the specified length for double values.
 
 **Since**: 23
 
@@ -2035,8 +2034,8 @@ Creates a new ValueArray of doubles.This function creates a new ValueArray of th
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | length The length of the ValueArray to be created. |
-| [out] | result A pointer to store the created ValueArray. |
+| [in] | length The length of the FixedArray to be created. |
+| [out] | result A pointer to store the created FixedArray. |
 
 **Returns**:
 
@@ -2044,15 +2043,15 @@ Creates a new ValueArray of doubles.This function creates a new ValueArray of th
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_GetRegion_Boolean()
+### FixedArray_GetRegion_Boolean()
 
 ```c
-ani_status (*ValueArray_GetRegion_Boolean)(ani_env *env, ani_valuearray_boolean array, ani_size offset,ani_size length, ani_boolean *native_buffer)
+ani_status (*FixedArray_GetRegion_Boolean)(ani_env *env, ani_fixedarray_boolean array, ani_size offset,ani_size length, ani_boolean *native_buffer)
 ```
 
 **Description**
 
-Retrieves a region of boolean values from a ValueArray.This function retrieves a portion of the specified boolean ValueArray into a native buffer.
+Retrieves a region of boolean values from an FixedArray.This function retrieves a portion of the specified boolean FixedArray into a native buffer.
 
 **Since**: 23
 
@@ -2061,7 +2060,7 @@ Retrieves a region of boolean values from a ValueArray.This function retrieves a
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to retrieve values from. |
+| [in] | array The FixedArray to retrieve values from. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to retrieve. |
 | [out] | native_buffer A buffer to store the retrieved boolean values. |
@@ -2072,15 +2071,15 @@ Retrieves a region of boolean values from a ValueArray.This function retrieves a
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_GetRegion_Char()
+### FixedArray_GetRegion_Char()
 
 ```c
-ani_status (*ValueArray_GetRegion_Char)(ani_env *env, ani_valuearray_char array, ani_size offset, ani_size length,ani_char *native_buffer)
+ani_status (*FixedArray_GetRegion_Char)(ani_env *env, ani_fixedarray_char array, ani_size offset, ani_size length,ani_char *native_buffer)
 ```
 
 **Description**
 
-Retrieves a region of character values from a ValueArray.This function retrieves a portion of the specified character ValueArray into a native buffer.
+Retrieves a region of character values from an FixedArray.This function retrieves a portion of the specified character FixedArray into a native buffer.
 
 **Since**: 23
 
@@ -2089,7 +2088,7 @@ Retrieves a region of character values from a ValueArray.This function retrieves
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to retrieve values from. |
+| [in] | array The FixedArray to retrieve values from. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to retrieve. |
 | [out] | native_buffer A buffer to store the retrieved character values. |
@@ -2100,15 +2099,15 @@ Retrieves a region of character values from a ValueArray.This function retrieves
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_GetRegion_Byte()
+### FixedArray_GetRegion_Byte()
 
 ```c
-ani_status (*ValueArray_GetRegion_Byte)(ani_env *env, ani_valuearray_byte array, ani_size offset, ani_size length,ani_byte *native_buffer)
+ani_status (*FixedArray_GetRegion_Byte)(ani_env *env, ani_fixedarray_byte array, ani_size offset, ani_size length,ani_byte *native_buffer)
 ```
 
 **Description**
 
-Retrieves a region of byte values from a ValueArray.This function retrieves a portion of the specified byte ValueArray into a native buffer.
+Retrieves a region of byte values from an FixedArray.This function retrieves a portion of the specified byte FixedArray into a native buffer.
 
 **Since**: 23
 
@@ -2117,7 +2116,7 @@ Retrieves a region of byte values from a ValueArray.This function retrieves a po
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to retrieve values from. |
+| [in] | array The FixedArray to retrieve values from. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to retrieve. |
 | [out] | native_buffer A buffer to store the retrieved byte values. |
@@ -2128,15 +2127,15 @@ Retrieves a region of byte values from a ValueArray.This function retrieves a po
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_GetRegion_Short()
+### FixedArray_GetRegion_Short()
 
 ```c
-ani_status (*ValueArray_GetRegion_Short)(ani_env *env, ani_valuearray_short array, ani_size offset, ani_size length,ani_short *native_buffer)
+ani_status (*FixedArray_GetRegion_Short)(ani_env *env, ani_fixedarray_short array, ani_size offset, ani_size length,ani_short *native_buffer)
 ```
 
 **Description**
 
-Retrieves a region of short values from a ValueArray.This function retrieves a portion of the specified short ValueArray into a native buffer.
+Retrieves a region of short values from an FixedArray.This function retrieves a portion of the specified short FixedArray into a native buffer.
 
 **Since**: 23
 
@@ -2145,7 +2144,7 @@ Retrieves a region of short values from a ValueArray.This function retrieves a p
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to retrieve values from. |
+| [in] | array The FixedArray to retrieve values from. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to retrieve. |
 | [out] | native_buffer A buffer to store the retrieved short values. |
@@ -2156,15 +2155,15 @@ Retrieves a region of short values from a ValueArray.This function retrieves a p
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_GetRegion_Int()
+### FixedArray_GetRegion_Int()
 
 ```c
-ani_status (*ValueArray_GetRegion_Int)(ani_env *env, ani_valuearray_int array, ani_size offset, ani_size length,ani_int *native_buffer)
+ani_status (*FixedArray_GetRegion_Int)(ani_env *env, ani_fixedarray_int array, ani_size offset, ani_size length,ani_int *native_buffer)
 ```
 
 **Description**
 
-Retrieves a region of integer values from a ValueArray.This function retrieves a portion of the specified integer ValueArray into a native buffer.
+Retrieves a region of integer values from an FixedArray.This function retrieves a portion of the specified integer FixedArray into a native buffer.
 
 **Since**: 23
 
@@ -2173,7 +2172,7 @@ Retrieves a region of integer values from a ValueArray.This function retrieves a
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to retrieve values from. |
+| [in] | array The FixedArray to retrieve values from. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to retrieve. |
 | [out] | native_buffer A buffer to store the retrieved integer values. |
@@ -2184,15 +2183,15 @@ Retrieves a region of integer values from a ValueArray.This function retrieves a
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_GetRegion_Long()
+### FixedArray_GetRegion_Long()
 
 ```c
-ani_status (*ValueArray_GetRegion_Long)(ani_env *env, ani_valuearray_long array, ani_size offset, ani_size length,ani_long *native_buffer)
+ani_status (*FixedArray_GetRegion_Long)(ani_env *env, ani_fixedarray_long array, ani_size offset, ani_size length,ani_long *native_buffer)
 ```
 
 **Description**
 
-Retrieves a region of long integer values from a ValueArray.This function retrieves a portion of the specified long integer ValueArray into a native buffer.
+Retrieves a region of long integer values from an FixedArray.This function retrieves a portion of the specified long integer FixedArray into a native buffer.
 
 **Since**: 23
 
@@ -2201,7 +2200,7 @@ Retrieves a region of long integer values from a ValueArray.This function retrie
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to retrieve values from. |
+| [in] | array The FixedArray to retrieve values from. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to retrieve. |
 | [out] | native_buffer A buffer to store the retrieved long integer values. |
@@ -2212,15 +2211,15 @@ Retrieves a region of long integer values from a ValueArray.This function retrie
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_GetRegion_Float()
+### FixedArray_GetRegion_Float()
 
 ```c
-ani_status (*ValueArray_GetRegion_Float)(ani_env *env, ani_valuearray_float array, ani_size offset, ani_size length,ani_float *native_buffer)
+ani_status (*FixedArray_GetRegion_Float)(ani_env *env, ani_fixedarray_float array, ani_size offset, ani_size length,ani_float *native_buffer)
 ```
 
 **Description**
 
-Retrieves a region of float values from a ValueArray.This function retrieves a portion of the specified float ValueArray into a native buffer.
+Retrieves a region of float values from an FixedArray.This function retrieves a portion of the specified float FixedArray into a native buffer.
 
 **Since**: 23
 
@@ -2229,7 +2228,7 @@ Retrieves a region of float values from a ValueArray.This function retrieves a p
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to retrieve values from. |
+| [in] | array The FixedArray to retrieve values from. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to retrieve. |
 | [out] | native_buffer A buffer to store the retrieved float values. |
@@ -2240,15 +2239,15 @@ Retrieves a region of float values from a ValueArray.This function retrieves a p
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_GetRegion_Double()
+### FixedArray_GetRegion_Double()
 
 ```c
-ani_status (*ValueArray_GetRegion_Double)(ani_env *env, ani_valuearray_double array, ani_size offset,ani_size length, ani_double *native_buffer)
+ani_status (*FixedArray_GetRegion_Double)(ani_env *env, ani_fixedarray_double array, ani_size offset,ani_size length, ani_double *native_buffer)
 ```
 
 **Description**
 
-Retrieves a region of double values from a ValueArray.This function retrieves a portion of the specified double ValueArray into a native buffer.
+Retrieves a region of double values from an FixedArray.This function retrieves a portion of the specified double FixedArray into a native buffer.
 
 **Since**: 23
 
@@ -2257,7 +2256,7 @@ Retrieves a region of double values from a ValueArray.This function retrieves a 
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to retrieve values from. |
+| [in] | array The FixedArray to retrieve values from. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to retrieve. |
 | [out] | native_buffer A buffer to store the retrieved double values. |
@@ -2268,15 +2267,15 @@ Retrieves a region of double values from a ValueArray.This function retrieves a 
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_SetRegion_Boolean()
+### FixedArray_SetRegion_Boolean()
 
 ```c
-ani_status (*ValueArray_SetRegion_Boolean)(ani_env *env, ani_valuearray_boolean array, ani_size offset,ani_size length, const ani_boolean *native_buffer)
+ani_status (*FixedArray_SetRegion_Boolean)(ani_env *env, ani_fixedarray_boolean array, ani_size offset,ani_size length, const ani_boolean *native_buffer)
 ```
 
 **Description**
 
-Sets a region of boolean values in a ValueArray.This function sets a portion of the specified boolean ValueArray using a native buffer.
+Sets a region of boolean values in an FixedArray.This function sets a portion of the specified boolean FixedArray using a native buffer.
 
 **Since**: 23
 
@@ -2285,7 +2284,7 @@ Sets a region of boolean values in a ValueArray.This function sets a portion of 
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to set values in. |
+| [in] | array The FixedArray to set values in. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to set. |
 | [in] | native_buffer A buffer containing the boolean values to set. |
@@ -2296,15 +2295,15 @@ Sets a region of boolean values in a ValueArray.This function sets a portion of 
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_SetRegion_Char()
+### FixedArray_SetRegion_Char()
 
 ```c
-ani_status (*ValueArray_SetRegion_Char)(ani_env *env, ani_valuearray_char array, ani_size offset, ani_size length,const ani_char *native_buffer)
+ani_status (*FixedArray_SetRegion_Char)(ani_env *env, ani_fixedarray_char array, ani_size offset, ani_size length,const ani_char *native_buffer)
 ```
 
 **Description**
 
-Sets a region of character values in a ValueArray.This function sets a portion of the specified character ValueArray using a native buffer.
+Sets a region of character values in an FixedArray.This function sets a portion of the specified character FixedArray using a native buffer.
 
 **Since**: 23
 
@@ -2313,7 +2312,7 @@ Sets a region of character values in a ValueArray.This function sets a portion o
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to set values in. |
+| [in] | array The FixedArray to set values in. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to set. |
 | [in] | native_buffer A buffer containing the character values to set. |
@@ -2324,15 +2323,15 @@ Sets a region of character values in a ValueArray.This function sets a portion o
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_SetRegion_Byte()
+### FixedArray_SetRegion_Byte()
 
 ```c
-ani_status (*ValueArray_SetRegion_Byte)(ani_env *env, ani_valuearray_byte array, ani_size offset, ani_size length,const ani_byte *native_buffer)
+ani_status (*FixedArray_SetRegion_Byte)(ani_env *env, ani_fixedarray_byte array, ani_size offset, ani_size length,const ani_byte *native_buffer)
 ```
 
 **Description**
 
-Sets a region of byte values in a ValueArray.This function sets a portion of the specified byte ValueArray using a native buffer.
+Sets a region of byte values in an FixedArray.This function sets a portion of the specified byte FixedArray using a native buffer.
 
 **Since**: 23
 
@@ -2341,7 +2340,7 @@ Sets a region of byte values in a ValueArray.This function sets a portion of the
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to set values in. |
+| [in] | array The FixedArray to set values in. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to set. |
 | [in] | native_buffer A buffer containing the byte values to set. |
@@ -2352,15 +2351,15 @@ Sets a region of byte values in a ValueArray.This function sets a portion of the
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_SetRegion_Short()
+### FixedArray_SetRegion_Short()
 
 ```c
-ani_status (*ValueArray_SetRegion_Short)(ani_env *env, ani_valuearray_short array, ani_size offset, ani_size length,const ani_short *native_buffer)
+ani_status (*FixedArray_SetRegion_Short)(ani_env *env, ani_fixedarray_short array, ani_size offset, ani_size length,const ani_short *native_buffer)
 ```
 
 **Description**
 
-Sets a region of short values in a ValueArray.This function sets a portion of the specified short ValueArray using a native buffer.
+Sets a region of short values in an FixedArray.This function sets a portion of the specified short FixedArray using a native buffer.
 
 **Since**: 23
 
@@ -2369,7 +2368,7 @@ Sets a region of short values in a ValueArray.This function sets a portion of th
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to set values in. |
+| [in] | array The FixedArray to set values in. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to set. |
 | [in] | native_buffer A buffer containing the short values to set. |
@@ -2380,15 +2379,15 @@ Sets a region of short values in a ValueArray.This function sets a portion of th
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_SetRegion_Int()
+### FixedArray_SetRegion_Int()
 
 ```c
-ani_status (*ValueArray_SetRegion_Int)(ani_env *env, ani_valuearray_int array, ani_size offset, ani_size length,const ani_int *native_buffer)
+ani_status (*FixedArray_SetRegion_Int)(ani_env *env, ani_fixedarray_int array, ani_size offset, ani_size length,const ani_int *native_buffer)
 ```
 
 **Description**
 
-Sets a region of integer values in a ValueArray.This function sets a portion of the specified integer ValueArray using a native buffer.
+Sets a region of integer values in an FixedArray.This function sets a portion of the specified integer FixedArray using a native buffer.
 
 **Since**: 23
 
@@ -2397,7 +2396,7 @@ Sets a region of integer values in a ValueArray.This function sets a portion of 
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to set values in. |
+| [in] | array The FixedArray to set values in. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to set. |
 | [in] | native_buffer A buffer containing the integer values to set. |
@@ -2408,15 +2407,15 @@ Sets a region of integer values in a ValueArray.This function sets a portion of 
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_SetRegion_Long()
+### FixedArray_SetRegion_Long()
 
 ```c
-ani_status (*ValueArray_SetRegion_Long)(ani_env *env, ani_valuearray_long array, ani_size offset, ani_size length,const ani_long *native_buffer)
+ani_status (*FixedArray_SetRegion_Long)(ani_env *env, ani_fixedarray_long array, ani_size offset, ani_size length,const ani_long *native_buffer)
 ```
 
 **Description**
 
-Sets a region of long integer values in a ValueArray.This function sets a portion of the specified long integer ValueArray using a native buffer.
+Sets a region of long integer values in an FixedArray.This function sets a portion of the specified long integer FixedArray using a native buffer.
 
 **Since**: 23
 
@@ -2425,7 +2424,7 @@ Sets a region of long integer values in a ValueArray.This function sets a portio
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to set values in. |
+| [in] | array The FixedArray to set values in. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to set. |
 | [in] | native_buffer A buffer containing the long integer values to set. |
@@ -2436,15 +2435,15 @@ Sets a region of long integer values in a ValueArray.This function sets a portio
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_SetRegion_Float()
+### FixedArray_SetRegion_Float()
 
 ```c
-ani_status (*ValueArray_SetRegion_Float)(ani_env *env, ani_valuearray_float array, ani_size offset, ani_size length,const ani_float *native_buffer)
+ani_status (*FixedArray_SetRegion_Float)(ani_env *env, ani_fixedarray_float array, ani_size offset, ani_size length,const ani_float *native_buffer)
 ```
 
 **Description**
 
-Sets a region of float values in a ValueArray.This function sets a portion of the specified float ValueArray using a native buffer.
+Sets a region of float values in an FixedArray.This function sets a portion of the specified float FixedArray using a native buffer.
 
 **Since**: 23
 
@@ -2453,7 +2452,7 @@ Sets a region of float values in a ValueArray.This function sets a portion of th
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to set values in. |
+| [in] | array The FixedArray to set values in. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to set. |
 | [in] | native_buffer A buffer containing the float values to set. |
@@ -2464,15 +2463,15 @@ Sets a region of float values in a ValueArray.This function sets a portion of th
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### ValueArray_SetRegion_Double()
+### FixedArray_SetRegion_Double()
 
 ```c
-ani_status (*ValueArray_SetRegion_Double)(ani_env *env, ani_valuearray_double array, ani_size offset,ani_size length, const ani_double *native_buffer)
+ani_status (*FixedArray_SetRegion_Double)(ani_env *env, ani_fixedarray_double array, ani_size offset,ani_size length, const ani_double *native_buffer)
 ```
 
 **Description**
 
-Sets a region of double values in a ValueArray.This function sets a portion of the specified double ValueArray using a native buffer.
+Sets a region of double values in an FixedArray.This function sets a portion of the specified double FixedArray using a native buffer.
 
 **Since**: 23
 
@@ -2481,7 +2480,7 @@ Sets a region of double values in a ValueArray.This function sets a portion of t
 | Parameter | Description |
 | -- | -- |
 | [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray to set values in. |
+| [in] | array The FixedArray to set values in. |
 | [in] | offset The starting offset of the region. |
 | [in] | length The number of elements to set. |
 | [in] | native_buffer A buffer containing the double values to set. |
@@ -2492,10 +2491,10 @@ Sets a region of double values in a ValueArray.This function sets a portion of t
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### FixedArray_New()
+### FixedArray_New_Ref()
 
 ```c
-ani_status (*FixedArray_New)(ani_env *env, ani_type type, ani_size length, ani_ref initial_element,ani_fixedarray *result)
+ani_status (*FixedArray_New_Ref)(ani_env *env, ani_type type, ani_size length, ani_ref initial_element,ani_fixedarray_ref *result)
 ```
 
 **Description**
@@ -2520,15 +2519,15 @@ Creates a new FixedArray of references.This function creates a new FixedArray of
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### FixedArray_Set()
+### FixedArray_Set_Ref()
 
 ```c
-ani_status (*FixedArray_Set)(ani_env *env, ani_fixedarray array, ani_size index, ani_ref ref)
+ani_status (*FixedArray_Set_Ref)(ani_env *env, ani_fixedarray_ref array, ani_size index, ani_ref ref)
 ```
 
 **Description**
 
-Sets a reference at a specific index in a FixedArray.This function sets the value of a reference at the specified index in the FixedArray.
+Sets a reference at a specific index in an FixedArray.This function sets the value of a reference at the specified index in the FixedArray.
 
 **Since**: 23
 
@@ -2547,15 +2546,15 @@ Sets a reference at a specific index in a FixedArray.This function sets the valu
 | -- | -- |
 | ani_status | Returns a status code of type `ani_status` indicating success or failure. |
 
-### FixedArray_Get()
+### FixedArray_Get_Ref()
 
 ```c
-ani_status (*FixedArray_Get)(ani_env *env, ani_fixedarray array, ani_size index, ani_ref *result)
+ani_status (*FixedArray_Get_Ref)(ani_env *env, ani_fixedarray_ref array, ani_size index, ani_ref *result)
 ```
 
 **Description**
 
-Retrieves a reference from a specific index in a FixedArray.This function retrieves the value of a reference at the specified index in the FixedArray.
+Retrieves a reference from a specific index in an FixedArray.This function retrieves the value of a reference at the specified index in the FixedArray.
 
 **Since**: 23
 
@@ -11353,32 +11352,6 @@ Unbox a double object into a double value.This function unboxes a double object 
 | [in] | env A pointer to the environment structure. |
 | [in] | obj The obj to be unboxed. |
 | [out] | result A pointer to restore the resulting unboxed double value. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| ani_status | Returns a status code of type `ani_status` indicating success or failure. |
-
-### ValueArray_GetLength()
-
-```c
-ani_status (*ValueArray_GetLength)(ani_env *env, ani_valuearray array, ani_size *result)
-```
-
-**Description**
-
-Retrieves the length of a ValueArray.This function retrieves the length of the specified ValueArray.
-
-**Since**: 26.1.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [in] | env A pointer to the environment structure. |
-| [in] | array The ValueArray whose length is to be retrieved. |
-| [out] | result A pointer to store the length of the ValueArray. |
 
 **Returns**:
 

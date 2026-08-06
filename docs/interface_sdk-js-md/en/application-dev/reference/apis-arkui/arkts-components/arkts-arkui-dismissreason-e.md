@@ -1,0 +1,120 @@
+# DismissReason
+
+Enumerates the reasons for popup dismissal.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-unnamed-declare enum DismissReason--><!--Device-unnamed-declare enum DismissReason-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## PRESS_BACK
+
+```TypeScript
+PRESS_BACK = 0
+```
+
+Touching the **Back** button, swiping left or right on the screen, or pressing the **Esc** key.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DismissReason-PRESS_BACK = 0--><!--Device-DismissReason-PRESS_BACK = 0-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## TOUCH_OUTSIDE
+
+```TypeScript
+TOUCH_OUTSIDE = 1
+```
+
+Touching the mask.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DismissReason-TOUCH_OUTSIDE = 1--><!--Device-DismissReason-TOUCH_OUTSIDE = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## CLOSE_BUTTON
+
+```TypeScript
+CLOSE_BUTTON = 2
+```
+
+Touching the close button.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DismissReason-CLOSE_BUTTON = 2--><!--Device-DismissReason-CLOSE_BUTTON = 2-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## SLIDE_DOWN
+
+```TypeScript
+SLIDE_DOWN = 3
+```
+
+Swiping down.
+
+**NOTE**
+
+This API is effective only in [sheet transition]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DismissReason-SLIDE_DOWN = 3--><!--Device-DismissReason-SLIDE_DOWN = 3-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## SLIDE
+
+```TypeScript
+SLIDE = 4
+```
+
+Swiping left or right on the screen. By default, swiping right dismisses the popup, while swiping left is used in the mirror scenario. This setting is not user-defined.
+
+**NOTE**
+
+This API is effective only in [sheet transition]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DismissReason-SLIDE = 4--><!--Device-DismissReason-SLIDE = 4-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

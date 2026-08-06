@@ -1,0 +1,62 @@
+# ReadonlyArray
+
+**ArkTS mode:** ArkTS-Dyn only
+
+<!--Device-unnamed-interface ReadonlyArray<T>--><!--Device-unnamed-interface ReadonlyArray<T>-End-->
+
+## flat
+
+```TypeScript
+flat<A, D extends number = 1>(
+        this: A,
+        depth?: D
+    ): FlatArray<A, D>[]
+```
+
+Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+**ArkTS mode:** ArkTS-Dyn only
+
+<!--Device-ReadonlyArray-flat<A, D extends number = 1>(        this: A,        depth?: D    ): FlatArray<A, D>[]--><!--Device-ReadonlyArray-flat<A, D extends number = 1>(        this: A,        depth?: D    ): FlatArray<A, D>[]-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| this | A | Yes |  |
+| depth | D | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;A, D&gt;[] |  |
+
+## flatMap
+
+```TypeScript
+flatMap<U, This = undefined> (
+        callback: (this: This, value: T, index: number, array: T[]) => U | ReadonlyArray<U>,
+        thisArg?: This
+    ): U[]
+```
+
+Calls a defined callback function on each element of an array. Then, flattens the result into a new array. This is identical to a map followed by flat with depth 1.
+
+**ArkTS mode:** ArkTS-Dyn only
+
+<!--Device-ReadonlyArray-flatMap<U, This = undefined> (        callback: (this: This, value: T, index: number, array: T[]) => U | ReadonlyArray<U>,        thisArg?: This    ): U[]--><!--Device-ReadonlyArray-flatMap<U, This = undefined> (        callback: (this: This, value: T, index: number, array: T[]) => U | ReadonlyArray<U>,        thisArg?: This    ): U[]-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (this: This, value: T, index: number, array: T[]) =&gt; U \| ReadonlyArray&lt;U&gt; | Yes |  |
+| thisArg | This | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| U[] |  |
+

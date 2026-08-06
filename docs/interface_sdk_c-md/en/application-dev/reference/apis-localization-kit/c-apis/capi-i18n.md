@@ -9,5 +9,5 @@ Provides internationalization APIs for application localization, and relies on l
 
 | Name | Description |
 | -- | -- |
-| [errorcode.h](capi-errorcode-h.md) | Provides the error codes returned by internationalization APIs. |
-| [timezone.h](capi-timezone-h.md) | Provides the capability of obtaining time zone information. |
+| [errorcode.h](capi-errorcode-h.md) | The error code in i18n. |
+| [timezone.h](capi-timezone-h.md) | Provides the API for obtaining timezone offset transition information. |

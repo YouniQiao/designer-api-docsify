@@ -1,7 +1,7 @@
 # OH_Huks_Param
 
 ```c
-typedef struct OH_Huks_Param {...} OH_Huks_Param
+struct OH_Huks_Param {...}
 ```
 
 ## 概述

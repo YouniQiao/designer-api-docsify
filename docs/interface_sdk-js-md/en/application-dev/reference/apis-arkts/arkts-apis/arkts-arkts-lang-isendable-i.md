@@ -1,0 +1,14 @@
+# ISendable
+
+Base interface for all Sendable classes/interfaces.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-lang-interface ISendable--><!--Device-lang-interface ISendable-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+

@@ -243,7 +243,6 @@ Indicates video dimension type.
 | OH_VIDEO_DIM_TYPE_2D = 0 | 2-dimension video |
 | OH_VIDEO_DIM_TYPE_3D_SBS | 3-dimension video, format: side by side |
 | OH_VIDEO_DIM_TYPE_3D_TAB | 3-dimension video, format: top and bottom |
-| OH_VIDEO_DIM_TYPE_BUTT | Invalid video dimension type |
 
 ### OH_NativeBuffer_3D_MetadataKey
 

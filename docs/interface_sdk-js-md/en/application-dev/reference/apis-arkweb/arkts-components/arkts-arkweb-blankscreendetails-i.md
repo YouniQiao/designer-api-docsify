@@ -1,0 +1,30 @@
+# BlankScreenDetails
+
+Defines details of the blank screen issue detected.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+<!--Device-unnamed-declare interface BlankScreenDetails--><!--Device-unnamed-declare interface BlankScreenDetails-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## detectedContentfulNodesCount
+
+```TypeScript
+detectedContentfulNodesCount?: number
+```
+
+This attribute may exist when the contentful node detection policy is used and the threshold for the number of detected nodes is set. Otherwise, this attribute does not exist.Number of contentful nodes that are detected.
+
+**Type:** number
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+<!--Device-BlankScreenDetails-detectedContentfulNodesCount?: number--><!--Device-BlankScreenDetails-detectedContentfulNodesCount?: number-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+

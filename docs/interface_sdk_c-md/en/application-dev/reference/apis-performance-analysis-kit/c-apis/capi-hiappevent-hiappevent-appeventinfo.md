@@ -6,7 +6,7 @@ typedef struct HiAppEvent_AppEventInfo {...} HiAppEvent_AppEventInfo
 
 ## Overview
 
-Defines a struct for the information about a single event, including the domain, name, type, and customparameter list in JSON string format.
+Defines a struct for the information about a single event, including the domain, name, type, andparameter list in JSON string format.
 
 **Since**: 12
 

@@ -1,0 +1,216 @@
+# LongPressGestureInterface
+
+LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter.
+    **NOTE**  
+    
+    Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing  
+    the application's two-finger long press gesture to be ineffective.
+
+**Inheritance/Implementation:** LongPressGestureInterface extends [GestureInterface<LongPressGestureInterface>](GestureInterface<LongPressGestureInterface>)
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+<!--Device-unnamed-interface LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>--><!--Device-unnamed-interface LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## [[Call]]
+
+```TypeScript
+(value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface
+```
+
+Creates a long press gesture. Inherits from [GestureInterface\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**,  
+**Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
+
+If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event.
+
+If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LongPressGestureInterface-(value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface--><!--Device-LongPressGestureInterface-(value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | { fingers?: number; repeat?: boolean; duration?: number } | No | Parameters for the long press gesture. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ - **fingers**: minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **1**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ - **repeat**: whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **false**. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ - **duration**: minimum hold-down time, in ms.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **500**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+
+## [[Call]]
+
+```TypeScript
+(options?: LongPressGestureHandlerOptions): LongPressGestureInterface
+```
+
+Creates a long press gesture. Compared with [LongPressGesture]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_)},this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+
+In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**,  
+**Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
+
+If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event.
+
+If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-LongPressGestureInterface-(options?: LongPressGestureHandlerOptions): LongPressGestureInterface--><!--Device-LongPressGestureInterface-(options?: LongPressGestureHandlerOptions): LongPressGestureInterface-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Parameters of the long press gesture handler. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+
+## onAction
+
+```TypeScript
+onAction(event: (event: GestureEvent) => void): LongPressGestureInterface
+```
+
+Registers the callback for successful long press gesture recognition.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LongPressGestureInterface-onAction(event: (event: GestureEvent) => void): LongPressGestureInterface--><!--Device-LongPressGestureInterface-onAction(event: (event: GestureEvent) => void): LongPressGestureInterface-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for successful long press gesture recognition. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+
+## onActionCancel
+
+```TypeScript
+onActionCancel(event: () => void): LongPressGestureInterface
+```
+
+Registers the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful long press gesture recognition. No gesture event information is returned.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LongPressGestureInterface-onActionCancel(event: () => void): LongPressGestureInterface--><!--Device-LongPressGestureInterface-onActionCancel(event: () => void): LongPressGestureInterface-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () =&gt; void | Yes | Callback for long press gesture cancellation. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+
+## onActionCancel
+
+```TypeScript
+onActionCancel(event: Callback<GestureEvent>): LongPressGestureInterface
+```
+
+Registers the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful long press gesture recognition. Gesture event information is returned.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LongPressGestureInterface-onActionCancel(event: Callback<GestureEvent>): LongPressGestureInterface--><!--Device-LongPressGestureInterface-onActionCancel(event: Callback<GestureEvent>): LongPressGestureInterface-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GestureEvent&gt; | Yes | Callback for long press gesture cancellation. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+
+## onActionEnd
+
+```TypeScript
+onActionEnd(event: (event: GestureEvent) => void): LongPressGestureInterface
+```
+
+Registers the callback for long press gesture completion. This callback is triggered when all fingers are lifted after successful recognition.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LongPressGestureInterface-onActionEnd(event: (event: GestureEvent) => void): LongPressGestureInterface--><!--Device-LongPressGestureInterface-onActionEnd(event: (event: GestureEvent) => void): LongPressGestureInterface-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for long press gesture completion. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+

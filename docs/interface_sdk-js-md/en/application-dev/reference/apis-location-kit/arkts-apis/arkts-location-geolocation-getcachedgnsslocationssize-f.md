@@ -1,0 +1,82 @@
+# getCachedGnssLocationsSize
+
+## getCachedGnssLocationsSize
+
+```TypeScript
+function getCachedGnssLocationsSize(callback: AsyncCallback<number>): void
+```
+
+Obtain the number of cached GNSS locations reported at a time
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCachedGnssLocationsSize
+
+**Required permissions:** ohos.permission.LOCATION
+
+<!--Device-geolocation-function getCachedGnssLocationsSize(callback: AsyncCallback<number>): void--><!--Device-geolocation-function getCachedGnssLocationsSize(callback: AsyncCallback<number>): void-End-->
+
+**System capability:** SystemCapability.Location.Location.Gnss
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Indicates the callback for reporting the cached GNSS locations size. |
+
+**Example**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getCachedGnssLocationsSize((err, size) => {
+    if (err) {
+        console.info('getCachedGnssLocationsSize: err=' + JSON.stringify(err));
+    }
+    if (size) {
+        console.info('getCachedGnssLocationsSize: size=' + JSON.stringify(size));
+    }
+});
+```
+
+
+## getCachedGnssLocationsSize
+
+```TypeScript
+function getCachedGnssLocationsSize(): Promise<number>
+```
+
+Obtain the number of cached GNSS locations reported at a time
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCachedGnssLocationsSize
+
+**Required permissions:** ohos.permission.LOCATION
+
+<!--Device-geolocation-function getCachedGnssLocationsSize(): Promise<number>--><!--Device-geolocation-function getCachedGnssLocationsSize(): Promise<number>-End-->
+
+**System capability:** SystemCapability.Location.Location.Gnss
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;number&gt; | The promise returned by the function. |
+
+**Example**
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getCachedGnssLocationsSize().then((result) => {
+    console.info('promise, getCachedGnssLocationsSize: ' + JSON.stringify(result));
+});
+```
+

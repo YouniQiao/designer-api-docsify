@@ -1,0 +1,40 @@
+# LightResponse
+
+Defines a **LightResponse** object.
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 8
+
+**Substitutes:** ohos.sensor/sensor#LightResponse
+
+<!--Device-unnamed-export interface LightResponse--><!--Device-unnamed-export interface LightResponse-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor.Lite
+
+## intensity
+
+```TypeScript
+intensity: number
+```
+
+Light intensity, in lux.
+
+**Type:** number
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 8
+
+**Substitutes:** ohos.sensor/sensor#LightResponse.intensity
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-LightResponse-intensity: number--><!--Device-LightResponse-intensity: number-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor.Lite
+

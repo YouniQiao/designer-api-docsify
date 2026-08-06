@@ -1,0 +1,90 @@
+# ArcSwiperController
+
+Provide methods for controlling ArcSwiper component.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+<!--Device-unnamed-export declare class ArcSwiperController--><!--Device-unnamed-export declare class ArcSwiperController-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+A constructor used to create a ArcSwiperController object.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ArcSwiperController-constructor()--><!--Device-ArcSwiperController-constructor()-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
+## finishAnimation
+
+```TypeScript
+finishAnimation(handler?: FinishAnimationHandler): void
+```
+
+Finish the swiper animation.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ArcSwiperController-finishAnimation(handler?: FinishAnimationHandler): void--><!--Device-ArcSwiperController-finishAnimation(handler?: FinishAnimationHandler): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The handler is used to listen for the end of the animation. |
+
+## showNext
+
+```TypeScript
+showNext(): void
+```
+
+Show next subcomponent.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ArcSwiperController-showNext(): void--><!--Device-ArcSwiperController-showNext(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
+## showPrevious
+
+```TypeScript
+showPrevious(): void
+```
+
+Show previous subcomponent.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ArcSwiperController-showPrevious(): void--><!--Device-ArcSwiperController-showPrevious(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+

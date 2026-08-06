@@ -10,7 +10,7 @@ Declare audio download manager related interfaces.
 
 **Since**: 26.0.0
 
-**Related module**: [OHAudioSuite](capi-ohaudiosuite.md)
+**Related module**: [AudioSuite](capi-audiosuite.md)
 
 ## Summary
 
@@ -18,9 +18,9 @@ Declare audio download manager related interfaces.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AudioSuite_DownloadStatusInfo](capi-ohaudiosuite-oh-audiosuite-downloadstatusinfo.md) | OH_AudioSuite_DownloadStatusInfo | Define download status information structure. |
-| [OH_AudioSuite_DownloadStatusInfoArray](capi-ohaudiosuite-oh-audiosuite-downloadstatusinfoarray.md) | OH_AudioSuite_DownloadStatusInfoArray | Define download status information array structure. |
-| [OH_AudioSuite_DownloadManagerStruct](capi-ohaudiosuite-oh-audiosuite-downloadmanagerstruct.md) | OH_AudioSuite_DownloadManager | Declare the audio download manager.The handle of audio download manager is used for download related functions. |
+| [OH_AudioSuite_DownloadStatusInfo](capi-audiosuite-oh-audiosuite-downloadstatusinfo.md) | OH_AudioSuite_DownloadStatusInfo | Define download status information structure. |
+| [OH_AudioSuite_DownloadStatusInfoArray](capi-audiosuite-oh-audiosuite-downloadstatusinfoarray.md) | OH_AudioSuite_DownloadStatusInfoArray | Define download status information array structure. |
+| [OH_AudioSuite_DownloadManagerStruct](capi-audiosuite-oh-audiosuite-downloadmanagerstruct.md) | OH_AudioSuite_DownloadManager | Declare the audio download manager.The handle of audio download manager is used for download related functions. |
 
 ### Function
 
@@ -31,7 +31,6 @@ Declare audio download manager related interfaces.
 | [int32_t OH_AudioSuite_RegisterDownloadCallback(OH_AudioSuite_DownloadManager *downloadManager, const OH_AudioSuite_DownloadCallback *callback)](#oh_audiosuite_registerdownloadcallback) | - | Register download status callback. |
 | [int32_t OH_AudioSuite_UnregisterDownloadCallback(OH_AudioSuite_DownloadManager *downloadManager, const OH_AudioSuite_DownloadCallback *callback)](#oh_audiosuite_unregisterdownloadcallback) | - | Unregister download status callback. |
 | [int32_t OH_AudioSuite_StartDownload(OH_AudioSuite_DownloadManager *downloadManager, const char *featureName)](#oh_audiosuite_startdownload) | - | Start downloading a feature. |
-| [int32_t OH_AudioSuite_PauseDownload(OH_AudioSuite_DownloadManager *downloadManager, const char *featureName)](#oh_audiosuite_pausedownload) | - | Pause downloading a feature. |
 | [int32_t OH_AudioSuite_CancelDownload(OH_AudioSuite_DownloadManager *downloadManager, const char *featureName)](#oh_audiosuite_canceldownload) | - | Cancel downloading a feature. |
 | [int32_t OH_AudioSuite_StartBackgroundDownload(OH_AudioSuite_DownloadManager *downloadManager, const char *featureName)](#oh_audiosuite_startbackgrounddownload) | - | Start background downloading a feature. |
 | [int32_t OH_AudioSuite_GetDownloadStatus(OH_AudioSuite_DownloadManager *downloadManager, const char *featureName, OH_AudioSuite_DownloadStatusInfo *status)](#oh_audiosuite_getdownloadstatus) | - | Get download status of a feature. |
@@ -73,7 +72,7 @@ Get the audio download manager handle.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioSuite_DownloadManager](capi-ohaudiosuite-oh-audiosuite-downloadmanagerstruct.md) **downloadManager | Pointer to receive the download manager handle. |
+| [OH_AudioSuite_DownloadManager](capi-audiosuite-oh-audiosuite-downloadmanagerstruct.md) **downloadManager | Pointer to receive the download manager handle. |
 
 **Returns**:
 
@@ -97,7 +96,7 @@ Register download status callback.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioSuite_DownloadManager](capi-ohaudiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
+| [OH_AudioSuite_DownloadManager](capi-audiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
 | [const OH_AudioSuite_DownloadCallback](capi-native-audio-suite-download-manager-h.md#oh_audiosuite_downloadcallback) *callback | Callback function to receive download status updates. |
 
 **Returns**:
@@ -122,7 +121,7 @@ Unregister download status callback.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioSuite_DownloadManager](capi-ohaudiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
+| [OH_AudioSuite_DownloadManager](capi-audiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
 | [const OH_AudioSuite_DownloadCallback](capi-native-audio-suite-download-manager-h.md#oh_audiosuite_downloadcallback) *callback | Callback function to unregister. |
 
 **Returns**:
@@ -147,33 +146,8 @@ Start downloading a feature.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioSuite_DownloadManager](capi-ohaudiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
+| [OH_AudioSuite_DownloadManager](capi-audiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
 | const char *featureName | Name of the feature to download. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| int32_t | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or featureName is nullptr.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li><br>         </ul> |
-
-### OH_AudioSuite_PauseDownload()
-
-```c
-int32_t OH_AudioSuite_PauseDownload(OH_AudioSuite_DownloadManager *downloadManager, const char *featureName)
-```
-
-**Description**
-
-Pause downloading a feature.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_AudioSuite_DownloadManager](capi-ohaudiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
-| const char *featureName | Name of the feature to pause. |
 
 **Returns**:
 
@@ -197,7 +171,7 @@ Cancel downloading a feature.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioSuite_DownloadManager](capi-ohaudiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
+| [OH_AudioSuite_DownloadManager](capi-audiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
 | const char *featureName | Name of the feature to cancel. |
 
 **Returns**:
@@ -222,7 +196,7 @@ Start background downloading a feature.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioSuite_DownloadManager](capi-ohaudiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
+| [OH_AudioSuite_DownloadManager](capi-audiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
 | const char *featureName | Name of the feature to download. |
 
 **Returns**:
@@ -247,9 +221,9 @@ Get download status of a feature.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioSuite_DownloadManager](capi-ohaudiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
+| [OH_AudioSuite_DownloadManager](capi-audiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
 | const char *featureName | Name of the feature. |
-| [OH_AudioSuite_DownloadStatusInfo](capi-ohaudiosuite-oh-audiosuite-downloadstatusinfo.md) *status | Pointer to receive download status information. |
+| [OH_AudioSuite_DownloadStatusInfo](capi-audiosuite-oh-audiosuite-downloadstatusinfo.md) *status | Pointer to receive download status information. |
 
 **Returns**:
 
@@ -273,7 +247,7 @@ Uninstall a downloaded feature.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioSuite_DownloadManager](capi-ohaudiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
+| [OH_AudioSuite_DownloadManager](capi-audiosuite-oh-audiosuite-downloadmanagerstruct.md) *downloadManager | Download manager handle. |
 | const char *featureName | Name of the feature to uninstall. |
 
 **Returns**:

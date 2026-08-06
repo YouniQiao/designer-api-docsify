@@ -1,0 +1,29 @@
+# CloudType (System API)
+
+```TypeScript
+type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets
+```
+
+Enumerates the types of the cloud data field. The specific type is determined by the parameter function.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-cloudExtension-type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets--><!--Device-cloudExtension-type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
+
+**System API:** This is a system API.
+
+| Type | Description |
+| --- | --- |
+| null | The value is null. |
+| long | The value is a 64-bit integer (int64\_t). |
+| double | The value is a floating-point number (float). |
+| string | The value is a string. |
+| boolean | The value is true or false. |
+| Uint8Array | The value is a Uint8 array. |
+| CloudAsset | The value is of the cloud asset type. |
+| CloudAssets | The value is an array of cloud assets. |
+

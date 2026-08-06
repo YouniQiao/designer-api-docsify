@@ -1,0 +1,82 @@
+# ScanResult
+
+Describes the contents of the scan results.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanResult
+
+<!--Device-bluetooth-interface ScanResult--><!--Device-bluetooth-interface ScanResult-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## data
+
+```TypeScript
+data: ArrayBuffer
+```
+
+The raw data of broadcast packet
+
+**Type:** ArrayBuffer
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanResult.data
+
+<!--Device-ScanResult-data: ArrayBuffer--><!--Device-ScanResult-data: ArrayBuffer-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## deviceId
+
+```TypeScript
+deviceId: string
+```
+
+Address of the scanned device
+
+**Type:** string
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanResult.deviceId
+
+<!--Device-ScanResult-deviceId: string--><!--Device-ScanResult-deviceId: string-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## rssi
+
+```TypeScript
+rssi: number
+```
+
+RSSI of the remote device
+
+**Type:** number
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanResult.rssi
+
+<!--Device-ScanResult-rssi: number--><!--Device-ScanResult-rssi: number-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+

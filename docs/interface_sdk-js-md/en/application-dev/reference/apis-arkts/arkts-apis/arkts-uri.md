@@ -1,0 +1,20 @@
+# @ohos.uri
+
+The uri module provides APIs for parsing URI strings that comply with the RFC3986 standard.This standard defines how to encode and parse the identifiers used to locate network resources.The module does not support parsing of URIs in non-standard scenarios.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-declare namespace uri--><!--Device-unnamed-declare namespace uri-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## Summary
+
+### Classes
+
+| Name | Description |
+| --- | --- |
+| [URI](arkts-arkts-uri-uri-c.md) | URI Represents a Uniform Resource Identifier (URI) reference. |
+

@@ -1,0 +1,58 @@
+# AsyKeySpec
+
+Defines the asymmetric key parameters for creating a key generator. You need to construct a child class object and pass it to [createAsyKeyGeneratorBySpec()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a key generator. When constructing a child class object, use little-endian format for RSA keys and use big-endian format and positive numbers for other key parameters of the bigint type.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-cryptoFramework-interface AsyKeySpec--><!--Device-cryptoFramework-interface AsyKeySpec-End-->
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API version 10 to 11: SystemCapability.Security.CryptoFramework
+
+## algName
+
+```TypeScript
+algName: string
+```
+
+Asymmetric key algorithm, for example, **RSA**, **DSA**, **ECC**, **SM2**, **Ed25519**, **X25519**, or **DH**.
+
+**Type:** string
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeySpec-algName: string--><!--Device-AsyKeySpec-algName: string-End-->
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API version 10 to 11: SystemCapability.Security.CryptoFramework
+
+## specType
+
+```TypeScript
+specType: AsyKeySpecType
+```
+
+Key parameter type, which is used to distinguish public and private key parameters.
+
+**Type:** AsyKeySpecType
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeySpec-specType: AsyKeySpecType--><!--Device-AsyKeySpec-specType: AsyKeySpecType-End-->
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API version 10 to 11: SystemCapability.Security.CryptoFramework
+

@@ -1,0 +1,31 @@
+# constructUDPSocketInstance
+
+## constructUDPSocketInstance
+
+```TypeScript
+function constructUDPSocketInstance(): UDPSocket
+```
+
+Creates a UDPSocket object.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+<!--Device-socket-function constructUDPSocketInstance(): UDPSocket--><!--Device-socket-function constructUDPSocketInstance(): UDPSocket-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the UDPSocket of the constructUDPSocketInstance. |
+
+**Example**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+```
+

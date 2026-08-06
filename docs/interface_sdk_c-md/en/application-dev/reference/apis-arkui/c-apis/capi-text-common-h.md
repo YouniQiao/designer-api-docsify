@@ -310,8 +310,8 @@ Enumerates the ellipsis positions.
 | ARKUI_ELLIPSIS_MODE_START = 0 | An ellipsis is used at the start of the line of text. |
 | ARKUI_ELLIPSIS_MODE_CENTER | An ellipsis is used at the center of the line of text. |
 | ARKUI_ELLIPSIS_MODE_END | An ellipsis is used at the end of the line of text. |
-| ARKUI_ELLIPSIS_MODE_MULTILINE_START | An ellipsis is used at the start of the line of text for multiline and single line.@since 24 |
-| ARKUI_ELLIPSIS_MODE_MULTILINE_CENTER | An ellipsis is used at the center of the line of text for multiline and single line.@since 24 |
+| ARKUI_ELLIPSIS_MODE_MULTILINE_START | An ellipsis is used at the start of the line of text for multiline and single line.<br>**Since**: 24 |
+| ARKUI_ELLIPSIS_MODE_MULTILINE_CENTER | An ellipsis is used at the center of the line of text for multiline and single line.<br>**Since**: 24 |
 
 ### ArkUI_KeyboardAppearance
 

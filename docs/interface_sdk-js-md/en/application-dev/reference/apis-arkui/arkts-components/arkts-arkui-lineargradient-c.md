@@ -1,0 +1,38 @@
+# LinearGradient
+
+LinearGradient class
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+<!--Device-unnamed-declare class LinearGradient--><!--Device-unnamed-declare class LinearGradient-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## constructor
+
+```TypeScript
+constructor(colorStops: ColorStop[])
+```
+
+Creates a linear gradient color object.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LinearGradient-constructor(colorStops: ColorStop[])--><!--Device-LinearGradient-constructor(colorStops: ColorStop[])-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| colorStops | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | Gradient colors and color stops. |
+

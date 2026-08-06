@@ -1,0 +1,60 @@
+# ComponentDescription (System API)
+
+Represents a component description file.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-update-export interface ComponentDescription--><!--Device-update-export interface ComponentDescription-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+
+## componentId
+
+```TypeScript
+componentId: string
+```
+
+Component ID, which uniquely identifies a component in the upgrade package.
+
+Use scenarios: Pass this parameter to obtain the description of the corresponding component when calling  
+**getNewVersionDescription**. Use this parameter to distinguish different components when displaying version details.
+
+How to obtain: Obtain the value of **componentId** of the corresponding component from the **versionComponents**  
+array in the version check result.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-ComponentDescription-componentId: string--><!--Device-ComponentDescription-componentId: string-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+
+## descriptionInfo
+
+```TypeScript
+descriptionInfo: DescriptionInfo
+```
+
+Information about the description file.
+
+**Type:** DescriptionInfo
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-ComponentDescription-descriptionInfo: DescriptionInfo--><!--Device-ComponentDescription-descriptionInfo: DescriptionInfo-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+

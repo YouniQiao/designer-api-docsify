@@ -1,0 +1,54 @@
+# PolicyFile (System API)
+
+Provides policy file information.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-securityGuard-interface PolicyFile--><!--Device-securityGuard-interface PolicyFile-End-->
+
+**System capability:** SystemCapability.Security.SecurityGuard
+
+**System API:** This is a system API.
+
+## fd
+
+```TypeScript
+fd: number
+```
+
+The policy file descriptor.
+
+**Type:** number
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-PolicyFile-fd: number--><!--Device-PolicyFile-fd: number-End-->
+
+**System capability:** SystemCapability.Security.SecurityGuard
+
+**System API:** This is a system API.
+
+## name
+
+```TypeScript
+name: string
+```
+
+The policy file name.
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-PolicyFile-name: string--><!--Device-PolicyFile-name: string-End-->
+
+**System capability:** SystemCapability.Security.SecurityGuard
+
+**System API:** This is a system API.
+

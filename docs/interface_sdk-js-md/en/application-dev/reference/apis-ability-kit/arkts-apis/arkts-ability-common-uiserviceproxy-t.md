@@ -1,0 +1,22 @@
+# UIServiceProxy
+
+```TypeScript
+export type UIServiceProxy = _UIServiceProxy.default
+```
+
+Defines the capability for data communication with the UIServiceExtensionAbility. UIServiceExtensionAbility is a special type of ExtensionAbility provided by the system and is used to provide extended capabilities related to floating windows.
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-common-export type UIServiceProxy = _UIServiceProxy.default--><!--Device-common-export type UIServiceProxy = _UIServiceProxy.default-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Property type:** _UIServiceProxy.default
+

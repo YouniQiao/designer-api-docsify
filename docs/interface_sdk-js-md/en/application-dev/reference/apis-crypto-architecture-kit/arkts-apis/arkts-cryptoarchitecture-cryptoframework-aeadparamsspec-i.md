@@ -1,0 +1,106 @@
+# AeadParamsSpec
+
+Describes parameters in  
+[init()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from  
+[ParamsSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.
+
+\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_It is applicable to the CCM and GCM modes of  
+\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_It is applicable to the GCM mode of  
+\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_It is applicable to \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_.
+    **NOTE**  
+    
+    When **AeadParamsSpec** is used for encryption in AES-CCM mode:  
+    - If the tag length is specified during encryption, the same length must be passed during decryption.  
+    
+    - In CCM mode, only one of [update]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ and  
+    [doFinal]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_ can be called for encryption or decryption, and each method can  
+    be called only once.
+
+**Inheritance/Implementation:** AeadParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-cryptoFramework-interface AeadParamsSpec extends ParamsSpec--><!--Device-cryptoFramework-interface AeadParamsSpec extends ParamsSpec-End-->
+
+**System capability:** SystemCapability.Security.CryptoFramework.Cipher
+
+## authenticatedData
+
+```TypeScript
+authenticatedData?: Uint8Array
+```
+
+Optional additional authenticated data.
+
+**Type:** Uint8Array
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AeadParamsSpec-authenticatedData?: Uint8Array--><!--Device-AeadParamsSpec-authenticatedData?: Uint8Array-End-->
+
+**System capability:** SystemCapability.Security.CryptoFramework.Cipher
+
+## nonce
+
+```TypeScript
+nonce: Uint8Array
+```
+
+Number used once.
+    **NOTE**  
+    - For AES-CCM, the nonce length ranges from 7 to 13 bytes.  
+    - For AES-GCM, the nonce length ranges from 1 to 128 bytes, 12 bytes are recommended.  
+    - For SM4-GCM, the nonce length ranges from 1 to 128 bytes, 12 bytes are recommended.  
+    - For ChaCha20-Poly1305, the nonce length must be 12 bytes.
+
+**Type:** Uint8Array
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AeadParamsSpec-nonce: Uint8Array--><!--Device-AeadParamsSpec-nonce: Uint8Array-End-->
+
+**System capability:** SystemCapability.Security.CryptoFramework.Cipher
+
+## tagLen
+
+```TypeScript
+tagLen?: int
+```
+
+Authentication tag length, in bytes.
+
+\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_For encryption, the tag will be added to the end of the ciphertext.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_For decryption, the tag should be at the end of the ciphertext.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_The value should be an integer.
+    **NOTE**  
+    - For AES-CCM, the default value is 12. The supported values are 4, 6, 8, 10, 12, 14, and 16.  
+    - For AES-GCM, the default value is 16. The supported values are 4, 8, 12, 13, 14, 15, and 16.  
+    - For SM4-GCM, the default value is 16. The supported values are 4, 8, 12, 13, 14, 15, and 16.  
+    - For ChaCha20-Poly1305, the default value is 16. The supported value is 16.
+
+**Type:** int
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AeadParamsSpec-tagLen?: int--><!--Device-AeadParamsSpec-tagLen?: int-End-->
+
+**System capability:** SystemCapability.Security.CryptoFramework.Cipher
+

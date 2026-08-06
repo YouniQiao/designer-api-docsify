@@ -1,0 +1,27 @@
+# @ohos.graphics.common2D
+
+This module defines some common data types in the 2D graphics field.
+    **NOTE**  
+    
+    - This module uses the physical pixel unit, px.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-declare namespace common2D--><!--Device-unnamed-declare namespace common2D-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## Summary
+
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [Color](arkts-arkgraphics2d-common2d-color-i.md) | Describes a color in ARGB format. |
+| [Color4f](arkts-arkgraphics2d-common2d-color4f-i.md) | Describes a color in ARGB format. |
+| [Point](arkts-arkgraphics2d-common2d-point-i.md) | Describes a coordinate point. |
+| [Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | Describes a 3D coordinate point. It inherits from [Point]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [Rect](arkts-arkgraphics2d-common2d-rect-i.md) | Describes a rectangle, which can be defined by two coordinate points: upper left corner point and lower right corner point. |
+

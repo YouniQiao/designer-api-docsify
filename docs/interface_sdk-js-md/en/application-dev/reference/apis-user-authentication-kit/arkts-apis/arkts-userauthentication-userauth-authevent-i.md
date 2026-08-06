@@ -1,0 +1,92 @@
+# AuthEvent
+
+Provides an asynchronous callback to return the authentication event information.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 11
+
+**Substitutes:** [userAuth.IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)
+
+<!--Device-userAuth-interface AuthEvent--><!--Device-userAuth-interface AuthEvent-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## callback
+
+```TypeScript
+callback(result: EventInfo): void
+```
+
+Called to return the authentication result or authentication tip information.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 11
+
+**Substitutes:** [userAuth.IAuthCallback.onResult](arkts-userauthentication-userauth-iauthcallback-i.md#onresult)(result:
+
+<!--Device-AuthEvent-callback(result: EventInfo): void--><!--Device-AuthEvent-callback(result: EventInfo): void-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Authentication result or tip information. |
+
+**Example**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+let authType = userAuth.UserAuthType.FACE;
+let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
+// Obtain the authentication result via a callback.
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  auth.on('result', {
+    callback: (result: userAuth.AuthResultInfo) => {
+      console.info(`authV9 result ${result.result}`);
+      console.info(`authV9 token ${result.token}`);
+      console.info(`authV9 remainAttempts ${result.remainAttempts}`);
+      console.info(`authV9 lockoutDuration ${result.lockoutDuration}`);
+    }
+  } as userAuth.AuthEvent);
+  auth.start();
+  console.info('authV9 start success');
+} catch (error) {
+  console.error(`authV9 error = ${error}`);
+  // do error.
+}
+// Obtain the authentication tip information via a callback.
+try {
+  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
+  auth.on('tip', {
+    callback : (result : userAuth.TipInfo) => {
+      switch (result.tip) {
+        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_BRIGHT:
+          // Do something.
+          break;
+        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_DARK:
+          // Do something.
+          break;
+        default:
+          // do others.
+      }
+    }
+  } as userAuth.AuthEvent);
+  auth.start();
+  console.info('authV9 start success');
+} catch (error) {
+  console.error(`authV9 error = ${error}`);
+  // do error.
+}
+```
+

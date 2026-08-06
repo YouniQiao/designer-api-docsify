@@ -10,7 +10,7 @@ Declare underlying data structure.
 
 **Since**: 26.0.0
 
-**Related module**: [OHAudioSuite](capi-ohaudiosuite.md)
+**Related module**: [AudioConverter](capi-audioconverter.md)
 
 ## Summary
 
@@ -18,8 +18,8 @@ Declare underlying data structure.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AudioConverter_Format](capi-ohaudiosuite-oh-audioconverter-format.md) | OH_AudioConverter_Format | Define the audio converter format info structure, used to describe basic audio format. |
-| [OH_AudioConverterStruct](capi-ohaudiosuite-oh-audioconverterstruct.md) | OH_AudioConverter | Declare the audio converter.The handle of audio converter is used for audio converter related functions. |
+| [OH_AudioConverter_Format](capi-audioconverter-oh-audioconverter-format.md) | OH_AudioConverter_Format | Define the audio converter format info structure, used to describe basic audio format. |
+| [OH_AudioConverterStruct](capi-audioconverter-oh-audioconverterstruct.md) | OH_AudioConverter | Declare the audio converter.The handle of audio converter is used for audio converter related functions. |
 
 ### Enum
 
@@ -104,9 +104,9 @@ Request to create the audio converter.The converter instance created by this fun
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_AudioConverter_Format](capi-ohaudiosuite-oh-audioconverter-format.md)* inputFormat | Pointer to the input audio format configuration. |
-| [const OH_AudioConverter_Format](capi-ohaudiosuite-oh-audioconverter-format.md)* outputFormat | Pointer to the output audio format configuration. |
-| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverterstruct.md)** converter | Pointer to a variable that receives the created audio converter instance. |
+| [const OH_AudioConverter_Format](capi-audioconverter-oh-audioconverter-format.md)* inputFormat | Pointer to the input audio format configuration. |
+| [const OH_AudioConverter_Format](capi-audioconverter-oh-audioconverter-format.md)* outputFormat | Pointer to the output audio format configuration. |
+| [OH_AudioConverter](capi-audioconverter-oh-audioconverterstruct.md)** converter | Pointer to a variable that receives the created audio converter instance. |
 
 **Returns**:
 
@@ -130,7 +130,7 @@ Request to release the converter.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverterstruct.md)* converter | Reference created by OH_AudioConverter_Create. |
+| [OH_AudioConverter](capi-audioconverter-oh-audioconverterstruct.md)* converter | Reference created by OH_AudioConverter_Create. |
 
 ### OH_AudioConverter_RequestDataCallback()
 
@@ -176,7 +176,7 @@ Set converter request data callback.This function binds the input data callback 
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverterstruct.md)* converter | Reference created by OH_AudioConverter_Create. |
+| [OH_AudioConverter](capi-audioconverter-oh-audioconverterstruct.md)* converter | Reference created by OH_AudioConverter_Create. |
 | [OH_AudioConverter_RequestDataCallback](capi-native-audio-converter-h.md#oh_audioconverter_requestdatacallback) callback | Callback function that will be invoked during [OH_AudioConverter_Process](capi-native-audio-converter-h.md#oh_audioconverter_process)to actively request input audio data. |
 | userData | Pointer to an application data structure that will be passed to the callback functions. |
 
@@ -203,7 +203,7 @@ Executing the audio format conversion.This function executes audio conversion to
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverterstruct.md)* converter | Reference created by [OH_AudioConverter_Create](capi-native-audio-converter-h.md#oh_audioconverter_create). |
+| [OH_AudioConverter](capi-audioconverter-oh-audioconverterstruct.md)* converter | Reference created by [OH_AudioConverter_Create](capi-native-audio-converter-h.md#oh_audioconverter_create). |
 | void* outputData | Pointer to the output buffer allocated by the caller to receive converted audio data. |
 | int32_t outputCapacity | Size of the output buffer in bytes specified by the user. |
 | outputSize | Size of output buffer the system really writes.Returns the number of bytes actually written on success.When [AUDIOCONVERTER_SUCCESS](capi-native-audio-converter-h.md#oh_audioconverter_result) is returned but outputSize is 0,it indicates that all buffered data has been fully flushed. |

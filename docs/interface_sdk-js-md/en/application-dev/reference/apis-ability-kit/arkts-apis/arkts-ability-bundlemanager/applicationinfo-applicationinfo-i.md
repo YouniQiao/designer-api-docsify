@@ -1,0 +1,681 @@
+# ApplicationInfo
+
+The module defines the application information.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-export interface ApplicationInfo--><!--Device-unnamed-export interface ApplicationInfo-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## accessTokenId
+
+```TypeScript
+readonly accessTokenId: long
+```
+
+Access token ID of the application, which is used in the  
+\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Type:** long
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly accessTokenId: long--><!--Device-ApplicationInfo-readonly accessTokenId: long-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## appDistributionType
+
+```TypeScript
+readonly appDistributionType: string
+```
+
+Distribution type of the application signing certificate. The options are as follows:\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_**app\_gallery**:  
+application installed from AppGallery. \_\_\_MD\_COMMENT\_DESC\_USD\_11\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_12\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_**enterprise**: enterprise internal application.These are applications developed by an enterprise for its internal use by employees only. They are not distributed through public channels like AppGallery but are distributed internally via the enterprise's own channels. \_\_\_MD\_COMMENT\_DESC\_USD\_13\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_**enterprise\_mdm**: enterprise  
+\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. \_\_\_MD\_COMMENT\_DESC\_USD\_14\_\_\_To install a common enterprise application, you must have  
+[administrator privileges]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. \_\_\_MD\_COMMENT\_DESC\_USD\_15\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_16\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_17\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_**enterprise\_normal**: standard enterprise application. These applications do not need to be released to AppGallery. Instead, they can be distributed and installed through an enterprise \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ and offline installer. \_\_\_MD\_COMMENT\_DESC\_USD\_18\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_19\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_**os\_integration**: pre-installed application. They are not available for third-party applications. \_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_crowdtesting: application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery. This API is deprecated since API version 11. \_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_**internaltesting**: application under internal testing of AppGallery. \_\_\_MD\_COMMENT\_DESC\_USD\_20\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_21\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_none: others.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly appDistributionType: string--><!--Device-ApplicationInfo-readonly appDistributionType: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## appIndex
+
+```TypeScript
+readonly appIndex: int
+```
+
+Index of an application clone. It takes effect only for cloned applications.
+
+**Type:** int
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-ApplicationInfo-readonly appIndex: int--><!--Device-ApplicationInfo-readonly appIndex: int-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## appProvisionType
+
+```TypeScript
+readonly appProvisionType: string
+```
+
+Type of the application signing certificate file. The options are **debug** and **release**.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly appProvisionType: string--><!--Device-ApplicationInfo-readonly appProvisionType: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## bundleType
+
+```TypeScript
+readonly bundleType: bundleManager.BundleType
+```
+
+Bundle type, which can be **APP** (application) or **ATOMIC\_SERVICE** (atomic service).
+
+**Type:** bundleManager.BundleType
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly bundleType: bundleManager.BundleType--><!--Device-ApplicationInfo-readonly bundleType: bundleManager.BundleType-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## cloudFileSyncEnabled
+
+```TypeScript
+readonly cloudFileSyncEnabled: boolean
+```
+
+Whether device-cloud file synchronization is enabled for the application. **true** if enabled, **false** otherwise.
+
+**Type:** boolean
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ApplicationInfo-readonly cloudFileSyncEnabled: boolean--><!--Device-ApplicationInfo-readonly cloudFileSyncEnabled: boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## cloudStructuredDataSyncEnabled
+
+```TypeScript
+readonly cloudStructuredDataSyncEnabled?: boolean
+```
+
+Whether device-cloud structured data synchronization is enabled for the application. **true** if enabled, **false**  
+otherwise.
+
+**Type:** boolean
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ApplicationInfo-readonly cloudStructuredDataSyncEnabled?: boolean--><!--Device-ApplicationInfo-readonly cloudStructuredDataSyncEnabled?: boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## codePath
+
+```TypeScript
+readonly codePath: string
+```
+
+Installation directory of the application.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly codePath: string--><!--Device-ApplicationInfo-readonly codePath: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## dataUnclearable
+
+```TypeScript
+readonly dataUnclearable: boolean
+```
+
+Whether the application data is unclearable. **true** if unclearable, **false** otherwise.
+
+**Type:** boolean
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly dataUnclearable: boolean--><!--Device-ApplicationInfo-readonly dataUnclearable: boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## debug
+
+```TypeScript
+readonly debug: boolean
+```
+
+Whether the application is running in debug mode. **true** if in debug mode, **false** otherwise.
+
+**Type:** boolean
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly debug: boolean--><!--Device-ApplicationInfo-readonly debug: boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## description
+
+```TypeScript
+readonly description: string
+```
+
+Description of the application. It corresponds to the **description** field in the  
+\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. For details about **description**, see the  
+**descriptionResource** field in this table.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly description: string--><!--Device-ApplicationInfo-readonly description: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## descriptionId
+
+```TypeScript
+readonly descriptionId: long
+```
+
+Resource ID of the application description. It is automatically generated during compilation and build based on the description configured for the application.
+
+**Type:** long
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly descriptionId: long--><!--Device-ApplicationInfo-readonly descriptionId: long-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## descriptionResource
+
+```TypeScript
+readonly descriptionResource: Resource
+```
+
+Resource information of the application description. The resource information obtained contains the bundle name,module name, and ID of the resource. You can call  
+[getMediaContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain the resource details.
+
+**Type:** Resource
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly descriptionResource: Resource--><!--Device-ApplicationInfo-readonly descriptionResource: Resource-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## enabled
+
+```TypeScript
+readonly enabled: boolean
+```
+
+Whether the application is enabled. **true** if enabled, **false** otherwise.
+
+**Type:** boolean
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly enabled: boolean--><!--Device-ApplicationInfo-readonly enabled: boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## icon
+
+```TypeScript
+readonly icon: string
+```
+
+Application icon. It corresponds to the **icon** field in the  
+\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file. For details about **icon**, see the  
+**iconResource** field in this table.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly icon: string--><!--Device-ApplicationInfo-readonly icon: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## iconId
+
+```TypeScript
+readonly iconId: long
+```
+
+Resource ID of the application icon. It is automatically generated during compilation and build based on the icon configured for the application.
+
+**Type:** long
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly iconId: long--><!--Device-ApplicationInfo-readonly iconId: long-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## iconResource
+
+```TypeScript
+readonly iconResource: Resource
+```
+
+Resource information of the application icon. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call  
+[getMediaContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain the resource details.
+
+**Type:** Resource
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly iconResource: Resource--><!--Device-ApplicationInfo-readonly iconResource: Resource-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## installSource
+
+```TypeScript
+readonly installSource: string
+```
+
+Installation source of an application. The options are as follows:
+
+- **pre-installed**: pre-installed application installed during the first boot.  
+- **ota**: pre-installed application added during system upgrade.  
+- **recovery**: pre-installed application manually restored by the user after uninstallation.  
+- **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a  
+variable, subject to the actual value.  
+- **unknown**: unknown application installation source.
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ApplicationInfo-readonly installSource: string--><!--Device-ApplicationInfo-readonly installSource: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## label
+
+```TypeScript
+readonly label: string
+```
+
+Application label. It corresponds to the **label** field in the  
+\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file. For details about **label**, see the  
+**labelResource** field in this table. Starting from API version 20, if  
+[bundleManager.getAbilityInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is used to obtain application information, this field is the application name visible to users, instead of the resource descriptor.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly label: string--><!--Device-ApplicationInfo-readonly label: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## labelId
+
+```TypeScript
+readonly labelId: long
+```
+
+Resource ID of the application label. It is automatically generated during compilation and build based on the label configured for the application.
+
+**Type:** long
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly labelId: long--><!--Device-ApplicationInfo-readonly labelId: long-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## labelResource
+
+```TypeScript
+readonly labelResource: Resource
+```
+
+Resource information of the application label. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call  
+[getMediaContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain the resource details.
+
+**Type:** Resource
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly labelResource: Resource--><!--Device-ApplicationInfo-readonly labelResource: Resource-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## metadata
+
+```TypeScript
+readonly metadata: Map<string, Array<Metadata>>
+```
+
+Metadata of the application. The information can be obtained by passing in **GET\_BUNDLE\_INFO\_WITH\_APPLICATION** and  
+**GET\_BUNDLE\_INFO\_WITH\_METADATA** to the **bundleFlags** parameter of  
+[getBundleInfoForSelf]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+Note: Supported since API version 9 and deprecated since API version 10. You are advised to use **metadataArray**  
+instead.
+
+**Type:** Map&lt;string, Array&lt;Metadata&gt;&gt;
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 10
+
+**Substitutes:** [ApplicationInfo#metadataArray](applicationinfo-applicationinfo-i.md#metadataarray)
+
+<!--Device-ApplicationInfo-readonly metadata: Map<string, Array<Metadata>>--><!--Device-ApplicationInfo-readonly metadata: Map<string, Array<Metadata>>-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## metadataArray
+
+```TypeScript
+readonly metadataArray: Array<ModuleMetadata>
+```
+
+Metadata of the application. The information can be obtained by passing in **GET\_BUNDLE\_INFO\_WITH\_APPLICATION** and  
+**GET\_BUNDLE\_INFO\_WITH\_METADATA** to the **bundleFlags** parameter of  
+[getBundleInfoForSelf]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Type:** Array&lt;ModuleMetadata&gt;
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly metadataArray: Array<ModuleMetadata>--><!--Device-ApplicationInfo-readonly metadataArray: Array<ModuleMetadata>-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## multiAppMode
+
+```TypeScript
+readonly multiAppMode: MultiAppMode
+```
+
+Multi-app mode.
+
+**Type:** MultiAppMode
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-ApplicationInfo-readonly multiAppMode: MultiAppMode--><!--Device-ApplicationInfo-readonly multiAppMode: MultiAppMode-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## name
+
+```TypeScript
+readonly name: string
+```
+
+Name of the application bundle. It corresponds to the **bundleName** field in the  
+\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly name: string--><!--Device-ApplicationInfo-readonly name: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## nativeLibraryPath
+
+```TypeScript
+readonly nativeLibraryPath: string
+```
+
+Local library file path of the application.
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-ApplicationInfo-readonly nativeLibraryPath: string--><!--Device-ApplicationInfo-readonly nativeLibraryPath: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## permissions
+
+```TypeScript
+readonly permissions: Array<string>
+```
+
+Permissions required for accessing the application. The permissions can be obtained by passing in  
+**GET\_BUNDLE\_INFO\_WITH\_APPLICATION** and **GET\_BUNDLE\_INFO\_WITH\_REQUESTED\_PERMISSION** to the **bundleFlags**  
+parameter of  
+[getBundleInfoForSelf]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly permissions: Array<string>--><!--Device-ApplicationInfo-readonly permissions: Array<string>-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## process
+
+```TypeScript
+readonly process: string
+```
+
+Process name.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly process: string--><!--Device-ApplicationInfo-readonly process: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## releaseType
+
+```TypeScript
+readonly releaseType: string
+```
+
+Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) to determine the compatibility.
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ApplicationInfo-readonly releaseType: string--><!--Device-ApplicationInfo-readonly releaseType: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## removable
+
+```TypeScript
+readonly removable: boolean
+```
+
+Whether the application is removable. **true** if removable, **false** otherwise.
+
+**Type:** boolean
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly removable: boolean--><!--Device-ApplicationInfo-readonly removable: boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## systemApp
+
+```TypeScript
+readonly systemApp: boolean
+```
+
+Whether the application is a system application. **true** if it is a system application, **false** otherwise.
+
+**Type:** boolean
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly systemApp: boolean--><!--Device-ApplicationInfo-readonly systemApp: boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## uid
+
+```TypeScript
+readonly uid: int
+```
+
+UID of the application.
+
+**Type:** int
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ApplicationInfo-readonly uid: int--><!--Device-ApplicationInfo-readonly uid: int-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+

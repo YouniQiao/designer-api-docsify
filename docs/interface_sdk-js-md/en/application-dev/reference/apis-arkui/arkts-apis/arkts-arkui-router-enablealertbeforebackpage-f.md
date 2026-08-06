@@ -1,0 +1,42 @@
+# enableAlertBeforeBackPage
+
+## enableAlertBeforeBackPage
+
+```TypeScript
+function enableAlertBeforeBackPage(options: EnableAlertOptions): void
+```
+
+Enables the display of a confirm dialog box before returning to the previous page.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.arkui.UIContext:Router#showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showalertbeforebackpage)
+
+<!--Device-router-function enableAlertBeforeBackPage(options: EnableAlertOptions): void--><!--Device-router-function enableAlertBeforeBackPage(options: EnableAlertOptions): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Description of the dialog box. |
+
+**Example**
+
+```TypeScript
+router.enableAlertBeforeBackPage({
+  message: 'Message Info'
+});
+```
+
+```TypeScript
+router.enableAlertBeforeBackPage({
+  message: 'Message Info'
+});
+```
+

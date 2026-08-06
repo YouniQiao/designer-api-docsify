@@ -1,0 +1,26 @@
+# AVSessionType
+
+```TypeScript
+type AVSessionType = 'audio' | 'video' | 'voice_call' | 'video_call' | 'photo'
+```
+
+Session type supports audio & video, voice\_call, video\_call, photo
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-avSession-type AVSessionType = 'audio' | 'video' | 'voice_call' | 'video_call' | 'photo'--><!--Device-avSession-type AVSessionType = 'audio' | 'video' | 'voice_call' | 'video_call' | 'photo'-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+| Type | Description |
+| --- | --- |
+| 'audio' | audio type [since 10] |
+| 'video' | video type [since 10] |
+| 'voice\_call' | voice call type [since 11] |
+| 'video\_call' | video call type [since 12] |
+| 'photo' | photo type [since 22] |
+

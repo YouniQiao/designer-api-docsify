@@ -6,7 +6,7 @@ typedef struct ffrt_cond_t {...} ffrt_cond_t
 
 ## Overview
 
-Defines the condition variable structure used to store internal data of the condition variable.
+Defines the condition variable structure.
 
 **Since**: 10
 
@@ -20,7 +20,7 @@ Defines the condition variable structure used to store internal data of the cond
 
 | Name | Description |
 | -- | -- |
-| [uint32_t storage[(ffrt_cond_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)]](#sizeof) | Internal storage backing the condition variable. Do not access directly; use the `ffrt_cond_*` APIs. |
+| [uint32_t storage[(ffrt_cond_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)]](#sizeof) | An array of uint32_t used to store the condition variable. |
 
 ## Member function description
 
@@ -32,6 +32,6 @@ uint32_t storage[(ffrt_cond_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32
 
 **Description**
 
-Internal storage backing the condition variable. Do not access directly; use the `ffrt_cond_*` APIs.
+An array of uint32_t used to store the condition variable.
 
 

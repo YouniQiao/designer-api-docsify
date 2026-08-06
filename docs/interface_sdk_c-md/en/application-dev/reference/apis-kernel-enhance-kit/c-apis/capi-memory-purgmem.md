@@ -6,7 +6,7 @@ typedef struct PurgMem OH_PurgeableMemory
 
 ## Overview
 
-Defines a purgeable memory struct.
+Purgeable mem struct
 
 **Since**: 10
 

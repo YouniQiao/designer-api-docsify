@@ -6,7 +6,7 @@ typedef struct Asset_Result {...} Asset_Result
 
 ## 概述
 
-单条关键资的产查询结果。
+关键资产查询结果，用于定义一条关键资产。
 
 **起始版本：** 11
 

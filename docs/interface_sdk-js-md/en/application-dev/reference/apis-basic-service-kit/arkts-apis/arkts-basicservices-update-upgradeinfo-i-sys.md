@@ -1,0 +1,55 @@
+# UpgradeInfo (System API)
+
+Represents update information.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-update-export interface UpgradeInfo--><!--Device-update-export interface UpgradeInfo-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+
+## businessType
+
+```TypeScript
+businessType: BusinessType
+```
+
+Upgrade service type.
+
+**Type:** BusinessType
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-UpgradeInfo-businessType: BusinessType--><!--Device-UpgradeInfo-businessType: BusinessType-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+
+## upgradeApp
+
+```TypeScript
+upgradeApp: string
+```
+
+Caller package name, which is used to identify the app that calls the upgrade API. The value is in the format of  
+**com.***xxx.xxx.xxx* and consists of multiple segments separated by dots (.). The value is a string of 1 to 255characters, and each segment ranges from 1 to 64 characters. Only letters, digits, and dots (.) are supported.Each segment must start with a letter and cannot contain consecutive dots (.) or end with a dot (.). An exception is thrown when the value is out of range or the format is incorrect.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-UpgradeInfo-upgradeApp: string--><!--Device-UpgradeInfo-upgradeApp: string-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+
