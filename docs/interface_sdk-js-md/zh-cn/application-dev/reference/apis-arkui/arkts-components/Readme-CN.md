@@ -803,6 +803,8 @@
   - [RichEditorResponseType](arkts-arkui-richeditor-richeditorresponsetype-e.md)
   - [RichEditorSpanType](arkts-arkui-richeditor-richeditorspantype-e.md)
   - [UndoStyle](arkts-arkui-richeditor-undostyle-e.md)
+- [RichText](arkts-arkui-richtext.md)
+  - [RichText属性/事件](arkts-arkui-richtext-attribute.md)
 - [Row](arkts-arkui-row.md)
   - [Row属性/事件](arkts-arkui-row-attribute.md)
   - [RowOptions](arkts-arkui-row-rowoptions-i.md)

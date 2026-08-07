@@ -1,6 +1,6 @@
 # KeySource
 
-Type of the input device that triggers the current key.
+定义触发按键事件的设备类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Type of the input device that triggers the current key.
 Unknown = 0
 ```
 
-The input device type is unknown.
+输入设备类型未知。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ The input device type is unknown.
 Keyboard = 4
 ```
 
-Set Device Type to Keyboard.
+输入设备类型为键盘。
 
 **起始版本：** 23
 
@@ -52,7 +52,7 @@ Set Device Type to Keyboard.
 JOYSTICK = 5
 ```
 
-Set Device Type to Joystic.
+输入设备类型为游戏手柄。
 
 **起始版本：** 23
 

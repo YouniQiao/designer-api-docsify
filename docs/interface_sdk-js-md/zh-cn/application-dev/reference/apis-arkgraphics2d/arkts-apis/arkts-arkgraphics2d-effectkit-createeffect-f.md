@@ -6,7 +6,7 @@
 function createEffect(source: image.PixelMap): Filter
 ```
 
-通过传入的PixelMap创建Filter实例。
+通过传入的PixelMap创建Filter实例。后续可通过链式调用添加各种图像效果，最终通过[getEffectPixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取处理后的图像。
 
 **起始版本：** 9
 
@@ -30,7 +30,7 @@ function createEffect(source: image.PixelMap): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回不带任何效果的Filter链表头节点，失败时返回null。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回一个未添加任何效果的Filter实例，失败时返回null。 |
 
 **示例：**
 

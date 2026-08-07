@@ -24,7 +24,7 @@ Disconnects the connection of a specified web native message extension.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connectionId | int | Yes | The number code of the ability connected |
+| connectionId | int | Yes | Connection ID. |
 
 **Return value:**
 

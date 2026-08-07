@@ -50,15 +50,15 @@ import { Driver, UIElementInfo, UIEventObserver } from '@kit.TestKit';
 async function demo() {
   // 创建Driver对象
   let driver: Driver = Driver.create();
-  // 创建UI事件监听器
+  // 创建UI事件监听器。
   let observer: UIEventObserver = driver.createUIEventObserver();
-  // 定义回调函数，输出toast控件的属性信息
+  // 定义回调函数，输出toast控件的属性信息。
   let callback = (UIElementInfo: UIElementInfo) => {
     console.info(UIElementInfo.bundleName);
     console.info(UIElementInfo.text);
     console.info(UIElementInfo.type);
   }
-  // 订阅toast控件出现事件
+  // 订阅toast控件出现事件。
   observer.once('toastShow', callback);
 }
 ```
@@ -158,7 +158,7 @@ async function demo() {
   let observer: UIEventObserver = driver.createUIEventObserver();
   let options: WindowChangeOptions = {
     timeout: 20000,
-    bundleName: 'com.example.myapplication'  // 请开发者替换为实际包名
+    bundleName: 'com.example.myapplication'  // 请开发者替换为实际包名。
   }
   let callback = (UIElementInfo: UIElementInfo) => {
     console.info(UIElementInfo.bundleName);
@@ -216,7 +216,7 @@ async function demo() {
   let observer: UIEventObserver = driver.createUIEventObserver();
   let option: ComponentEventOptions = {
     timeout: 20000,
-    on: ON.id('123')  // 请开发者替换为实际存在的控件id值
+    on: ON.id('123')  // 请开发者替换为实际存在的控件id值。
   };
   let callback = (UIElementInfo: UIElementInfo) => {
     console.info(UIElementInfo.bundleName);

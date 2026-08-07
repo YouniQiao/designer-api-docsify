@@ -2,7 +2,7 @@
 
 继承自[BaseGestureEvent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。可将该对象作为[onGestureJudgeBegin]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的event参数来传递。
 
-**继承/实现关系：** TapGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
+**继承/实现关系：** TapGestureEvent extends [BaseGestureEvent](arkts-arkui-component/gesture-basegestureevent-i.md)
 
 **起始版本：** 11
 

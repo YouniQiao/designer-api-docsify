@@ -16,7 +16,7 @@ Describes a font feature.
 name: string
 ```
 
-String identified by the keyword in the font feature key-value pair.
+Keyword identifier in the font feature key-value pair, such as 'liga' (standard ligature), 'kern' (kerning adjustment), etc.
 
 **Type:** string
 

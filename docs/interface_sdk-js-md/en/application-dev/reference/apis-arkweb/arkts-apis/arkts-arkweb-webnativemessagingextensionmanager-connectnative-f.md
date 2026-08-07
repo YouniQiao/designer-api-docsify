@@ -24,7 +24,7 @@ Connects the current ability to the specified web native message extension abili
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The context of the caller of the ui ability |
+| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the web native message extension. |
 | want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The element name of the web native messaging ability |
 | callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The remote object instance |
 

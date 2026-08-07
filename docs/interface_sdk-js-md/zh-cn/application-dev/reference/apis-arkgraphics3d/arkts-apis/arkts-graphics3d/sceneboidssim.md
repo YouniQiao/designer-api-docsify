@@ -17,7 +17,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [BoidsSimGravityParameters](sceneboidssim-boidssimgravityparameters-i-sys.md) | Boids模拟引力场参数。 |
-| [BoidsSimParameters](sceneboidssim-boidssimparameters-i-sys.md) | 每个boid绑定的群组模拟参数. |
+| [BoidsSimParameters](sceneboidssim-boidssimparameters-i-sys.md) | 群组模拟参数，用于配置每个个体的行为属性。 |
 | [BoidsSimRepulsionParameters](sceneboidssim-boidssimrepulsionparameters-i-sys.md) | Boids模拟斥力场参数。 |
 <!--DelEnd-->
 

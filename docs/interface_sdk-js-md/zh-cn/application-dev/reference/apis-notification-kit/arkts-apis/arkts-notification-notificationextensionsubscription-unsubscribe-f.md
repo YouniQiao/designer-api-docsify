@@ -48,7 +48,7 @@ ArkTS-Sta示例：
 
 ```TypeScript
 notificationExtensionSubscription.unsubscribe().then(() => {
-  console.info("unsubscribe success");
+  console.info('unsubscribe success');
 }).catch((error: Error) => {
   let err = error as BusinessError
   console.error(`unsubscribe fail, code is ${err.code}, message is ${err.message}`);

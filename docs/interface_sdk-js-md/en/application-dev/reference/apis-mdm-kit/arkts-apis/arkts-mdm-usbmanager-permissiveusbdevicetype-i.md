@@ -7,7 +7,7 @@ parameters in this API are optional, allowing for more flexible USB device disab
 - Only the matching based on the **baseClass** parameter is supported.  
 - Multiple parameters can be configured. All parameters must be satisfied simultaneously for a match.  
 - You can obtain the list of USB devices connected to the host device through the  
-getDevices API, and then find the type of the current device in the returned list.
+[getDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API, and then find the type of the current device in the returned list.
 
 **Since:** 26.0.0
 

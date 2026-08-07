@@ -7,7 +7,7 @@ type EllipticalMaskRadius = [
 ]
 ```
 
-The major axis and minor axis of the elliptical mask used in function 'ellipticalGradientBlur'.
+Defines the radius of the elliptical mask.
 
 **Since:** 23
 

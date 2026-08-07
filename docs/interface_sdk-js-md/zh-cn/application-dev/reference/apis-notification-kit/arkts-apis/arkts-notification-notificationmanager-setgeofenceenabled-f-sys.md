@@ -52,7 +52,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 notificationManager.setGeofenceEnabled(true).then(() => {
-  hilog.info(0x0000, 'testTag', '%{public}s', "setGeofenceEnabled success");
+  hilog.info(0x0000, 'testTag', '%{public}s', 'setGeofenceEnabled success');
 }).catch((err: BusinessError) => {
   hilog.error(0x0000, 'testTag', '%{public}s',`setGeofenceEnabled failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -64,7 +64,7 @@ ArkTS-Sta示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 notificationManager.setGeofenceEnabled(true).then(() => {
-    console.info("setGeofenceEnabled success");
+    console.info('setGeofenceEnabled success');
 }).catch((err: Error) => {
     let error: BusinessError = err as BusinessError;
     console.error(`setGeofenceEnabled failed, code is ${error.code}, message is ${error.message}`);

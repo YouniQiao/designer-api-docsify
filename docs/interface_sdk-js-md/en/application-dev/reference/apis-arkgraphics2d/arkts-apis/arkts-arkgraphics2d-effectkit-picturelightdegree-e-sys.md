@@ -1,6 +1,6 @@
 # PictureLightDegree (System API)
 
-The picture light color degree.
+Enum for the brightness of image colors.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ The picture light color degree.
 UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0
 ```
 
-Unknown light color degree picture.
+Image with unknown brightness.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ Unknown light color degree picture.
 EXTREMELY_LIGHT_COLOR_PICTURE = 1
 ```
 
-Extremely light color picture.
+Extremely bright image.
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ Extremely light color picture.
 LIGHT_COLOR_PICTURE = 2
 ```
 
-Light color picture.
+Bright image.
 
 **Since:** 26.0.0
 
@@ -84,7 +84,7 @@ Light color picture.
 DARK_COLOR_PICTURE = 3
 ```
 
-Dark color picture.
+Dark image.
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ Dark color picture.
 EXTREMELY_DARK_COLOR_PICTURE = 4
 ```
 
-Extremely dark color picture.
+Extremely dark image.
 
 **Since:** 26.0.0
 
@@ -128,7 +128,7 @@ Extremely dark color picture.
 FLOWERY_PICTURE = 5
 ```
 
-Flowery picture.
+Colorful image.
 
 **Since:** 26.0.0
 
@@ -150,7 +150,7 @@ Flowery picture.
 EXTREMELY_FLOWERY_PICTURE = 6
 ```
 
-Extremely flowery picture.
+Extremely colorful image.
 
 **Since:** 26.0.0
 

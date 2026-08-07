@@ -7,7 +7,7 @@ type EllipticalMaskCenter = [
 ]
 ```
 
-The center of the elliptical mask,specifying where the ellipse mask is anchored in function 'ellipticalGradientBlur'.
+Defines the center point of the elliptical mask.
 
 **Since:** 23
 

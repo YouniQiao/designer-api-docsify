@@ -214,7 +214,7 @@ async function demo() {
   let options: TouchOptions = {
     pressure: 0.5
   };
-  // 在目标坐标点进行单击，并指定触摸压力
+  // 在目标坐标点进行单击，并指定触摸压力。
   await driver.clickAtWithOptions({ x: 100, y: 100, displayId: 0 }, options);
 }
 ```
@@ -355,9 +355,9 @@ import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  // 顺时针旋转50格，旋转速度为30格/秒
+  // 顺时针旋转50格，旋转速度为30格/秒。
   await driver.crownRotate(50, 30);
-  // 逆时针旋转20格，旋转速度为30格/秒
+  // 逆时针旋转20格，旋转速度为30格/秒。
   await driver.crownRotate(-20, 30);
 }
 ```
@@ -687,11 +687,11 @@ import { Driver, TouchOptions } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let options: TouchOptions = {
-    speed: 800,     // 拖拽速率800px/s
-    duration: 2000, // 拖拽前长按2000ms
-    pressure: 0.5   // 触摸压力值
+    speed: 800,     // 拖拽速率800px/s。
+    duration: 2000, // 拖拽前长按2000ms。
+    pressure: 0.5   // 触摸压力值。
   };
-  // 从起始坐标点拖拽至目标坐标点，并指定拖拽速率、长按时长和触摸压力
+  // 从起始坐标点拖拽至目标坐标点，并指定拖拽速率、长按时长和触摸压力。
   await driver.dragBetweenWithOptions({ x: 100, y: 100, displayId: 0 }, { x: 1000, y: 1000, displayId: 0 }, options);
 }
 ```
@@ -748,7 +748,7 @@ import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  // 获取当前布局信息并保存为JSON文件
+  // 获取当前布局信息并保存为JSON文件。
   await driver.dumpLayout('/data/storage/el2/base/cache/layout.json', 0);
 }
 ```
@@ -1559,7 +1559,7 @@ import { Driver, PointerMatrix } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  // 模拟指关节滑动在屏幕上画'S'
+  // 模拟指关节滑动在屏幕上画'S'。
   let pointers: PointerMatrix = PointerMatrix.create(1, 6);
   pointers.setPoint(0, 0, { x: 750, y: 300 });
   pointers.setPoint(0, 1, { x: 500, y: 100 });
@@ -1622,23 +1622,23 @@ injectMultiPointerAction(pointers: PointerMatrix, speed?: int): Promise<boolean>
 import { Driver, PointerMatrix } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象
+  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 创建2指5步的滑动轨迹矩阵
+  // 创建2指5步的滑动轨迹矩阵。
   let pointers: PointerMatrix = PointerMatrix.create(2, 5);
-  // 设置第一根手指的滑动轨迹
+  // 设置第一根手指的滑动轨迹。
   pointers.setPoint(0, 0, { x: 250, y: 480 });
   pointers.setPoint(0, 1, { x: 250, y: 440 });
   pointers.setPoint(0, 2, { x: 250, y: 400 });
   pointers.setPoint(0, 3, { x: 250, y: 360 });
   pointers.setPoint(0, 4, { x: 250, y: 320 });
-  // 设置第二根手指的滑动轨迹
+  // 设置第二根手指的滑动轨迹。
   pointers.setPoint(1, 0, { x: 250, y: 480 });
   pointers.setPoint(1, 1, { x: 250, y: 440 });
   pointers.setPoint(1, 2, { x: 250, y: 400 });
   pointers.setPoint(1, 3, { x: 250, y: 360 });
   pointers.setPoint(1, 4, { x: 250, y: 320 });
-  // 注入双指滑动操作
+  // 注入双指滑动操作。
   await driver.injectMultiPointerAction(pointers);
 }
 ```
@@ -1696,13 +1696,13 @@ import { Driver, PointerMatrix } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  // 创建单指8步的滑动轨迹矩阵
+  // 创建单指8步的滑动轨迹矩阵。
   let pointer = PointerMatrix.create(1, 8);
-  // 循环设置每步坐标点，模拟从下向上的滑动
+  // 循环设置每步坐标点，模拟从下向上的滑动。
   for (let step = 0; step < 8; step++) {
     pointer.setPoint(0, step, { x: 500, y: 1100 - 100 * step });
   }
-  // 以600px/s速率和0.5压力值注入手写笔滑动操作
+  // 以600px/s速率和0.5压力值注入手写笔滑动操作。
   await driver.injectPenPointerAction(pointer, 600, 0.5);
 }
 ```
@@ -2056,7 +2056,7 @@ import { Driver, Point } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  // 模拟指关节单指双击手势
+  // 模拟指关节单指双击手势。
   let points: Array<Point> = [{ x: 100, y: 100 }];
   await driver.knuckleKnock(points, 2);
 }
@@ -2209,10 +2209,10 @@ import { Driver, TouchOptions } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let options: TouchOptions = {
-    duration: 2000, // 长按持续2000ms
-    pressure: 0.8  // 触摸压力值
+    duration: 2000, // 长按持续2000ms。
+    pressure: 0.8  // 触摸压力值。
   };
-  // 在目标坐标点进行长按，并指定长按时长和触摸压力
+  // 在目标坐标点进行长按，并指定长按时长和触摸压力。
   await driver.longClickAtWithOptions({ x: 100, y: 100, displayId: 0 }, options);
 }
 ```
@@ -2491,14 +2491,14 @@ import { Driver, TouchOptions, KeyOptions } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let touchOptions: TouchOptions = {
-    speed: 800,     // 拖拽速率800px/s
-    duration: 2000  // 拖拽前长按2000ms
+    speed: 800,     // 拖拽速率800px/s。
+    duration: 2000  // 拖拽前长按2000ms。
   };
   let keyOptions: KeyOptions = {
-    key1: 2072,  // Ctrl键
-    key2: 2019   // C键
+    key1: 2072,  // Ctrl键。
+    key2: 2019   // C键。
   };
-  // 鼠标拖拽并同时按下Ctrl+C组合键
+  // 鼠标拖拽并同时按下Ctrl+C组合键。
   await driver.mouseDragWithOptions({ x: 100, y: 100 }, { x: 200, y: 200 }, touchOptions, keyOptions);
 }
 ```
@@ -3661,10 +3661,10 @@ import { Driver, TouchOptions } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let options: TouchOptions = {
-    speed: 800,   // 滑动速率800px/s
-    pressure: 0.5  // 触摸压力值
+    speed: 800,   // 滑动速率800px/s。
+    pressure: 0.5  // 触摸压力值。
   };
-  // 从起始坐标点滑向目标坐标点，并指定滑动速率和触摸压力
+  // 从起始坐标点滑向目标坐标点，并指定滑动速率和触摸压力。
   await driver.swipeBetweenWithOptions({ x: 100, y: 100, displayId: 0 }, { x: 1000, y: 1000, displayId: 0 }, options);
 }
 ```
@@ -3833,7 +3833,7 @@ import { Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  // 注入Ctrl+Alt+Delete组合键
+  // 注入Ctrl+Alt+Delete组合键。
   await driver.triggerCombineKeys(2072, 2047, 2035);
 }
 ```
@@ -3948,7 +3948,7 @@ import { KeyCode } from '@kit.InputKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
 }
 ```
 
@@ -4005,7 +4005,7 @@ import { KeyCode } from '@kit.InputKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // 返回键
+  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // 返回键。
 }
 ```
 
@@ -4064,11 +4064,11 @@ import { Driver, PenKey, PenMode, PenKeyOperation } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  // 手写模式下触发手写键单击
+  // 手写模式下触发手写键单击。
   await driver.triggerPenKey(PenKey.HANDWRITING, PenMode.HANDWRITING, PenKeyOperation.CLICK);
-  // 空鼠模式下触发空鼠键双击
+  // 空鼠模式下触发空鼠键双击。
   await driver.triggerPenKey(PenKey.AIR_MOUSE, PenMode.AIR_MOUSE, PenKeyOperation.DOUBLE_CLICK, { point: { x: 500, y: 500 } });
-  // 空鼠模式下触发智慧键单击
+  // 空鼠模式下触发智慧键单击。
   await driver.triggerPenKey(PenKey.SMART, PenMode.AIR_MOUSE, PenKeyOperation.CLICK);
 }
 ```

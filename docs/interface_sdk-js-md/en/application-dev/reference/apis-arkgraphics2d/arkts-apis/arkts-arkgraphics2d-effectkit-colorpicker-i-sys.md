@@ -1,6 +1,6 @@
 # ColorPicker
 
-A class used to obtain the color from an image. Before calling any method of ColorPicker, use createColorPicker to create a ColorPicker instance.
+A color picker class used to obtain the main color from image data. It is suitable for scenarios such as UI theme color extraction, image color scheme analysis, and intelligent color scheme recommendation, helping developers dynamically generate harmonious color schemes based on image content. Before calling the methods of ColorPicker, you need to create a ColorPicker instance via createColorPicker.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ A class used to obtain the color from an image. Before calling any method of Col
 discriminatePictureLightDegree(): PictureLightDegree
 ```
 
-Discriminates the light and dark degree of the picture.
+Discriminates the light and dark degree of the picture. When the light and dark degree cannot be determined,UNKNOWN\_LIGHT\_COLOR\_DEGREE\_PICTURE is returned.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Discriminates the light and dark degree of the picture.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  returns the picture light and dark degree. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Light and dark degree of the image. |
 
 ## getAlphaZeroTransparentProportion
 
@@ -50,7 +50,7 @@ ArkTS-Sta:
 getAlphaZeroTransparentProportion(): double
 ```
 
-Get the proportion of transparent pixels with alpha=0 in the image
+Obtains the proportion of fully transparent pixels with alpha=0 in the image.
 
 **Since:** 23
 
@@ -68,7 +68,7 @@ Get the proportion of transparent pixels with alpha=0 in the image
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | proportion of transparent pixels with alpha=0 |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Proportion of fully transparent pixels with alpha=0. The value range is [0, 1]. |
 
 **Error codes:**
 
@@ -110,7 +110,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getComplexityDegree(): PictureComplexityDegree
 ```
 
-Get complexity degree of an image
+Obtains the complexity degree of the image. When the complexity degree cannot be determined, the default value UNKNOWN\_COMPLEXITY\_DEGREE\_PICTURE is returned.
 
 **Since:** 22
 
@@ -128,7 +128,7 @@ Get complexity degree of an image
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | complexity degree of an image |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Complexity degree of the image. |
 
 **Error codes:**
 
@@ -170,7 +170,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getDeepenImmersionColor(): Color
 ```
 
-Generates a stronger immersion color that merges with the background color and is deeper than the background color.
+Generates a stronger immersion color that merges with the background color and is deeper than the background color, and writes the result to a Color instance. This API uses a color mixing algorithm to create a color that is both harmonious with the background color and has a stronger immersive effect.
 
 **Since:** 26.0.0
 
@@ -190,7 +190,7 @@ Generates a stronger immersion color that merges with the background color and i
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  returns the stronger immersion color that both blends with the background and appears deeper than the background. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color value of the deepened immersion color. If the image processing fails or the immersion color cannot be generated, null is returned. |
 
 ## getImmersiveBackgroundColor
 
@@ -198,7 +198,7 @@ Generates a stronger immersion color that merges with the background color and i
 getImmersiveBackgroundColor(): Color
 ```
 
-Generates an immersive background color that creates an immersive visual effect.
+Generates an immersive background color that creates an immersive visual effect, and writes the result to a Color instance. This API generates a color value suitable for use as an immersive background based on the dominant color.
 
 **Since:** 26.0.0
 
@@ -218,7 +218,7 @@ Generates an immersive background color that creates an immersive visual effect.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  returns the immersive background color. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color value of the immersive background color. If the image processing fails or the immersive background color cannot be generated, null is returned. |
 
 ## getImmersiveForegroundColor
 
@@ -226,7 +226,7 @@ Generates an immersive background color that creates an immersive visual effect.
 getImmersiveForegroundColor(): Color
 ```
 
-Generates an immersive foreground color that creates an immersive visual effect for text and content.
+Generates an immersive foreground color that creates an immersive visual effect for text and content, and writes the result to a Color instance. This API generates a color value suitable for use as an immersive foreground based on the dominant color.
 
 **Since:** 26.0.0
 
@@ -246,7 +246,7 @@ Generates an immersive foreground color that creates an immersive visual effect 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  returns the immersive foreground color. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color value of the immersive foreground color. If the image processing fails or the immersive foreground color cannot be generated, null is returned. |
 
 ## getMorandiShadowColor
 
@@ -254,7 +254,7 @@ Generates an immersive foreground color that creates an immersive visual effect 
 getMorandiShadowColor(): Color
 ```
 
-Gets the Morandi shadow color from the dominant color.
+Obtains the Morandi shadow color from the dominant color of the image and writes the result to a Color instance. This API uses a specific color conversion algorithm to convert the dominant color into a Morandi style shadow tone.
 
 **Since:** 26.0.0
 
@@ -274,7 +274,7 @@ Gets the Morandi shadow color from the dominant color.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  returns the Morandi shadow color converted from the dominant color. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color value of the Morandi shadow color. If the image processing fails or the Morandi shadow color cannot be obtained, null is returned. |
 
 ## getReverseColor
 
@@ -282,7 +282,7 @@ Gets the Morandi shadow color from the dominant color.
 getReverseColor(): Color
 ```
 
-Gets the reverse color based on the discriminatePictureLightDegree result.When the picture light degree is EXTREMELY\_LIGHT\_COLOR\_PICTURE, returns black color.For other picture light degree types, returns white color.
+Generates a reverse color based on the image brightness discrimination result, and writes the result to a Color instance. Based on the image light degree type obtained from the discriminatePictureLightDegree API,a reverse color is generated. Only the extremely light color picture (EXTREMELY\_LIGHT\_COLOR\_PICTURE) type returns black; other types return white. It is used for UI themes or contrast calculations.
 
 **Since:** 26.0.0
 
@@ -302,7 +302,7 @@ Gets the reverse color based on the discriminatePictureLightDegree result.When t
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  returns the reverse color for UI themes or contrast calculations. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color value of the reverse color. If the image processing fails or the reverse color cannot be generated, null is returned. |
 
 ## getShadeDegree
 
@@ -310,7 +310,7 @@ Gets the reverse color based on the discriminatePictureLightDegree result.When t
 getShadeDegree(): PictureShadeDegree
 ```
 
-Get shade degree of an image
+Obtains the shade degree of the image. When the shade degree cannot be determined, the default value UNKNOWN\_SHADE\_DEGREE\_PICTURE is returned.
 
 **Since:** 22
 
@@ -328,7 +328,7 @@ Get shade degree of an image
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | shade degree of an image |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Shade degree of the image. |
 
 **Error codes:**
 
@@ -376,7 +376,7 @@ ArkTS-Sta:
 getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>
 ```
 
-Get top proportion colors and percentages of an image
+Synchronously returns the top proportion colors and their corresponding percentages from the image, with the number specified by colorCount.
 
 **Since:** 22
 
@@ -394,13 +394,13 @@ Get top proportion colors and percentages of an image
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The number of colors to require, the value is 1 to 10. |
+| colorCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of color values and their corresponding percentages, rounded down. Before OpenHarmony 6.1, the value range is [1, 10]. If the number of colors to extract is greater than 10, the top 10 are taken. Since OpenHarmony 6.1, the value range is [1, 20]. If the number of colors to extract is greater than 20, the top 20 are taken. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Map&lt;Color \| null, number \| null&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Map&lt;Color \| null, double \| null&gt; | Map of colors and percentages, sorted by proportion. - If the number of colors obtained is less than the value of colorCount, the map size is the actual number obtained. - If the colors fail to be obtained or the number of colors obtained is less than 1, Map() is returned. - If the value of colorCount is greater than 10, a map holding the first 10 colors with the top proportions is returned. |
+| ArkTS-Dyn: Map&lt;Color \| null, number \| null&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Map&lt;Color \| null, double \| null&gt; | Map of the top colorCount color values and their corresponding percentages by proportion in the image. The percentage value range is [0, 1]. - If the number of colors obtained is less than the value of colorCount, the map size is the actual number obtained. - If the colors fail to be obtained or the number of colors obtained is less than 1, Map() is returned. |
 
 **Error codes:**
 

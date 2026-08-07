@@ -1,6 +1,6 @@
 # UnlitShadowAlphaMaterial（系统接口）
 
-无光照阴影透明度材质资源
+无光照阴影透明度材质资源。此材质继承自[Material]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，仅绘制材质表面阴影。材质启用[Blend]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_属性时，可与背景融合模拟透明效果。
 
 **继承/实现关系：** UnlitShadowAlphaMaterial extends [Material](../../../apis-arkui/arkts-components/arkts-arkui-material-t.md)
 

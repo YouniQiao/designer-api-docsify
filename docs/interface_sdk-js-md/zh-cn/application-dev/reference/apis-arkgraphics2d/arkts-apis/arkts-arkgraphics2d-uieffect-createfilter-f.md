@@ -6,7 +6,7 @@
 function createFilter(): Filter
 ```
 
-创建Filter实例用于给组件添加多种filter效果。
+创建Filter实例用于给组件添加多种Filter效果。
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ function createFilter(): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Filter的头节点。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Filter实例，支持添加多种Filter效果。 |
 
 **示例：**
 

@@ -1,6 +1,6 @@
 # TouchType
 
-Function Called by Touch
+定义触摸操作的触发状态类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Function Called by Touch
 Down = 0
 ```
 
-Triggered when the finger is pressed.
+手指按下时触发。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ Triggered when the finger is pressed.
 Up = 1
 ```
 
-Triggered when the finger is raised.
+手指抬起时触发。
 
 **起始版本：** 23
 
@@ -52,7 +52,7 @@ Triggered when the finger is raised.
 Move = 2
 ```
 
-Triggered when the finger presses on the screen.
+手指按压并在屏幕上移动时触发。
 
 **起始版本：** 23
 
@@ -70,7 +70,7 @@ Triggered when the finger presses on the screen.
 Cancel = 3
 ```
 
-Triggers when the touch event cancels.
+触摸事件取消时触发。例如：1.手指按住屏幕同时点击Home键返回桌面，此时会触发Cancel；2.\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_手指触摸过程中存在手写笔操作，手指的触摸操作会收到Cancel事件。
 
 **起始版本：** 23
 
@@ -88,7 +88,7 @@ Triggers when the touch event cancels.
 HOVER_ENTER = 9
 ```
 
-Triggers when the touch event turns to hover enter in accessibility processing.
+无障碍模式下，手指按下时触发。
 
 **起始版本：** 23
 
@@ -106,7 +106,7 @@ Triggers when the touch event turns to hover enter in accessibility processing.
 HOVER_MOVE = 10
 ```
 
-Triggers when the touch event turns to hover move in accessibility processing.
+无障碍模式下，触摸移动时触发。
 
 **起始版本：** 23
 
@@ -124,7 +124,7 @@ Triggers when the touch event turns to hover move in accessibility processing.
 HOVER_EXIT = 11
 ```
 
-Triggers when the touch event turns to hover exit in accessibility processing.
+无障碍模式下，抬手时触发。
 
 **起始版本：** 23
 
@@ -142,7 +142,7 @@ Triggers when the touch event turns to hover exit in accessibility processing.
 HOVER_CANCEL = 12
 ```
 
-Triggers when the touch event turns to hover cancel in accessibility processing.
+无障碍模式下，取消当前触发的事件。
 
 **起始版本：** 23
 

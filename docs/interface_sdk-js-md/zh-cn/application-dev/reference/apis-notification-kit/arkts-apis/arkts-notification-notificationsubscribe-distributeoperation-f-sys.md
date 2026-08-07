@@ -52,13 +52,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let hashcode: string = 'hashcode';
 let operationInfo: notificationSubscribe.OperationInfo = {
-  actionName: "actionName",
-  userInput: "userInput",
+  actionName: 'actionName',
+  userInput: 'userInput',
   operationType: 1,
   buttonIndex: 1,
 };
 notificationSubscribe.distributeOperation(hashcode, operationInfo).then(() => {
-  console.info("distributeOperation success");
+  console.info('distributeOperation success');
 }).catch((err: BusinessError) => {
   console.error(`distributeOperation fail, code is ${err.code}, message is ${err.message}`);
 });
@@ -69,11 +69,11 @@ ArkTS-Sta示例：
 ```TypeScript
 let hashcode: string = 'hashcode';
 let operationInfo: notificationSubscribe.OperationInfo = {
-  actionName: "actionName",
-  userInput: "userInput",
+  actionName: 'actionName',
+  userInput: 'userInput',
 };
 notificationSubscribe.distributeOperation(hashcode, operationInfo).then(() => {
-  console.info("distributeOperation success");
+  console.info('distributeOperation success');
 }).catch((err: Error): void => {
   let error: BusinessError = err as BusinessError;
   console.error(`distributeOperation fail, code is ${error.code}, message is ${error.message}`);

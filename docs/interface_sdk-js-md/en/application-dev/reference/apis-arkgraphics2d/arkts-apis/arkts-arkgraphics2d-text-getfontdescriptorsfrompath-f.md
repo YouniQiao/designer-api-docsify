@@ -31,13 +31,13 @@ Obtains an array of font descriptors by font file path. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| Resource | Yes | Path of the font file to be queried. The path must be in the format of " **file://** + Absolute path of the font file" or **\_\_\_ESCAPED\_DOLLAR\_\_\_rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
+| path | string \| Resource | Yes | Path of the font file to query. Two formats are supported:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Absolute path of the font file starting with "file://", for example, "file:///system/fonts/test.ttf".\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. File in the project's resources/rawfile directory, in the format of \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('file name'), for example, \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('test.ttf' ). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;FontDescriptor&gt;&gt; | Promise used to return all font descriptors. If the font file cannot be found, the path is invalid, the font file does not have the required permission, or the file is not a font file , an empty array is returned. |
+| Promise&lt;Array&lt;FontDescriptor&gt;&gt; | Promise used to return all font descriptors. If the font file cannot be found, the path is invalid, the font file does not have the required permission, or the file is not a font file, an empty array is returned. |
 
 **Example**
 

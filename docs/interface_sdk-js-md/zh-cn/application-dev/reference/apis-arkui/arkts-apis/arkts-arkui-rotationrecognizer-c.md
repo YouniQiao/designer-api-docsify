@@ -2,7 +2,7 @@
 
 旋转手势识别器对象，继承于[GestureRecognizer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
 
-**继承/实现关系：** RotationRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
+**继承/实现关系：** RotationRecognizer extends [GestureRecognizer](arkts-arkui-component/gesture-gesturerecognizer-c.md)
 
 **起始版本：** 18
 

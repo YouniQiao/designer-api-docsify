@@ -58,7 +58,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   onConsume: onConsumeCallback
 };
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -74,7 +74,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   onConsume: onConsumeCallback
 };
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: Error) => {
   let error: BusinessError = err as BusinessError;
   console.error(`subscribeNotification failed, code is ${error.code}, message is ${error.message}`);
@@ -141,10 +141,10 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   onConsume: onConsumeCallback
 };
 let subscribeInfo: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ["bundleName1", "bundleName2"],
+  bundleNames: ['bundleName1', 'bundleName2'],
 }
 notificationSubscribe.subscribeNotification(subscriber, subscribeInfo).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -160,10 +160,10 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   onConsume: onConsumeCallback
 };
 let subscribeInfo: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ["bundleName1", "bundleName2"],
+  bundleNames: ['bundleName1', 'bundleName2'],
 }
 notificationSubscribe.subscribeNotification(subscriber, subscribeInfo).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: Error) => {
   let error: BusinessError = err as BusinessError;
   console.error(`subscribeNotification failed, code is ${error.code}, message is ${error.message}`);

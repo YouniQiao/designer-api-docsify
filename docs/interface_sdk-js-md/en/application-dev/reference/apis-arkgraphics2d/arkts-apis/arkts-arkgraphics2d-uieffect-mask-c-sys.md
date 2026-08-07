@@ -1,6 +1,6 @@
 # Mask (System API)
 
-Defines the mask for Filter or VisualEffect.
+Mask effect class, used as input for Filter and VisualEffect. Different types of Mask provide different grayscale distribution patterns, such as wave ring masks, radial gradients, pixel map masks, etc.
 
 **Since:** 20
 
@@ -19,7 +19,7 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
       fillColor?: Color): Mask
 ```
 
-Create a Mask of pixelmap.
+Creates a Mask instance with scaling effect by inputting a pixelMap, the area of the pixelMap to be drawn,the drawing area of the mounted node, and the color to fill outside the drawing area.
 
 **Since:** 20
 
@@ -35,16 +35,16 @@ Create a Mask of pixelmap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes |  |
-| srcRect | common2D.Rect | Yes |  |
-| dstRect | common2D.Rect | Yes |  |
-| fillColor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| pixelMap | image.PixelMap | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
+| srcRect | common2D.Rect | Yes | The area of the pixelMap to be drawn. The leftmost and topmost positions correspond to 0, and the rightmost and bottommost positions correspond to 1. right must be greater than left, and bottom must be greater than top; otherwise the effect will not take effect. |
+| dstRect | common2D.Rect | Yes | The drawing area of the pixelMap on the node where the mask is mounted. The leftmost and topmost positions of the node correspond to 0, and the rightmost and bottommost positions correspond to 1. right must be greater than left, and bottom must be greater than top; otherwise the effect will not take effect. |
+| fillColor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The color to fill the area outside the pixelMap drawing area on the node. Each component range is [0, 1], default is transparent color. Values less than 0 are treated as 0, and values greater than 1 are treated as 1. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a Mask instance created based on the pixelMap. |
 
 **Error codes:**
 
@@ -99,7 +99,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 static createPixelMapMask(pixelMap: image.PixelMap): Mask
 ```
 
-Create a Mask of pixelMap to use directly.
+Creates a Mask instance by inputting a pixelMap. This interface does not perform scaling on the input pixelMap.
 
 **Since:** 22
 
@@ -115,13 +115,13 @@ Create a Mask of pixelMap to use directly.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | The pixelMap of PixelMapMask. |
+| pixelMap | image.PixelMap | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns pixelMap mask. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a Mask with the pixelMap. |
 
 **Error codes:**
 
@@ -222,7 +222,7 @@ static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY
       gradients: Array<[double, double]>): Mask
 ```
 
-Create a Mask of radial gradient.
+Creates an elliptical mask Mask instance by inputting the center position of the ellipse,the semi-major and semi-minor axes, and shape parameters.
 
 **Since:** 20
 
@@ -238,16 +238,16 @@ Create a Mask of radial gradient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| center | common2D.Point | Yes |  |
-| radiusX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes |  |
-| radiusY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes |  |
-| gradients | ArkTS-Dyn: Array&lt;[number, number]&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;[double, double]&gt; | Yes |  |
+| center | common2D.Point | Yes | Sets the center point of the ellipse. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| radiusX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the semi-major axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| radiusY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the semi-minor axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| gradients | ArkTS-Dyn: Array&lt;[number, number]&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;[double, double]&gt; | Yes | The binary arrays in the array represent gradients: [RGBA color, position]. The RGBA color uses the same value for all four channels, which can be regarded as a grayscale value; position represents the distribution position of the RGBA color along the radial direction outward. Both RGBA color and position have a value range of [0, 1], floating-point values are supported, values less than 0 are treated as 0, and values greater than 1 are treated as 1. The position parameter values must be strictly increasing, the number of binary arrays in the Array must be greater than or equal to 2, and the elements in the binary arrays must not be empty; otherwise the elliptical distribution effect will not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a grayscale Mask with the elliptical radial distribution effect. |
 
 **Error codes:**
 
@@ -267,7 +267,7 @@ ArkTS-Sta:
 static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask
 ```
 
-Create a Mask of ripple.
+Creates a wave ring mask Mask instance by inputting the center position, radius, and width of the wave ring.
 
 **Since:** 20
 
@@ -283,16 +283,16 @@ Create a Mask of ripple.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| center | common2D.Point | Yes |  |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes |  |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes |  |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No |  |
+| center | common2D.Point | Yes | Sets the position of the wave ring center on the component. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], and values outside the range will be clamped during implementation. |
+| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the radius of the wave ring, using normalized values. When the radius is 1, the wave ring radius equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
+| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the width of the wave ring, using normalized values. When the width is 1, the wave ring width equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | Sets the offset of the wave peak position. The default value is 0, meaning the wave peak is at the exact center of the wave ring; -1.0 means the wave peak is at the innermost edge of the wave ring; 1.0 means the wave peak is at the outermost edge of the wave ring. The value range is [-1, 1], and values outside the range will be clamped during implementation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a Mask with the wave ring mask effect. |
 
 **Error codes:**
 
@@ -312,7 +312,7 @@ let mask = uiEffect.Mask.createRippleMask({x:0.5, y:1.0}, 0.5, 0.3, 0.0);
 static createUseEffectMask(useEffect: boolean): Mask
 ```
 
-Create a Mask of use effect.
+Creates and sets a Mask instance indicating whether to use blur caching. This Mask instance is specifically designed for the useEffectMask parameter of the liquidMaterial method, used to declare whether the material effect uses blur caching to improve performance. When this Mask instance is used with other Filter or VisualEffect methods, the useEffect property may not take effect.
 
 **Since:** 22
 
@@ -328,13 +328,13 @@ Create a Mask of use effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| useEffect | boolean | Yes | The use effect flag of UseEffectMask. |
+| useEffect | boolean | Yes | Flag indicating whether to use blur caching. A value of true means use, and the blur effect will be displayed normally; a value of false means not use, and the blur effect will not be displayed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns use effect mask. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a Mask instance that indicates whether to use blur caching. |
 
 **Error codes:**
 
@@ -414,7 +414,7 @@ static createWaveGradientMask(center: common2D.Point, width: double, propagation
       blurRadius: double, turbulenceStrength?: double): Mask
 ```
 
-Create a Mask of single wave gradient.
+Creates a single-wave mask Mask instance by inputting the wave source center position and single-wave parameters.
 
 **Since:** 20
 
@@ -430,17 +430,17 @@ Create a Mask of single wave gradient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| center | common2D.Point | Yes | The wave source center of the single-wave mask. |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The circular ring width of the single-wave mask. |
-| propagationRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The outer diffusion radius of the single-wave mask. |
-| blurRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The blur radius of the single-wave mask. |
-| turbulenceStrength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | The turbulent displacement intensity of the single-wave mask. |
+| center | common2D.Point | Yes | Sets the center point of the single-wave source. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the width of the single-wave ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| propagationRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the outer diffusion radius of the single-wave ring. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| blurRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Sets the blur outer radius of the single-wave ring. A blur radius of 0 results in a solid-edge ring; otherwise, it is a soft-edge ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| turbulenceStrength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | Sets the turbulence intensity of the single-wave ring. The default value is 0; an intensity of 0 results in a regular ring, otherwise the ring edges will be turbulently distorted. The value range is [-1, 1], floating-point values are supported, and values outside the range will be clamped during implementation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns wave gradient mask. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns a grayscale Mask with a single wave shape. |
 
 **Error codes:**
 

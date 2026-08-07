@@ -1,6 +1,6 @@
 # PictureComplexityDegree (System API)
 
-Enumerates the complexity degree of an image.
+Enumerates the complexity degree of the image.
 
 **Since:** 22
 
@@ -18,7 +18,7 @@ Enumerates the complexity degree of an image.
 UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0
 ```
 
-The complexity degree of the image is unknown.
+Default value. The complexity degree of the image is unknown.
 
 **Since:** 22
 

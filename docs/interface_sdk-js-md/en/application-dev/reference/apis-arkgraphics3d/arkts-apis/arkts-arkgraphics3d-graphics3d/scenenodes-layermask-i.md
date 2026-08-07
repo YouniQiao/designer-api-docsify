@@ -22,7 +22,7 @@ ArkTS-Sta:
 getEnabled(index: int): boolean
 ```
 
-Get whether layer mask is enabled.
+Checks whether the mask is enabled for a layer of a given index.
 
 **Since:** 12
 
@@ -36,13 +36,13 @@ Get whether layer mask is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | the layer mask |
+| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the layer. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | whether layer mask is enabled |
+| boolean | Check result for whether the layer mask is enabled. true if enabled, false otherwise. |
 
 ## setEnabled
 
@@ -56,7 +56,7 @@ ArkTS-Sta:
 setEnabled(index: int, enabled: boolean): void
 ```
 
-Set whether the layer mask is enabled.
+Enables the mask of a layer of a given index.
 
 **Since:** 12
 
@@ -70,6 +70,6 @@ Set whether the layer mask is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | the layer mask |
-| enabled | boolean | Yes | whether layer mask is enabled |
+| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the layer. The value is an integer greater than or equal to 0. |
+| enabled | boolean | Yes | Whether to enable the layer mask. true to enable, false otherwise. |
 

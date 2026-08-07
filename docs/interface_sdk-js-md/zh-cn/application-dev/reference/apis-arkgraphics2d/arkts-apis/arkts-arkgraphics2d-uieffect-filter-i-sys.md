@@ -1,5 +1,7 @@
 # Filter
 
+Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建一个Filter实例。
+
 **起始版本：** 12
 
 **ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
@@ -14,7 +16,7 @@
 bezierWarp(controlPoints: Array<common2D.Point>): Filter
 ```
 
-将贝塞尔曲线变形的效果添加至组件上。该效果通过在图层边界上创建封闭的贝塞尔曲线，实现对图像的精准扭曲和形状调整。贝塞尔曲线共有四段，首尾顺次相连，每段包含一个顶点和两个切点。
+将贝塞尔曲线变形的效果添加至组件上。该效果通过在图层边界上创建封闭的贝塞尔曲线，实现对图像的精准扭曲和形状调整。贝塞尔曲线共有四段，首尾顺次相连，每段包含一个顶点和两个切点。典型应用场景包括人脸形变特效、卡片透视变形等。
 
 **起始版本：** 20
 
@@ -30,7 +32,7 @@ bezierWarp(controlPoints: Array<common2D.Point>): Filter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controlPoints | Array&lt;common2D.Point&gt; | 是 | 12个贝塞尔形变控制点，更改控制点的位置可改变形成边缘的曲线的形状， 从而扭曲图像。控制点坐标为0-1坐标系，且坐标值可大于1或小于0。 |
+| controlPoints | Array&lt;common2D.Point&gt; | 是 | 12个贝塞尔形变控制点，数组长度必须为12， 更改控制点的位置可改变形成边缘的曲线形状，从而扭曲图像。控制点坐标使用归一化坐标系 （默认范围为[0, 1]），且坐标值可大于1或小于0。数组长度不为12时效果不生效。 |
 
 **返回值：**
 
@@ -216,10 +218,10 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colors | Array&lt;Color&gt; | 是 | 颜色数组，多个颜色的渐变。数组长度取值范围[0, 12], 每一个颜色值取值范围为大于等于0。 数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
-| positions | Array&lt;common2D.Point&gt; | 是 | 位置数组，颜色对应的分布位置。数组长度取值范围[0, 12]。 数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
-| strengths | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 是 | 强度数组，颜色对应的扩散强度。数组长度取值范围[0, 12], 每一个强度值取值范围为大于等于0。 数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
-| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 遮罩alpha，颜色对应的alpha显示遮罩。不设置时，默认组件内容全部有颜色渐变效果。 |
+| colors | Array&lt;Color&gt; | 是 | 颜色数组，多个颜色的渐变。数组长度取值范围为[0, 12], 每一个颜色值取值范围需大于等于0。 数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
+| positions | Array&lt;common2D.Point&gt; | 是 | 位置数组，颜色对应的分布位置。数组长度取值范围为[0, 12]。 数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
+| strengths | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 是 | 强度数组，颜色对应的扩散强度。数组长度取值范围为[0, 12], 每一个强度值取值范围需大于等于0。 数组长度等于0或大于12时无效果，colors、positions和strengths的数组长度不相等时无效果。 |
+| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 控制渐变效果透明度分布的遮罩。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。当需要控制颜色渐变效果的 透明度分布（如局部透明或动态透明效果）时传入此参数。不设置时，颜色渐变效果的透明度 完全由colors参数决定。 |
 
 **返回值：**
 
@@ -324,16 +326,16 @@ contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lightPosition | common2D.Point3d | 是 | 光源在组件空间的位置，[-1, -1, 0]为组件左上角，[1, 1, 0]为组件的右下角， z轴分量越大光源离组件平面越远，可照射区域越大。 x分量取值范围[-10, 10]，y分量取值范围[-10, 10]，z分量取值范围[0, 10]，超出范围会自动截断。 |
-| lightColor | common2D.Color | 是 | 光源颜色，各元素取值范围为[0, 1]，超出范围会自动截断。 |
-| lightIntensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 光源强度，取值范围[0, 1]，数值越大光源亮度越大，超出范围会自动截断。 |
-| displacementMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 该参数暂不生效。 |
+| lightPosition | common2D.Point3d | 是 | 光源在组件空间的位置，[-1, -1, 0]为组件左上角，[1, 1, 0]为组件的右下角， z轴分量越大光源离组件平面越远，可照射区域越大。 x分量取值范围为[-10, 10]，y分量取值范围为[-10, 10]，z分量取值范围为[0, 10]，超出范围会自动截断。 |
+| lightColor | common2D.Color | 是 | 光源颜色，RGBA各分量取值范围为[0, 1]，超出范围会自动截断。 |
+| lightIntensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 光源强度，取值范围为[0, 1]，数值越大光源亮度越大，超出范围会自动截断。 |
+| displacementMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 置换贴图参数，该参数暂不生效，不建议传入。不设置时对功能无影响。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  返回了具有内容光照效果的filter。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  返回了具有内容光照效果的Filter。 |
 
 **错误码：**
 
@@ -439,7 +441,7 @@ ArkTS-Sta:
 directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter
 ```
 
-为组件内容提供基于Mask和平行光的光照效果。
+为组件内容提供基于Mask和平行光的光照效果。平行光从统一方向照射组件平面，所有光线方向一致，不因距离衰减，光照强度在组件各处均匀分布，适合模拟太阳光等远距离光源场景。与contentLight的点光源不同，平行光无需指定光源具体位置。通过Mask可控制光照细节，通过factor可结合高度图增强浮雕效果。
 
 **起始版本：** 20
 
@@ -455,11 +457,11 @@ directionLight(direction: common2D.Point3d, color: Color, intensity: double, mas
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | common2D.Point3d | 是 | 方向光的入射方向。 |
+| direction | common2D.Point3d | 是 | 入射光的方向，通过三维坐标表示光线的入射方向。 |
 | color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 光照颜色。 |
-| intensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 光照强度，非负数。 |
-| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 置换贴图，用于描述二维图像表面的三维细节，通过法线或高度图增强局部细节和光照反射效果， 若输入为高度图，须与factor参数配合使用。默认为空，表现为全局无细节的平面光照效果。 |
-| factor | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 否 | 采样缩放系数。默认值为null，mask作为法线图采样；非默认值时，mask作为高度图采样， 实际高度值为mask的采样值与factor的乘积。 |
+| intensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 光照强度，取值范围为[0, +∞)，数值越大光源亮度越大。 |
+| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 置换贴图，用于描述二维图像表面的三维细节。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。 当需要增强局部细节和光照反射效果（如浮雕、凹凸纹理）时传入此参数。通过法线或高度图实现，若输入为高度图需与factor参数配合使用。 不设置时默认为空，表现为全局无细节的平面光照效果。 |
+| factor | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 否 | 采样缩放系数。当使用高度图作为mask且需要控制高度缩放时传入此参数。不设置时mask作为法线图采样直接使用； 设置了值时mask作为高度图采样，实际高度值为mask采样值与factor的乘积。 |
 
 **返回值：**
 
@@ -538,8 +540,8 @@ displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displacementMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定扭曲程度。与factor相乘后共同决定扭曲程度。 |
-| factor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | 否 | 指定水平、竖直方向扭曲程度系数，系数的绝对值越大，扭曲程度越明显， 建议取值范围为[-10.0, 10.0]。不设置时，默认值为1.0。设置为0时，无扭曲效果。与mask相乘后共同决定扭曲程度。 |
+| displacementMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 置换贴图，用于控制扭曲的方向和强度。可通过Mask类的创建方法 （如createRippleMask、createPixelMapMask等）创建Mask实例。与factor相乘后共同决定扭曲程度。 |
+| factor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | 否 | 指定水平、竖直方向扭曲程度系数。当需要控制扭曲的方向和强度 （如单向扭曲或差异扭曲）时传入此参数。系数的绝对值越大，扭曲程度越明显，建议取值范围为 [-10.0, 10.0]。不设置时默认值为[1.0, 1.0]，表示水平和竖直方向均应用默认扭曲强度。 设置为[0.0, 0.0]时，无扭曲效果。Mask的灰度值控制扭曲的方向和强度，factor与Mask灰度值 相乘后共同决定最终的扭曲程度，即实际扭曲值 = Mask灰度值 × factor值。 |
 
 **返回值：**
 
@@ -681,7 +683,7 @@ ArkTS-Sta:
 edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter
 ```
 
-为组件内容检测边缘，并添加边缘高亮效果。
+为组件内容检测边缘，并添加边缘高亮效果。该效果自动检测组件内容的边缘轮廓并叠加高亮描边。
 
 **起始版本：** 20
 
@@ -698,9 +700,9 @@ edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 指定描边高光透明度，越大描边越明显。取值范围为[0, 1]。 设置为0时无描边；设置小于0的值时，按值为0处理；设置大于1的值时，按值为1处理。 |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 指定描边高光颜色，不设置时，将默认使用组件内容的原始颜色。 如果有值，使用指定颜色。设置不为null时，Color中的alpha不发挥作用，仅使用rgb。 |
-| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 指定描边高光强度。不设置时，默认组件内容全部有描边高光效果。 |
-| bloom | boolean | 否 | 指定描边是否发光。设置为true时，有描边和发光效果；设置为false时，只有描边效果无发光效果； 不设置时，默认为true。小于16*16的图片默认只有描边效果，无发光效果，此参数失去作用。 |
+| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 指定描边高光颜色，RGB各分量取值范围为[0, +∞)。 当需要自定义描边高光颜色（如强调特定颜色效果）时传入此参数。不设置时， 默认使用组件内容的原始颜色。设置了color参数时，Color中的alpha不发挥作用，仅使用rgb。 |
+| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 指定描边高光强度遮罩。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。当需要控制描边高光效果的 作用区域（如局部高光而非全局高光）时传入此参数。不设置时，默认组件内容全部有描边高光效果。 |
+| bloom | boolean | 否 | 指定描边是否发光。当需要增强视觉效果时设置为true； 当需要简洁描边效果时设置为false。不设置时默认为true（带发光效果）。 小于16*16的图片默认只有描边效果，无发光效果，此参数失去作用。 |
 
 **返回值：**
 
@@ -777,7 +779,7 @@ ArkTS-Sta:
 flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter
 ```
 
-将飞入飞出形变效果添加至组件上。
+将飞入飞出形变效果添加至组件上。典型应用场景包括页面切换动画、窗口进出动画、对话框弹出动画、列表项进出动画等。
 
 **起始版本：** 12
 
@@ -840,7 +842,7 @@ struct FlyInFlyOutEffect {
 heatDistortion(param: HeatDistortionEffectParam): Filter
 ```
 
-应用热浪扭曲效果到图像，模拟热空气流动产生的视觉扭曲。
+应用热浪扭曲效果到图像，模拟热空气流动产生的视觉扭曲效果。
 
 **起始版本：** 26.0.0
 
@@ -911,7 +913,7 @@ maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], g
       bFactor?: [double, double]): Filter
 ```
 
-为组件内容添加由置换贴图控制的色散效果。
+为组件内容添加由置换贴图控制的色散效果，模拟光线通过棱镜时的色散现象。典型应用场景包括炫彩特效、棱镜折射模拟等。
 
 **起始版本：** 20
 
@@ -927,11 +929,11 @@ maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], g
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dispersionMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 置换贴图，用于控制色散的强度、方向和透明度。建议使用PixelMapMask类型的置换贴图。 |
+| dispersionMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 置换贴图，用于控制色散的强度、方向和透明度。建议使用 PixelMapMask类型的置换贴图，可通过自定义图片纹理实现对色散区域和强度的精细控制。 可通过createPixelMapMask方法创建Mask实例。 |
 | alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 色散整体透明度，透明度越小效果越透明。取值范围为[0, 1.0]。 透明度设置为0时色散效果不生效；透明度设置小于0的值时，按值为0处理；设置大于1.0的值时，按值为1.0处理。 |
-| rFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | 否 | X/Y方向上R通道的色散基础偏移，偏移越大红色色散效果越明显。 每个方向上的取值范围为[-1.0, 1.0]。偏移设置小于-1.0的值时，按值为-1.0处理；设置大于1.0的值时，按值为1.0处理。 |
-| gFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | 否 | X/Y方向上G通道的色散基础偏移，偏移越大绿色色散效果越明显。取值范围同rFactor。 |
-| bFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | 否 | X/Y方向上B通道的色散基础偏移，偏移越大蓝色色散效果越明显。取值范围同rFactor。 |
+| rFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | 否 | X/Y方向上R通道的色散基础偏移。当需要自定义红色通道的 色散强度和方向时传入此参数，偏移越大红色色散效果越明显。不传入时默认值为[0.0, 0.0]， 无R通道色散偏移。每个方向上的取值范围为[-1.0, 1.0]，超出范围自动截断。 |
+| gFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | 否 | X/Y方向上G通道的色散基础偏移。当需要自定义绿色通道的 色散强度和方向时传入此参数。不传入时默认值为[0.0, 0.0]，无G通道色散偏移。 取值范围同rFactor，为[-1.0, 1.0]，超出范围自动截断。 |
+| bFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | 否 | X/Y方向上B通道的色散基础偏移。当需要自定义蓝色通道的 色散强度和方向时传入此参数。不传入时默认值为[0.0, 0.0]，无B通道色散偏移。 取值范围同rFactor，为[-1.0, 1.0]，超出范围自动截断。 |
 
 **返回值：**
 
@@ -957,7 +959,9 @@ ArkTS-Sta:
 maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter
 ```
 
-为组件内容提供基于Mask的转场效果。
+为组件内容提供基于Mask的转场效果，可用于页面切换动画、场景过渡效果等场景。
+
+不建议在屏幕尺寸发生改变的过程中使用此效果，如：旋转屏幕，折叠屏开合屏幕等。
 
 **起始版本：** 20
 
@@ -973,9 +977,9 @@ maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通过遮罩指定转场效果的作用区域。 |
-| factor | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 否 | 转场过渡系数，取值范围为[0.0, 1.0]，默认值为1.0。 factor值越大画面越接近转场后页面，超出范围自动截断到[0.0, 1.0]。 |
-| inverse | boolean | 否 | 是否启用反向转场，true表示启用，false表示不启用，默认值为false。 |
+| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 通过遮罩指定转场效果的作用区域。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。Mask的灰度值 决定转场效果的作用程度，灰度值越大的区域转场效果越明显。 |
+| factor | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 否 | 转场过渡系数。当需要控制转场进度（如动画中途或动态调整）时 传入此参数，值越大画面越接近转场后页面。不设置时默认值为1.0（转场完成状态）。 取值范围为[0.0, 1.0]，超出范围自动截断到[0.0, 1.0]。 |
+| inverse | boolean | 否 | 是否启用反向转场。当需要反向转场效果（如从后页面向前页面过渡） 时设置为true；当需要正向转场效果（从前页面向后页面过渡）时设置为false。 默认值为false（正向转场）。 |
 
 **返回值：**
 
@@ -1062,7 +1066,7 @@ pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stretchSizes | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 是 | 上下左右四个方向边缘像素扩展的百分比比例，取值范围为[-1, 1]。 正值表示向外扩展，上下左右四个方向分别用指定原图比例的边缘像素填充。负值表示内缩，但是最终图像大小不变。 注意四个方向对应的参数需统一为非正值或非负值。 |
+| stretchSizes | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 是 | 上下左右四个方向边缘像素扩展的百分比比例，取值范围为[-1, 1]。 正值表示向外扩展，上下左右四个方向分别用指定原图比例的边缘像素填充。负值表示内缩，但是最终图像大小不变。 注意四个方向对应的参数需统一为非正值或非负值，否则效果无效。 |
 | tileMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 边缘像素扩展的像素填充模式。 |
 
 **返回值：**
@@ -1222,7 +1226,7 @@ variableRadiusBlur(radius: double, radiusMap: Mask): Filter
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 最大模糊半径，单位为px，该值越大越模糊。取值范围为[0, 128]。 模糊半径设置为0时不模糊；模糊半径设置小于0的值时，按值为0处理；设置大于128的值时，按值为128处理。 |
-| radiusMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 代表模糊程度的Mask对象。 |
+| radiusMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 代表模糊程度的Mask对象。Mask的灰度值代表对应位置的模糊程度，灰度值越大越模糊。 |
 
 **返回值：**
 

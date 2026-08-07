@@ -56,11 +56,11 @@ let options: zlib.Options = {
 };
 
 try {
-  zlib.compressFiles([inFile, pathDir], outFile, options).then((data: void) => {
-    console.info('compressFiles success. data: ' + JSON.stringify(data));
+  zlib.compressFiles([inFile, pathDir], outFile, options).then(() => {
+    console.info('compressFiles success.');
   }).catch((errData: BusinessError) => {
     console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  })
+  });
 } catch (errData) {
   let code = (errData as BusinessError).code;
   let message = (errData as BusinessError).message;

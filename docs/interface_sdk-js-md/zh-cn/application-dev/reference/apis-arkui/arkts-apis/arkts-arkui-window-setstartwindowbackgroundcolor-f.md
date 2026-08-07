@@ -38,7 +38,7 @@ function setStartWindowBackgroundColor(moduleName: string, abilityName: string, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setStartWindowBackgroundColor can not to work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setStartWindowBackgroundColor can not work correctly due to limited device capabilities. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal task error. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Parameter exceeds the allowed length. |
 
@@ -49,7 +49,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { ColorMetrics, window } from '@kit.ArkUI';
 
 try {
-  let promise = window.setStartWindowBackgroundColor("entry", "EntryAbility", ColorMetrics.numeric(0xff000000));
+  let promise = window.setStartWindowBackgroundColor('entry', 'EntryAbility', ColorMetrics.numeric(0xff000000));
   promise.then(() => {
     console.info('Succeeded in setting the starting window color.');
   }).catch((err: BusinessError) => {

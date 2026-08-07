@@ -5480,7 +5480,7 @@ Sets the padding of the component.Default value: **0**.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Padding \| Length \| LocalizedPadding \| undefined | 是 |  |
+| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Length \| LocalizedPadding \| undefined | 是 |  |
 
 **返回值：**
 
@@ -5934,7 +5934,7 @@ Sets the safe area padding. It enables a container to add a component-level safe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| paddingValue | Padding \| LengthMetrics \| LocalizedPadding \| undefined | 是 | Indicates safeArea padding values |
+| paddingValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| LengthMetrics \| LocalizedPadding \| undefined | 是 | Indicates safeArea padding values |
 
 **返回值：**
 

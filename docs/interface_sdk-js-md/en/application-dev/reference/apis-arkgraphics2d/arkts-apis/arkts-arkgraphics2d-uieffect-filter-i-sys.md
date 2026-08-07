@@ -1,6 +1,6 @@
 # Filter
 
-The Filter for Component.
+Filter effect class, used to apply corresponding effects to specified components.Before calling Filter methods, you need to first create a Filter instance through createFilter.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ The Filter for Component.
 bezierWarp(controlPoints: Array<common2D.Point>): Filter
 ```
 
-Sets the deformation effect controlled by bezier curves of the component.
+Adds a Bezier curve deformation effect to the component. This effect achieves precise distortion and shape adjustment of the image by creating closed Bezier curves at the layer boundary.There are four Bezier curve segments, connected head to tail in sequence, with each segment containing one vertex and two tangent points. Typical application scenarios include face deformation effects,card perspective distortion, etc.
 
 **Since:** 20
 
@@ -32,13 +32,13 @@ Sets the deformation effect controlled by bezier curves of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlPoints | Array&lt;common2D.Point&gt; | Yes | The bezier control points, 12 points needed. |
+| controlPoints | Array&lt;common2D.Point&gt; | Yes | 12 Bezier deformation control points. The array length must be 12. Changing the positions of the control points changes the shape of the curves forming the edges, thereby distorting the image. The control point coordinates use a normalized coordinate system (default range [0, 1]), and coordinate values can be greater than 1 or less than 0. If the array length is not 12, the effect will not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the Bezier curve deformation effect attached. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ struct BezierWarpExample {
 blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter
 ```
 
-Applies blur bubbles rise effect to simulate rising bubbles with blur.This effect creates a dreamy, bubbly distortion similar to rising bubbles in liquid.
+Applies a blur bubbles rise effect to the image, simulating a dreamy, bubbly distortion similar to rising bubbles in liquid.
 
 **Since:** 26.0.0
 
@@ -93,13 +93,13 @@ Applies blur bubbles rise effect to simulate rising bubbles with blur.This effec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the blur bubbles rise effect parameters. |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The blur bubbles rise effect parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the blur bubbles rise Filter. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the blur bubbles rise effect attached. |
 
 ## colorGradient
 
@@ -115,7 +115,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
         alphaMask?: Mask): Filter
 ```
 
-Sets the color gradient filter, may blend with alpha mask.
+Adds a color gradient effect to the component content.
 
 **Since:** 20
 
@@ -131,16 +131,16 @@ Sets the color gradient filter, may blend with alpha mask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colors | Array&lt;Color&gt; | Yes |  |
-| positions | Array&lt;common2D.Point&gt; | Yes |  |
-| strengths | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes |  |
-| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| colors | Array&lt;Color&gt; | Yes | The color array for multi-color gradient. The array length range is [0, 12], and each color value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
+| positions | Array&lt;common2D.Point&gt; | Yes | The position array, corresponding to the distribution positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
+| strengths | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes | The strength array, corresponding to the diffusion strength of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
+| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The mask that controls the transparency distribution of the gradient effect. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the transparency distribution of the color gradient effect (such as local transparency or dynamic transparency effects). If not set, the transparency of the color gradient effect is entirely determined by the colors parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the color gradient effect attached. |
 
 **Error codes:**
 
@@ -192,7 +192,7 @@ contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightI
       displacementMap?: Mask): Filter
 ```
 
-Sets the content light filter.
+Adds a 3D lighting effect to the component content.
 
 **Since:** 20
 
@@ -208,16 +208,16 @@ Sets the content light filter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lightPosition | common2D.Point3d | Yes |  |
-| lightColor | common2D.Color | Yes |  |
-| lightIntensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes |  |
-| displacementMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| lightPosition | common2D.Point3d | Yes | The position of the light source in the component space. [-1, -1, 0] is the top-left corner of the component, [1, 1, 0] is the bottom-right corner of the component. The larger the z-axis component, the farther the light source is from the component plane, and the larger the illuminated area. The x component range is [-10, 10], the y component range is [-10, 10], and the z component range is [0, 10]. Values outside the range will be automatically clamped. |
+| lightColor | common2D.Color | Yes | The color of the light source. The RGBA components range from [0, 1]. Values outside the range will be automatically clamped. |
+| lightIntensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The intensity of the light source. The value range is [0, 1]. A larger value indicates a brighter light source. Values outside the range will be automatically clamped. |
+| displacementMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The displacement map parameter. This parameter is not currently effective and is not recommended to be passed in. Not setting it has no effect on the functionality. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the content lighting effect attached. |
 
 **Error codes:**
 
@@ -276,7 +276,7 @@ ArkTS-Sta:
 directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter
 ```
 
-Generates lighting effects from mask and directional light.
+Provides a Mask-based and directional light lighting effect for the component content.Directional light illuminates the component plane from a uniform direction, with all light rays in the same direction, not attenuating with distance, and the light intensity is evenly distributed across the component,suitable for simulating distant light sources such as sunlight. Unlike the point light source of contentLight,directional light does not need to specify the specific position of the light source.Through the Mask, you can control lighting details, and through the factor, you can combine height maps to enhance the relief effect.
 
 **Since:** 20
 
@@ -292,17 +292,17 @@ Generates lighting effects from mask and directional light.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | common2D.Point3d | Yes | Direction of light |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Color of light |
-| intensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Intensity of light |
-| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Mask, as a displacement map that affects lighting effects |
-| factor | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | Mask scale factor, used to scale the mask channel values |
+| direction | common2D.Point3d | Yes | The direction of the incident light, represented by three-dimensional coordinates indicating the direction of the light rays. |
+| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The light color. |
+| intensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The light intensity. The value range is [0, +∞). A larger value indicates a brighter light source. |
+| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The displacement map, used to describe the three-dimensional details of the two-dimensional image surface. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to enhance local details and lighting reflection effects (such as relief, bump textures). Implemented through normal maps or height maps; if a height map is input, it needs to be used with the factor parameter. If not set, the default is empty, resulting in a global flat lighting effect without details. |
+| factor | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | The sampling scale coefficient. Pass this parameter when using a height map as the mask and needing to control the height scaling. If not set, the mask is sampled directly as a normal map; if a value is set, the mask is sampled as a height map, and the actual height value is the product of the mask sampling value and the factor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the lighting effect controlled by the displacement map attached. |
 
 **Error codes:**
 
@@ -359,7 +359,7 @@ ArkTS-Sta:
 displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter
 ```
 
-Sets distort effect with displacement map.
+Adds a distortion effect to the component content.
 
 **Since:** 20
 
@@ -375,14 +375,14 @@ Sets distort effect with displacement map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displacementMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| factor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No |  |
+| displacementMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The displacement map, used to control the direction and intensity of distortion. A Mask instance can be created through Mask creation methods (such as createRippleMask, createPixelMapMask, etc.). It works together with the factor to determine the degree of distortion. |
+| factor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No | Specifies the horizontal and vertical distortion intensity coefficients. Pass this parameter when you need to control the direction and intensity of distortion (such as one-way distortion or differential distortion). The larger the absolute value of the coefficient, the more obvious the distortion. The recommended value range is [-10.0, 10.0]. If not set, the default value is [1.0, 1.0], indicating that both horizontal and vertical directions apply the default distortion intensity. Setting it to [0.0, 0.0] results in no distortion effect. The grayscale value of the Mask controls the direction and intensity of distortion, and the factor multiplied by the Mask grayscale value jointly determines the final distortion degree, i.e., actual distortion value = Mask grayscale value × factor value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the distortion effect attached. |
 
 **Error codes:**
 
@@ -424,7 +424,7 @@ ArkTS-Sta:
 distort(distortionK: double): Filter
 ```
 
-Set distort effect of the component.
+Adds a lens distortion effect to the component.
 
 **Since:** 13
 
@@ -440,13 +440,13 @@ Set distort effect of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distortionK | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | set the degree of distort effect, value range [-1, 1]. If the value is 0, the component keep same, if the value is less than 0, the component is barrel distortion, if the value is more than 0, the component is pincushion distortion. |
+| distortionK | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The distortion coefficient, indicating the degree of lens distortion. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. When the distortion coefficient is less than 0, the effect is barrel distortion; when greater than 0, the effect is pincushion distortion. The closer the value is to 0, the smaller the distortion; when the value is 0, there is no distortion effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns distort Filter. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the lens distortion effect attached. |
 
 **Error codes:**
 
@@ -472,7 +472,7 @@ ArkTS-Sta:
 edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter
 ```
 
-Detects and glows edges of contents.
+Detects edges of the component content and adds an edge highlight effect.This effect automatically detects the edge contours of the component content and overlays a highlight stroke.
 
 **Since:** 20
 
@@ -488,16 +488,16 @@ Detects and glows edges of contents.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes |  |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
-| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
-| bloom | boolean | No |  |
+| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Specifies the stroke highlight transparency. A larger value makes the stroke more obvious. The value range is [0, 1]. Setting it to 0 results in no stroke; values less than 0 are treated as 0; values greater than 1 are treated as 1. |
+| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Specifies the stroke highlight color. The RGB components range from [0, +∞). Pass this parameter when you need to customize the stroke highlight color (such as emphasizing a specific color effect). If not set, the original color of the component content is used by default. When the color parameter is set, the alpha in Color does not take effect; only RGB is used. |
+| mask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Specifies the stroke highlight intensity mask. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the area of the stroke highlight effect (such as local highlight instead of global highlight). If not set, the entire component content has the stroke highlight effect by default. |
+| bloom | boolean | No | Specifies whether the stroke has a bloom effect. Set to true when you need to enhance the visual effect; set to false when you need a simple stroke effect. The default value is true (with bloom effect). For images smaller than 16x16, there is only a stroke effect by default, no bloom effect, and this parameter has no effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the edge highlight effect attached. |
 
 **Error codes:**
 
@@ -541,7 +541,7 @@ ArkTS-Sta:
 flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter
 ```
 
-Set the fly in or fly out effect of the component.
+Adds a fly-in or fly-out deformation effect to the component.Typical application scenarios include page transition animations, window entry/exit animations,dialog pop-up animations, list item entry/exit animations, etc.
 
 **Since:** 12
 
@@ -557,14 +557,14 @@ Set the fly in or fly out effect of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | set the degree of fly in or fly out effect, value range [0, 1]. |
-| flyMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | set the location of stretching when fly in or out If the value is 0, the component keep same, else the value is 1, component are fully fly out or fly in. |
+| degree | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Indicates the degree of fly-in or fly-out deformation. The value range is [0, 1]. The closer the value is to 1, the more obvious the deformation. Values outside the range will not produce a deformation effect. |
+| flyMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The scene mode of the fly-in or fly-out effect. BOTTOM indicates the fly-in or fly-out deformation scene from the bottom of the device. TOP indicates the fly-in or fly-out deformation scene from the top of the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns fly in fly out Filter. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the fly-in or fly-out deformation effect attached. |
 
 **Error codes:**
 
@@ -584,7 +584,7 @@ filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP)
 heatDistortion(param: HeatDistortionEffectParam): Filter
 ```
 
-Applies heat distortion effect to simulate hot air distortion.This effect creates a wavy distortion similar to heat shimmer or hot air rising.
+Applies a heat distortion effect to the image, simulating the visual distortion caused by hot air flow.
 
 **Since:** 26.0.0
 
@@ -602,13 +602,13 @@ Applies heat distortion effect to simulate hot air distortion.This effect create
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the heat distortion effect parameters. |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The heat distortion effect parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the heat distortion Filter. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the heat distortion effect attached. |
 
 ## maskDispersion
 
@@ -624,7 +624,7 @@ maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], g
       bFactor?: [double, double]): Filter
 ```
 
-Sets dispersion effect with mask map.
+Adds a dispersion effect controlled by a displacement map to the component content, simulating the dispersion phenomenon when light passes through a prism. Typical application scenarios include colorful effects, prism refraction simulation, etc.
 
 **Since:** 20
 
@@ -640,17 +640,17 @@ Sets dispersion effect with mask map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dispersionMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes |  |
-| rFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No |  |
-| gFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No |  |
-| bFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No |  |
+| dispersionMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The displacement map, used to control the intensity, direction, and transparency of dispersion. It is recommended to use a PixelMapMask-type displacement map, which allows fine-grained control over the dispersion area and intensity through custom image textures. A Mask instance can be created through the createPixelMapMask method. |
+| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The overall transparency of the dispersion effect. A smaller transparency value results in a more transparent effect. The value range is [0, 1.0]. Setting it to 0 results in no dispersion effect; values less than 0 are treated as 0; values greater than 1.0 are treated as 1.0. |
+| rFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No | The basic offset of the R channel in the X/Y direction. Pass this parameter when you need to customize the dispersion intensity and direction of the red channel. A larger offset results in a more obvious red dispersion effect. If not passed, the default value is [0.0, 0.0], meaning no R channel dispersion offset. The value range for each direction is [-1.0, 1.0], and values outside the range will be automatically clamped. |
+| gFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No | The basic offset of the G channel in the X/Y direction. Pass this parameter when you need to customize the dispersion intensity and direction of the green channel. If not passed, the default value is [0.0, 0.0], meaning no G channel dispersion offset. The value range is the same as rFactor, [-1.0, 1.0], and values outside the range will be automatically clamped. |
+| bFactor | ArkTS-Dyn: [number, number]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：[double, double] | No | The basic offset of the B channel in the X/Y direction. Pass this parameter when you need to customize the dispersion intensity and direction of the blue channel. If not passed, the default value is [0.0, 0.0], meaning no B channel dispersion offset. The value range is the same as rFactor, [-1.0, 1.0], and values outside the range will be automatically clamped. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the dispersion effect controlled by the displacement map attached. |
 
 **Error codes:**
 
@@ -670,7 +670,9 @@ ArkTS-Sta:
 maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter
 ```
 
-Applies Transition with alpha mask
+Provides a Mask-based transition effect for the component content, which can be used for page transition animations, scene transition effects, etc.
+
+It is not recommended to use this effect during screen size changes, such as screen rotation,foldable screen opening/closing, etc.
 
 **Since:** 20
 
@@ -686,15 +688,15 @@ Applies Transition with alpha mask
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Animatable mask object |
-| factor | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | The coefficient of the mask, defaulting to 1.0f [0~1] |
-| inverse | boolean | No | Transition mode, default is fasle (true, false) |
+| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Specifies the area of the transition effect through a mask. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). The grayscale value of the Mask determines the degree of the transition effect; a larger grayscale value results in a more obvious transition effect in that area. |
+| factor | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | No | The transition coefficient. Pass this parameter when you need to control the transition progress (such as during animation or dynamic adjustment). A larger value makes the image closer to the post-transition page. If not set, the default value is 1.0 (transition completed state). The value range is [0.0, 1.0], and values outside the range will be automatically clamped to [0.0, 1.0]. |
+| inverse | boolean | No | Whether to enable reverse transition. Set to true when you need a reverse transition effect (such as transitioning from the back page to the front page); set to false when you need a forward transition effect (such as transitioning from the front page to the back page). The default value is false (forward transition). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the transition effect attached. |
 
 **Error codes:**
 
@@ -759,7 +761,7 @@ ArkTS-Sta:
 pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter
 ```
 
-Set the edge pixel stretch effect of the Component.
+Adds a pixel stretch effect to the component.
 
 **Since:** 12
 
@@ -775,14 +777,14 @@ Set the edge pixel stretch effect of the Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stretchSizes | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes |  |
-| tileMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| stretchSizes | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes | The percentage ratios of edge pixel stretching in the top, bottom, left, and right directions. The value range is [-1, 1]. A positive value indicates outward stretching, and the edge pixels of the specified original image ratio are used to fill in the top, bottom, left, and right directions. A negative value indicates inward shrinking, but the final image size remains unchanged. Note that the parameters for all four directions must be uniformly non-positive or non-negative, otherwise the effect will not take effect. |
+| tileMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The pixel fill mode for edge pixel stretching. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the pixel stretch effect attached. |
 
 **Example**
 
@@ -802,7 +804,7 @@ ArkTS-Sta:
 radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter
 ```
 
-Adds the content radius gradient blurring effect for the current component.The input parameter is the blurring radius.
+Adds a radius linear gradient blur effect to the component content.
 
 **Since:** 19
 
@@ -818,14 +820,14 @@ Adds the content radius gradient blurring effect for the current component.The i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | the blurring radius. The larger the blurring radius, the more blurring the content, and if the value is 0, the content blurring effect is not blurring. |
-| gradientParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the radius gradient blur options. |
+| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Blur radius, in px. A larger blur radius results in a stronger blur effect. The value range is [0, 128]. When the blur radius is 0, there is no blur effect; values less than 0 are treated as 0; values greater than 128 are treated as 128. |
+| gradientParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The linear gradient parameters, including fractionStops and direction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns radius gradient blur Filter. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the radius linear gradient blur effect attached. |
 
 **Error codes:**
 
@@ -845,7 +847,7 @@ ArkTS-Sta:
 variableRadiusBlur(radius: double, radiusMap: Mask): Filter
 ```
 
-Sets variable radius blur effect with radius map.
+Provides a Mask-based gradient blur effect for the component content.
 
 **Since:** 20
 
@@ -861,14 +863,14 @@ Sets variable radius blur effect with radius map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | the blurring radius. The larger the blurring radius, the more blurring the content, and if the value is 0, the content blurring effect is not blurring. |
-| radiusMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the alpha of the mask determines the degree of blurring. |
+| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Maximum blur radius, in px. A larger value results in a stronger blur effect. The value range is [0, 128]. When the blur radius is 0, there is no blur effect; values less than 0 are treated as 0; values greater than 128 are treated as 128. |
+| radiusMap | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The Mask object representing the degree of blurring. The grayscale value of the Mask represents the degree of blurring at the corresponding position; a larger grayscale value indicates more blurring. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the current effect attached. |
 
 **Error codes:**
 
@@ -910,7 +912,7 @@ ArkTS-Sta:
 waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter
 ```
 
-Set waterRipple effect of the Component.
+Adds a water ripple effect to the component.
 
 **Since:** 12
 
@@ -926,17 +928,17 @@ Set waterRipple effect of the Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Indicates the ripple progress. The value 1 indicates that ripples are displayed on all screens. |
-| waveCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The number of waves when the water ripples. The maximum count of waves is 3, the minimum value is 1, default is 2. |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Represents the X-axis position of center point where the water ripple first appears on the screen. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Represents the Y-axis position of center point where the water ripple first appears on the screen. |
-| rippleMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Set the mode of water ripple, 0 for mobile to desktop(Receive), 1 for mobile to desktop(Send), 2 for mobile to mobile, 3 for cross platform. |
+| progress | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Indicates the ripple progress. The value range is [0, 1]. The closer the progress is to 1, the more fully the ripples are displayed. Values outside the range will not produce a ripple effect. |
+| waveCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The number of waves when the water ripples. The value range is [1, 3]. The wave count must be an integer. If a floating-point number or a value outside the range is provided, the ripple effect will not appear. |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The X-axis position of the center point where the water ripple first appears on the screen. The screen is normalized, with the top-left corner at (0, 0) and the top-right corner at (1, 0). A negative value indicates a position to the left of the screen. |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The Y-axis position of the center point where the water ripple first appears on the screen. The screen is normalized, with the top-left corner at (0, 0) and the bottom-left corner at (0, 1). A negative value indicates a position above the screen. |
+| rippleMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The scene mode of the water ripple. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns water ripple Filter. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the water ripple effect attached. |
 
 **Error codes:**
 

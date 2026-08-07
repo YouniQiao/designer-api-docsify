@@ -1,6 +1,6 @@
 # Visibility
 
-Controls the display or hide of the current component
+定义组件的可见性及布局占位状态。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Controls the display or hide of the current component
 Visible = 0
 ```
 
-Show
+显示。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ Show
 Hidden = 1
 ```
 
-Hide, but participate in layout for placeholder.
+隐藏，但参与布局进行占位。
 
 **起始版本：** 23
 
@@ -52,7 +52,7 @@ Hide, but participate in layout for placeholder.
 None = 2
 ```
 
-Hides but does not participate in layout and does not take place.
+隐藏，但不参与布局，不进行占位。
 
 **起始版本：** 23
 

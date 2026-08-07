@@ -48,7 +48,10 @@ let didExceed = paragraph.didExceedMaxLines();
 forceReuseRasterResult(isForce: boolean): void
 ```
 
-是否强制复用栅格化结果。
+设置是否强制复用光栅化结果。不调用此接口时，系统默认允许更新光栅化结果。
+
+适用于文本内容未发生变化但需要多次调用[paint]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_绘制的场景，通过复用光栅化结果可避免重复光栅化计算以提升绘制性能。设置后，在下次调用  
+[paint]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_绘制时生效。
 
 **起始版本：** 26.0.0
 
@@ -66,7 +69,7 @@ forceReuseRasterResult(isForce: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isForce | boolean | 是 | 是否强制复用栅格化结果。 True表示强制复用光栅化结果。False表示允许更新光栅化结果。 默认值为false。 |
+| isForce | boolean | 是 | 是否强制复用光栅化结果。true表示强制复用光栅化结果，false表示允许更新光栅化结果。 |
 
 **示例：**
 
@@ -702,7 +705,7 @@ getIdeographicBaseline(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 获取表意字下的基线位置，浮点数，单位为物理像素px。 |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 表意字下的基线位置，浮点数，单位为物理像素px。 |
 
 **示例：**
 
@@ -774,7 +777,7 @@ getLineHeight(line: int): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 文本行索引，整数，范围为0~getLineCount()-1。 |
+| line | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 文本行索引，整数，范围为0~[getLineCount]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1。 |
 
 **返回值：**
 
@@ -846,13 +849,13 @@ getLineMetrics(lineNumber: int): LineMetrics | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lineNumber | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要查询度量信息的行的编号，行号从0开始。 |
+| lineNumber | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 要查询度量信息的行的编号，行号从0开始，最大行索引为文本行数量-1，文本行数量可通过 [getLineCount]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
 
 **示例：**
 
@@ -888,7 +891,7 @@ getLineWidth(line: int): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 文本行索引，整数，范围为0~getLineCount()-1。 |
+| line | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 文本行索引，整数，范围为0~[getLineCount]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1。 |
 
 **返回值：**
 
@@ -1106,7 +1109,7 @@ getParagraphStyle(): ParagraphStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 段落的样式配置。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 段落的样式配置。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_其中\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_、\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_、\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_、 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_属性：返回32位无符号整型颜色数值。示例：返回值\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，对应纯黑色十六进制颜色值\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，等价于 [common2D.Color]{ |
 
 **示例：**
 
@@ -1505,6 +1508,19 @@ getVisibleTextRanges(): Array<Range>
 获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的maxLines属性）截断或省略号模式（  
 [EllipsisMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_）替换而未显示的文本。
 
+**说明：**
+
+返回的范围取决于段落的具体截断情况（如是否设置最大行数或省略号等）：  
+| 场景 | 说明 |  
+|---|---|  
+| 文本未被截断 | 范围包含全部已排版文本 |  
+| 仅设置maxLines截断（未设置省略号） | 范围为实际显示的文本，即第一行至第maxLines行末尾的文本。 |  
+| 尾部省略（EllipsisMode.END） | 范围为省略号之前的文本。 |  
+| 头部省略（EllipsisMode.START） | 范围为省略号之后的文本。 |  
+| 中部省略（EllipsisMode.MIDDLE） | 第一个范围为省略号之前的文本，第二个范围为省略号之后的文本。 |  
+| 多行头部省略（EllipsisMode.MULTILINE\_START） | 同中部省略，返回省略号前后的文本范围。 |  
+| 多行中部省略（EllipsisMode.MULTILINE\_MIDDLE） | 同中部省略，返回省略号前后的文本范围。 |
+
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
@@ -1668,7 +1684,7 @@ layout(width: double): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1721,8 +1737,8 @@ struct Index {
       await paragraph.layout(200);
       console.info('Succeeded in doing layout');
     } catch (error) {
-      let e: Error = error as Error;
-      console.error(`Failed to do layout, error: ${JSON.stringify(e)} message: ${e.message}`);
+      let err: BusinessError = error as BusinessError;
+      console.error(`Failed to do layout, error: ${err.code} message: ${err.message}`);
     }
   }
 
@@ -1920,7 +1936,7 @@ ArkTS-Sta:
 paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
-在画布上以 (x, y) 为左上角绘制文本。
+在画布上以 (x, y) 为左上角绘制文本。调用前必须先调用[layout()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口进行排版，否则无法正确显示文本内容。
 
 **起始版本：** 12
 
@@ -1962,7 +1978,7 @@ ArkTS-Sta:
 paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void
 ```
 
-在画布上沿路径绘制文本。
+在画布上沿路径绘制文本。调用前必须先调用[layout()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口进行排版，否则无法正确显示文本内容。
 
 **起始版本：** 12
 

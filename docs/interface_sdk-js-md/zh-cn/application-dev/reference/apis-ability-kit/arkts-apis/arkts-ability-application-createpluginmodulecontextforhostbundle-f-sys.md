@@ -66,10 +66,8 @@ export default class EntryAbility extends UIAbility {
           let message: string = (error as BusinessError).message;
           console.error(`createPluginModuleContextForHostBundle failed, error.code: ${code}, error.message: ${message}`);
         });
-    } catch (error) {
-      let code: number = (error as BusinessError).code;
-      let message: string = (error as BusinessError).message;
-      console.error(`createPluginModuleContextForHostBundle failed, error.code: ${code}, error.message: ${message}`);
+    } catch (error: BusinessError) {
+      console.error(`createPluginModuleContextForHostBundle failed, error.code: ${error.code}, error.message: ${error.message}`);
     }
   }
 }

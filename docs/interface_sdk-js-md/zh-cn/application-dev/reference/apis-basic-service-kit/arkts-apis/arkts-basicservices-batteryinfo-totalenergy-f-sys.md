@@ -24,3 +24,11 @@ function totalEnergy(): int
 | --- | --- |
 | int | 返回当前设备电池的总容量，单位毫安时。 |
 
+**示例：**
+
+```TypeScript
+// ArkTS-Sta示例
+let result = batteryInfo.totalEnergy();
+console.info("The result is: " + result);
+```
+

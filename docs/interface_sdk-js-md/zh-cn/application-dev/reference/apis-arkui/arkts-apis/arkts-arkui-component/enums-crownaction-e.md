@@ -1,6 +1,6 @@
 # CrownAction
 
-Rotating crown event behavior.
+旋转表冠动作。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Rotating crown event behavior.
 UPDATE = 1
 ```
 
-Rotation crown behavior update.
+表冠转动中。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ Rotation crown behavior update.
 END = 2
 ```
 
-The rotation crown behavior ends.
+表冠停止转动。
 
 **起始版本：** 23
 

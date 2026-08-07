@@ -12,7 +12,9 @@ function getUsbStorageDeviceAccessPolicy(admin: Want): UsbPolicy
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**需要权限：** ohos.permission.ENTERPRISE_MANAGE_USB
+**需要权限：** 
+- API版本26.0.0+：ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
+- API版本12 - 24：ohos.permission.ENTERPRISE_MANAGE_USB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

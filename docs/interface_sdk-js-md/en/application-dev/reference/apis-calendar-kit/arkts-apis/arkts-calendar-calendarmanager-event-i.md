@@ -56,7 +56,7 @@ Event description, with a maximum of 5,000 characters. If this parameter is not 
 endTime: number
 ```
 
-End time of an event. The value is a 13-digit timestamp. For an all-day event, this field is converted to the timestamp corresponding to 24:00 of the specified date.
+End time of an event. The value is a 13-digit timestamp. For an all-day event, this field is converted to timestamp corresponding to 00:00 of the specified date.When [getEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_is called to query events, this field is queried by default.
 
 **Type:** number
 
@@ -76,11 +76,10 @@ End time of an event. The value is a 13-digit timestamp. For an all-day event, t
 id?: number
 ```
 
-Event ID. When you call  
+Event ID. This parameter does not need to be set in  
 [addEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-[addEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to create an event, this parameter is not required. When you call  
-[deleteEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ or  
-[deleteEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ to delete an event, this parameter is required and must be set to an array of integers. If this parameter is set to an invalid value, an error will be reported.
+[addEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.This is an auto-increment field of the database, which has no default value.When [deleteEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ or  
+[deleteEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_is called to delete an event, the value must be an integer. If an invalid value is passed, an error will be reported.When [getEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_is called to query events, this field is queried by default.
 
 **Type:** number
 
@@ -120,8 +119,9 @@ Unique ID of an event, with a maximum of 5,000 characters. If this parameter is 
 instanceEndTime?: number
 ```
 
-End time of an event. The value is a 13-digit timestamp. This parameter does not need to be set in  
-[addEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [addEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+End time of an event instance, which must be a 13-digit timestamp. The default value is undefined. This parameter is not required when  
+[addEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [addEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is called to create an event or  
+[getEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_is called to query an event.
 
 **Type:** number
 
@@ -141,8 +141,9 @@ End time of an event. The value is a 13-digit timestamp. This parameter does not
 instanceStartTime?: number
 ```
 
-Start time of an event. The value is a 13-digit timestamp. This parameter does not need to be set in  
-[addEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [addEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+Start time of an event instance, which must be a 13-digit timestamp. The default value is undefined. This parameter is not required when  
+[addEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [addEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is called to create an event or  
+[getEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_is called to query an event.
 
 **Type:** number
 
@@ -283,7 +284,7 @@ service?: EventService
 startTime: number
 ```
 
-Start time of an event. The value is a 13-digit timestamp. For an all-day event, this field is converted to the timestamp corresponding to 00:00 of the specified date.
+Start time of an event. The value is a 13-digit timestamp. For an all-day event, this field is converted to timestamp corresponding to 00:00 of the specified date.When [getEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_is called to query events, this field is queried by default.
 
 **Type:** number
 
@@ -344,7 +345,7 @@ Event title, with a maximum of 5,000 characters. If this parameter is not specif
 type: EventType
 ```
 
-Event type.
+Event type.When [getEvents()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_is called to query events, this field is queried by default.
 
 **Type:** EventType
 

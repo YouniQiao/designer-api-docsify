@@ -18,7 +18,7 @@ The parameters of blur bubbles rise effect.
 blurIntensity: double
 ```
 
-Defines gaussian blur intensity for blur bubbles rise effect.Value range [0, 1], and values outside the range will be clamped.0 means no blur, and 1 represents the maximum blur level.
+The Gaussian blur intensity of the blur bubbles rise effect.The value range is [0, 1], and values outside the range will be clamped during implementation.0 means no blur, and 1 represents the maximum blur level.
 
 **Type:** double
 
@@ -40,7 +40,7 @@ Defines gaussian blur intensity for blur bubbles rise effect.Value range [0, 1],
 maskImage: image.PixelMap
 ```
 
-Defines mask image for blur bubbles rise effect, controls the blur bubbles area.The masked area has a blur effect, while the unmasked area has no blur effect.
+The mask image for the blur bubbles rise effect, controlling the blur bubbles area.The masked area has a blur effect, while the unmasked area has no blur effect.
 
 **Type:** image.PixelMap
 
@@ -62,7 +62,7 @@ Defines mask image for blur bubbles rise effect, controls the blur bubbles area.
 mixStrength: double
 ```
 
-Defines mix strength between original and blurred images.Value range [0, 1], and values outside the range will be clamped.0 corresponds to the original image, and 1 corresponds to the blurred image.
+The mixing strength between the original and blurred images.The value range is [0, 1], and values outside the range will be clamped during implementation.0 corresponds to the original image, and 1 corresponds to the blurred image.
 
 **Type:** double
 
@@ -84,7 +84,7 @@ Defines mix strength between original and blurred images.Value range [0, 1], and
 progress: double
 ```
 
-Defines animation progress for blur bubbles rise effect.Value range [0, 1], and values outside the range will be clamped.0 corresponds to the start of the animation, and 1 corresponds to the end of the animation.
+The animation progress of the blur bubbles rise effect.The value range is [0, 1], and values outside the range will be clamped during implementation.0 corresponds to the start of the animation, and 1 corresponds to the end of the animation.
 
 **Type:** double
 

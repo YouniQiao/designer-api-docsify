@@ -54,7 +54,7 @@ enabled: boolean
 intensity: double
 ```
 
-光源强度, 单位为坎德拉.
+光照强度，单位为坎德拉（cd），取值范围是大于0的实数。
 
 **类型：** double
 

@@ -1,6 +1,8 @@
 # FontCollection
 
-字体集。
+字体集，用于管理文本排版所需的字体资源。FontCollection为[ParagraphBuilder]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_提供字体匹配和字形查找能力，是文本排版管线的基础组件。提供全局实例（[getGlobalInstance]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_）和本地实例（  
+[getLocalInstance]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_），全局实例加载的字体在应用内共享，适用于普通应用场景；本地实例各实例独立，加载的字体仅对当前实例生效、实例间互不影响，推荐卡片场景使用。支持通过[loadFontSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_或  
+[loadFont]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_加载自定义字体。
 
 **起始版本：** 12
 
@@ -16,7 +18,7 @@
 clearCaches(): void
 ```
 
-清理字体排版缓存（字体排版缓存本身设有内存上限和清理机制，所占内存有限，如无内存要求，不建议清理）。
+清理字体排版缓存。字体排版缓存本身设有内存上限和自动清理机制，所占内存有限。如无特殊内存要求，不建议清理。
 
 **起始版本：** 12
 
@@ -91,7 +93,7 @@ static getGlobalInstance(): FontCollection
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FontCollection对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 应用全局FontCollection实例对象，可用于管理字体加载、卸载和排版等操作。 |
 
 **示例：**
 
@@ -166,7 +168,7 @@ static getLocalInstance(): FontCollection
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FontCollection对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 本地FontCollection实例对象，推荐卡片场景使用，可用于管理字体加载、卸载和排版等操作。 |
 
 **示例：**
 
@@ -206,7 +208,7 @@ loadFont(name: string, path: string | Resource): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -229,8 +231,8 @@ struct RenderTest {
   async loadFontPromise() {
     fontCollection.loadFont('testName', 'file:///system/fonts/a.ttf').then((data) => {
       console.info(`Succeeded in doing loadFont ${JSON.stringify(data)} `);
-    }).catch((error: Error) => {
-      console.error(`Failed to do loadFont, error: ${JSON.stringify(error)} message: ${error.message}`);
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to do loadFont, error: ${error.code} message: ${error.message}`);
     });
   }
 
@@ -404,8 +406,8 @@ loadFontSyncWithCheck(name: string, path: string | Resource, index?: int): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 加载字体成功后，该字体对应的名称，可填写任意字符串，可使用该名称指定并使用该字体。 |
-| path | string \| Resource | 是 | 需要加载的字体文件的路径，支持两种格式： "file:// + 字体文件绝对路径" 或 \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile("字体文件路径")。 |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 字体文件格式为ttc时，指定加载的字体索引。默认为0：表示加载ttc的第一个字体。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_非ttc格式文件索引值无意义，若指定索引，只能为0。 |
+| path | string \| Resource | 是 | 需要加载的字体文件的路径，支持两种格式： "file:// + 字体文件绝对路径" 或 \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('字体文件路径')。 |
+| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 字体文件格式为ttc时，指定加载的字体索引。默认为0：表示加载ttc的第一个字体。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_非ttc格式文件索引值无意义，若指定索引，只能为0。 |
 
 **错误码：**
 
@@ -449,8 +451,9 @@ struct Index {
           fc.loadFontSyncWithCheck(this.fontFamily, 'file:///system/fonts/NotoSansCJK-Regular.ttc', 1);
           try {
             fc.loadFontSyncWithCheck(this.fontFamily, '/system/fonts/NotoSansCJK-Regular.ttc', 1);
-          } catch (e) {
-            console.error(`Failed to do loadFontWithCheck, error: ${JSON.stringify(e)} message: ${e.message}`);
+          } catch (error) {
+            let err: BusinessError = error as BusinessError;
+            console.error(`Failed to do loadFontWithCheck, error: ${err.code} message: ${err.message}`);
           }
         })
     }
@@ -532,8 +535,8 @@ loadFontWithCheck(name: string, path: string | Resource, index?: int): Promise<v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 加载字体成功后，该字体对应的名称，可填写任意字符串，可使用该名称指定并使用该字体。 |
-| path | string \| Resource | 是 | 需要加载的字体文件的路径，支持两种格式： "file:// + 字体文件绝对路径" 或 \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile("字体文件路径")。 |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 字体文件格式为ttc时，指定加载的字体索引。默认为0：表示加载ttc的第一个字体。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_非ttc格式文件索引值无意义，若指定索引，只能为0。 |
+| path | string \| Resource | 是 | 需要加载的字体文件的路径，支持两种格式： "file:// + 字体文件绝对路径" 或 \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('字体文件路径')。 |
+| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 字体文件格式为ttc时，指定加载的字体索引。默认为0：表示加载ttc的第一个字体。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_非ttc格式文件索引值无意义，若指定索引，只能为0。 |
 
 **返回值：**
 
@@ -582,13 +585,13 @@ struct Index {
         .onClick(() => {
           fc.loadFontWithCheck(this.fontFamily, 'file:///system/fonts/NotoSansCJK-Regular.ttc', 1).then((data) => {
             console.info(`Succeeded in doing loadFontWithCheck ${JSON.stringify(data)} `);
-          }).catch((error: Error) => {
-            console.error(`Failed to do loadFontWithCheck, error: ${JSON.stringify(error)} message: ${error.message}`);
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to do loadFontWithCheck, error: ${error.code} message: ${error.message}`);
           });
           fc.loadFontWithCheck(this.fontFamily, '/system/fonts/NotoSansCJK-Regular.ttc', 1).then((data) => {
             console.info(`Succeeded in doing loadFontWithCheck ${JSON.stringify(data)} `);
-          }).catch((error: Error) => {
-            console.error(`Failed to do loadFontWithCheck, error: ${JSON.stringify(error)} message: ${error.message}`);
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to do loadFontWithCheck, error: ${error.code} message: ${error.message}`);
           });
         })
     }
@@ -746,7 +749,7 @@ unloadFont(name: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例：**
 

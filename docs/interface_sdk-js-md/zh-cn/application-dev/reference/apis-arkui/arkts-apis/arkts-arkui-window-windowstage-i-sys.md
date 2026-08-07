@@ -117,7 +117,7 @@ export default class EntryAbility extends UIAbility {
   // ...
 
   onWindowStageCreate(windowStage: window.WindowStage) {
-    let imgResourceId = $r("app.media.startIcon").id
+    let imgResourceId = $r("app.media.startIcon").id;
     try {
       let promise = windowStage.setImageForRecent(imgResourceId, ImageFit.Fill);
       promise.then(() => {

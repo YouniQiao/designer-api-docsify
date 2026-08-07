@@ -84,7 +84,7 @@ Called when a web native messaging connection is disconnected.
 context: WebNativeMessagingExtensionContext
 ```
 
-Indicates web native messaging extension ability context.
+Context of web native messaging.
 
 **Type:** WebNativeMessagingExtensionContext
 

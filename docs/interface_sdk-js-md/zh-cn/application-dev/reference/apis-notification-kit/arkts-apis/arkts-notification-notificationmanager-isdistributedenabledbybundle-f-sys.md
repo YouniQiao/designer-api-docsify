@@ -60,7 +60,7 @@ let isDistributedEnabledByBundleCallback = (err: BusinessError, data: boolean): 
     }
 };
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.isDistributedEnabledByBundle(bundle, isDistributedEnabledByBundleCallback);
 ```
@@ -79,7 +79,7 @@ let isDistributedEnabledByBundleCallback = (err: BusinessError | null, data: boo
 };
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.isDistributedEnabledByBundle(bundle, isDistributedEnabledByBundleCallback);
 ```
@@ -143,7 +143,7 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
     console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
@@ -159,7 +159,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
     console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
@@ -226,10 +226,10 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
     uid: 1
 };
-let deviceType: string = "phone";
+let deviceType: string = 'phone';
 notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data: boolean) => {
     console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
@@ -244,10 +244,10 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
     uid: 1
 };
-let deviceType: string = "phone";
+let deviceType: string = 'phone';
 notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data: boolean) => {
     console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
 }).catch((err: Error): void => {

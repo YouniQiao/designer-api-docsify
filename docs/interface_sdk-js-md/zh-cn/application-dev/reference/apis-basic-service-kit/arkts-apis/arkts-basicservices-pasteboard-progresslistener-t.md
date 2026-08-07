@@ -1,0 +1,24 @@
+# ProgressListener
+
+```TypeScript
+type ProgressListener = (progress: ProgressInfo) => void
+```
+
+定义进度数据变化的订阅函数，当选择不使用系统默认进度显示时，可设置该项获取粘贴过程的进度。
+
+**起始版本：** 15
+
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-pasteboard-type ProgressListener = (progress: ProgressInfo) => void--><!--Device-pasteboard-type ProgressListener = (progress: ProgressInfo) => void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| progress | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 定义进度上报的数据结构，且仅当进度指示选项[ProgressIndicator]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_设置为 NONE时才会上报此信息。  |
+

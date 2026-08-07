@@ -261,14 +261,13 @@ getImageBounds(): common2D.Rect
 Obtains the image boundaries of this text line. The image boundaries, equivalent to visual boundaries, depend on the font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line. For the strings "j" and "E", their image boundaries are different.Specifically, the width of the boundary for "j" is narrower than that for "E", and the height of the boundary for"j" is taller than that for "E".
     **NOTE**  
     
-    The following figure shows the image boundaries of the string " a b ".  
+    The figure shows the image boundaries for the string " a b ".  
     
     !\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
     
-    The following figure shows the image boundaries of the strings "j" and "E".  
+    The figure shows the image boundaries for the string "j" or "E".  
     
-    !  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
+    !\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
 
 **Since:** 18
 
@@ -362,7 +361,7 @@ Obtains the index of a character at the specified position in the original strin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | common2D.Point | Yes | Position of the character. |
+| point | common2D.Point | Yes | Coordinate position for finding the character index. The coordinates are relative to the top-left origin of the text line, in physical pixels (px). x indicates the horizontal coordinate, and y indicates the vertical coordinate. |
 
 **Return value:**
 
@@ -449,14 +448,14 @@ let trailingSpaceWidth = lines[0].getTrailingSpaceWidth();
 getTypographicBounds(): TypographicBounds
 ```
 
-Obtains the typographic boundaries of the text line. These boundaries depend on the typographic font and font size, but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves.
+Obtains the typographic boundaries of the text line. These boundaries depend on the typographic font and font size, but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves.
     **NOTE**  
     
-    The following figure shows the typographic boundaries of the string " a b ".  
+    The figure shows the typesetting boundaries for the string " a b ".  
     
     !\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
     
-    The following figure shows the typographic boundaries of the strings "j" and "E".  
+    The figure shows the typesetting boundaries for the string "j" or "E".  
     
     !  
     \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_

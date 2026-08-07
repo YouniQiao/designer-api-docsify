@@ -47,7 +47,7 @@ import { BusinessError } from '@ohos.base';
 try {
   systemParameter.set('test.parameter.key', 'testValue', (err: BusinessError, data: void) => {
     if (err) {
-      console.error('set test.parameter.key value err:' + err.code);
+      console.error(`Failed to set system parameter. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info('set test.parameter.key value success');
     }
@@ -109,10 +109,10 @@ import { BusinessError } from '@ohos.base';
 
 try {
   let setPromise: Promise<void> = systemParameter.set('test.parameter.key', 'testValue');
-  setPromise.then((value: void) => {
-    console.info('set test.parameter.key success: ' + value);
+  setPromise.then(() => {
+    console.info('set test.parameter.key success');
   }).catch((err: BusinessError) => {
-    console.error('set test.parameter.key error: ' + err.code);
+    console.error(`Failed to set system parameter. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (e) {
   console.error('set unexpected error: ' + e);

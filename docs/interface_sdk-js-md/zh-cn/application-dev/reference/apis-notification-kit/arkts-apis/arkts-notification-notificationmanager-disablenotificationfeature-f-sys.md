@@ -53,7 +53,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let disabled: boolean = true;
-let bundleList: Array<string> = ["com.example.myapplication"];
+let bundleList: Array<string> = ['com.example.myapplication'];
 try {
   notificationManager.disableNotificationFeature(disabled, bundleList).then(() => {
     hilog.info(0x0000, 'testTag', '%{public}s', `disableNotificationFeature success.`);
@@ -71,7 +71,7 @@ ArkTS-Sta示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let disabled: boolean = true;
-let bundleList: Array<string> = ["com.example.myapplication"];
+let bundleList: Array<string> = ['com.example.myapplication'];
 notificationManager.disableNotificationFeature(disabled, bundleList).then(() => {
   console.info('disableNotificationFeature success.');
 }).catch((err: Error): void => {
@@ -133,7 +133,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let disabled: boolean = true;
-let bundleList: Array<string> = ["com.example.myapplication"];
+let bundleList: Array<string> = ['com.example.myapplication'];
 let userId: number = 1;
 try {
   notificationManager.disableNotificationFeature(disabled, bundleList, userId).then(() => {
@@ -152,7 +152,7 @@ ArkTS-Sta示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let disabled: boolean = true;
-let bundleList: Array<string> = ["com.example.myapplication"];
+let bundleList: Array<string> = ['com.example.myapplication'];
 let userId: int = 1;
 notificationManager.disableNotificationFeature(disabled, bundleList, userId).then(() => {
   console.info(`DisableNotificationFeature success.`);

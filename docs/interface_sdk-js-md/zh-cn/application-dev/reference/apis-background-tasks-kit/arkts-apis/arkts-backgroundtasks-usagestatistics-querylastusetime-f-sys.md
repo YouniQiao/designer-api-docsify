@@ -54,7 +54,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 
 // 查询时将com.ohos.camera替换为实际查询的包名
-usageStatistics.queryLastUseTime({"com.ohos.camera": [0]}).then((res:usageStatistics.AppStatsMap) => {
+usageStatistics.queryLastUseTime({'com.ohos.camera': [0]}).then((res:usageStatistics.AppStatsMap) => {
   console.info('queryLastUseTime promise success.');
   console.info('queryLastUseTime promise result ' + JSON.stringify(res));
 }).catch((err: BusinessError) => {

@@ -45,15 +45,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let onCheckNotification = (info : notificationManager.NotificationCheckInfo): notificationManager.NotificationCheckResult => {
     console.info(`====>OnCheckNotification info: ${JSON.stringify(info)}`);
     if(info.notificationId == 1){
-        let result: notificationManager.NotificationCheckResult =  { code: 1, message: "testMsg1"};
+        let result: notificationManager.NotificationCheckResult =  { code: 1, message: 'testMsg1'};
         return result;
     } else {
-        let result: notificationManager.NotificationCheckResult =   { code: 0, message: "testMsg0"};
+        let result: notificationManager.NotificationCheckResult =   { code: 0, message: 'testMsg0'};
         return result;
     }
 }
 try{
-    notificationManager.on("checkNotification", onCheckNotification);
+    notificationManager.on('checkNotification', onCheckNotification);
 } catch (err){
     console.error(`notificationManager.on failed, code is ${err.code}, message is ${err.message}`);
 }
@@ -111,10 +111,10 @@ try{
   notificationManager.on('checkNotification',{
     contentType: notificationManager.ContentType.NOTIFICATION_CONTENT_LIVE_VIEW,
     slotType: notificationManager.SlotType.LIVE_VIEW ,
-    extraInfoKeys: ["event"],
+    extraInfoKeys: ['event'],
   },
     async (checkInfo)=>{
-      return { code: 1, message: "INVALID_PARAMETERS"};
+      return { code: 1, message: 'INVALID_PARAMETERS'};
   },);
 } catch (err) {
   console.error(`notificationManager.on failed, code is ${err.code}, message is ${err.message}`);

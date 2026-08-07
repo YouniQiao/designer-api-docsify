@@ -52,7 +52,7 @@ Allows breaks within any character in non-CJK text. (CJK means Chinese, Japanese
 BREAK_WORD = 2
 ```
 
-Allows breaks between any two characters in non-CJK text. It prioritizes breaking at whitespace or other natural breakpoints to keep words intact. If no breakpoints are found, it breaks between any two characters. For CJK text, this behaves like **NORMAL**.
+For non-CJK text, breaks lines between any two characters. If a line contains break points (such as whitespace characters), the line breaks at the break points first to keep words intact. If the entire line has no break points, the line breaks between any two characters. For CJK text, this strategy behaves the same as NORMAL.
 
 **Since:** 12
 

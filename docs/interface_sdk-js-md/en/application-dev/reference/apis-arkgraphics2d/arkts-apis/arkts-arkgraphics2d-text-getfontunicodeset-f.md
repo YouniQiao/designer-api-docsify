@@ -24,8 +24,8 @@ An empty array is returned if the font file is not found, the font file path is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| Resource | Yes | Path of the font file to be queried. The path must be in the format of " **file://** + Absolute path of the font file" or **\_\_\_ESCAPED\_DOLLAR\_\_\_rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Font index to be loaded when the font file format is TTC or OTC. The index value of a non- TTC/OTC file can only be **0**. If this parameter is set to a negative value or exceeds the actual index range of the font file, an empty array is returned. |
+| path | string \| Resource | Yes | Path of the font file to query, which must be "file:// + absolute path of the font file" or \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('file name in the resources/rawfile directory of the project'). |
+| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the font to load when the font file format is ttc/otc. The value ranges from 0 to count-1, where count is the number of fonts contained in the font file. For non-ttc/otc files, the index can only be 0. If this parameter is negative or exceeds the actual index range of the font file, an empty array is returned. |
 
 **Return value:**
 

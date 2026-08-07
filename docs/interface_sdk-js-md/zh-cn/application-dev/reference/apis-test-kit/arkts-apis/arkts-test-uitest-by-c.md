@@ -246,7 +246,7 @@ isAfter(by: By): By
 import { By, BY } from '@kit.TestKit';
 
 // 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之后。
-let by: By = BY.type('Text').isAfter(BY.text('123')); // 查找 text为123之后的第一个Text组件
+let by: By = BY.type('Text').isAfter(BY.text('123')); // 查找text为123之后的第一个Text组件。
 ```
 
 ## isBefore
@@ -291,7 +291,7 @@ isBefore(by: By): By
 import { By, BY } from '@kit.TestKit';
 
 // 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之前。
-let by: By = BY.type('Button').isBefore(BY.text('123')); // 查找text为123之前的第一个Button组件
+let by: By = BY.type('Button').isBefore(BY.text('123')); // 查找text为123之前的第一个Button组件。
 ```
 
 ## key

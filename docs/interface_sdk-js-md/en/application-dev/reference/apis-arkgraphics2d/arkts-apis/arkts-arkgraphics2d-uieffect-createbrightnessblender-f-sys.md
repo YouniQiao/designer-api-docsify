@@ -6,7 +6,7 @@
 function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender
 ```
 
-Create a BrightnessBlender, which is used to adjust the brightness of UI components.
+Creates a BrightnessBlender instance for adding a brightness effect to a component.
 
 **Since:** 12
 
@@ -24,13 +24,13 @@ Create a BrightnessBlender, which is used to adjust the brightness of UI compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The brightness blender parameters. |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The brightness blender parameters, including grayscale adjustment coefficients, saturation, blending ratio, and other configuration items. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the blender. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the brightness blender. |
 
 **Example**
 

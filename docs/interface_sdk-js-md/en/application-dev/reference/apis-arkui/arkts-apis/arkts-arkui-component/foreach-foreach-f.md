@@ -44,7 +44,7 @@ export declare function ForEach(
 ): ForEachAttribute
 ```
 
-Defines ForEachEach Component. It requires call setForEachOptions at start of component attribute set-up,and it requires call applyAttributeFinish at end of component attribute set-up.
+Defines ForEach Component. It requires calling setForEachOptions at start of component attribute set-up,and it requires calling applyAttributesFinish at end of component attribute set-up.
 
 **Since:** 26.1.0
 

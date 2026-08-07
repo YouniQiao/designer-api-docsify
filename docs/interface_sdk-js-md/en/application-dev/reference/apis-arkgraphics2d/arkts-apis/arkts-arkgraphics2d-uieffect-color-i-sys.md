@@ -1,6 +1,6 @@
 # Color (System API)
 
-The Color of Light.
+RGBA color description.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ The Color of Light.
 alpha: double
 ```
 
-Alpha component of color.
+Alpha component of the color (transparency).
 
 **Type:** double
 
@@ -38,7 +38,7 @@ Alpha component of color.
 blue: double
 ```
 
-Blue component of color
+Blue component of the color.
 
 **Type:** double
 
@@ -58,7 +58,7 @@ Blue component of color
 green: double
 ```
 
-Green component of color.
+Green component of the color.
 
 **Type:** double
 
@@ -78,7 +78,7 @@ Green component of color.
 red: double
 ```
 
-Red component of color.
+Red component of the color.
 
 **Type:** double
 

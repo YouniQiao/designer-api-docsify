@@ -73,6 +73,7 @@
 | [TextDataDetectorType](arkts-arkui-textdatadetectortype-e.md) | 定义文本数据检测类型。 |
 | [TextDeleteDirection](arkts-arkui-textdeletedirection-e.md) | 定义删除文本方向。 |
 | [TextDirection](arkts-arkui-textdirection-e.md) | 文本排版方向。 |
+| [TextEncoding](arkts-arkui-textencoding-e.md) | 枚举文本布局查询接口支持的文本编码类型。 |
 | [TextMenuShowMode](arkts-arkui-textmenushowmode-e.md) | 菜单的显示模式。 |
 | [TextVerticalAlign](arkts-arkui-textverticalalign-e.md) | 文本垂直对齐的方式。默认值BASELINE，沿基线对齐。 |
 

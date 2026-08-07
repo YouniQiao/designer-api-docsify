@@ -24,13 +24,13 @@ function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlend
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 实现提亮效果的参数。 |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 实现提亮效果的参数，包含灰度调整系数、饱和度、混合比例等配置项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回设置了提亮效果参数的BrightnessBlender。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回提亮效果的BrightnessBlender混合器。 |
 
 **示例：**
 

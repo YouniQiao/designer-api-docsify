@@ -1,0 +1,32 @@
+# ProgressInfo
+
+定义进度上报的数据结构，且仅当进度指示选项[ProgressIndicator]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置为NONE时才会上报此信息。
+
+**起始版本：** 15
+
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+
+<!--Device-pasteboard-interface ProgressInfo--><!--Device-pasteboard-interface ProgressInfo-End-->
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+
+## progress
+
+```TypeScript
+progress: int
+```
+
+不使用系统提供的进度条时，系统上报拷贝粘贴任务进度百分比，单位：%。
+
+**类型：** int
+
+**起始版本：** 15
+
+**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ProgressInfo-progress: int--><!--Device-ProgressInfo-progress: int-End-->
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+

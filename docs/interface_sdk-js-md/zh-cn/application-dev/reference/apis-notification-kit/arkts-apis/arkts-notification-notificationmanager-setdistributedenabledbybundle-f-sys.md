@@ -57,13 +57,13 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
     uid: 1
 };
 let enable: boolean = true;
-let deviceType: string = "phone";
+let deviceType: string = 'phone';
 notificationManager.setDistributedEnabledByBundle(bundle, deviceType, enable).then(() => {
-    console.info("setDistributedEnabledByBundle success");
+    console.info('setDistributedEnabledByBundle success');
 }).catch((err: BusinessError) => {
     console.error(`setDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -76,13 +76,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
     uid: 1
 };
 let enable: boolean = true;
-let deviceType: string = "phone";
+let deviceType: string = 'phone';
 notificationManager.setDistributedEnabledByBundle(bundle, deviceType, enable).then(() => {
-    console.info("setDistributedEnabledByBundle success");
+    console.info('setDistributedEnabledByBundle success');
 }).catch((err: Error): void => {
     let error: BusinessError = err as BusinessError;
     console.error(`setDistributedEnabledByBundle failed, code is ${error.code}, message is ${error.message}`);

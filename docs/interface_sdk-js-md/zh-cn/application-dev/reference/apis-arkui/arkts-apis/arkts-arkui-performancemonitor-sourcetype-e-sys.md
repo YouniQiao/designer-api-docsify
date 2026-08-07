@@ -2,9 +2,9 @@
 
 用户场景触发源类型枚举。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 <!--Device-performanceMonitor-export enum SourceType--><!--Device-performanceMonitor-export enum SourceType-End-->
 
@@ -20,9 +20,9 @@ PERF_TOUCH_EVENT = 0
 
 触摸屏事件。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,9 +40,9 @@ PERF_MOUSE_EVENT = 1
 
 鼠标事件。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,9 +60,9 @@ PERF_TOUCHPAD_EVENT = 2
 
 触摸板事件。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,9 +80,9 @@ PERF_JOYSTICK_EVENT = 3
 
 摇杆事件。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -100,9 +100,9 @@ PERF_KEY_EVENT = 4
 
 键盘事件。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

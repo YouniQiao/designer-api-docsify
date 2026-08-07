@@ -1,6 +1,6 @@
 # MouseAction
 
-Function Called by Mouse
+定义鼠标操作的动作类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Function Called by Mouse
 Press = 1
 ```
 
-Triggered when the mouse is pressed.
+鼠标按键按下。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ Triggered when the mouse is pressed.
 Release = 2
 ```
 
-Triggered when the mouse is released.
+鼠标按键释放。
 
 **起始版本：** 23
 
@@ -52,7 +52,7 @@ Triggered when the mouse is released.
 Move = 3
 ```
 
-Triggered when the mouse is Moved.
+鼠标移动。
 
 **起始版本：** 23
 
@@ -70,7 +70,7 @@ Triggered when the mouse is Moved.
 Hover = 4
 ```
 
-Triggered when the mouse is Hovered.
+鼠标悬浮。
 
 **起始版本：** 23
 
@@ -88,7 +88,7 @@ Triggered when the mouse is Hovered.
 ENTER_WINDOW = 4
 ```
 
-Triggered when mouse enters the window.
+鼠标进入窗口。
 
 **起始版本：** 23
 
@@ -106,7 +106,7 @@ Triggered when mouse enters the window.
 LEAVE_WINDOW = 5
 ```
 
-Triggered when mouse leaves the window.
+鼠标离开窗口。
 
 **起始版本：** 23
 
@@ -124,7 +124,9 @@ Triggered when mouse leaves the window.
 CANCEL = 13
 ```
 
-Triggered when the mouse event is canceled.
+鼠标按键取消。通常在以下场景触发：
+
+1. 组件失去焦点：当前持有焦点的组件因系统事件（如弹窗打断、应用切换）失去焦点时，会触发该动作。2. 事件中断：鼠标操作过程中发生更高优先级事件（如系统级手势或强制回收事件流），导致当前鼠标操作被强制终止。3. 异常状态退出：如组件销毁、渲染环境异常等场景下，未完成的鼠标事件会被标记为取消。
 
 **起始版本：** 23
 

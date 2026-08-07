@@ -43,3 +43,20 @@ getSoundCardInfo(): Promise<SoundCardInfo>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
+**示例：**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioManager = audio.getAudioManager();
+let deviceEnhanceManager = audioManager.getDeviceEnhanceManager();
+
+deviceEnhanceManager.getSoundCardInfo().then((soundCardInfo: audio.SoundCardInfo) => {
+  console.info(`Successfully obtained sound card info: ${JSON.stringify(soundCardInfo, null, 2)}`);
+})
+.catch((err: BusinessError) => {
+  console.error(`Failed to get sound card info. Code: ${err.code}, Message: ${err.message}`);
+});
+```
+

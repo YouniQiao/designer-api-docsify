@@ -1,6 +1,6 @@
 # BrightnessParam (System API)
 
-The parameters of brightness.
+Detailed description of the material brightness parameters.
 
 **Since:** 22
 
@@ -18,7 +18,7 @@ The parameters of brightness.
 cubicCoeff : double
 ```
 
-Defines cubicCoeff of brightness.
+Third-order coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
 **Type:** double
 
@@ -38,7 +38,7 @@ Defines cubicCoeff of brightness.
 fraction : double
 ```
 
-Defines fraction of brightness.
+Blending ratio for the brightness effect. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. A larger value indicates a weaker brightness effect.
 
 **Type:** double
 
@@ -58,7 +58,7 @@ Defines fraction of brightness.
 lightUpDegree : double
 ```
 
-Defines lightUpDegree of brightness.
+Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are treated as -1;values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
 **Type:** double
 
@@ -78,7 +78,7 @@ Defines lightUpDegree of brightness.
 negRgb : [double, double, double]
 ```
 
-Defines negative RGB of brightness.
+Negative adjustment coefficients based on the base saturation. The value range for each number is [-1, 1].Values less than -1 are treated as -1; values greater than 1 are treated as 1.A larger value indicates lower saturation.
 
 **Type:** [double, double, double]
 
@@ -98,7 +98,7 @@ Defines negative RGB of brightness.
 posRgb : [double, double, double]
 ```
 
-Defines positive RGB of brightness.
+Positive adjustment coefficients based on the base saturation. The value range for each number is [-1, 1].Values less than -1 are treated as -1; values greater than 1 are treated as 1.A larger value indicates higher saturation.
 
 **Type:** [double, double, double]
 
@@ -118,7 +118,7 @@ Defines positive RGB of brightness.
 quadCoeff : double
 ```
 
-Defines quadCoeff of brightness.
+Second-order coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
 **Type:** double
 
@@ -138,7 +138,7 @@ Defines quadCoeff of brightness.
 rate : double
 ```
 
-Defines rate of brightness.
+Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1;values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
 **Type:** double
 
@@ -158,7 +158,7 @@ Defines rate of brightness.
 saturation : double
 ```
 
-Defines saturation of brightness.
+Base saturation for brightness. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. A larger value indicates a higher base saturation.
 
 **Type:** double
 

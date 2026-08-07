@@ -22,3 +22,11 @@ function batteryTemperature(): int
 | --- | --- |
 | int | 返回当前设备电池的温度，单位0.1摄氏度。 |
 
+**示例：**
+
+```TypeScript
+// ArkTS-Sta示例
+let result = batteryInfo.batteryTemperature();
+console.info("The result is: " + result);
+```
+

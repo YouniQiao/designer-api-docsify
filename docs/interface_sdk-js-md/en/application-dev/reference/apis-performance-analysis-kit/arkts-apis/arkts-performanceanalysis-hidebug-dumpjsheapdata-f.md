@@ -30,7 +30,7 @@ Dumps VM heap data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameter check failed, Parameter type error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed, Parameter type error. |
 
 **Example**
 

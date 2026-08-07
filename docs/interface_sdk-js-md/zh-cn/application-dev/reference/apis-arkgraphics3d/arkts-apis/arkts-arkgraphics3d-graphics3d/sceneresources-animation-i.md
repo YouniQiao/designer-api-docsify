@@ -34,7 +34,7 @@ finish(): void
 onFinished(callback: Callback<void>): void
 ```
 
-注册动画完成时的回调.
+动画播放结束时执行的回调函数，动画播放完成或者finish操作会触发这个回调。
 
 **起始版本：** 12
 

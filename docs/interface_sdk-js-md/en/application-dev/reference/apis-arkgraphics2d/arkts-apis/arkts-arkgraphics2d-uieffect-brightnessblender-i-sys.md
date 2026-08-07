@@ -1,6 +1,6 @@
 # BrightnessBlender (System API)
 
-The Blender of backgroundColorEffect.
+Brightness blender, used to add a brightness effect to a specified component.Before calling BrightnessBlender, you need to first create a BrightnessBlender instance through createBrightnessBlender.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ The Blender of backgroundColorEffect.
 cubicRate: double
 ```
 
-Defines third-order rate for grayscale adjustment.
+Third-order coefficient for grayscale adjustment. The value range is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** double
 
@@ -40,7 +40,7 @@ Defines third-order rate for grayscale adjustment.
 degree: double
 ```
 
-Defines grayscale adjustment degree.
+Grayscale adjustment ratio. The value range is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** double
 
@@ -62,7 +62,7 @@ Defines grayscale adjustment degree.
 fraction: double
 ```
 
-Defines the blending fraction for brightness effect.
+Blending ratio for the brightness effect. The value range is [0, 1].Values outside the range will be clamped during implementation.
 
 **Type:** double
 
@@ -84,7 +84,7 @@ Defines the blending fraction for brightness effect.
 linearRate: double
 ```
 
-Defines linear rate for grayscale adjustment.
+Linear coefficient for grayscale adjustment. The value range is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** double
 
@@ -106,7 +106,7 @@ Defines linear rate for grayscale adjustment.
 negativeCoefficient: [double, double, double]
 ```
 
-Defines the negative adjustment coefficients in RGB channels based on the reference saturation.
+Negative RGB adjustment coefficients based on the base saturation. The value range for each number is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** [double, double, double]
 
@@ -128,7 +128,7 @@ Defines the negative adjustment coefficients in RGB channels based on the refere
 positiveCoefficient: [double, double, double]
 ```
 
-Defines the positive adjustment coefficients in RGB channels based on the reference saturation.
+Positive RGB adjustment coefficients based on the base saturation. The value range for each number is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** [double, double, double]
 
@@ -150,7 +150,7 @@ Defines the positive adjustment coefficients in RGB channels based on the refere
 quadraticRate: double
 ```
 
-Defines second-order rate for grayscale adjustment.
+Second-order coefficient for grayscale adjustment. The value range is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** double
 
@@ -172,7 +172,7 @@ Defines second-order rate for grayscale adjustment.
 saturation: double
 ```
 
-Defines the reference saturation for brightness.
+Base saturation for brightness. The value range is [0, 20].Values outside the range will be clamped during implementation.
 
 **Type:** double
 

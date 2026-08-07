@@ -48,10 +48,12 @@ function setSync(key: string, value: string): void
 **示例：**
 
 ```TypeScript
+import { BusinessError } from '@ohos.base';
+
 try {
   systemParameter.setSync('test.parameter.key', 'default');
 } catch (e) {
-  console.error('set unexpected error: ' + e);
+  console.error(`Failed to set system parameter. Code: ${(e as BusinessError).code}, message: ${(e as BusinessError).message}`);
 }
 ```
 

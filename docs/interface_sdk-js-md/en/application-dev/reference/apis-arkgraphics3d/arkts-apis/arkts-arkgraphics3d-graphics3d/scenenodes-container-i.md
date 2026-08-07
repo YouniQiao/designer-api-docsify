@@ -60,7 +60,7 @@ ArkTS-Sta:
 count(): int
 ```
 
-Returns the number of items in the container.
+Obtains the number of nodes in the container.
 
 **Since:** 12
 
@@ -74,7 +74,7 @@ Returns the number of items in the container.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | the number of the container |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Number of nodes in the container. The value is a non-negative integer. |
 
 ## get
 
@@ -88,7 +88,7 @@ ArkTS-Sta:
 get(index: int): T | null
 ```
 
-Returns a child at given index from this Container's child list.
+Obtains a node of a given index. If no node is obtained, null is returned.
 
 **Since:** 12
 
@@ -102,13 +102,13 @@ Returns a child at given index from this Container's child list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | the index of the child to return |
+| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the node. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | return the item specified by the index |
+| T | Object obtained. If no object is obtained, null is returned. |
 
 ## insertAfter
 

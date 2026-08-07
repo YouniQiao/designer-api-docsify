@@ -75,7 +75,7 @@ Create a new component.
 destroy(): void
 ```
 
-Release all native scene resources. All TS references will be undefined.
+Destroys this scene and releases all scene resources.
 
 **Since:** 12
 
@@ -142,7 +142,7 @@ Get default render context
 getNodeByPath(path: string, type?: NodeType): Node | null
 ```
 
-Get a node by path.
+Obtains a node by path.
 
 **Since:** 12
 
@@ -156,14 +156,14 @@ Get a node by path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | the path of the node |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | verify the type of node, if it does not match, return null |
+| path | string | Yes | Path in the scene node tree. Each layer is separated by a slash (/). |
+| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Expected type of the node to be returned. The default value is null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | if the node is found by it's path |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the instance of the requested node. Returns null if not found or if the type of the found node does not match the passed parameter. |
 
 ## getResourceFactory
 
@@ -253,7 +253,7 @@ Import scene into the scene as a node. The node hierarchy will appear under the 
 static load(uri? : ResourceStr): Promise<Scene>
 ```
 
-Create a new scene from a ResourceStr.If uri is not provided, will return an empty scene.
+Loads a resource by path.This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -267,13 +267,13 @@ Create a new scene from a ResourceStr.If uri is not provided, will return an emp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the resource of creating a scene |
+| uri | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Path of the model file resource to load. The default value is undefined. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | promise a scene |
+| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the Scene object created. |
 
 ## renderFrame
 

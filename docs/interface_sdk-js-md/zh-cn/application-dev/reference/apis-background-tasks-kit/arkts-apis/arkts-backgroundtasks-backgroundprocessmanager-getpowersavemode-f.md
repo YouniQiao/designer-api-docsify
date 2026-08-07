@@ -43,14 +43,16 @@ function getPowerSaveMode(pid: int): Promise<PowerSaveMode>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
-// 请开发者替换为实际的进程号
-let pid = 33333;
+
+let pid = 33333;  // 请开发者替换为实际的进程号
 try {
-    backgroundProcessManager.getPowerSaveMode(pid).then((result: backgroundProcessManager.PowerSaveMode) => {
-        console.info("getPowerSaveMode: " + result.toString());
-    });
+  backgroundProcessManager.getPowerSaveMode(pid).then((result: backgroundProcessManager.PowerSaveMode) => {
+    console.info(`getPowerSaveMode: ${result}`);
+  }).catch((err: BusinessError) => {
+    console.error(`getPowerSaveMode failed, promise errCode: ${err.code}, message: ${err.message}`);
+  });
 } catch (error) {
-    console.error(`getPowerSaveMode failed, errCode: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+  console.error(`getPowerSaveMode failed, errCode: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
 

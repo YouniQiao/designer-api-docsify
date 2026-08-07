@@ -1,6 +1,6 @@
 # InteractionHand
 
-Function Called by Touch or Gesture.
+定义事件是由左手点击触发还是右手点击触发。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Function Called by Touch or Gesture.
 NONE = 0
 ```
 
-Unknown hand.
+未定义。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ Unknown hand.
 LEFT = 1
 ```
 
-Left hand.
+左手触发。
 
 **起始版本：** 23
 
@@ -52,7 +52,7 @@ Left hand.
 RIGHT = 2
 ```
 
-Right hand.
+右手触发。
 
 **起始版本：** 23
 

@@ -45,3 +45,18 @@ Updates the service scope supported by the specified companion device template. 
 | [32600002](../errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
 | [32600003](../errorcode-useriam.md#32600003-invalid-service-id) | The business ID is invalid. |
 
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const templateId = new Uint8Array([1, 2, 3]);
+companionDeviceAuth.updateEnabledBusinessIds(templateId, [companionDeviceAuth.BusinessId.DEFAULT])
+  .then(() => {
+    console.info('business scope updated');
+  })
+  .catch((err: BusinessError) => {
+    console.error(`error has been captured: code: ${err.code}, message: ${err.message}`);
+  })
+```
+

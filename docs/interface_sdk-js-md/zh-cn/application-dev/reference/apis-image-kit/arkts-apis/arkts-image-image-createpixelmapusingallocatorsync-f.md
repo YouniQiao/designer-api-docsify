@@ -56,6 +56,10 @@ function createPixelMapUsingAllocatorSync() {
   };
   try {
     let pixelMap: image.PixelMap = image.createPixelMapUsingAllocatorSync(color, opts, image.AllocatorType.DMA);
+    if (pixelMap == undefined) {
+      console.error(`Failed to create the PixelMap.`);
+      return;
+    }
     console.info('Succeeded in creating the PixelMap.');
   } catch (e) {
     const err = e as BusinessError;
@@ -132,6 +136,10 @@ function createPixelMapUsingAllocatorSync() {
   let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.BGRA_8888, size: { height: 4, width: 6 } };
   try {
     let pixelMap: image.PixelMap = image.createPixelMapUsingAllocatorSync(opts, image.AllocatorType.DMA);
+    if (pixelMap == undefined) {
+      console.error(`Failed to create the PixelMap.`);
+      return;
+    }
     console.info('Succeeded in creating the PixelMap.');
   } catch (e) {
     const err = e as BusinessError;

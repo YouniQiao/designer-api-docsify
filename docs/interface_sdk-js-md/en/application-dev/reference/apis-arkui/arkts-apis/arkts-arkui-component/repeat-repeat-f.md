@@ -39,7 +39,7 @@ export declare function Repeat<T>(
 ): RepeatAttribute<T>
 ```
 
-Defines Repeat Component. It requires call setRepeatOptions at start of component attribute set-up,and it requires call applyAttributeFinish at end of component attribute set-up.
+Defines Repeat Component. It requires calling setRepeatOptions at start of component attribute set-up,and it requires calling applyAttributesFinish at end of component attribute set-up.
 
 **Since:** 26.1.0
 

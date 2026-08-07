@@ -22,3 +22,11 @@ function nowCurrent(): int
 | --- | --- |
 | int | 返回当前设备电池的电流，单位毫安。 |
 
+**示例：**
+
+```TypeScript
+// ArkTS-Sta示例
+let result = batteryInfo.nowCurrent();
+console.info("The result is: " + result);
+```
+

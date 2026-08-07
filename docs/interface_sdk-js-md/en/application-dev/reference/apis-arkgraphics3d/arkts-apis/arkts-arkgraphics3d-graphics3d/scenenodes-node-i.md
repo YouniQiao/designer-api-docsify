@@ -18,7 +18,7 @@ Defines Node interface.
 getNodeByPath(path: string): Node | null
 ```
 
-Get node by path.
+Obtains a node by path. If no node is obtained, null is returned.
 
 **Since:** 12
 
@@ -32,13 +32,13 @@ Get node by path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | the path of the node queried |
+| path | string | Yes | Path in the scene node tree. Each layer is separated by a slash (/). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the node object. |
 
 ## children
 

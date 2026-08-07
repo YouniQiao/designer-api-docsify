@@ -55,7 +55,7 @@ let isBadgeDisplayedCallback = (err: BusinessError, data: boolean): void => {
     }
 }
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.isBadgeDisplayed(bundle, isBadgeDisplayedCallback);
 ```
@@ -74,7 +74,7 @@ let isBadgeDisplayedCallback = (err: BusinessError | null, data: boolean | undef
 }
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.isBadgeDisplayed(bundle, isBadgeDisplayedCallback);
 ```
@@ -133,7 +133,7 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 
 notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {
@@ -150,7 +150,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 
 notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {

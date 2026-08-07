@@ -66,9 +66,9 @@ let notificationRequest: notificationManager.NotificationRequest = {
   content: {
     notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
     normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
+      title: 'test_title',
+      text: 'test_text',
+      additionalText: 'test_additionalText'
     }
   }
 };
@@ -94,9 +94,9 @@ let notificationRequest: notificationManager.NotificationRequest = {
   content: {
     notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
     normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
+      title: 'test_title',
+      text: 'test_text',
+      additionalText: 'test_additionalText'
     }
   }
 };
@@ -167,9 +167,9 @@ let notificationRequest: notificationManager.NotificationRequest = {
   content: {
     notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
     normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
+      title: 'test_title',
+      text: 'test_text',
+      additionalText: 'test_additionalText'
     }
   }
 };
@@ -191,9 +191,9 @@ let notificationRequest: notificationManager.NotificationRequest = {
   content: {
     notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
     normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
+      title: 'test_title',
+      text: 'test_text',
+      additionalText: 'test_additionalText'
     }
   }
 };

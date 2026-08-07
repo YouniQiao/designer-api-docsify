@@ -1,6 +1,6 @@
 # CompetitionStrategy
 
-Defines whether a competition for gesture recognition results should occur between the event injector and the gesture recognizers of the target component.This strategy determines how the injected input event interacts with the target component's own gesture handling logic.
+定义分发的事件是否为竞争手势，竞争场景手势原始节点和目标节点只有一个节点会响应手势，非竞争场景可以同时响应。
 
 **起始版本：** 24
 
@@ -16,7 +16,7 @@ Defines whether a competition for gesture recognition results should occur betwe
 DEFAULT = 0
 ```
 
-No competition strategy.The injected event does not compete with any existing gestures.Both the injected event and existing gestures can be processed independently and in parallel.
+表示分发的事件为非竞争手势。
 
 **起始版本：** 24
 
@@ -34,7 +34,7 @@ No competition strategy.The injected event does not compete with any existing ge
 COMPETITION = 1
 ```
 
-Competition strategy.The gesture recognition result from the event injector will compete with those from the target component's own recognizers.
+表示分发的事件为竞争手势。
 
 **起始版本：** 24
 

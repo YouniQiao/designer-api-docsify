@@ -4,7 +4,7 @@
 type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender
 ```
 
-Defines the blending effect.
+Blender type, used to describe the blending effect.
 
 **Since:** 13
 
@@ -20,7 +20,7 @@ Defines the blending effect.
 
 | Type | Description |
 | --- | --- |
-| BrightnessBlender | Base brightness blender |
-| HdrBrightnessBlender | HDR brightness blender [since 20] |
+| BrightnessBlender | Brightness blender |
+| HdrBrightnessBlender | HDR-enabled brightness blender [since 20] |
 | HdrDarkenBlender | HDR-adaptive darken blender [since 26.0.0] |
 

@@ -52,11 +52,11 @@ let displayBadgeCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`displayBadge failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("displayBadge success");
+        console.info('displayBadge success');
     }
 }
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.displayBadge(bundle, false, displayBadgeCallback);
 ```
@@ -70,12 +70,12 @@ let displayBadgeCallback = (err: BusinessError | null): void => {
     if (err) {
         console.error(`displayBadge failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("displayBadge success");
+        console.info('displayBadge success');
     }
 }
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.displayBadge(bundle, false, displayBadgeCallback);
 ```
@@ -135,10 +135,10 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.displayBadge(bundle, false).then(() => {
-    console.info("displayBadge success");
+    console.info('displayBadge success');
 }).catch((err: BusinessError) => {
     console.error(`displayBadge failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -151,10 +151,10 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.displayBadge(bundle, false).then(() => {
-    console.info("displayBadge success");
+    console.info('displayBadge success');
 }).catch((err: Error): void => {
     let error: BusinessError = err as BusinessError;
     console.error(`displayBadge failed, code is ${error.code}, message is ${error.message}`);

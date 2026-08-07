@@ -12,7 +12,9 @@ Obtains the access policy of the USB storage device.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USB
+**Required permissions:** 
+- API version 26.0.0+: ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
+- API version 12 - 24: ohos.permission.ENTERPRISE_MANAGE_USB
 
 **Model restriction:** This API can be used only in the stage model.
 

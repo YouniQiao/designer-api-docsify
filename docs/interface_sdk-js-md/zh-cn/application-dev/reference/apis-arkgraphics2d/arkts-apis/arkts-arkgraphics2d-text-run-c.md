@@ -1,8 +1,8 @@
 # Run
 
-文本排版单元。
+文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_类的[getGlyphRuns()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口获取。
 
-下列API示例中都需先使用[TextLine]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_类的[getGlyphRuns()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口获取Run对象实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[TextLine]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_类的[getGlyphRuns()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_接口获取Run对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ getAdvances(range: Range): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point]{ |
+| Array&lt;common2D.Point&gt; | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中， [common2D.Point]{ |
 
 **示例：**
 
@@ -67,7 +67,7 @@ advancesRange = runs[0].getAdvances({start:0, end:-10}); // -10是非法参数�
 getAdvances(range: Range): Array<common2D.Point> | undefined
 ```
 
-获取指定范围内的字形宽度数组
+获取该排版单元指定范围内每个字形的字形宽度数组。
 
 **起始版本：** 23
 
@@ -81,13 +81,13 @@ getAdvances(range: Range): Array<common2D.Point> | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | range获取当前run的字形范围，其中start表示起始位置，end表示范围长度，如果长度为0，则获取从start到末尾的字形 |
+| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要获取的字形位置范围。range.start表示范围开始的位置，range.end表示范围的长度。如果长度是0表示从range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the advance width and height of each glyph. |
+| Array&lt;common2D.Point&gt; | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中， [common2D.Point]{ |
 
 ## getFont
 
@@ -111,7 +111,7 @@ getFont(): drawing.Font
 
 | 类型 | 说明 |
 | --- | --- |
-| drawing.Font | Font** object of this run. |
+| drawing.Font | 该排版单元的字体属性对象实例。 |
 
 **示例：**
 
@@ -299,7 +299,7 @@ struct Index {
 getGlyphs(range: Range): Array<int> | undefined
 ```
 
-获取范围内每个字符的字形标识符
+获取该排版单元指定范围内每个字符的字形序号。
 
 **起始版本：** 23
 
@@ -313,13 +313,13 @@ getGlyphs(range: Range): Array<int> | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | range获取当前run的字形范围，其中start表示起始位置，end表示范围长度，如果长度为0，则获取从start到末尾的字形 |
+| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要获取的字形序号范围，range.start表示范围开始的位置，range.end表示范围的长度，当range.end为0时表示从range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;int&gt; | Glyph identifier or undefined. |
+| Array&lt;int&gt; | 该排版单元中每个字符对应的字形序号。 |
 
 ## getImageBounds
 
@@ -336,8 +336,7 @@ getImageBounds(): common2D.Rect
     
     示意图展示了字符串为"j"或"E"的图像边界。  
     
-    !  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
+    !\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
 
 **起始版本：** 18
 
@@ -353,7 +352,7 @@ getImageBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | Image boundary of the layout unit, in physical pixels (px). |
+| common2D.Rect | 该排版单元的图像边界，单位为物理像素px。 |
 
 **示例：**
 
@@ -383,7 +382,7 @@ getOffsets(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the offset of each glyph in the run relative to its index. |
+| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于其索引的偏移量。 |
 
 **示例：**
 
@@ -413,7 +412,7 @@ getPositions(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
+| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
 
 **示例：**
 
@@ -449,7 +448,7 @@ getPositions(range: Range): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
+| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
 
 **示例：**
 
@@ -530,7 +529,7 @@ struct Index {
 getPositions(range: Range): Array<common2D.Point> | undefined
 ```
 
-获取指定范围内字体位置信息
+获取该排版单元指定范围内每个字形相对于每行的字形位置数组。
 
 **起始版本：** 23
 
@@ -544,13 +543,13 @@ getPositions(range: Range): Array<common2D.Point> | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | range获取当前run的字形范围，其中start表示起始位置，end表示范围长度，如果长度为0，则获取从start到末尾的字形 |
+| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要获取的字形位置范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | The position of the font in the layout or undefined. |
+| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
 
 ## getStringIndices
 
@@ -661,7 +660,7 @@ struct Index {
 getStringIndices(range?: Range): Array<int> | undefined
 ```
 
-获取run对象中字形索引的范围，索引为相对于段落起始的偏移
+获取排版单元指定范围内字形的字符索引，该索引是相对于整个段落的偏移。
 
 **起始版本：** 23
 
@@ -675,13 +674,13 @@ getStringIndices(range?: Range): Array<int> | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | range获取当前run的字形范围，其中start表示起始位置，end表示范围长度，如果长度为0，则获取从start到末尾的字形 |
+| range | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 要获取的字符索引范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。不传该参数时，默认获取整个渲染块。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;int&gt; | The glyph indices or undefined. |
+| Array&lt;int&gt; | 返回每个字符的索引。 |
 
 ## getStringRange
 
@@ -751,7 +750,7 @@ let textDirection = runs[0].getTextDirection();
 getTextStyle(): TextStyle
 ```
 
-获取当前绘制单元的样式属性信息
+获取该排版单元的文本样式。
 
 **起始版本：** 26.0.0
 
@@ -769,7 +768,7 @@ getTextStyle(): TextStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前绘制单元的样式属性对象 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 该排版单元的文本样式。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_、\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_、\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_、 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_属性：返回32位无符号整型颜色数值。示例：返回值\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，对应纯黑色十六进制颜色值\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，等价于 [common2D.Color]{ |
 
 **示例：**
 
@@ -894,8 +893,7 @@ getTypographicBounds(): TypographicBounds
     
     示意图展示了字符串为" a b "的排版边界。  
     
-    !  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
+    !\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
     
     示意图展示了字符串为"j"或"E"的排版边界。  
     

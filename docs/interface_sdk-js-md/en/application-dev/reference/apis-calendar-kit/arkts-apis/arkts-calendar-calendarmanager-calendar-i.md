@@ -26,7 +26,8 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -94,7 +95,8 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -157,7 +159,8 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 <!--Device-Calendar-addEvents(events: Event[]): Promise<void>--><!--Device-Calendar-addEvents(events: Event[]): Promise<void>-End-->
 
@@ -230,7 +233,8 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 <!--Device-Calendar-addEvents(events: Event[], callback: AsyncCallback<void>): void--><!--Device-Calendar-addEvents(events: Event[], callback: AsyncCallback<void>): void-End-->
 
@@ -656,7 +660,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.READ_CALENDAR
 
 <!--Device-Calendar-getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>--><!--Device-Calendar-getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>-End-->
 
@@ -731,7 +736,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.READ_CALENDAR
 
 <!--Device-Calendar-getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void--><!--Device-Calendar-getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void-End-->
 
@@ -815,7 +821,8 @@ For versions earlier than API version 20, the default fields to be obtained incl
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.READ_CALENDAR
 
 <!--Device-Calendar-getEvents(callback: AsyncCallback<Event[]>):void--><!--Device-Calendar-getEvents(callback: AsyncCallback<Event[]>):void-End-->
 
@@ -910,7 +917,8 @@ Queries the event instance with a specified event key in a calendar. This API us
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 18-20: ohos.permission.READ_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

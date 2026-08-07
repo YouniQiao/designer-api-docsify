@@ -28,6 +28,7 @@ This API obtains the sandbox application configuration, which can be used to rea
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 | [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |

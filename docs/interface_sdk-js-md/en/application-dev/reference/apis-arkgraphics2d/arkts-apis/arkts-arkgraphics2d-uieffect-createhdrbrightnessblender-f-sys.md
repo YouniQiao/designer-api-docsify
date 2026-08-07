@@ -6,7 +6,7 @@
 function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender
 ```
 
-Create an HdrBrightnessBlender, which is used to adjust the HDR brightness of UI components.
+Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness effect to a component.
 
 **Since:** 20
 
@@ -22,13 +22,13 @@ Create an HdrBrightnessBlender, which is used to adjust the HDR brightness of UI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The brightness blender parameters. |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The brightness blender parameters, including grayscale adjustment coefficients, saturation, blending ratio, and other configuration items, used to configure the brightness effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the blender. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the HDR-enabled brightness blender. |
 
 **Error codes:**
 

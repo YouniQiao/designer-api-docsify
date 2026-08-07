@@ -407,6 +407,7 @@ export default class EntryAbility extends UIAbility {
   }
 
   // 当长时任务类型包含数据传输(dataTransfer)时，应用需要更新进度，其他类型不需要
+  // 从API版本26.1.0开始，可使用updateDataTransferProgress接口更新包含数据传输类型的长时任务通知。可选择通知是否带进度环，以及进度环为100时是否响铃。
   updateProcess(process: number) {
     // 定义通知类型，更新进度时的通知类型必须为实况窗
     let downLoadTemplate: notificationManager.NotificationTemplate = {

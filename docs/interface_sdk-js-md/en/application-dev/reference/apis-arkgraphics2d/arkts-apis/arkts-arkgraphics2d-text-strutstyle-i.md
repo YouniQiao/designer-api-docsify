@@ -96,7 +96,7 @@ Font style. The default value is **NORMAL**.
 fontWeight?: FontWeight
 ```
 
-Font weight. The default value is **W400**. The default system font supports font weight adjustment. For other fonts, if the weight is less than W600, there is no variation in stroke thickness. If the weight is greater than or equal to W600, it might result in a fake bold effect.
+Font weight. The default value is **W400**. Before \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_, only variable fonts in system fonts support font weight adjustment. Since \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_, both system fonts and variable fonts in third-party registered fonts support font weight adjustment. For non-variable fonts, the font thickness does not change when the font weight value is set to less than **W600**, and a faux bold effect may be triggered when the font weight value is set to **W600** or greater.
 
 **Type:** FontWeight
 

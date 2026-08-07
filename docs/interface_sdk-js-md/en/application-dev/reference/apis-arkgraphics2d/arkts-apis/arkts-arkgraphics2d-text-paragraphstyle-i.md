@@ -1,6 +1,7 @@
 # ParagraphStyle
 
-Describes a paragraph style.
+Represents a paragraph style, which controls the overall layout behavior of a paragraph, including attributes such as alignment, line break strategy, and maximum number of lines. ParagraphStyle serves as a required parameter of the [ParagraphBuilder]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ constructor, and works together with  
+[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ (which controls text-level styles) to determine the final typesetting result of the paragraph.
 
 **Since:** 12
 
@@ -137,7 +138,7 @@ Sets whether to enable line height rollback during text layout. If the set line 
 firstLineHeadIndent?: double
 ```
 
-Sets the first-line indent of a paragraph. The indent value must be greater than or equal to 0. The default value is **0**.
+First line indent of the paragraph. The indent value must be greater than or equal to 0, in physical pixels (px).The default value is **0**.
 
 **Type:** double
 
@@ -159,7 +160,7 @@ Sets the first-line indent of a paragraph. The indent value must be greater than
 headIndents?: Array<double>
 ```
 
-Sets the line-start indent array. Each element in the array represents the indent value of a single line. If the actual number of text lines exceeds the length of the indent array, the last value of the array is applied to the extra lines. All indent values must be greater than or equal to 0. By default, the array is empty.
+Array of head indents. Each element in the array represents the indent value of one line. When the actual number of text lines exceeds the number of elements in the indent array, the indent of the excess lines is the last value in the array. All indent values must be greater than or equal to 0, in physical pixels (px). The default value is an empty array.
 
 **Type:** Array&lt;double&gt;
 
@@ -202,9 +203,8 @@ otherwise. The default value is **false**.
 lineSpacing?: double
 ```
 
-Line spacing, in physical pixels (px). The default value is **0**. **lineSpacing** is not restricted by  
-**lineHeightMaximum** and **lineHeightMinimum** in [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. By default, the line spacing is reserved for the last line. You can set [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.textHeightBehavior to  
-**DISABLE\_ALL** or **DISABLE\_LAST\_ASCENT** to disable the line spacing for the last line.
+Line spacing, in physical pixels (px). The default value is **0**. lineSpacing is not restricted by lineHeightMaximum and lineHeightMinimum in [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. The last line retains line spacing by default. You can disable line spacing for the last line by setting  
+[ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_'s textHeightBehavior to DISABLE\_ALL or DISABLE\_LAST\_ASCENT.
 
 **Type:** double
 
@@ -244,8 +244,8 @@ Maximum number of lines. The value is an integer. The default value is **1e9**.
 orphanCharOptimization?: boolean
 ```
 
-Sets whether to enable orphan optimization during text typesetting. Orphan optimization improves text layout by more efficiently handling orphan characters (the first character in the last line of a paragraph). When enabled,it adjusts line break positions to avoid orphan characters as much as possible. Orphan optimization takes effect only when [wordBreak]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is not BREAK\_ALL and the [locale]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ of the first  
-[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ of the text to be typeset is "zh-Hans" or "zh-Hant". **true** means that orphan optimization is enabled, and **false** means the opposite. The default value is **false**.
+Whether to enable orphan character optimization during text typesetting. Orphan character optimization improves text layout by handling isolated characters (the first character of the last line of a paragraph) more efficiently. When enabled, it adjusts line break points to avoid isolated characters as much as possible. The orphan character optimization feature takes effect only when [wordBreak]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is not BREAK\_ALL and the locale of the first [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ of the text to be typeset is "zh-Hans" or "zh-Hant". The value **true** enables orphan character optimization, and **false** disables it. The default value is  
+**false**.
 
 **Type:** boolean
 
@@ -267,7 +267,7 @@ Sets whether to enable orphan optimization during text typesetting. Orphan optim
 punctuationOverflow?: boolean
 ```
 
-Whether to enable punctuation overflow.
+Whether to enable end-of-line punctuation hanging during text typesetting. The value **true** enables end-of-line punctuation hanging, allowing a single punctuation mark at the end of a line to exceed the typesetting width without wrapping. The value **false** disables end-of-line punctuation hanging. The default value is **false**.
 
 **Type:** boolean
 
@@ -330,7 +330,7 @@ Alignment mode and position of the text after the tab character in a paragraph. 
 tailIndents?: Array<double>
 ```
 
-Sets the end-of-line indent array. Each element in the array represents the indent value of a single line. If the actual number of text lines exceeds the length of the indent array, the last value of the array is applied to the extra lines. All indent values must be greater than or equal to 0. By default, the array is empty.
+Array of tail indents. Each element in the array represents the indent value of one line. When the actual number of text lines exceeds the number of elements in the indent array, the indent of the excess lines is the last value in the array. All indent values must be greater than or equal to 0, in physical pixels (px). The default value is an empty array.
 
 **Type:** Array&lt;double&gt;
 
@@ -432,10 +432,8 @@ Whether to consider the alignment impact of trailing spaces during text layout. 
 verticalAlign?: TextVerticalAlign
 ```
 
-Vertical alignment of text. This parameter takes effect when line height scaling (that is, **heightScale** of  
-[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) is enabled or different font sizes (that is, **fontSize** of  
-[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_) are set for text in a line. If superscript and subscript text (that is,  
-**badgeType** of [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_) is set in a line, the superscript and subscript text will participate in vertical alignment as common text.
+Text vertical alignment mode. The default value is BASELINE, which means text baseline alignment. This attribute takes effect when line height scaling is enabled (that is, when [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_'s heightScale is set) or when text in different font sizes is mixed in a line (that is, when  
+[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_'s fontSize is set). If there is superscript or subscript text in the line(that is, text with [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_'s badgeType attribute set), the superscript or subscript text participates in vertical alignment in the same way as normal text.
 
 **Type:** TextVerticalAlign
 

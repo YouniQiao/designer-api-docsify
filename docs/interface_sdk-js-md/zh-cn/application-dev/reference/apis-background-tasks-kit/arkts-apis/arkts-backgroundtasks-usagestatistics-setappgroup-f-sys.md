@@ -49,7 +49,7 @@ function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCal
 import { BusinessError } from '@kit.BasicServicesKit';
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 
-let bundleName: string = "com.example.deviceUsageStatistics";
+let bundleName: string = 'com.example.deviceUsageStatistics';
 let newGroup = usageStatistics.GroupType.DAILY_GROUP;
 
 usageStatistics.setAppGroup(bundleName, newGroup, (err: BusinessError) => {
@@ -116,7 +116,7 @@ function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>
 import { BusinessError } from '@kit.BasicServicesKit';
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 
-let bundleName: string = "com.example.deviceUsageStatistics";
+let bundleName: string = 'com.example.deviceUsageStatistics';
 let newGroup = usageStatistics.GroupType.DAILY_GROUP;
 
 usageStatistics.setAppGroup(bundleName, newGroup).then( () => {

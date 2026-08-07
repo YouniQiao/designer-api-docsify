@@ -6,7 +6,7 @@
 function registerConversationListener(
     bundleName: string,
     abilityName: string,
-    dataCallback: DataCallback,
+    dataCallback: DataCallback
   ): void
 ```
 
@@ -23,7 +23,7 @@ function registerConversationListener(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-conversation-function registerConversationListener(    bundleName: string,    abilityName: string,    dataCallback: DataCallback,  ): void--><!--Device-conversation-function registerConversationListener(    bundleName: string,    abilityName: string,    dataCallback: DataCallback,  ): void-End-->
+<!--Device-conversation-function registerConversationListener(    bundleName: string,    abilityName: string,    dataCallback: DataCallback  ): void--><!--Device-conversation-function registerConversationListener(    bundleName: string,    abilityName: string,    dataCallback: DataCallback  ): void-End-->
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
@@ -45,5 +45,25 @@ function registerConversationListener(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid parameter. The bundleName, abilityName or dataCallback is invalid or empty. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-内部) | Internal error. |
+| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-内部错误) | Internal error. |
+
+**示例：**
+
+```TypeScript
+import { conversation } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName: string = 'com.example.demo';
+  let abilityName: string = 'EntryAbility';
+
+  conversation.registerConversationListener(bundleName, abilityName, (deviceId: string, msg: ArrayBuffer) => {
+    console.info(`received message, deviceId: ${deviceId}, msg length: ${msg.byteLength}`);
+  });
+  console.info(`registerConversationListener success`);
+} catch (err) {
+  const e: BusinessError = err as BusinessError;
+  console.error(`registerConversationListener errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 

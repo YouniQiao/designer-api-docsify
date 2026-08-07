@@ -39,3 +39,10 @@ function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimit
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid template type. |
 
+**示例：**
+
+```TypeScript
+let limits: floatView.FloatViewLimits = floatView.getFloatViewLimits(floatView.FloatViewTemplateType.ROUNDED_RECTANGLE);
+console.info('Float view limits: ' + JSON.stringify(limits));
+```
+

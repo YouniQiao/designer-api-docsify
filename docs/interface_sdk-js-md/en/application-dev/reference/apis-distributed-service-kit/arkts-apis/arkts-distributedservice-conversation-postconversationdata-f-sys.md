@@ -8,7 +8,7 @@ function postConversationData(
     bundleName: string,
     abilityName: string,
     msg: ArrayBuffer
-): Promise<void>
+  ): Promise<void>
 ```
 
 Sends session data to the target device. The target device must be a trusted device under the same account. The network ID or UDID of the target device is used for device addressing. Data is sent to the app with the registered listener on the target device based on the specified bundle name and ability name. Typical use scenarios include sending collaboration commands across devices.
@@ -21,7 +21,7 @@ Sends session data to the target device. The target device must be a trusted dev
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-conversation-function postConversationData(    deviceId: string,    bundleName: string,    abilityName: string,    msg: ArrayBuffer): Promise<void>--><!--Device-conversation-function postConversationData(    deviceId: string,    bundleName: string,    abilityName: string,    msg: ArrayBuffer): Promise<void>-End-->
+<!--Device-conversation-function postConversationData(    deviceId: string,    bundleName: string,    abilityName: string,    msg: ArrayBuffer  ): Promise<void>--><!--Device-conversation-function postConversationData(    deviceId: string,    bundleName: string,    abilityName: string,    msg: ArrayBuffer  ): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.SoftBus.Core
 
@@ -51,8 +51,8 @@ Sends session data to the target device. The target device must be a trusted dev
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. The deviceId, bundleName, abilityName or msg is invalid or empty. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-internal-error) | Internal error. |
-| [2004001](../../apis-distributedservice-kit/errorcode-conversation.md#2004001-unsupported-peer-version) | Remote not support. |
-| [2004002](../../apis-distributedservice-kit/errorcode-conversation.md#2004002-duplicate-calls) | Duplicate calls, previous call still in progress. |
-| [2004003](../../apis-distributedservice-kit/errorcode-conversation.md#2004003-failure-to-send-data) | Send data failed. |
-| [2004004](../../apis-distributedservice-kit/errorcode-conversation.md#2004004-request-timeout) | Wait remote ack timeout. |
+| [2004001](../../apis-distributedservice-kit/errorcode-conversation.md#2004001-unsupported-peer-version) | Remote system version is too low. |
+| [2004002](../../apis-distributedservice-kit/errorcode-conversation.md#2004002-duplicate-calls) | Failed to start ability on the remote side. |
+| [2004003](../../apis-distributedservice-kit/errorcode-conversation.md#2004003-failure-to-send-data) | Failed to send data. |
+| [2004004](../../apis-distributedservice-kit/errorcode-conversation.md#2004004-request-timeout) | Timeout while waiting for acknowledgement from the remote side. |
 

@@ -26,7 +26,7 @@ Returns **0** if the font file is not found, the font file path is invalid, the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| Resource | Yes | Path of the font file to be queried. The path must be in the format of " **file://** + Absolute path of the font file" or **\_\_\_ESCAPED\_DOLLAR\_\_\_rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
+| path | string \| Resource | Yes | Path of the font file to query, which must be "file:// + absolute path of the font file" or \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('file name in the resources/rawfile directory of the project'). |
 
 **Return value:**
 

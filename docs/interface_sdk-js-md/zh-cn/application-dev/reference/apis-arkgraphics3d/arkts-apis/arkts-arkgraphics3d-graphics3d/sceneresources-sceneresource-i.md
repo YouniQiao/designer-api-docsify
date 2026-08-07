@@ -16,7 +16,7 @@
 destroy(): void
 ```
 
-释放场景资源.
+销毁场景资源，释放所有关联的资源或引用，一旦被释放，资源就不能被再次使用或访问。
 
 **起始版本：** 12
 
@@ -32,7 +32,7 @@ destroy(): void
 name: string
 ```
 
-场景资源名称.
+场景资源名称，没有特殊格式要求。
 
 **类型：** string
 
@@ -50,7 +50,7 @@ name: string
 readonly resourceType: SceneResourceType
 ```
 
-场景资源类型.
+场景资源类型，默认值为undefined。
 
 **类型：** SceneResourceType
 
@@ -68,7 +68,7 @@ readonly resourceType: SceneResourceType
 readonly uri?: ResourceStr
 ```
 
-场景资源URI.
+需要加载的场景资源URI，默认值为undefined。
 
 **类型：** ResourceStr
 

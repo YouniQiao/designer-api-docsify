@@ -42,5 +42,5 @@ static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 群组模拟世界，如果插件未加载则返回null |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回群组模拟世界实例，若不存在则返回null。 |
 

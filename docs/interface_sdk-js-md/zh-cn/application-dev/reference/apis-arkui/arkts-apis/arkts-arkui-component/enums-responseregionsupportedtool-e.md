@@ -1,6 +1,6 @@
 # ResponseRegionSupportedTool
 
-Defines the event tool type that support response region settings.
+触摸热区适用的输入工具类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Defines the event tool type that support response region settings.
 ALL = 0
 ```
 
-All source tool type.
+所有输入工具类型。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ All source tool type.
 FINGER = 1
 ```
 
-The finger type.
+手指。
 
 **起始版本：** 23
 
@@ -52,7 +52,7 @@ The finger type.
 PEN = 2
 ```
 
-The pen type.
+手写笔。
 
 **起始版本：** 23
 
@@ -70,7 +70,7 @@ The pen type.
 MOUSE = 3
 ```
 
-The mouse type.
+鼠标。
 
 **起始版本：** 23
 

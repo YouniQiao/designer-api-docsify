@@ -1,6 +1,7 @@
 # ParagraphStyle
 
-段落样式。
+段落样式，用于控制段落的整体布局行为，包括对齐方式、断行策略和最大行数等属性。ParagraphStyle作为[ParagraphBuilder]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_构造函数的必要参数，与  
+[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_（控制文本级别样式）分工协作，共同决定段落的最终排版效果。
 
 **起始版本：** 12
 
@@ -134,7 +135,7 @@ fallbackLineSpacing?: boolean
 firstLineHeadIndent?: double
 ```
 
-设置段落首行缩进，缩进值需大于等于0，默认值为0。
+设置段落首行缩进，缩进值需大于等于0，单位为物理像素px，默认值为0。
 
 **类型：** double
 
@@ -156,7 +157,7 @@ firstLineHeadIndent?: double
 headIndents?: Array<double>
 ```
 
-设置行首缩进数组，数组中每个元素代表一行缩进值，当实际文本行数超过缩进数组个数时，超过行的缩进为数组最后一个值，缩进值需全大于等于0，默认为空数组。
+设置行首缩进数组，数组中每个元素代表一行缩进值，当实际文本行数超过缩进数组个数时，超过行的缩进为数组最后一个值，缩进值需全大于等于0，单位为物理像素px，默认为空数组。
 
 **类型：** Array&lt;double&gt;
 
@@ -198,7 +199,7 @@ includeFontPadding?: boolean
 lineSpacing?: double
 ```
 
-行间距，单位为物理像素px，默认值为0。lineSpacing不受[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中lineHeightMaximum和lineHeightMinimum限制。尾行默认保留行间距，可通过设置[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.textHeightBehavior为DISABLE\_ALL或DISABLE\_LAST\_ASCENT禁用尾行行间距。
+行间距，单位为物理像素px，默认值为0。lineSpacing不受[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中lineHeightMaximum和lineHeightMinimum限制。尾行默认保留行间距，可通过设置[ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的textHeightBehavior为DISABLE\_ALL或DISABLE\_LAST\_ASCENT禁用尾行行间距。
 
 **类型：** double
 
@@ -238,7 +239,7 @@ maxLines?: int
 orphanCharOptimization?: boolean
 ```
 
-设置文本排版时是否使能孤字优化。孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为非BREAK\_ALL并且待排版文本首个[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的[locale]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_为“zh-Hans”或“zh-Hant”时生效。true表示使能孤字优化，false表示不使能孤字优化，默认值为false。
+设置文本排版时是否使能孤字优化。孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为非BREAK\_ALL并且待排版文本首个[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的locale为“zh-Hans”或“zh-Hant”时生效。true表示使能孤字优化，false表示不使能孤字优化，默认值为false。
 
 **类型：** boolean
 
@@ -260,7 +261,7 @@ orphanCharOptimization?: boolean
 punctuationOverflow?: boolean
 ```
 
-尾行标点悬挂
+设置文本排版时是否使能行尾标点悬挂。true表示使能行尾标点悬挂，允许行尾单个标点超出排版宽度而不换行，false表示不使能行尾标点悬挂，默认值为false。
 
 **类型：** boolean
 
@@ -322,7 +323,7 @@ tab?: TextTab
 tailIndents?: Array<double>
 ```
 
-设置行尾缩进数组，数组中每个元素代表一行缩进值，当实际文本行数超过缩进数组个数时，超过行的缩进为数组最后一个值，缩进值需全大于等于0，默认为空数组。
+设置行尾缩进数组，数组中每个元素代表一行缩进值，当实际文本行数超过缩进数组个数时，超过行的缩进为数组最后一个值，缩进值需全大于等于0，单位为物理像素px，默认为空数组。
 
 **类型：** Array&lt;double&gt;
 
@@ -424,7 +425,8 @@ trailingSpaceOptimized?: boolean
 verticalAlign?: TextVerticalAlign
 ```
 
-文本垂直对齐方式，开启行高缩放（即设置[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的heightScale）或行内不同字号（即设置[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的fontSize）文本混排时生效。若行内有上下标文本（即设置[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_的badgeType属性文本），上下标文本将与普通文本一样参与垂直对齐。
+文本垂直对齐方式，默认为BASELINE，即文本基线对齐。开启行高缩放（即设置[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的heightScale）或行内不同字号（即设置  
+[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的fontSize）文本混排时生效。若行内有上下标文本（即设置[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_的badgeType属性文本），上下标文本将与普通文本一样参与垂直对齐。
 
 **类型：** TextVerticalAlign
 

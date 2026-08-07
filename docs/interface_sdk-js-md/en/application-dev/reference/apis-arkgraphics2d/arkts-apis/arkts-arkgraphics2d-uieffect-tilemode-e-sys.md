@@ -1,6 +1,6 @@
 # TileMode (System API)
 
-TileMode enumeration description
+Pixel fill mode enumeration.
 
 **Since:** 12
 

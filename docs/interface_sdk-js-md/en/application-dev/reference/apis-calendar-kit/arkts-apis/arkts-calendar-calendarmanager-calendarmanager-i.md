@@ -23,7 +23,9 @@ Creates a Calendar object based on the calendar account information.This API use
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+**Required permissions:** 
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 <!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>--><!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>-End-->
 
@@ -82,7 +84,9 @@ Creates a Calendar object based on the calendar account information.This API use
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+**Required permissions:** 
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 <!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void--><!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void-End-->
 
@@ -141,7 +145,9 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+**Required permissions:** 
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 <!--Device-CalendarManager-deleteCalendar(calendar: Calendar): Promise<void>--><!--Device-CalendarManager-deleteCalendar(calendar: Calendar): Promise<void>-End-->
 
@@ -207,7 +213,9 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+**Required permissions:** 
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 <!--Device-CalendarManager-deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void--><!--Device-CalendarManager-deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void-End-->
 
@@ -326,7 +334,9 @@ Obtains the created and default Calendar objects of the current application.This
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+**Required permissions:** 
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.READ_CALENDAR
 
 <!--Device-CalendarManager-getAllCalendars(): Promise<Calendar[]>--><!--Device-CalendarManager-getAllCalendars(): Promise<Calendar[]>-End-->
 
@@ -376,7 +386,9 @@ Obtains the created and default Calendar objects of the current application.This
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+**Required permissions:** 
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.READ_CALENDAR
 
 <!--Device-CalendarManager-getAllCalendars(callback: AsyncCallback<Calendar[]>): void--><!--Device-CalendarManager-getAllCalendars(callback: AsyncCallback<Calendar[]>): void-End-->
 
@@ -428,7 +440,9 @@ Obtains the default or specified Calendar object. This API uses a promise to ret
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+**Required permissions:** 
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.READ_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -485,7 +499,9 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+**Required permissions:** 
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.READ_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -548,7 +564,9 @@ Obtains the default Calendar object, which is created when the data storage runs
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-**Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+**Required permissions:** 
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.READ_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

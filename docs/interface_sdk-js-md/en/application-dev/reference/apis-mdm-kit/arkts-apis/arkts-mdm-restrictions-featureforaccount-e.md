@@ -131,7 +131,8 @@ USB storage device write capability. Currently, it is supported only on enterpri
 
 Disabling the USB storage device write capability for a specific user in any of the following scenarios will result in a policy conflict:
 
-1. The device USB capability ([FeatureForDevice.USB]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) has been disabled.2. USB storage device access policy has been set to read-only or disabled via the setUsbStorageDeviceAccessPolicy API.3. Storage USB devices have been disabled via the addDisallowedUsbDevices API.
+1. The device USB capability ([FeatureForDevice.USB]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) has been disabled.2. USB storage device access policy has been set to read-only or disabled via the  
+[setUsbStorageDeviceAccessPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API.3. Storage USB devices have been disabled via the [addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ API.
 
 **Since:** 26.0.0
 

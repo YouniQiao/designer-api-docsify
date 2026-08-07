@@ -54,7 +54,7 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let deviceType: string = "phone";
+let deviceType: string = 'phone';
 notificationManager.isSmartReminderEnabled(deviceType).then((data: boolean) => {
     console.info(`isSmartReminderEnabled success， data:${data}`);
 }).catch((err: BusinessError) => {
@@ -67,7 +67,7 @@ ArkTS-Sta示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let deviceType: string = "phone";
+let deviceType: string = 'phone';
 notificationManager.isSmartReminderEnabled(deviceType).then((data: boolean) => {
     console.info(`isSmartReminderEnabled success， data:${data}`);
 }).catch((err: Error): void => {

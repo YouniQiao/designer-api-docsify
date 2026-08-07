@@ -6,7 +6,7 @@
 function createEffect(source: image.PixelMap): Filter
 ```
 
-Creates a Filter instance based on a pixel map.
+Creates a Filter instance based on the input PixelMap. You can then add various image effects through chained calls, and finally obtain the processed image via getEffectPixelMap.
 
 **Since:** 9
 
@@ -24,13 +24,13 @@ Creates a Filter instance based on a pixel map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Image Overview. |
+| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Head node of the filter linked list without any effect. If the operation fails, null is returned. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a Filter instance with no effects added, or null if the operation fails. |
 
 **Example**
 

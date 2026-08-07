@@ -33,3 +33,21 @@ Checks whether Do Not Disturb is enabled on this device.The Do Not Disturb state
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [35200001](../../apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
 
+**Example**
+
+```TypeScript
+import { BusinessError, intelligentScene } from '@kit.BasicServicesKit';
+
+let isDoNotDisturbEnabled: boolean = false;
+try {
+  isDoNotDisturbEnabled = await intelligentScene.isDoNotDisturbEnabled();
+} catch (err) {
+  console.error(`Failed to get doNotDisturb state, code: ${err.code}, message: ${err.message}`);
+}
+if (isDoNotDisturbEnabled) {
+  console.info('DoNotDisturb state is open');
+} else {
+  console.info('DoNotDisturb state is closed');
+}
+```
+

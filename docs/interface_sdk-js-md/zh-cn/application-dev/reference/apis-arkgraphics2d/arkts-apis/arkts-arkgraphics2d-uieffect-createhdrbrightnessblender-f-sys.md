@@ -22,7 +22,7 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 实现提亮效果的参数。 |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 实现提亮效果的参数，包含灰度调整系数、饱和度、混合比例等配置项，用于配置提亮效果。 |
 
 **返回值：**
 

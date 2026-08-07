@@ -1322,6 +1322,7 @@ requestPermissionOnApplicationSetting(tokenID: int): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0. |
 | [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The specified tokenID does not exist. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 

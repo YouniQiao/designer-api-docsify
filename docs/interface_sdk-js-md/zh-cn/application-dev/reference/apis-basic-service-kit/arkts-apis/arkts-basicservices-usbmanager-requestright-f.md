@@ -38,7 +38,6 @@ function requestRight(deviceName: string): Promise<boolean>
 **示例：**
 
 ```TypeScript
-import { BusinessError } from '@ohos.base';
 function requestRight() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
@@ -49,7 +48,7 @@ function requestRight() {
   let device: usbManager.USBDevice = devicesList?.[0];
   usbManager.requestRight(device.name).then(ret => {
     console.info(`requestRight = ${ret}`);
-  }).catch((error: BusinessError) => {
+  }).catch((error) => {
     console.error(`Failed to request right. Code: ${error.code}, message: ${error.message}`);
   });
 }

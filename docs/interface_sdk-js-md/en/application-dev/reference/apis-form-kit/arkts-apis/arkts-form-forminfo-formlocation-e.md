@@ -138,7 +138,7 @@ SCREEN_LOCK = 6
 
 The widget is located on the locked screen.
 
-**Since:** 12
+**Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 

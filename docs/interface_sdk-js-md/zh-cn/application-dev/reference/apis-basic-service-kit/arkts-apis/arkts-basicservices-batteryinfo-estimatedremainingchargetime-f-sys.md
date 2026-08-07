@@ -24,3 +24,11 @@ function estimatedRemainingChargeTime(): long
 | --- | --- |
 | long | 返回当前设备充满电的预估时间，单位毫秒。 |
 
+**示例：**
+
+```TypeScript
+// ArkTS-Sta示例
+let result = batteryInfo.estimatedRemainingChargeTime();
+console.info("The result is: " + result);
+```
+

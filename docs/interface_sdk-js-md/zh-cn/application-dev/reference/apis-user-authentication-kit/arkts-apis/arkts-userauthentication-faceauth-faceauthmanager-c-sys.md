@@ -82,9 +82,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // 该surfaceId应通过XComponentController.getXComponentSurfaceId()方法从XComponent控件获取，此处仅用作示例。
 let surfaceId = '123456';
-let manager = new faceAuth.FaceAuthManager();
+let faceManager = new faceAuth.FaceAuthManager();
 try {
-  manager.setSurfaceId(surfaceId);
+  faceManager.setSurfaceId(surfaceId);
   console.info('set surface id successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;

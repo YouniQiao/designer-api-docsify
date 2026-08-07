@@ -2,7 +2,8 @@
 
 Represents the USB device type information.
 
-You can obtain the list of USB devices connected to the host device through the getDevices API, and then find the type of the current device in the returned list.
+You can obtain the list of USB devices connected to the host device through the  
+[getDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API, and then find the type of the current device in the returned list.
 
 **Since:** 14
 

@@ -38,3 +38,34 @@ function create(config: FloatViewConfiguration): Promise<FloatViewController>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. This window context is abnormal. 2. System error, such as a null pointer, insufficient memory or a JS engine exception. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid template type. |
 
+**示例：**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  private floatViewController: floatView.FloatViewController | undefined = undefined;
+  aboutToAppear(): void {
+    // 请在组件内获取context，确保this.getUIContext().getHostContext()返回的结果为UIAbilityContext
+    let ctx = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    let config: floatView.FloatViewConfiguration = {
+      context: ctx,
+      templateType: floatView.FloatViewTemplateType.ROUNDED_RECTANGLE
+    };
+    try {
+      floatView.create(config).then((data: floatView.FloatViewController) => {
+        this.floatViewController = data;
+        console.info(`Succeeded in creating float view controller. Data: ${data}`);
+      }).catch((err: BusinessError): void => {
+        console.error(`Failed to create float view controller. Cause:${err.code}, message:${err.message}`);
+      });
+    } catch(e) {
+      console.error(`Failed to create float view controller. Cause:${e.code}, message:${e.message}`);
+    }
+  }
+}
+```
+

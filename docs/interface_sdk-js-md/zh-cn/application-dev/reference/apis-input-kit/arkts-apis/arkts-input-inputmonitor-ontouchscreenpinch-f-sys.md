@@ -41,7 +41,7 @@ function onTouchscreenPinch(fingers: int, receiver: Callback<TouchGestureEvent>)
 import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { inputMonitor } from '@kit.InputKit';
-import { TouchGestureEvent } from '@ohos.multimodalInput.gestureEvent';
+import { TouchGestureEvent } from '@kit.InputKit';
 
 @Entry
 @Component

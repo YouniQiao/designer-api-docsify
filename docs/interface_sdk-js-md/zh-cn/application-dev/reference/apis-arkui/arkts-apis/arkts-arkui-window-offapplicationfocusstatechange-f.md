@@ -38,7 +38,7 @@ try {
   // 如果通过on开启多个callback进行监听，同时关闭所有监听：
   window.offApplicationFocusStateChange(); 
 } catch (exception) {
-  console.error(`Failed to enable or disable the listener for application focus state changes. Cause code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to disable the listener for application focus state changes. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 

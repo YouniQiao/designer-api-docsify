@@ -1,6 +1,6 @@
 # MouseButton
 
-Define the button types of the mouse device.
+定义鼠标按键的类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Define the button types of the mouse device.
 Left = 1
 ```
 
-Mouse Left Button.
+鼠标左键。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ Mouse Left Button.
 Right = 2
 ```
 
-Mouse Right Button.
+鼠标右键。
 
 **起始版本：** 23
 
@@ -52,7 +52,7 @@ Mouse Right Button.
 Middle = 4
 ```
 
-Mouse Middle Button.
+鼠标中键。
 
 **起始版本：** 23
 
@@ -70,7 +70,7 @@ Mouse Middle Button.
 Back = 8
 ```
 
-Mouse Back Button.
+鼠标左侧后退键。
 
 **起始版本：** 23
 
@@ -85,10 +85,10 @@ Mouse Back Button.
 ## Forward
 
 ```TypeScript
-Forward = 16
+Forward =16
 ```
 
-Mouse Forward Button.
+鼠标左侧前进键。
 
 **起始版本：** 23
 
@@ -96,7 +96,7 @@ Mouse Forward Button.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-MouseButton-Forward = 16--><!--Device-MouseButton-Forward = 16-End-->
+<!--Device-MouseButton-Forward =16--><!--Device-MouseButton-Forward =16-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,7 +106,7 @@ Mouse Forward Button.
 None = 0
 ```
 
-Mouse None Button.
+无按键。
 
 **起始版本：** 23
 

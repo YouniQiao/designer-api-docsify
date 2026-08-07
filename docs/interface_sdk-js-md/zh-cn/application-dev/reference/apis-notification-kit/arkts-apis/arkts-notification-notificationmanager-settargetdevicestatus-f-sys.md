@@ -48,7 +48,7 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-notificationManager.setTargetDeviceStatus("current", 1).then(() => {
+notificationManager.setTargetDeviceStatus('current', 1).then(() => {
   console.info(`Succeeded in setting target device status.`);
 }).catch((err: BusinessError) => {
   console.error(`Failed to set target device status. Code is ${err.code}, message is ${err.message}`);
@@ -60,7 +60,7 @@ ArkTS-Sta示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-notificationManager.setTargetDeviceStatus("current", 1).then(() => {
+notificationManager.setTargetDeviceStatus('current', 1).then(() => {
   console.info('Succeeded in setting target device status.');
 }).catch((err: Error): void => {
   let error: BusinessError = err as BusinessError;

@@ -10,6 +10,9 @@ Defines the container of basic data types.
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
+**Model restriction:** 
+- API version 11 and later: This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-common-export type PacMap = _PacMap--><!--Device-common-export type PacMap = _PacMap-End-->

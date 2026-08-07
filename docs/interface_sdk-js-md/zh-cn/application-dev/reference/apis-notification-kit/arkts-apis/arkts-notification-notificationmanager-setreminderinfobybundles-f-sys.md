@@ -51,7 +51,7 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName",
+    bundle: 'bundleName',
 };
 let reminderInfos: Array<notificationManager.NotificationReminderInfo> = [
     {
@@ -73,7 +73,7 @@ ArkTS-Sta示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName",
+    bundle: 'bundleName',
 };
 let reminderInfos: Array<notificationManager.NotificationReminderInfo> = [
     {

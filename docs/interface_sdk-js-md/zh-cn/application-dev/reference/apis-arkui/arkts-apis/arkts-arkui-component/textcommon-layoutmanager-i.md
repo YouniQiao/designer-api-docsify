@@ -44,6 +44,38 @@ getCharacterPositionAtCoordinate(x: double, y: double): PositionWithAffinity | u
 | --- | --- |
 | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 字符的位置信息。当[LayoutManager]{ |
 
+## getCharacterPositionAtCoordinate
+
+```TypeScript
+getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding): PositionWithAffinity | undefined
+```
+
+根据指定编码类型，获取距离指定坐标最近的字符位置信息。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LayoutManager-getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding): PositionWithAffinity | undefined--><!--Device-LayoutManager-getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding): PositionWithAffinity | undefined-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | double | 是 | 相对于组件的横坐标。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| y | double | 是 | 相对于组件的纵坐标。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 字符位置使用的编码类型，默认值为TextEncoding.TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 字符的位置信息。当[LayoutManager]{ |
+
 ## getCharacterRangeForGlyphRange
 
 ```TypeScript
@@ -67,6 +99,37 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | glyphRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本的字形范围。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
+
+## getCharacterRangeForGlyphRange
+
+```TypeScript
+getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined
+```
+
+根据指定编码类型和文本字形范围，获取字符范围以及实际的字形范围。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LayoutManager-getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined--><!--Device-LayoutManager-getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| glyphRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本的字形范围。 |
+| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 字符范围使用的编码类型，默认值为TextEncoding.TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8。 |
 
 **返回值：**
 
@@ -129,6 +192,37 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | charRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本的字符范围。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
+
+## getGlyphRangeForCharacterRange
+
+```TypeScript
+getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined
+```
+
+根据指定编码类型和文本字符范围，获取字形范围以及实际的字符范围。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LayoutManager-getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined--><!--Device-LayoutManager-getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): Array<TextRange> | undefined-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| charRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 文本的字符范围。 |
+| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 字符范围使用的编码类型，默认值为TextEncoding.TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8。 |
 
 **返回值：**
 

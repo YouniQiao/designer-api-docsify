@@ -38,5 +38,23 @@ function unregisterConversationListener(bundleName: string, abilityName: string)
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid parameter. The bundleName or abilityName is invalid or empty. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-内部) | Internal error. |
+| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-内部错误) | Internal error. |
+
+**示例：**
+
+```TypeScript
+import { conversation } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName: string = 'com.example.demo';
+  let abilityName: string = 'EntryAbility';
+
+  conversation.unregisterConversationListener(bundleName, abilityName);
+  console.info(`unregisterConversationListener success`);
+} catch (err) {
+  const e: BusinessError = err as BusinessError;
+  console.error(`unregisterConversationListener errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 

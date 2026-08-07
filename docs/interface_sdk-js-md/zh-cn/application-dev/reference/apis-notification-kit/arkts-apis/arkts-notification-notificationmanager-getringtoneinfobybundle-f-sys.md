@@ -58,7 +58,7 @@ export default class EntryAbility extends UIAbility {
   onForeground(): void {
     try {
       let bundle: notificationManager.BundleOption = {
-        bundle: "bundleName",
+        bundle: 'bundleName',
       };
       notificationManager.getRingtoneInfoByBundle(bundle)
         .then((ringtoneInfo: notificationManager.RingtoneInfo) => {
@@ -79,7 +79,7 @@ ArkTS-Sta示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName",
+    bundle: 'bundleName',
 };
 notificationManager.getRingtoneInfoByBundle(bundle).then((ringtoneInfo: notificationManager.RingtoneInfo) => {
     console.info(`getRingtoneInfoByBundle success: ${JSON.stringify(ringtoneInfo)}`);

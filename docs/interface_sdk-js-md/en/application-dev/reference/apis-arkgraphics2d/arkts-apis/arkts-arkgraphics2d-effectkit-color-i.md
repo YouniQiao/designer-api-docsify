@@ -1,6 +1,6 @@
 # Color
 
-A class that stores the color picked.
+A color class used to store the color picking result. It is suitable for scenarios such as obtaining the main color, the color with the largest proportion, and the color with the highest saturation from an image in conjunction with ColorPicker, helping developers conveniently obtain and pass image color picking results.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ A class that stores the color picked.
 alpha: int
 ```
 
-Value of the alpha component. The value range is [0x0, 0xFF].
+Alpha component value. Value range: [0x0, 0xFF].
 
 **Type:** int
 
@@ -38,7 +38,7 @@ Value of the alpha component. The value range is [0x0, 0xFF].
 blue: int
 ```
 
-Value of the blue component. The value range is [0x0, 0xFF].
+Blue component value. Value range: [0x0, 0xFF].
 
 **Type:** int
 
@@ -60,7 +60,7 @@ Value of the blue component. The value range is [0x0, 0xFF].
 green: int
 ```
 
-Value of the green component. The value range is [0x0, 0xFF].
+Green component value. Value range: [0x0, 0xFF].
 
 **Type:** int
 
@@ -82,7 +82,7 @@ Value of the green component. The value range is [0x0, 0xFF].
 red: int
 ```
 
-Value of the red component. The value range is [0x0, 0xFF].
+Red component value. Value range: [0x0, 0xFF].
 
 **Type:** int
 

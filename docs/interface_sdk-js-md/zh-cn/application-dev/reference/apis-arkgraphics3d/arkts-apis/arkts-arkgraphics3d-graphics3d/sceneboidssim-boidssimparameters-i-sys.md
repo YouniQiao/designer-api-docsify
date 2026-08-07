@@ -1,6 +1,13 @@
 # BoidsSimParameters（系统接口）
 
-每个boid绑定的群组模拟参数.
+群组模拟参数，用于配置每个个体的行为属性。
+    **说明：**  
+    模拟帧是指群组模拟中按固定时间步长执行的更新周期，类似Unity中的FixedUpdate。  
+    默认时间步长为16ms（约62.5FPS），模拟通过累积真实时间并按固定步长消耗来驱动。  
+    下文部分参数的默认值基于该时间步长计算：  
+    - maxVelocityMag： 0.01 / 0.016 ≈ 0.625（m/s）。  
+    - maxAccelerationMag： maxVelocityMag / 0.016 ≈ 39.06（m/s²）。  
+    - maxTurnRate： π × 0.75 × 0.016 ≈ 0.0377（rad/模拟帧）。
 
 **起始版本：** 26.0.0
 
@@ -128,7 +135,7 @@ boundaryMinPos?: Vec3
 boundaryWeight?: double
 ```
 
-boid在boundaryDistance范围内被边界墙推回的强度。取值范围：[0, +∞)。默认值：0.0
+边界约束力权重。个体在boundaryDistance范围内被边界墙推回的强度。取值 >= 0。默认值为0.0。
 
 **类型：** double
 
@@ -216,7 +223,7 @@ gravityWeight?: double
 initialPosition?: Vec3
 ```
 
-boid的初始位置. 未设置时，使用实体的当前变换位置.默认值：(NaN, NaN, NaN).
+每个个体的初始位置，各分量单位为m。未设置时保留当前实体位置。默认值为(NaN, NaN, NaN)。
 
 **类型：** Vec3
 
@@ -260,7 +267,7 @@ boid的初始旋转. 未设置时，使用实体的当前变换旋转.默认值�
 initialVelocity?: Vec3
 ```
 
-boid的初始速度. 默认值：(0, 0, 0).
+每个个体的初始速度向量，各分量单位为m/s。默认值为(0, 0, 0)。
 
 **类型：** Vec3
 
@@ -282,7 +289,7 @@ boid的初始速度. 默认值：(0, 0, 0).
 maxAccelerationMag?: double
 ```
 
-boid每模拟帧可达到的最大加速度. 取值范围：[0, +∞). 默认值：约为39.06.
+个体每模拟帧可达到的最大加速度，单位为m/s²。取值 >= 0。默认值约为39.06。
 
 **类型：** double
 
@@ -304,7 +311,7 @@ boid每模拟帧可达到的最大加速度. 取值范围：[0, +∞). 默认值
 maxTurnRate?: Vec3
 ```
 
-每模拟帧每轴最大转向速率. 取值范围：[0, +∞) per axis.默认值：每轴约为0.0377.
+每模拟帧每轴最大转向速率，各分量单位为rad/模拟帧。每个分量取值 >= 0。默认值各分量约为0.0377。
 
 **类型：** Vec3
 
@@ -326,7 +333,7 @@ maxTurnRate?: Vec3
 maxVelocityMag?: double
 ```
 
-boid每模拟帧可达到的最大速度. 取值范围：[0, +∞). 默认值：约为0.625.
+个体每模拟帧可达到的最大速度，单位为m/s。取值 >= 0。默认值约为0.625。
 
 **类型：** double
 
@@ -370,7 +377,7 @@ repulsionWeight?: double
 separationDistance?: double
 ```
 
-分离规则的感知半径。此距离范围内的boid会产生分离力（边界处力为零）。取值范围：[0, +∞)。默认值：0.0
+分离规则的感知半径，单位为m。仅严格在该距离内的邻近个体对分离力有贡献（边界处力为0）。取值 >= 0。默认值为0.0。
 
 **类型：** double
 
@@ -392,7 +399,7 @@ separationDistance?: double
 separationWeight?: double
 ```
 
-boid在separationDistance范围内避开邻近个体的强度。取值范围：[0, +∞)。默认值：0.0
+分离规则权重。个体在separationDistance范围内受邻近个体排斥的强度。取值 >= 0。默认值为0.0。
 
 **类型：** double
 

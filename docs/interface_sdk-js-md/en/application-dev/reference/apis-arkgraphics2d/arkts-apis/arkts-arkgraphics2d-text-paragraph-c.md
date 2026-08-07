@@ -49,7 +49,10 @@ let didExceed = paragraph.didExceedMaxLines();
 forceReuseRasterResult(isForce: boolean): void
 ```
 
-Whether to force reuse the rasterization result.
+Sets whether to force reuse of the rasterization result. If this API is not called, the system allows updating the rasterization result by default.
+
+This API is suitable for scenarios where the text content remains unchanged but  
+[paint]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is called for drawing.
 
 **Since:** 26.0.0
 
@@ -67,7 +70,7 @@ Whether to force reuse the rasterization result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isForce | boolean | Yes | Whether to force reuse the rasterization result. True means to force reuse of the rasterization result. False means to allow updates to the rasterization result. The default value is false. |
+| isForce | boolean | Yes | Whether to force reuse of the rasterization result. The value **true** means to force reuse of the rasterization result, and **false** means to allow updating the rasterization result. |
 
 ## getActualTextRange
 
@@ -219,7 +222,7 @@ Obtains the character range corresponding to the specified glyph range.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | glyphRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Glyph range. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character range indicates the byte range. For UTF-16 encoding , the returned character range indicates the UTF-16 encoding unit range. |
+| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character range indicates the byte range. For UTF-16 encoding, the returned character range indicates the UTF-16 encoding unit range. |
 
 **Return value:**
 
@@ -379,7 +382,7 @@ Obtains the ideographic baseline.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Ideographic baseline, in units of px. The value is a floating point number. |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Baseline position under ideographic characters, a floating point number in physical pixels ( px). |
 
 **Example**
 
@@ -451,7 +454,7 @@ Obtains the height of a given line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the line. The value is an integer ranging from 0 to getLineCount() – 1. |
+| line | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the text line, which is an integer ranging from 0 to [getLineCount]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1. |
 
 **Return value:**
 
@@ -523,7 +526,7 @@ Obtains the line measurement information of a line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineNumber | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Line number, starting from 0. |
+| lineNumber | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of the line for which metric information is to be queried. Line numbers start from 0, and the maximum line index is the number of text lines minus 1. The number of text lines can be obtained through the [getLineCount]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API. |
 
 **Return value:**
 
@@ -565,7 +568,7 @@ Obtains the width of a given line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the line. The value is an integer ranging from 0 to getLineCount() – 1. |
+| line | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Text line index, which is an integer ranging from 0 to [getLineCount]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-1. |
 
 **Return value:**
 
@@ -783,7 +786,7 @@ Obtains the style configuration of a paragraph.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Paragraph style configuration. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Style configuration of the paragraph. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ properties return a 32-bit unsigned integer color value. Example: The return value \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ corresponds to the pure black hexadecimal color value \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, which is equivalent to the [common2D.Color]{ |
 
 ## getProcessState
 
@@ -943,6 +946,20 @@ getVisibleTextRanges(): Array<Range>
 ```
 
 Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_)or replacement in ellipsis mode ([EllipsisMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_).
+
+**NOTE**
+
+The returned range depends on the specific truncation of the paragraph(for example, whether the maximum number of lines or ellipsis is set):
+
+| Scenario| Description|  
+|---|---|  
+| Text is not truncated.| The range includes all typeset text.|  
+| Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.|  
+| EllipsisMode.END| The range is the text before the ellipsis.|  
+| EllipsisMode.START| The value is the text after the ellipsis.|  
+| EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.|  
+| EllipsisMode.MULTILINE\_START| the text range before and after the ellipsis is returned.|  
+| EllipsisMode.MULTILINE\_MIDDLE| the text range before and after the ellipsis is returned.|
 
 **Since:** 26.0.0
 
@@ -1198,7 +1215,8 @@ ArkTS-Sta:
 paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
-Paints the text on the canvas with the coordinate point (x, y) as the upper left corner.
+Draws text on the canvas with (x, y) as the upper-left corner. You must call  
+[layout()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
 
 **Since:** 12
 
@@ -1240,7 +1258,7 @@ ArkTS-Sta:
 paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void
 ```
 
-Draws text along a path on the canvas.
+Draws text along a path on the canvas. You must call [layout()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
 
 **Since:** 12
 

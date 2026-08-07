@@ -1,6 +1,6 @@
 # Filter
 
-The Filter for Component.
+Filter effect class, used to apply corresponding effects to specified components.Before calling Filter methods, you need to first create a Filter instance through createFilter.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ ArkTS-Sta:
 blur(blurRadius: double): Filter
 ```
 
-Set blur effect of the Component.
+Adds a blur effect to the component.
 
 **Since:** 12
 
@@ -36,13 +36,13 @@ Set blur effect of the Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes |  |
+| blurRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Blur radius, in px. The value must be greater than or equal to 0. A larger blur radius results in a stronger blur effect. When the blur radius is 0, there is no blur effect. If a negative number is passed in, it is automatically corrected to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the blur effect attached, supporting chained calls to add other effects. |
 
 **Example**
 
@@ -85,7 +85,15 @@ ArkTS-Sta:
 hdrBrightnessRatio(ratio: double): Filter
 ```
 
-Applies a high dynamic range (HDR) brightness enhancement filter to the component.
+Adds an HDR (High Dynamic Range) brightening effect to the component content.Nesting is not recommended, as forced nesting may cause overexposure.
+
+The brightening effect requires the HDR rendering pipeline to be enabled to take effect.In some scenarios, HDR cannot be enabled even if an attempt is made to trigger the HDR rendering pipeline,for example, when the device hardware specifications do not support HDR.
+
+The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance.
+    **NOTE**  
+    
+    Using the HDR brightening effect incurs certain performance and power consumption overhead.  
+    It is recommended to use it in scenarios where HDR images or videos already exist.
 
 **Since:** 24
 
@@ -102,13 +110,13 @@ Applies a high dynamic range (HDR) brightness enhancement filter to the componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratio | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The brightness multiplier ratio (1.0 = original, >1.0 = brighter). |
+| ratio | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Brightening ratio. The value range is [1.0, the maximum brightening ratio supported by the current device]. Values less than 1.0 are treated as 1.0; a value equal to 1.0 means no processing; values greater than 1.0 attempt to trigger the HDR rendering pipeline; values exceeding the maximum ratio are treated as the maximum ratio. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns hdr brightness Filter. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the Filter with the HDR brightening effect attached, supporting chained calls to add other effects. |
 
 **Error codes:**
 

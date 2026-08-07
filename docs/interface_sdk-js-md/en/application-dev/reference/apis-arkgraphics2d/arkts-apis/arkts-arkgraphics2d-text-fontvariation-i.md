@@ -16,7 +16,7 @@ Describes a font variation.
 axis: string
 ```
 
-String identified by the keyword in the font variation key-value pair.
+Keyword identifier in the variable font property key-value pair, such as 'wght' (weight), 'wdth' (width), and 'ital' (italic).
 
 **Type:** string
 

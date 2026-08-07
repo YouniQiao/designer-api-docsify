@@ -22,3 +22,11 @@ function pluggedType(): BatteryPluggedType
 | --- | --- |
 | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前设备连接的充电器类型。 |
 
+**示例：**
+
+```TypeScript
+// ArkTS-Sta示例
+let result = batteryInfo.pluggedType();
+console.info("The result is: " + result);
+```
+

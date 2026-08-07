@@ -45,7 +45,7 @@ try {
     if (err) {
       console.error(`Failed to set test.parameter.key value. Code: ${err.code}, message: ${err.message}`);
     } else {
-      console.info(`set test.parameter.key value success: ${data}`);
+      console.info('set test.parameter.key value success');
     }
   });
 } catch (e) {

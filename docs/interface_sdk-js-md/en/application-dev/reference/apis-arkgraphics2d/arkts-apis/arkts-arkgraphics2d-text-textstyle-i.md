@@ -1,6 +1,7 @@
 # TextStyle
 
-Describes a text style.
+Represents a text style, which controls the visual appearance attributes of text, including font, color, font size,spacing, decoration lines, and shadows. TextStyle is applied to subsequently added text content through the  
+[pushStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method of [ParagraphBuilder]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, and works together with [ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ (which controls paragraph-level attributes). Within the same paragraph, you can call pushStyle multiple times to apply different styles to different text segments.
 
 **Since:** 12
 
@@ -16,7 +17,7 @@ Describes a text style.
 backgroundRect?: RectStyle
 ```
 
-Rectangle style.
+Text rectangle style. Pass this parameter when you need to add a background rectangle to text (such as setting the background color, rounded corners, etc.).
 
 **Type:** RectStyle
 
@@ -76,7 +77,7 @@ Text baseline type. The default value is **ALPHABETIC**.
 baselineShift?: double
 ```
 
-Underline offset of text, a floating-point value in physical pixels (px), with a default value of **0.0**.
+Vertical offset distance of the text baseline, in physical pixels (px). The default value is **0.0**.
 
 **Type:** double
 
@@ -136,7 +137,7 @@ Text decoration. By default, no decoration is used.
 ellipsis?: string
 ```
 
-Ellipsis content, which will be used to replace the extra content.
+Ellipsis text. When the ellipsis takes effect, this field value replaces the ellipsis portion. The default value is an empty string, which uses the system default ellipsis … (U+2026). When configured together with the tab attribute of ParagraphStyle, the tab attribute does not take effect.
 
 **Type:** string
 
@@ -198,7 +199,7 @@ Edge processing mode for drawing texts. The default value is **ANTI\_ALIAS**.
 fontFamilies?: Array<string>
 ```
 
-Array of font families. By default, the array is empty, indicating that all system fonts are matched.
+List of font family names. The default value is empty, which matches the system font. When using a custom font,specify the name used when loading the font in this list. When set together with fontTypefaces, fontTypefaces takes precedence and fontFamilies does not take effect.
 
 **Type:** Array&lt;string&gt;
 
@@ -218,7 +219,7 @@ Array of font families. By default, the array is empty, indicating that all syst
 fontFeatures?: Array<FontFeature>
 ```
 
-Array of font features.
+Array of text font features. Pass this parameter when you need to enable or disable specific font features (such as ligatures, kerning adjustment, etc.).
 
 **Type:** Array&lt;FontFeature&gt;
 
@@ -278,7 +279,9 @@ Font style. The default value is **NORMAL**.
 fontTypefaces?: Array<drawing.Typeface>
 ```
 
-Array of font typefaces
+Array of specified typesetting font objects, used to prioritize the specified font objects for text shaping and skip the font matching process. When a font object in the array cannot shape some characters, the unshaped characters will be shaped using the system font. The default value is an empty array, indicating that no font object is specified and the default font matching process is used.
+
+When fontTypefaces is set together with [TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.fontFamilies, fontTypefaces takes precedence.
 
 **Type:** Array&lt;drawing.Typeface&gt;
 
@@ -300,7 +303,7 @@ Array of font typefaces
 fontVariations?: Array<FontVariation>
 ```
 
-Array of font variations.
+Array of variable font properties. Pass this parameter when you need to adjust the variable axis parameters of a variable font (such as the font weight axis, font width axis, etc.).
 
 **Type:** Array&lt;FontVariation&gt;
 
@@ -320,7 +323,7 @@ Array of font variations.
 fontWeight?: FontWeight
 ```
 
-Font weight. The default value is **W400**. Currently, only the default system font supports font weight adjustment. For other fonts, if the weight is less than semi-bold (W600), there is no variation in stroke thickness. If the weight is greater than or equal to semi-bold, it might result in a fake bold effect.
+Font weight. The default value is W400. Before \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_, only variable fonts in system fonts support font weight adjustment. Since \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_, variable fonts in both system fonts and third-party registered fonts support font weight adjustment. For non-variable fonts, setting a font weight value less than semi-bold (W600) results in no change in font thickness, while setting a font weight value greater than or equal to semi-bold (W600) may trigger a pseudo-bold effect.
 
 **Type:** FontWeight
 
@@ -380,7 +383,7 @@ Whether half leading is enabled. Half leading is the leading split in half and a
 heightOnly?: boolean
 ```
 
-How the height of the text box is set. The value **true** means that the height of the text box is set based on the font size and the value of **heightScale**, and **false** means that the height is set based on the line height and line spacing. The default value is **false**.
+The value **true** means the text box height is set based on the font size and heightScale, and **false** means the text box height is set based on the line height and line spacing. The default value is **false**.
 
 **Type:** boolean
 
@@ -400,7 +403,7 @@ How the height of the text box is set. The value **true** means that the height 
 heightScale?: double
 ```
 
-Scale factor of the line height. The value is a floating point number. The default value is **1.0**. This parameter is valid only when **heightOnly** is set to **true**.
+Scale factor of the line height. The value is a floating point number. The default value is **1.0**. This parameter is valid only when **heightOnly** is set to** true**.
 
 **Type:** double
 
@@ -521,7 +524,7 @@ Language type. For example, **'en-Latn'** indicates English (Latin script), **'z
 textShadows?: Array<TextShadow>
 ```
 
-Array of shadows.
+Array of text shadows. Pass this parameter when you need to add shadow effects to text.
 
 **Type:** Array&lt;TextShadow&gt;
 

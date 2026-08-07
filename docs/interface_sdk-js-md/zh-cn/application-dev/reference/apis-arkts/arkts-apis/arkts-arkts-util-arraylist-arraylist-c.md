@@ -426,7 +426,7 @@ forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; void | 是 | 回调函数。 |
-| thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
+| thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为undefined。 |
 
 **错误码：**
 
@@ -1147,7 +1147,7 @@ replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; T | 是 | 回调函数。 |
-| thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
+| thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为undefined。 |
 
 **错误码：**
 

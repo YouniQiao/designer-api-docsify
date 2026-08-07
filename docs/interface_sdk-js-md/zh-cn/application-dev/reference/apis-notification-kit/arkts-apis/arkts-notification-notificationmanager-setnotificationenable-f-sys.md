@@ -51,11 +51,11 @@ let setNotificationEnableCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`setNotificationEnable failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("setNotificationEnable success");
+        console.info('setNotificationEnable success');
     }
 }
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.setNotificationEnable(bundle, false, setNotificationEnableCallback);
 ```
@@ -69,12 +69,12 @@ let setNotificationEnableCallback = (err: BusinessError | null): void => {
     if (err) {
         console.error(`setNotificationEnable failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("setNotificationEnable success");
+        console.info('setNotificationEnable success');
     }
 }
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.setNotificationEnable(bundle, false, setNotificationEnableCallback);
 ```
@@ -133,10 +133,10 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.setNotificationEnable(bundle, false).then(() => {
-    console.info("setNotificationEnable success");
+    console.info('setNotificationEnable success');
 }).catch((err: BusinessError) => {
     console.error(`setNotificationEnable failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -149,10 +149,10 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.setNotificationEnable(bundle, false).then(() => {
-  console.info("setNotificationEnable success");
+  console.info('setNotificationEnable success');
 }).catch((err: Error): void => {
     let error: BusinessError = err as BusinessError;
     console.error(`setNotificationEnable failed, code is ${error.code}, message is ${error.message}`);

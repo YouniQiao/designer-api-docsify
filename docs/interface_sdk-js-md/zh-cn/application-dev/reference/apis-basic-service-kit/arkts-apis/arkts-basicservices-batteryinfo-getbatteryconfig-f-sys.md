@@ -37,3 +37,16 @@ function getBatteryConfig(sceneName: string): string
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [5100101](../../apis-basic-services-kit/errorcode-battery-info.md#5100101-连接服务失败) | Failed to connect to the service. |
 
+**示例：**
+
+```TypeScript
+try {
+  let sceneName = 'xxx';
+  let result = batteryInfo.getBatteryConfig(sceneName);
+
+  console.info("The result is: " + result);
+} catch(err) {
+  console.error('getBatteryConfig failed, err: ' + err);
+}
+```
+

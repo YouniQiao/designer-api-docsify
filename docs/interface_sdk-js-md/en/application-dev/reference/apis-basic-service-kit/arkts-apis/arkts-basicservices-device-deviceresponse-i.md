@@ -213,7 +213,7 @@ Screen shape. The options are as follows:rect: Rectangle screen.circle: Circle s
 ## sdkMinorApiVersion
 
 ```TypeScript
-sdkMinorApiVersion: number
+sdkMinorApiVersion?: number
 ```
 
 Minor API version of the system software.From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.Example: 26.0.0Value range: (-∞,+∞).
@@ -228,14 +228,14 @@ Minor API version of the system software.From API 26 and later versions, the sys
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-DeviceResponse-sdkMinorApiVersion: number--><!--Device-DeviceResponse-sdkMinorApiVersion: number-End-->
+<!--Device-DeviceResponse-sdkMinorApiVersion?: number--><!--Device-DeviceResponse-sdkMinorApiVersion?: number-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## sdkPatchApiVersion
 
 ```TypeScript
-sdkPatchApiVersion: number
+sdkPatchApiVersion?: number
 ```
 
 Minor API version of the system software.From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.Example: 26.0.0Value range: (-∞,+∞).
@@ -250,7 +250,7 @@ Minor API version of the system software.From API 26 and later versions, the sys
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-DeviceResponse-sdkPatchApiVersion: number--><!--Device-DeviceResponse-sdkPatchApiVersion: number-End-->
+<!--Device-DeviceResponse-sdkPatchApiVersion?: number--><!--Device-DeviceResponse-sdkPatchApiVersion?: number-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 

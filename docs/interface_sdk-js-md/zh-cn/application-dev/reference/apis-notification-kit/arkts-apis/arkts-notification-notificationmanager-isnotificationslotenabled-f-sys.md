@@ -58,7 +58,7 @@ let isNotificationSlotEnabledCallback = (err: BusinessError, data: boolean): voi
 };
 
 notificationManager.isNotificationSlotEnabled(
-    { bundle: "ohos.samples.notification", },
+    { bundle: 'ohos.samples.notification', },
     notificationManager.SlotType.SOCIAL_COMMUNICATION,
     isNotificationSlotEnabledCallback);
 ```
@@ -78,7 +78,7 @@ let isNotificationSlotEnabledCallback = (err: BusinessError | null, data: boolea
 
 notificationManager.isNotificationSlotEnabled(
     // 需根据实际情况进行替换
-    { bundle: "bundleName1", },
+    { bundle: 'bundleName1', },
     notificationManager.SlotType.SOCIAL_COMMUNICATION,
     isNotificationSlotEnabledCallback);
 ```
@@ -138,7 +138,7 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // isNotificationSlotEnabled
-notificationManager.isNotificationSlotEnabled({ bundle: "ohos.samples.notification", },
+notificationManager.isNotificationSlotEnabled({ bundle: 'ohos.samples.notification', },
     notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
     console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
@@ -151,7 +151,7 @@ ArkTS-Sta示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-notificationManager.isNotificationSlotEnabled({ bundle: "bundleName1", },
+notificationManager.isNotificationSlotEnabled({ bundle: 'bundleName1', },
     notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
     console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
 }).catch((err: Error): void => {

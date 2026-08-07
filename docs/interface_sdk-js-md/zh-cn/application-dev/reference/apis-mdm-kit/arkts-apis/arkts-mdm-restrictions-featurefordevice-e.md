@@ -28,6 +28,24 @@ Wi-Fi P2P（点对点连接），允许设备在没有接入点的情况下直�
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## X_KEY
+
+```TypeScript
+X_KEY = 1
+```
+
+x键
+
+**起始版本：** 26.1.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForDevice-X_KEY = 1--><!--Device-FeatureForDevice-X_KEY = 1-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## LOCAL_INPUT
 
 ```TypeScript
@@ -43,6 +61,42 @@ LOCAL_INPUT = 2
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FeatureForDevice-LOCAL_INPUT = 2--><!--Device-FeatureForDevice-LOCAL_INPUT = 2-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## PACKET_FILTERING
+
+```TypeScript
+PACKET_FILTERING = 3
+```
+
+网络包过滤
+
+**起始版本：** 26.1.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForDevice-PACKET_FILTERING = 3--><!--Device-FeatureForDevice-PACKET_FILTERING = 3-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## SUDO
+
+```TypeScript
+SUDO = 4
+```
+
+超级用户执行
+
+**起始版本：** 26.1.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForDevice-SUDO = 4--><!--Device-FeatureForDevice-SUDO = 4-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -238,15 +292,15 @@ USB = 15
 
 以下五种情况再禁用设备USB能力，会报策略冲突。
 
-1）通过addAllowedUsbDevices接口添加了USB设备可用名单。
+1）通过[addAllowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口添加了USB设备可用名单。
 
-2）通过setUsbStorageDeviceAccessPolicy接口设置了USB存储设备访问策略为只读/禁用。
+2）通过[setUsbStorageDeviceAccessPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口设置了USB存储设备访问策略为只读/禁用。
 
-3）通过addDisallowedUsbDevices接口添加了禁止使用的USB设备类型。
+3）通过[addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口添加了禁止使用的USB设备类型。
 
-4）通过[setDisallowedPolicyForAccount]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口禁用了某用户USB存储设备写入能力。
+4）通过[setDisallowedPolicyForAccount]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_接口禁用了某用户USB存储设备写入能力。
 
-5）禁用USB转串口（[USB\_SERIAL]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_）。
+5）禁用USB转串口（[USB\_SERIAL]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_）。
 
 **起始版本：** 26.0.0
 
@@ -721,9 +775,9 @@ USB_SERIAL = 41
 
 设备USB转串口能力。禁用后外接的USB转串口设备无法使用。以下两种情况再禁用设备USB转串口能力，会报策略冲突。
 
-1）通过addAllowedUsbDevices接口添加了USB设备可用名单。
+1）通过[addAllowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口添加了USB设备可用名单。
 
-2）禁用设备USB能力（[USB]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）。
+2）禁用设备USB能力（[USB]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_）。
 
 **起始版本：** 26.0.0
 

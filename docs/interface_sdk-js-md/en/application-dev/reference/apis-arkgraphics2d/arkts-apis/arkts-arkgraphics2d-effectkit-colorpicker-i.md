@@ -1,6 +1,6 @@
 # ColorPicker
 
-A class used to obtain the color from an image. Before calling any method of ColorPicker, use createColorPicker to create a ColorPicker instance.
+A color picker class used to obtain the main color from image data. It is suitable for scenarios such as UI theme color extraction, image color scheme analysis, and intelligent color scheme recommendation, helping developers dynamically generate harmonious color schemes based on image content. Before calling the methods of ColorPicker, you need to create a ColorPicker instance via createColorPicker.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ A class used to obtain the color from an image. Before calling any method of Col
 getAverageColor(): Color
 ```
 
-Obtains the average color from the image and writes the result to a Color instance. This API returns the result synchronously.
+Reads the average color value from the image and writes the result to a Color instance. This API returns the result synchronously. It is commonly used in scenarios such as obtaining the overall tone of an image,such as image tone statistics and adaptive background color.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getHighestSaturationColor(): Color
 ```
 
-Obtains the color with the highest saturation from the image and writes the result to a Color instance. This API returns the result synchronously.
+Reads the color value with the highest saturation from the image and writes the result to a Color instance.This API returns the result synchronously. It is commonly used in scenarios such as extracting the most vivid color in an image, such as UI theme accent color extraction and icon highlight color selection.
 
 **Since:** 10
 
@@ -124,7 +124,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getLargestProportionColor(): Color
 ```
 
-Obtains the color with the largest proportion from the image and writes the result to a Color instance. This API returns the result synchronously.
+Reads the color value with the largest proportion in the image and writes the result to a Color instance.This API returns the result synchronously. This API uses the median cut algorithm to partition the color space and obtains the average color of the color space with the largest proportion. It is commonly used in scenarios such as identifying the largest color area in an image, such as icon background color extraction and image content analysis.
 
 **Since:** 10
 
@@ -178,7 +178,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getMainColor(): Promise<Color>
 ```
 
-Obtains the main color from the image and writes the result to a Color instance. This API uses a promise to return the result.
+Reads the color value of the main color from the image and writes the result to a Color instance. This API uses a promise to return the result. This API uses the image scaling algorithm to calculate the weighted value of surrounding pixels and reduce the original image to one pixel to obtain the main color. It is commonly used in scenarios such as automatic app theme color extraction, automatic UI color matching based on images, and dynamic background color adjustment of music players based on album covers.
 
 **Since:** 9
 
@@ -234,7 +234,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getMainColorSync(): Color
 ```
 
-Obtains the main color from the image and writes the result to a Color instance. This API returns the result synchronously.
+Reads the color value of the main color from the image and writes the result to a Color instance. This API returns the result synchronously. This API uses the image scaling algorithm to calculate the weighted value of surrounding pixels and reduces the original image to one pixel to obtain the main color. It is commonly used in scenarios such as automatic app theme color extraction, automatic UI color matching based on images,and dynamic background color adjustment of music players based on album covers.
 
 **Since:** 9
 
@@ -294,7 +294,7 @@ ArkTS-Sta:
 getTopProportionColors(colorCount: int): Array<Color | null>
 ```
 
-Obtains a given number of colors with the top proportions in the image. This API returns the result synchronously.
+Reads the top proportion colors from the image, with the number specified by colorCount, and writes the results to an array of Color instances. This API returns the result synchronously. It is commonly used in scenarios such as extracting the top multiple colors by proportion in an image, such as multi-tone color scheme generation and image color distribution analysis.
 
 **Since:** 12
 
@@ -312,13 +312,13 @@ Obtains a given number of colors with the top proportions in the image. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of colors to obtain. The value range is [1, 10]. If a non-integer is passed in , the value will be rounded down. |
+| colorCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of colors to extract, rounded down. Before OpenHarmony 6.1, the value range is [1, 10]. If the number of colors to extract is greater than 10, the top 10 are taken. Since OpenHarmony 6.1, the value range is [1, 20]. If the number of colors to extract is greater than 20, the top 20 are taken. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Color \| null&gt; | Array of colors, sorted by proportion. - If the number of colors obtained is less than the value of colorCount, the array size is the actual number obtained. - If the colors fail to be obtained or the number of colors obtained is less than 1, [null] is returned. - If the value of colorCount is greater than 10, an array holding the first 10 colors with the top proportions is returned. |
+| Array&lt;Color \| null&gt; | Array of colors, i.e., the top colorCount color values by proportion in the image, sorted by proportion. - If the number of colors obtained is less than the value of colorCount, the array size is the actual number obtained. - If the colors fail to be obtained or the number of colors obtained is less than 1, [null] is returned. |
 
 **Example**
 
@@ -364,7 +364,7 @@ ArkTS-Sta:
 isBlackOrWhiteOrGrayColor(color: long): boolean
 ```
 
-Determine whether the color is black or white or gray
+Determines whether the specified color value is a black, white, or gray color, and returns true or false.It is commonly used in scenarios such as determining whether a color belongs to the achromatic color system,such as intelligent color scheme filtering and image color classification.
 
 **Since:** 10
 
@@ -382,13 +382,13 @@ Determine whether the color is black or white or gray
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | The 32 bit ARGB color to discriminate. |
+| color | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Color value to determine whether it is black, white, or gray. The format is 0xAARRGGBB, and the value range is [0x0, 0xFFFFFFFF]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Result of judging black, white and gray. |
+| boolean | The value true means the color is black, white, or gray, and false means the opposite. |
 
 **Example**
 

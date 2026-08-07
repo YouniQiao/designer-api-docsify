@@ -49,7 +49,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   // 12345678为示例deviceId，应用开发时可通过queryDevices查询到相应设备的deviceId作为入参
-  let deviceInfos : Array<deviceManager.DeviceInfo> = deviceManager.queryDeviceInfo(12345678);
+  let deviceInfos: Array<deviceManager.DeviceInfo> = deviceManager.queryDeviceInfo(12345678);
   for (let item of deviceInfos) {
     console.info(`Device id is ${item.deviceId}`);
   }

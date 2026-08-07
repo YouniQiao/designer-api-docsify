@@ -96,9 +96,21 @@
   - [PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)
 - [@ohos.abilityToolAccessCtrl](arkts-abilitytoolaccessctrl.md)
   <!--Del-->
+  - [generateControlledDevicePackage(系统接口)](arkts-ability-abilitytoolaccessctrl-generatecontrolleddevicepackage-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [generateControllerDevicePackage(系统接口)](arkts-ability-abilitytoolaccessctrl-generatecontrollerdevicepackage-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getRemoteGrantStatus(系统接口)](arkts-ability-abilitytoolaccessctrl-getremotegrantstatus-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [grantToolPermissionsByUser(系统接口)](arkts-ability-abilitytoolaccessctrl-granttoolpermissionsbyuser-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [requestToolPermissions(系统接口)](arkts-ability-abilitytoolaccessctrl-requesttoolpermissions-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [updateRemoteGrantStatus(系统接口)](arkts-ability-abilitytoolaccessctrl-updateremotegrantstatus-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [verifyControlledDevicePackage(系统接口)](arkts-ability-abilitytoolaccessctrl-verifycontrolleddevicepackage-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [verifyControllerDevicePackage(系统接口)](arkts-ability-abilitytoolaccessctrl-verifycontrollerdevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AuthStatusInfo(系统接口)](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -112,6 +124,16 @@
   <!--Del-->
   - [PermissionQueryResult(系统接口)](arkts-ability-abilitytoolaccessctrl-permissionqueryresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [RemoteAuthPackage(系统接口)](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RemoteControlParams(系统接口)](arkts-ability-abilitytoolaccessctrl-remotecontrolparams-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RemoteInfo(系统接口)](arkts-ability-abilitytoolaccessctrl-remoteinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RemoteUserAuthItem(系统接口)](arkts-ability-abilitytoolaccessctrl-remoteuserauthitem-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RemoteUserAuthResults(系统接口)](arkts-ability-abilitytoolaccessctrl-remoteuserauthresults-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [TicketInfo(系统接口)](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UserAuthResult(系统接口)](arkts-ability-abilitytoolaccessctrl-userauthresult-i-sys.md)<!--DelEnd-->
@@ -119,6 +141,10 @@
   - [AuthStatus(系统接口)](arkts-ability-abilitytoolaccessctrl-authstatus-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [OperationType(系统接口)](arkts-ability-abilitytoolaccessctrl-operationtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RemoteGrantStatus(系统接口)](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Role(系统接口)](arkts-ability-abilitytoolaccessctrl-role-e-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.Ability](arkts-app-ability-ability.md)
   - [Ability](arkts-ability-app-ability-ability-ability-c.md)
 - [@ohos.app.ability.AbilityConstant](arkts-app-ability-abilityconstant.md)

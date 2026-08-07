@@ -1,6 +1,6 @@
 # ModifierKey
 
-Modifier key for hot key.
+输入法修饰键类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Modifier key for hot key.
 CTRL = 0
 ```
 
-ctrl.
+表示键盘上Ctrl键。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ ctrl.
 SHIFT = 1
 ```
 
-shift.
+表示键盘上Shift键。
 
 **起始版本：** 23
 
@@ -52,7 +52,7 @@ shift.
 ALT = 2
 ```
 
-alt.
+表示键盘上Alt键。
 
 **起始版本：** 23
 

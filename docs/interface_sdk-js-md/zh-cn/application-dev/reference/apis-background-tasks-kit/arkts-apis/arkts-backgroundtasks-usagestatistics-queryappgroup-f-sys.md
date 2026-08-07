@@ -162,7 +162,7 @@ function queryAppGroup(bundleName: string, callback: AsyncCallback<int>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 
-let bundleName: string = "com.ohos.camera";
+let bundleName: string = 'com.ohos.camera';
 usageStatistics.queryAppGroup(bundleName, (err: BusinessError, res: number) => {
   if(err) {
     console.error('BUNDLE_ACTIVE queryAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
@@ -228,7 +228,7 @@ function queryAppGroup(bundleName: string): Promise<int>
 import { BusinessError } from '@kit.BasicServicesKit';
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 
-let bundleName: string = "com.ohos.camera";
+let bundleName: string = 'com.ohos.camera';
 usageStatistics.queryAppGroup(bundleName).then((res: number) => {
   console.info('BUNDLE_ACTIVE queryAppGroup promise succeeded. result: ' + JSON.stringify(res));
 }).catch((err: BusinessError) => {

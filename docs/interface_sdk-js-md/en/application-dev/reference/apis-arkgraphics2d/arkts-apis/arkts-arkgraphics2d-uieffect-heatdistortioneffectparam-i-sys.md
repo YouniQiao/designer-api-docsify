@@ -18,7 +18,7 @@ The parameters of heat distortion effect.
 intensity: double
 ```
 
-Defines distortion intensity for heat distortion effect.Value range [0, 1], and values outside the range will be clamped.0 means no distortion, and 1 represents the maximum distortion level.
+The intensity of the heat distortion.The value range is [0, 1], and values outside the range will be clamped during implementation.0 means no distortion, and 1 represents the maximum distortion level.
 
 **Type:** double
 
@@ -40,7 +40,7 @@ Defines distortion intensity for heat distortion effect.Value range [0, 1], and 
 noiseScale: double
 ```
 
-Defines noise scale for heat distortion effect, controls the fineness of the noise texture.Value range [0.1, 5.0], and values outside the range will be clamped.The larger the value, the finer the noise texture.
+The noise scale of the heat distortion, controlling the fineness of the noise texture.The value range is [0.1, 5.0], and values outside the range will be clamped during implementation.A larger value results in a finer noise texture.
 
 **Type:** double
 
@@ -62,7 +62,7 @@ Defines noise scale for heat distortion effect, controls the fineness of the noi
 progress: double
 ```
 
-Defines animation progress for heat distortion effect.Value range [0, 1], and values outside the range will be clamped.0 corresponds to the start of the animation, and 1 corresponds to the end of the animation.
+The animation progress of the heat distortion.The value range is [0, 1], and values outside the range will be clamped during implementation.0 corresponds to the start of the animation, and 1 corresponds to the end of the animation.
 
 **Type:** double
 
@@ -84,7 +84,7 @@ Defines animation progress for heat distortion effect.Value range [0, 1], and va
 riseWeight: double
 ```
 
-Defines rise weight for heat distortion effect, controls the rising speed of bubbles.Value range [0, 1], and values outside the range will be clamped.The larger the value, the more obvious the upward movement.
+The rise weight of the heat distortion, controlling the rising speed of bubbles.The value range is [0, 1], and values outside the range will be clamped during implementation.A larger value results in more obvious upward movement.
 
 **Type:** double
 

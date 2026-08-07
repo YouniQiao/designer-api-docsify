@@ -43,6 +43,17 @@ getWindowProperties(): FloatViewProperties
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
 | [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | This operation is not supported on the float view in the current state. Possible cause: The float view window has not started, has stopped, or is in an error state. |
 
+**示例：**
+
+```TypeScript
+try {
+  let properties: floatView.FloatViewProperties | undefined = this.floatViewController?.getWindowProperties();
+  console.info('Float view properties: ' + JSON.stringify(properties));
+} catch(e) {
+  console.error(`Failed to get window properties. Cause:${e.code}, message:${e.message}`);
+}
+```
+
 ## offLimitsChange
 
 ```TypeScript
@@ -72,6 +83,19 @@ offLimitsChange(callback?: Callback<FloatViewLimits>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
+
+**示例：**
+
+```TypeScript
+let onLimitsChange = (limits: floatView.FloatViewLimits) => {
+  console.info('Float view limitsChange: ' + JSON.stringify(limits));
+};
+try {
+  this.floatViewController?.offLimitsChange(onLimitsChange);
+} catch(e) {
+  console.error(`Failed to off limitsChange float view. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## offRectChange
 
@@ -103,6 +127,19 @@ offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
 
+**示例：**
+
+```TypeScript
+let onRectChange = (info: floatView.FloatViewRectChangeInfo) => {
+  console.info('Float view rectChange: ' + JSON.stringify(info));
+};
+try {
+  this.floatViewController?.offRectChange(onRectChange);
+} catch(e) {
+  console.error(`Failed to off rectChange float view. Cause:${e.code}, message:${e.message}`);
+}
+```
+
 ## offStateChange
 
 ```TypeScript
@@ -132,6 +169,19 @@ offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
+
+**示例：**
+
+```TypeScript
+let onStateChange = (info: floatView.FloatViewStateChangeInfo) => {
+  console.info('Float view stateChange: ' + JSON.stringify(info));
+};
+try {
+  this.floatViewController?.offStateChange(onStateChange);
+} catch(e) {
+  console.error(`Failed to off stateChange float view. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## onLimitsChange
 
@@ -164,6 +214,19 @@ onLimitsChange(callback: Callback<FloatViewLimits>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
 | [1300030](../errorcode-window.md#1300030-重复操作闪控窗) | Repeated operations on the float view. Possible cause: The callback has already registered. |
 
+**示例：**
+
+```TypeScript
+let onLimitsChange = (limits: floatView.FloatViewLimits) => {
+  console.info('Float view limitsChange: ' + JSON.stringify(limits));
+};
+try {
+  this.floatViewController?.onLimitsChange(onLimitsChange);
+} catch(e) {
+  console.error(`Failed to on limitsChange float view. Cause:${e.code}, message:${e.message}`);
+}
+```
+
 ## onRectChange
 
 ```TypeScript
@@ -195,6 +258,19 @@ onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
 | [1300030](../errorcode-window.md#1300030-重复操作闪控窗) | Repeated operations on the float view. Possible cause: The callback has already registered. |
 
+**示例：**
+
+```TypeScript
+let onRectChange = (info: floatView.FloatViewRectChangeInfo) => {
+  console.info('Float view rectChange: ' + JSON.stringify(info));
+};
+try {
+  this.floatViewController?.onRectChange(onRectChange);
+} catch(e) {
+  console.error(`Failed to on rectChange float view. Cause:${e.code}, message:${e.message}`);
+}
+```
+
 ## onStateChange
 
 ```TypeScript
@@ -225,6 +301,19 @@ onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
 | [1300030](../errorcode-window.md#1300030-重复操作闪控窗) | Repeated operations on the float view. Possible cause: The callback has already registered. |
+
+**示例：**
+
+```TypeScript
+let onStateChange = (info: floatView.FloatViewStateChangeInfo) => {
+  console.info('Float view stateChange: ' + JSON.stringify(info));
+};
+try {
+  this.floatViewController?.onStateChange(onStateChange);
+} catch(e) {
+  console.error(`Failed to on stateChange float view. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## restoreMainWindow
 
@@ -265,6 +354,26 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 | [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started when restoring. |
 | [1300032](../errorcode-window.md#1300032-恢复主窗口失败) | Failed to restore the main window. Possible cause: 1. User has never clicked the float view window before restore. 2. The float view window is not in the foreground. 3. The main window is in PAUSED lifecycle state. 4. The main window is in background during recent. |
 
+**示例：**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let param: Record<string, Object> = {
+  "info": "helloworld",
+};
+// 闪控窗状态需是STARTED
+try {
+  this.floatViewController?.restoreMainWindow(param).then(() => {
+    console.info('Succeeded in restoring main window.');
+  }).catch((err: BusinessError): void => {
+    console.error(`Failed to restore main window. Cause:${err.code}, message:${err.message}`);
+  });
+} catch(e) {
+  console.error(`Failed to restore main window. Cause:${e.code}, message:${e.message}`);
+}
+```
+
 ## setFloatViewVisibilityInApp
 
 ```TypeScript
@@ -304,6 +413,22 @@ setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 
+**示例：**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  this.floatViewController?.setFloatViewVisibilityInApp(true).then(() => {
+    console.info('Succeeded in setting float view visibility in app.');
+  }).catch((err: BusinessError): void => {
+    console.error(`Failed to set float view visibility in app. Cause:${err.code}, message:${err.message}`);
+  });
+} catch(e) {
+  console.error(`Failed to set float view visibility in app. Cause:${e.code}, message:${e.message}`);
+}
+```
+
 ## setUIContext
 
 ```TypeScript
@@ -341,6 +466,22 @@ setUIContext(path: string, storage?: LocalStorage): Promise<void>
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible causes: Invalid path. |
+
+**示例：**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  this.floatViewController?.setUIContext('pages/Index').then(() => {
+    console.info('Succeeded in setting UI context.');
+  }).catch((err: BusinessError): void => {
+    console.error(`Failed to set UI context. Cause:${err.code}, message:${err.message}`);
+  });
+} catch(e) {
+  console.error(`Failed to set UI context. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## setUIContextByName
 
@@ -380,6 +521,52 @@ setUIContextByName(name: string, storage?: LocalStorage): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible causes: Invalid name. |
 
+**示例：**
+
+```TypeScript
+// Index.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+import { entryName } from './Hello'; // 导入命名路由页面
+
+@Entry
+@Component
+struct Index {
+  private floatViewController: floatView.FloatViewController | undefined = undefined;
+  // 创建控制器
+  // ...
+  public setUIContextByName(): void {
+    try {
+      this.floatViewController?.setUIContextByName(entryName).then(() => {
+        console.info('Succeeded in loading the content.');
+      }).catch((err: BusinessError): void => {
+        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    } catch (e) {
+      console.error(`Failed to load the content. Cause code: ${e.code}, message: ${e.message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+// Hello.ets
+export const entryName : string = 'Hello';
+@Entry({routeName: entryName, useSharedStorage: true})
+@Component
+export struct Hello {
+  @State message: string = 'Hello World'
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
 ## setWindowSize
 
 ```TypeScript
@@ -417,6 +604,27 @@ setWindowSize(size: window.Size): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: The value of the size is less than or equal to 0. |
+
+**示例：**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let size: window.Size = {
+  width: 400,
+  height: 600
+};
+try {
+  this.floatViewController?.setWindowSize(size).then(() => {
+    console.info('Succeeded in setting window size.');
+  }).catch((err: BusinessError): void => {
+    console.error(`Failed to set window size. Cause:${err.code}, message:${err.message}`);
+  });
+} catch(e) {
+  console.error(`Failed to set window size. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## start
 
@@ -458,6 +666,22 @@ start(): Promise<void>
 | [1300033](../errorcode-window.md#1300033-启动闪控窗失败) | Failed to start float view. Possible causes: 1. Start multiple float views. 2. The main window of context is not foreground. |
 | [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause: App has already started floating ball or pip window. |
 
+**示例：**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  this.floatViewController?.start().then(() => {
+    console.info('Succeeded in starting float view.');
+  }).catch((err: BusinessError): void => {
+    console.error(`Failed to start float view. Cause:${err.code}, message:${err.message}`);
+  });
+} catch(e) {
+  console.error(`Failed to start float view. Cause:${e.code}, message:${e.message}`);
+}
+```
+
 ## stop
 
 ```TypeScript
@@ -491,6 +715,22 @@ stop(): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300030](../errorcode-window.md#1300030-重复操作闪控窗) | Repeated operations on the float view. Possible cause: The float view is stopping or has already stopped. |
 | [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started. |
+
+**示例：**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  this.floatViewController?.stop().then(() => {
+    console.info('Succeeded in stopping float view.');
+  }).catch((err: BusinessError): void => {
+    console.error(`Failed to stop float view. Cause:${err.code}, message:${err.message}`);
+  });
+} catch(e) {
+  console.error(`Failed to stop float view. Cause:${e.code}, message:${e.message}`);
+}
+```
 
 ## switchTemplate
 
@@ -530,4 +770,29 @@ switchTemplate(templateProperty: TemplateProperty): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The float view controller object is null. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid template type. 2. The value of the size is less than or equal to 0. |
+
+**示例：**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let newSize: window.Size = {
+  width: 800,
+  height: 100
+};
+let templateProperty: floatView.TemplateProperty = {
+  templateType: floatView.FloatViewTemplateType.HORIZONTAL_BAR,
+  size: newSize,
+};
+try {
+  this.floatViewController?.switchTemplate(templateProperty).then(() => {
+    console.info('Succeeded in switching window type and size.');
+  }).catch((err: BusinessError): void => {
+    console.error(`Failed to switch window type and size. Cause:${err.code}, message:${err.message}`);
+  });
+} catch(e) {
+  console.error(`Failed to switch window type and size. Cause:${e.code}, message:${e.message}`);
+}
+```
 

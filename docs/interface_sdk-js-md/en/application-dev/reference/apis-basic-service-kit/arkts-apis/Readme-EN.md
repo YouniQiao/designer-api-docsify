@@ -233,8 +233,6 @@
 - [@ohos.annotation](arkts-annotation.md)
 - [@ohos.app.ability.PrintExtensionAbility](arkts-app-ability-printextensionability.md)
   - [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md)
-  <!--Del-->
-  - [PrintExtensionAbility(system api)](arkts-basicservices-app-ability-printextensionability-printextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.application.StaticSubscriberExtensionAbility](arkts-application-staticsubscriberextensionability.md)
   <!--Del-->
   - [StaticSubscriberExtensionAbility(system api)](arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md)<!--DelEnd-->
@@ -384,6 +382,7 @@
   - [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md)
   - [Constants](arkts-basicservices-deviceinfo-con.md)
 - [@ohos.deviceInfo](arkts-deviceinfo.md)
+  - [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md)
   - [DeviceTypes](arkts-basicservices-deviceinfo-devicetypes-e.md)
   - [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md)
 - [@ohos.events.emitter](arkts-events-emitter.md)

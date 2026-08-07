@@ -1,6 +1,10 @@
 # TileMode
 
 Enumerates the tile modes of the shader effect.
+    **NOTE**  
+    
+    Under CPU rendering, the shader tile mode supports only DECAL.  
+    Under GPU rendering, DECAL, CLAMP, REPEAT, and MIRROR modes are all supported.
 
 **Since:** 14
 
@@ -48,7 +52,7 @@ Repeats the shader effect in both horizontal and vertical directions.
 MIRROR = 2
 ```
 
-Repeats the shader effect in both horizontal and vertical directions, alternating mirror images.
+Repeats the shader effect in both horizontal and vertical directions, alternating mirror images so that adjacent images always join.
 
 **Since:** 14
 

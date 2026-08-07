@@ -6,7 +6,7 @@
 function createEffect(): VisualEffect
 ```
 
-Create a VisualEffect to add multiple effects to the component.
+Creates a VisualEffect instance for adding multiple VisualEffect effects to a component.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ Create a VisualEffect to add multiple effects to the component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the head node of visualEffect. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a VisualEffect instance, which supports adding multiple VisualEffect effects. |
 
 **Example**
 

@@ -1,6 +1,6 @@
 # LiquidMaterialEffectParam (System API)
 
-The parameters of liquid material effect.
+Material effect parameters, used to control the display properties of the material such as refraction, reflection, perturbation, and overlay color.
 
 **Since:** 22
 
@@ -18,7 +18,7 @@ The parameters of liquid material effect.
 distortFactor : double
 ```
 
-Defines distort factor for material effect.
+The perturbation effect coefficient. The value must be greater than or equal to 0.Values less than 0 indicate no perturbation effect.
 
 **Type:** double
 
@@ -38,7 +38,7 @@ Defines distort factor for material effect.
 distortProgress : double
 ```
 
-Defines distort progress for material effect.
+The perturbation effect progress. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. 0 indicates the start of perturbation, and 1 indicates the end.
 
 **Type:** double
 
@@ -58,7 +58,7 @@ Defines distort progress for material effect.
 enable : boolean
 ```
 
-Defines enable switch for material effect.
+Whether to enable the material effect. true means enabled, false means disabled.
 
 **Type:** boolean
 
@@ -78,7 +78,7 @@ Defines enable switch for material effect.
 materialFactor : double
 ```
 
-Defines material factor for material effect.
+The material coefficient. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. A value of 0 means no material effect and the overlay color is used for filling; a larger value indicates a more obvious material effect.
 
 **Type:** double
 
@@ -98,7 +98,7 @@ Defines material factor for material effect.
 reflectionFactor : double
 ```
 
-Defines reflection factor for material effect.
+The reflection coefficient. The value range is [0, 10]. Values less than 0 are treated as 0;values greater than 10 are treated as 10. A value of 0 means no reflection effect;a larger value indicates stronger reflection.
 
 **Type:** double
 
@@ -118,7 +118,7 @@ Defines reflection factor for material effect.
 refractionFactor : double
 ```
 
-Defines refraction factor for material effect.
+The refraction coefficient. The value range is [0, 10]. Values less than 0 are treated as 0;values greater than 10 are treated as 10. A value of 0 means no refraction effect;a larger value indicates stronger refraction.
 
 **Type:** double
 
@@ -138,7 +138,7 @@ Defines refraction factor for material effect.
 ripplePosition?: Array<[double, double]>
 ```
 
-Defines ripple animation position for material effect.
+The positions where the ripple effect is applied. Pass this parameter when you need to trigger ripple effects at multiple specified positions simultaneously. If not passed, there are no ripple positions by default,and the ripple effect will not take effect. Each position in the array contains x and y dimensions,using normalized coordinates where [0, 0] represents the top-left corner and [1, 1] represents the bottom-right corner. A maximum of 10 position coordinates are supported; exceeding this will make the entire parameter invalid.
 
 **Type:** Array&lt;[double, double]&gt;
 
@@ -158,7 +158,7 @@ Defines ripple animation position for material effect.
 rippleProgress : double
 ```
 
-Defines ripple animation progress for material effect.
+The ripple effect progress. The value must be greater than or equal to 0.Values less than 0 indicate no ripple effect.
 
 **Type:** double
 
@@ -178,7 +178,7 @@ Defines ripple animation progress for material effect.
 tintColor : [double, double, double, double]
 ```
 
-Defines tint color for material effect.
+The overlay color of the material, where the four variables correspond to RGBA respectively.The value range for each is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1.
 
 **Type:** [double, double, double, double]
 

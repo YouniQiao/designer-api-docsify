@@ -44,3 +44,17 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 | [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
+**示例：**
+
+```TypeScript
+import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
+
+async function exampleFunction() {
+  let statusInfoResult: dlpSetDlpFeature.StatusInfoResult =
+    await dlpSetDlpFeature.setDlpFeature(dlpSetDlpFeature.DlpFeatureStatus.ENABLED_FEATURE);
+  console.info('setDlpFeature result: ', JSON.stringify(statusInfoResult)); 
+} // 设置DLP特性开关状态。
+
+exampleFunction();
+```
+

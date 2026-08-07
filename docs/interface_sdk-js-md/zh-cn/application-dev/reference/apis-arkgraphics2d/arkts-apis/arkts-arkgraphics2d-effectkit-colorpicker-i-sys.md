@@ -1,6 +1,6 @@
 # ColorPicker
 
-取色类，用于从一张图像数据中获取它的主要颜色。在调用ColorPicker的方法前，需要先通过  
+取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景，可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过  
 [createColorPicker]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_创建一个ColorPicker实例。
 
 **起始版本：** 9
@@ -17,7 +17,7 @@
 discriminatePictureLightDegree(): PictureLightDegree
 ```
 
-获取图片的明亮程度。
+获取图片的明亮程度。当无法判别图片明亮程度时，返回UNKNOWN\_LIGHT\_COLOR\_DEGREE\_PICTURE。
 
 **起始版本：** 26.0.0
 
@@ -97,7 +97,7 @@ getAlphaZeroTransparentProportion(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 完全透明的像素占比，比例的取值范围为[0,1]。 |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 完全透明的像素占比，比例的取值范围为[0, 1]。 |
 
 **错误码：**
 
@@ -139,7 +139,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getComplexityDegree(): PictureComplexityDegree
 ```
 
-获取图像内容复杂度。
+获取图像内容复杂度。当无法判别图像内容复杂度时，返回默认值UNKNOWN\_COMPLEXITY\_DEGREE\_PICTURE。
 
 **起始版本：** 22
 
@@ -219,7 +219,7 @@ getDeepenImmersionColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像强沉浸色对应的颜色值，失败时返回null。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像强沉浸色对应的颜色值。当图像处理失败或无法生成沉浸色时返回null。 |
 
 **示例：**
 
@@ -275,7 +275,7 @@ getImmersiveBackgroundColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像沉浸式背景色对应的颜色值，失败时返回null。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像沉浸式背景色对应的颜色值。当图像处理失败或无法生成沉浸式背景色时返回null。 |
 
 **示例：**
 
@@ -331,7 +331,7 @@ getImmersiveForegroundColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像沉浸式前景色对应的颜色值，失败时返回null。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像沉浸式前景色对应的颜色值。当图像处理失败或无法生成沉浸式前景色时返回null。 |
 
 **示例：**
 
@@ -387,7 +387,7 @@ getMorandiShadowColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像莫兰迪阴影色对应的颜色值，失败时返回null。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像莫兰迪阴影色对应的颜色值。当图像处理失败或无法获取莫兰迪阴影色时返回null。 |
 
 **示例：**
 
@@ -444,7 +444,7 @@ getReverseColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像反向颜色对应的颜色值，失败时返回null。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Color实例，即图像反向颜色对应的颜色值。当图像处理失败或无法生成反向颜色时返回null。 |
 
 **示例：**
 
@@ -480,7 +480,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getShadeDegree(): PictureShadeDegree
 ```
 
-获取图像颜色深浅度。
+获取图像颜色深浅度。当无法判别图像颜色深浅度时，返回默认值UNKNOWN\_SHADE\_DEGREE\_PICTURE。
 
 **起始版本：** 22
 
@@ -546,7 +546,7 @@ ArkTS-Sta:
 getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>
 ```
 
-读取图像占比靠前的颜色值以及对应比例，个数由\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_指定，结果写入Color与其对应比例的字典中，使用同步方式返回。
+同步返回图像占比靠前的颜色值及其对应比例，个数由\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_指定。
 
 **起始版本：** 22
 
@@ -564,7 +564,7 @@ getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 需要取主色及对应比例的个数，向下取整。在OpenHarmony 6.1之前，取值范围为[1, 10]，取色个数大于10视为取前10个；从OpenHarmony 6.1开始，取值范围为[1, 20]，取色个数大于20视为取前20个。 |
+| colorCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 颜色值及对应比例的个数，向下取整。在OpenHarmony 6.1之前，取值范围为[1, 10]， 取色个数大于10视为取前10个；从OpenHarmony 6.1开始，取值范围为[1, 20]，取色个数大于20视为取前20个。 |
 
 **返回值：**
 

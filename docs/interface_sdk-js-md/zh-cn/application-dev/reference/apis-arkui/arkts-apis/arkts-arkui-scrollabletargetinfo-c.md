@@ -2,7 +2,7 @@
 
 手势识别器对应的滚动类容器组件的信息，继承于[EventTargetInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
 
-**继承/实现关系：** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md)
+**继承/实现关系：** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-component/gesture-eventtargetinfo-c.md)
 
 **起始版本：** 12
 

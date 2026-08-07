@@ -8,9 +8,9 @@ function end(scene: string): void
 
 用于标记用户场景结束，用户场景结束时调用此接口。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -25,12 +25,4 @@ function end(scene: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scene | string | 是 | 用户场景id，与begin配对严格保持一致，否则本次场景监测无效。 |
-
-**示例：**
-
-用户点击图标启动应用场景动效结束点。
-
-```TypeScript
-performanceMonitor.end("LAUNCHER_APP_LAUNCH_FROM_ICON");
-```
 

@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ForEach](foreach-foreach-f.md#foreach) | Defines ForEachEach Component. It requires call setForEachOptions at start of component attribute set-up,and it requires call applyAttributeFinish at end of component attribute set-up. |
+| [ForEach](foreach-foreach-f.md#foreach) | Defines ForEach Component. It requires calling setForEachOptions at start of component attribute set-up,and it requires calling applyAttributesFinish at end of component attribute set-up. |
 
 ### Types
 

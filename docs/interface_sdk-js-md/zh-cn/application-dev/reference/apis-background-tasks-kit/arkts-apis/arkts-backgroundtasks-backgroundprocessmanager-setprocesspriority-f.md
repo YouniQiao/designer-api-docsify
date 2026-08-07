@@ -43,7 +43,7 @@ import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 
 let childProcessPid = 33333;
 try {
-    backgroundProcessManager.setProcessPriority(childProcessPid,
+    await backgroundProcessManager.setProcessPriority(childProcessPid,
         backgroundProcessManager.ProcessPriority.PROCESS_INACTIVE);
 } catch (error) {
     console.error(`setProcessPriority failed, errCode: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);

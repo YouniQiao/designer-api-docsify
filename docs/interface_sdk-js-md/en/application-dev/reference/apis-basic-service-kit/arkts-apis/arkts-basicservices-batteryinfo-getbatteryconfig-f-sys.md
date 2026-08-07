@@ -37,3 +37,14 @@ Obtains the battery configuration based on the specified scenario.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [5100101](../../apis-basic-services-kit/errorcode-battery-info.md#5100101-service-connection-failure) | Failed to connect to the service. |
 
+**Example**
+
+```TypeScript
+import {batteryInfo} from '@kit.BasicServicesKit';
+
+let sceneName = 'xxx';
+let result = batteryInfo.getBatteryConfig(sceneName);
+
+console.info("The result is: " + result);
+```
+

@@ -101,9 +101,21 @@
   - [PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)
 - [@ohos.abilityToolAccessCtrl](arkts-abilitytoolaccessctrl.md)
   <!--Del-->
+  - [generateControlledDevicePackage(system api)](arkts-ability-abilitytoolaccessctrl-generatecontrolleddevicepackage-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [generateControllerDevicePackage(system api)](arkts-ability-abilitytoolaccessctrl-generatecontrollerdevicepackage-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getRemoteGrantStatus(system api)](arkts-ability-abilitytoolaccessctrl-getremotegrantstatus-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [grantToolPermissionsByUser(system api)](arkts-ability-abilitytoolaccessctrl-granttoolpermissionsbyuser-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [requestToolPermissions(system api)](arkts-ability-abilitytoolaccessctrl-requesttoolpermissions-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [updateRemoteGrantStatus(system api)](arkts-ability-abilitytoolaccessctrl-updateremotegrantstatus-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [verifyControlledDevicePackage(system api)](arkts-ability-abilitytoolaccessctrl-verifycontrolleddevicepackage-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [verifyControllerDevicePackage(system api)](arkts-ability-abilitytoolaccessctrl-verifycontrollerdevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AuthStatusInfo(system api)](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -117,6 +129,16 @@
   <!--Del-->
   - [PermissionQueryResult(system api)](arkts-ability-abilitytoolaccessctrl-permissionqueryresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [RemoteAuthPackage(system api)](arkts-ability-abilitytoolaccessctrl-remoteauthpackage-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RemoteControlParams(system api)](arkts-ability-abilitytoolaccessctrl-remotecontrolparams-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RemoteInfo(system api)](arkts-ability-abilitytoolaccessctrl-remoteinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RemoteUserAuthItem(system api)](arkts-ability-abilitytoolaccessctrl-remoteuserauthitem-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RemoteUserAuthResults(system api)](arkts-ability-abilitytoolaccessctrl-remoteuserauthresults-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [TicketInfo(system api)](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UserAuthResult(system api)](arkts-ability-abilitytoolaccessctrl-userauthresult-i-sys.md)<!--DelEnd-->
@@ -124,6 +146,10 @@
   - [AuthStatus(system api)](arkts-ability-abilitytoolaccessctrl-authstatus-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [OperationType(system api)](arkts-ability-abilitytoolaccessctrl-operationtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RemoteGrantStatus(system api)](arkts-ability-abilitytoolaccessctrl-remotegrantstatus-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Role(system api)](arkts-ability-abilitytoolaccessctrl-role-e-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.Ability](arkts-app-ability-ability.md)
   - [Ability](arkts-ability-app-ability-ability-ability-c.md)
 - [@ohos.app.ability.AbilityConstant](arkts-app-ability-abilityconstant.md)

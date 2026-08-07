@@ -150,7 +150,7 @@ Stops a native connection. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connectionId | int | Yes | Indicates the id of the specified connection. |
+| connectionId | int | Yes | ID of the connection to stop. |
 
 **Return value:**
 

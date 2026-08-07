@@ -92,6 +92,26 @@ Operation information list.
 
 **System API:** This is a system API.
 
+## remoteInfo
+
+```TypeScript
+remoteInfo?: RemoteInfo
+```
+
+Remote device information.
+
+**Type:** RemoteInfo
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+<!--Device-PermissionQuery-remoteInfo?: RemoteInfo--><!--Device-PermissionQuery-remoteInfo?: RemoteInfo-End-->
+
+**System capability:** SystemCapability.Security.Asset
+
+**System API:** This is a system API.
+
 ## ticketExpireTimeMs
 
 ```TypeScript

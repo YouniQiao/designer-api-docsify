@@ -1,14 +1,11 @@
-# @ohos.arkui.performanceMonitor(Performance Monitoring)
+# @ohos.arkui.performanceMonitor
 
-提供用户操作场景性能相关指标监测能力，在场景开始和结束时分别调用begin和end接口，即可获得该场景相关性能指标，目前仅包含响应时延、完成时延、丢帧。
-    **说明：**  
-    
-    - 从API Version 10开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
-    - 本模块接口为系统接口。
+性能监测
 
-**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 <!--Device-unnamed-declare namespace performanceMonitor--><!--Device-unnamed-declare namespace performanceMonitor-End-->
 

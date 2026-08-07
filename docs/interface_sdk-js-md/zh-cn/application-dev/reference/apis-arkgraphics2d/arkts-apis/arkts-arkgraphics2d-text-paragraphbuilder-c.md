@@ -1,6 +1,9 @@
 # ParagraphBuilder
 
-段落生成器。
+段落生成器，采用建造者模式构建段落对象。开发者通过构造函数传入[ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_和  
+[FontCollection]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_初始化ParagraphBuilder，然后通过  
+[pushStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_设置文本样式、[addText]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_添加文本内容，最终调用  
+[build()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_接口生成[Paragraph]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_对象进行排版和绘制。
 
 **起始版本：** 12
 
@@ -16,7 +19,7 @@
 addPlaceholder(placeholderSpan: PlaceholderSpan): void
 ```
 
-用于构建文本段落时插入占位符。
+用于构建文本段落时插入占位符。插入后，占位符将在段落排版中按照指定的宽度、高度和对齐方式占据相应空间，并影响文本的换行和布局。
 
 **起始版本：** 12
 
@@ -230,7 +233,7 @@ addText(text: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | 段落中插入的具体文本字符串，传入非法Unicode时会显示?。 |
+| text | string | 是 | 段落中插入的具体文本字符串，传入非法Unicode时会显示�。 |
 
 **示例：**
 
@@ -307,7 +310,7 @@ struct Index {
 build(): Paragraph
 ```
 
-用于构建段落，生成可用于后续排版渲染的段落对象。
+用于构建段落，生成可用于后续排版渲染的段落对象。调用build()后，如需再次构建文本，必须创建新的ParagraphBuilder实例。
 
 **起始版本：** 12
 
@@ -402,7 +405,7 @@ struct Index {
 buildLineTypeset(): LineTypeset
 ```
 
-构建行排版器。
+构建行排版器，生成可用于逐行排版计算的LineTypeset对象。
 
 **起始版本：** 18
 
@@ -504,7 +507,7 @@ ParagraphBuilder对象的构造函数。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | paragraphStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 段落样式。 |
-| fontCollection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体集。 |
+| fontCollection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体集对象，提供文本排版所需的字体资源，用于在段落构建过程中进行字形匹配和文本渲染。 |
 
 **示例：**
 
@@ -580,6 +583,10 @@ popStyle(): void
 ```
 
 弹出当前文本样式。
+    **说明：**  
+    
+    必须在调用[pushStyle()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_之后才能调用此方法。调用后，后续添加的文本将使用弹出前的文本样式。如果样式栈为空，将使用  
+    [ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_中的textStyle作为默认样式。
 
 **起始版本：** 12
 

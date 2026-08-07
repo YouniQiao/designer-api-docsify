@@ -37,9 +37,7 @@ import { contact } from '@kit.ContactsKit';
 
 // 通过selectContacts接口选择联系人。
 contact.selectContacts().then((data) => {
-  // 请在组件内获取context。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.updateContact(context, {
+  contact.updateContact({
     id: data[0].id, // 选择联系人的id。
     name: {
       fullName: 'xxx'

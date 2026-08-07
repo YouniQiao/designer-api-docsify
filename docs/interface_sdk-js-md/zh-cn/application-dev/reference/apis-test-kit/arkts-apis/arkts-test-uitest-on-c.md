@@ -65,7 +65,7 @@ import { Component, Driver, On, ON } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let component: Component = await driver.findComponent(ON.type('Text'));
-  let on: On = ON.text('123').afterComponent(component); // 查找第一个Text组件之后的text为123的组件
+  let on: On = ON.text('123').afterComponent(component); // 查找第一个Text组件之后的text为123的组件。
 }
 ```
 
@@ -114,7 +114,7 @@ import { Component, Driver, On, ON } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let component: Component = await driver.findComponent(ON.type('Text'));
-  let on: On = ON.text('123').beforeComponent(component); // 查找第一个Text组件之前的text为123的组件
+  let on: On = ON.text('123').beforeComponent(component); // 查找第一个Text组件之前的text为123的组件。
 }
 ```
 
@@ -166,7 +166,7 @@ belongingDisplay(displayId: int): On
 // xxx.test.ets
 import { On, ON } from '@kit.TestKit';
 
-let on: On = ON.belongingDisplay(0); // 使用静态构造器ON创建On对象，指定目标控件所属屏幕ID
+let on: On = ON.belongingDisplay(0); // 使用静态构造器ON创建On对象，指定目标控件所属屏幕ID。
 ```
 
 ## checkable
@@ -256,7 +256,7 @@ checked(b?: boolean): On
 // xxx.test.ets
 import { On, ON } from '@kit.TestKit';
 
-let on: On = ON.checked(true); // 使用静态构造器ON创建On对象，指定目标控件的被勾选状态属性
+let on: On = ON.checked(true); // 使用静态构造器ON创建On对象，指定目标控件的被勾选状态属性。
 ```
 
 ## clickable
@@ -574,7 +574,7 @@ id(id: string, pattern: MatchPattern): On
 // xxx.test.ets
 import { MatchPattern, On, ON } from '@kit.TestKit';
 
-let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // 忽略大小写匹配控件的id属性值
+let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // 忽略大小写匹配控件的id属性值。
 ```
 
 ## inWindow
@@ -711,7 +711,7 @@ isBefore(on: On): On
 import { On, ON } from '@kit.TestKit';
 
 // 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之前。
-let on: On = ON.type('Button').isBefore(ON.text('123')); // 查找text为123之前的第一个Button组件
+let on: On = ON.type('Button').isBefore(ON.text('123')); // 查找text为123之前的第一个Button组件。
 ```
 
 ## longClickable
@@ -807,7 +807,7 @@ originalText(text: string, pattern?: MatchPattern): On
 // xxx.test.ets
 import { On, ON } from '@kit.TestKit';
 
-let on: On = ON.originalText('123'); // 使用静态构造器ON创建On对象，指定目标控件的originalText属性
+let on: On = ON.originalText('123'); // 使用静态构造器ON创建On对象，指定目标控件的originalText属性。
 ```
 
 ## scrollable
@@ -1085,7 +1085,7 @@ within(on: On): On
 import { On, ON } from '@kit.TestKit';
 
 // 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之内。
-let on: On = ON.text('java').within(ON.type('Scroll')); // 查找Scroll里面的text为java的子组件
+let on: On = ON.text('java').within(ON.type('Scroll')); // 查找Scroll里面的text为java的子组件。
 ```
 
 ## withinComponent
@@ -1133,7 +1133,7 @@ import { Component, Driver, On, ON } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let component: Component = await driver.findComponent(ON.type('Text'));
-  let on: On = ON.text('123').withinComponent(component); // 查找第一个Text组件内部的text为123的组件
+  let on: On = ON.text('123').withinComponent(component); // 查找第一个Text组件内部的text为123的组件。
 }
 ```
 

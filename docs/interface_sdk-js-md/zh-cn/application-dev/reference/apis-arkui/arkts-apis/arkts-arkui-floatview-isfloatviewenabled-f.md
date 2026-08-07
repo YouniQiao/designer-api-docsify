@@ -24,3 +24,10 @@ function isFloatViewEnabled(): boolean
 | --- | --- |
 | boolean | 当前设备是否支持标准悬浮窗功能。true表示支持，false则表示不支持。 |
 
+**示例：**
+
+```TypeScript
+let enable: boolean = floatView.isFloatViewEnabled();
+console.info('Float view enabled is: ' + enable);
+```
+

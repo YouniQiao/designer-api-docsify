@@ -1,6 +1,6 @@
 # Filter
 
-A class used to add a specified effect to an image. Before calling any method of Filter, use createEffect to create a Filter instance.
+An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects,you need to call getEffectPixelMap to obtain the processed image.
 
 **Since:** 9
 
@@ -14,12 +14,14 @@ A class used to add a specified effect to an image. Before calling any method of
 
 ArkTS-Dyn:
 ```TypeScript
-ellipticalGradientBlur(blurRadius: number, center: EllipticalMaskCenter, maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter
+ellipticalGradientBlur(blurRadius: number, center: EllipticalMaskCenter,
+      maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter
 ```
 
 ArkTS-Sta:
 ```TypeScript
-ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter, maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter
+ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,
+      maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter
 ```
 
 Adds the elliptical gradient blur effect to the filter linked list, and returns the head node of the linked list.
@@ -30,7 +32,7 @@ Adds the elliptical gradient blur effect to the filter linked list, and returns 
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Filter-ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter, maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter--><!--Device-Filter-ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter, maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter-End-->
+<!--Device-Filter-ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,      maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter--><!--Device-Filter-ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,      maskRadius: EllipticalMaskRadius, fractionStops: FractionStop[]): Filter-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

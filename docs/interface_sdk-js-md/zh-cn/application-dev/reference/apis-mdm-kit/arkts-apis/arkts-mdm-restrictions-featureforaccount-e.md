@@ -133,9 +133,10 @@ USB存储设备写入能力，当前仅支持PC/2in1企业设备使用。
 
 1）已禁用设备USB能力（[FeatureForDevice.USB]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）。
 
-2）通过setUsbStorageDeviceAccessPolicy接口设置了USB存储设备访问策略为只读/禁用。
+2）通过  
+[setUsbStorageDeviceAccessPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口设置了USB存储设备访问策略为只读/禁用。
 
-3）通过addDisallowedUsbDevices接口添加了存储类型的USB设备禁用。
+3）通过[addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口添加了存储类型的USB设备禁用。
 
 **起始版本：** 26.0.0
 

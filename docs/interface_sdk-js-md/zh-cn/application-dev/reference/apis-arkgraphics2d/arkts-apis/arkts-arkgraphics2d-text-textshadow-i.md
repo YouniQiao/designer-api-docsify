@@ -1,6 +1,6 @@
 # TextShadow
 
-字体阴影。
+文本阴影。
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ blurRadius?: double
 color?: common2D.Color
 ```
 
-字体阴影的颜色，默认为黑色Color(255, 0, 0, 0)。
+文本阴影的颜色，默认为黑色Color(255, 0, 0, 0)。
 
 **类型：** common2D.Color
 
@@ -56,7 +56,7 @@ color?: common2D.Color
 point?: common2D.Point
 ```
 
-字体阴影基于当前文本的偏移位置，横、纵坐标要大于等于零，单位为物理像素px。
+文本阴影基于当前文本的偏移位置，横、纵坐标要大于等于零，单位为物理像素px，默认为common2D.Point(0, 0)。
 
 **类型：** common2D.Point
 

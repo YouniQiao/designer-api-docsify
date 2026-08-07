@@ -56,7 +56,7 @@ Starts an axis event. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The axis event in progress. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The axis event is in progress. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
 
 ## endAxis

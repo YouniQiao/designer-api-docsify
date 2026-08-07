@@ -1,6 +1,9 @@
 # ParagraphBuilder
 
-Implements a paragraph builder.
+Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
+[FontCollection]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to the constructor, then set the text style through  
+[pushStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, add text content through  
+[addText]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, and finally call [build()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ to generate a [Paragraph]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ object for typesetting and drawing.
 
 **Since:** 12
 
@@ -16,7 +19,7 @@ Implements a paragraph builder.
 addPlaceholder(placeholderSpan: PlaceholderSpan): void
 ```
 
-Inserts a placeholder into the paragraph being built.
+Inserts a placeholder when building a text paragraph. After insertion, the placeholder occupies the corresponding space in paragraph typesetting according to the specified width, height, and alignment, and affects text line breaking and layout.
 
 **Since:** 12
 
@@ -32,7 +35,7 @@ Inserts a placeholder into the paragraph being built.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| placeholderSpan | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Placeholder span, which describes the size, alignment, baseline type , and baseline offset of the placeholder. |
+| placeholderSpan | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Placeholder span, which describes the size, alignment, baseline type, and baseline offset of the placeholder. |
 
 **Example**
 
@@ -158,7 +161,7 @@ Inserts a text string into the paragraph being built.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Exact text string inserted into the paragraph. If an invalid Unicode character is provided, it is displayed as ?. |
+| text | string | Yes | Exact text string inserted into the paragraph. If an invalid Unicode character is provided, it is displayed as �. |
 
 **Example**
 
@@ -202,7 +205,7 @@ struct Index {
 build(): Paragraph
 ```
 
-Creates a paragraph object that can be used for subsequent layout and rendering.
+Builds a paragraph and generates a paragraph object that can be used for subsequent typesetting and rendering.After build() is called, a new ParagraphBuilder instance must be created to build text again.
 
 **Since:** 12
 
@@ -261,7 +264,7 @@ struct Index {
 buildLineTypeset(): LineTypeset
 ```
 
-Builds a line typesetter.
+Builds a line typesetter and generates a LineTypeset object that can be used for line-by-line typesetting calculation.
 
 **Since:** 18
 
@@ -331,7 +334,7 @@ A constructor used to create a **ParagraphBuilder** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | paragraphStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Paragraph style. |
-| fontCollection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font collection. |
+| fontCollection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Font collection object that provides font resources required for text typesetting, used for glyph matching and text rendering during paragraph construction. |
 
 **Example**
 
@@ -372,6 +375,11 @@ popStyle(): void
 ```
 
 Restores the previous text style.
+    **NOTE**  
+    
+    This method must be called after [pushStyle()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. After it is called,  
+    subsequently added text will use the text style before the pop operation. If the style stack is empty, the  
+    textStyle in [ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ will be used as the default style.
 
 **Since:** 12
 

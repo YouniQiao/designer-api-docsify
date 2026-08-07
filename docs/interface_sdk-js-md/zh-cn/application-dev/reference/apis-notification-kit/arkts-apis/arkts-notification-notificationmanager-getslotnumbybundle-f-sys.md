@@ -56,7 +56,7 @@ let getSlotNumByBundleCallback = (err: BusinessError, data: number): void => {
 }
 
 let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 
 notificationManager.getSlotNumByBundle(bundle, getSlotNumByBundleCallback);
@@ -77,7 +77,7 @@ let getSlotNumByBundleCallback = (err: BusinessError | null, data: long | undefi
 
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 
 notificationManager.getSlotNumByBundle(bundle, getSlotNumByBundleCallback);
@@ -137,7 +137,7 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 
 notificationManager.getSlotNumByBundle(bundle).then((data: number) => {
@@ -154,7 +154,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 
 notificationManager.getSlotNumByBundle(bundle).then((data: long) => {

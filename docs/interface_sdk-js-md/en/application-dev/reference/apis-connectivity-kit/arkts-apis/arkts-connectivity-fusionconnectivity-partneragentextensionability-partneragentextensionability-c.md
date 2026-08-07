@@ -36,6 +36,16 @@ Called when the PartnerAgentExtensionAbility is to be destroyed.Applications can
 | --- | --- | --- | --- |
 | reason | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The reason for Ability destruction. |
 
+**Example**
+
+```TypeScript
+export default class PartnerAgentExtAbility extends PartnerAgentExtensionAbility {
+  onDestroyWithReason(reason: partnerAgent.PartnerAgentExtensionAbilityDestroyReason): void {
+    console.info(`onDestroyWithReason is: ${reason}`);
+  }
+}
+```
+
 ## onDeviceDiscovered
 
 ```TypeScript
@@ -59,6 +69,16 @@ Called when a device is discovered.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceAddress | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Address of the discovered device. |
+
+**Example**
+
+```TypeScript
+export default class PartnerAgentExtAbility extends PartnerAgentExtensionAbility {
+  onDeviceDiscovered(deviceAddress: partnerAgent.PartnerDeviceAddress): void {
+    console.info(`onDeviceDiscovered success: ${deviceAddress.bluetoothAddress}`);
+  }
+}
+```
 
 ## context
 

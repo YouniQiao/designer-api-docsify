@@ -6,7 +6,7 @@
 function isFontSupported(fontURL: string | Resource): boolean
 ```
 
-检查系统是否支持指定的字体文件。
+检查系统是否支持指定的字体文件。可在加载自定义字体前预先验证字体文件的可用性，避免因字体不支持导致文本渲染异常。
 
 **起始版本：** 23
 

@@ -43,9 +43,9 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 import { deviceManager } from '@kit.DriverDevelopmentKit';
 
 try {
-  let devices : Array<deviceManager.Device> = deviceManager.queryDevices(deviceManager.BusType.USB);
+  let devices: Array<deviceManager.Device> = deviceManager.queryDevices(deviceManager.BusType.USB);
   for (let item of devices) {
-    let device : deviceManager.USBDevice = item as deviceManager.USBDevice;
+    let device: deviceManager.USBDevice = item as deviceManager.USBDevice;
     console.info(`Device id is ${device.deviceId}`);
   }
 } catch (error) {

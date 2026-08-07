@@ -221,7 +221,7 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
       console.info('Succeeded in adding events');
     }).catch((err: BusinessError) => {
       // 检查权限是否已成功申请或者参数是否正确。
-      console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
+      console.error(`Failed to add events. Code: ${err.code}, message: ${err.message}`);
     });
   }
 });
@@ -829,13 +829,15 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
     calendar = data;
     await calendar.addEvent(event1).then((data: number) => {
-      console.info(`Succeeded in adding event, id -> ${data}`);
+      console.info(`Succeeded in adding event, id1 -> ${data}`);
+      id1 = data;
     }).catch((err: BusinessError) => {
       // 检查权限是否已成功申请或者参数是否正确。
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     await calendar.addEvent(event2).then((data: number) => {
-      console.info(`Succeeded in adding event, id -> ${data}`);
+      console.info(`Succeeded in adding event, id2 -> ${data}`);
+      id2 =data;
     }).catch((err: BusinessError) => {
       // 检查参数是否正确。
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);

@@ -57,16 +57,16 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // 包信息
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 // 通知ID
 let notificationId = 1;
 // 按钮信息
 let buttonOptions: notificationManager.ButtonOptions = {
-    buttonName: "buttonName1",
+    buttonName: 'buttonName1',
 }
 notificationManager.triggerSystemLiveView(bundle, notificationId, buttonOptions).then(() => {
-  console.info("triggerSystemLiveView success");
+  console.info('triggerSystemLiveView success');
 }).catch((err: BusinessError) => {
   console.error(`triggerSystemLiveView failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -80,17 +80,17 @@ import { BusinessError } from '@kit.BasicServicesKit';
 // 包信息
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 // 通知ID
 let notificationId: int = 1;
 // 按钮信息
 let buttonOptions: notificationManager.ButtonOptions = {
     // 需根据实际情况进行替换
-    buttonName: "buttonName1",
+    buttonName: 'buttonName1',
 }
 notificationManager.triggerSystemLiveView(bundle, notificationId, buttonOptions).then(() => {
-  console.info("triggerSystemLiveView success");
+  console.info('triggerSystemLiveView success');
 }).catch((err: Error): void => {
   let error: BusinessError = err as BusinessError;
   console.error(`triggerSystemLiveView failed, code is ${error.code}, message is ${error.message}`);

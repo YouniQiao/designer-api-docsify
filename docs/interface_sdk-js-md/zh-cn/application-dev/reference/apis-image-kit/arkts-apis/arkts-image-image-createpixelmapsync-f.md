@@ -54,6 +54,10 @@ function createPixelMapSync() {
   };
   try {
     let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
+    if (pixelMap == undefined) {
+      console.error(`Failed to create the PixelMap.`);
+      return;
+    }
     console.info('Succeeded in creating the PixelMap.');
   } catch (e) {
     const err = e as BusinessError;
@@ -130,6 +134,10 @@ function createPixelMapSync() {
   let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_1010102, size: { height: 4, width: 6 } };
   try {
     let pixelMap: image.PixelMap = image.createPixelMapSync(opts);
+    if (pixelMap == undefined) {
+      console.error(`Failed to create the PixelMap.`);
+      return;
+    }
     console.info('Succeeded in creating the PixelMap.');
   } catch (e) {
     const err = e as BusinessError;

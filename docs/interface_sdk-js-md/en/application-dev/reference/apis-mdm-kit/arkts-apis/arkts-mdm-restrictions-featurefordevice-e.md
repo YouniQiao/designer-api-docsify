@@ -293,7 +293,10 @@ Device USB capability. Disabling this capability prohibits the use of external U
 
 If the device USB capability is disabled in any of the following scenarios, a policy conflict will be reported:
 
-1. A list of allowed USB devices has been configured via the addAllowedUsbDevices API.2. USB storage device access policy has been set to read-only or disabled via the setUsbStorageDeviceAccessPolicy API.3. Specific USB device types have been blocked via the addDisallowedUsbDevices API.4. USB storage write has been disabled for specific users via the [setDisallowedPolicyForAccount]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API.5. USB-to-serial conversion ([USB\_SERIAL]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_) is disabled.
+1. A list of allowed USB devices has been configured via the  
+[addAllowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API.2. USB storage device access policy has been set to read-only or disabled via the  
+[setUsbStorageDeviceAccessPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API.3. Specific USB device types have been blocked via the  
+[addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ API.4. USB storage write has been disabled for specific users via the [setDisallowedPolicyForAccount]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ API.5. USB-to-serial conversion ([USB\_SERIAL]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_) is disabled.
 
 **Since:** 26.0.0
 
@@ -778,7 +781,8 @@ USB_SERIAL = 41
 
 Device USB-to-serial port capability. After the capability is disabled, external USB-to-serial port devices will be unavailable. Disabling the USB-to-Serial capability in any of the following scenario will trigger a policy conflict:
 
-1. A list of allowed USB devices has been configured via the addAllowedUsbDevices API.2. The device ([USB]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) capability has been disabled.
+1. A list of allowed USB devices has been configured via the  
+[addAllowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API.2. The device ([USB]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_) capability has been disabled.
 
 **Since:** 26.0.0
 

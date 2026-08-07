@@ -32,7 +32,7 @@ getNodeByPath(path: string): Node | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 要查询的节点路径 |
+| path | string | 是 | 场景节点层次中的路径。每层之间使用'/'符号进行分割。 |
 
 **返回值：**
 
@@ -46,7 +46,7 @@ getNodeByPath(path: string): Node | null
 readonly children: Container<Node>
 ```
 
-节点的子节点.
+节点的子节点，不存在则为空值。为只读属性，表示不能替换整个children容器，但可以通过容器方法操作子节点（如append()、insertAfter()、remove()或clear()）。如果append或insertAfter的节点已存在于容器中，容器会先移除该节点再插入，因此数量不会增加，看似“无效”；添加新节点才会真正增加子节点数量。
 
 **类型：** Container&lt;Node&gt;
 

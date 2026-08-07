@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Repeat](repeat-repeat-f.md#repeat) | Defines Repeat Component. It requires call setRepeatOptions at start of component attribute set-up,and it requires call applyAttributeFinish at end of component attribute set-up. |
+| [Repeat](repeat-repeat-f.md#repeat) | Defines Repeat Component. It requires calling setRepeatOptions at start of component attribute set-up,and it requires calling applyAttributesFinish at end of component attribute set-up. |
 
 ### Interfaces
 

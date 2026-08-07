@@ -50,11 +50,11 @@ let removeAllCallback = (err: BusinessError) => {
   if (err) {
     console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("removeAll success");
+    console.info('removeAll success');
   }
 }
 let bundle: notificationSubscribe.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 notificationSubscribe.removeAll(bundle, removeAllCallback);
 ```
@@ -68,12 +68,12 @@ let removeAllCallback = (err: BusinessError | null) => {
   if (err) {
     console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("removeAll success");
+    console.info('removeAll success');
   }
 }
 let bundle: notificationSubscribe.BundleOption = {
   // 需根据实际情况进行替换
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 notificationSubscribe.removeAll(bundle, removeAllCallback);
 ```
@@ -127,7 +127,7 @@ let removeAllCallback = (err: BusinessError) => {
     if (err) {
         console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("removeAll success");
+        console.info('removeAll success');
     }
 }
 notificationSubscribe.removeAll(removeAllCallback);
@@ -142,7 +142,7 @@ let removeAllCallback = (err: BusinessError | null) => {
     if (err) {
         console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("removeAll success");
+        console.info('removeAll success');
     }
 }
 notificationSubscribe.removeAll(removeAllCallback);
@@ -199,7 +199,7 @@ let removeAllCallback = (err: BusinessError) => {
   if (err) {
     console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("removeAll success");
+    console.info('removeAll success');
   }
 }
 // 用户ID，使用时需替换为真实的userId。
@@ -216,7 +216,7 @@ let removeAllCallback = (err: BusinessError | null ) => {
   if (err) {
     console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("removeAll success");
+    console.info('removeAll success');
   }
 }
 // 用户ID，使用时需替换为真实的userId。
@@ -278,7 +278,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let userId: number = 1;
 notificationSubscribe.removeAll(userId).then(() => {
-  console.info("removeAll success");
+  console.info('removeAll success');
 }).catch((err: BusinessError) => {
   console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
 });
@@ -289,7 +289,7 @@ ArkTS-Sta示例：
 ```TypeScript
 let userId: int = 1;
 notificationSubscribe.removeAll(userId).then(() => {
-  console.info("removeAll success");
+  console.info('removeAll success');
 }).catch((err: Error): void => {
   let error: BusinessError = err as BusinessError;
   console.error(`removeAll fail, code is ${error.code}, message is ${error.message}`);
@@ -350,7 +350,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // 不指定应用时，删除所有通知
 notificationSubscribe.removeAll().then(() => {
-  console.info("removeAll success");
+  console.info('removeAll success');
 }).catch((err: BusinessError) => {
   console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
 });
@@ -361,7 +361,7 @@ ArkTS-Sta示例：
 ```TypeScript
 // 不指定应用时，删除所有通知
 notificationSubscribe.removeAll().then(() => {
-  console.info("removeAll success");
+  console.info('removeAll success');
 }).catch((err: Error): void => {
   let error: BusinessError = err as BusinessError;
   console.error(`removeAll fail, code is ${error.code}, message is ${error.message}`);

@@ -36,7 +36,7 @@ No memory optimization.
 ENABLE_AUTO_CACHE_OPTIMIZATION = 1 << 0
 ```
 
-LazyForEach handle the memory optimization.
+LazyForEach handles the memory optimization.
 
 **Since:** 26.0.0
 

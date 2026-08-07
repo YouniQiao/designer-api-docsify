@@ -44,13 +44,15 @@ function isPowerSaveMode(pid: int): Promise<boolean>
 import { BusinessError } from '@kit.BasicServicesKit';
 import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 
-let pid = 33333;
+let pid = 33333;  // 请开发者替换为实际的进程号
 try {
-    backgroundProcessManager.isPowerSaveMode(pid).then((result: boolean) => {
-        console.info("isPowerSaveMode: " + result.toString());
-    });
+  backgroundProcessManager.isPowerSaveMode(pid).then((result: boolean) => {
+    console.info(`isPowerSaveMode: ${result}`);
+  }).catch((err: BusinessError) => {
+    console.error(`isPowerSaveMode failed, promise errCode: ${err.code}, message: ${err.message}`);
+  });
 } catch (error) {
-    console.error(`isPowerSaveMode failed, errCode: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+  console.error(`isPowerSaveMode failed, errCode: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
 

@@ -103,6 +103,6 @@ function queryAppGroupSync(bundleName: string): int
 ```TypeScript
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 
-let priorityGroup: number = usageStatistics.queryAppGroupSync("com.ohos.camera");
+let priorityGroup: number = usageStatistics.queryAppGroupSync('com.ohos.camera');
 ```
 

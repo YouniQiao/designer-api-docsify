@@ -131,7 +131,7 @@ createSampler(params:SceneResourceParameters): Promise<Sampler>
 createScene(uri?: ResourceStr): Promise<Scene>
 ```
 
-从资源创建新场景.如果未提供uri，将返回空场景.
+从指定的资源URI创建一个新的场景。如果不指定URI，则创建一个空场景，使用Promise异步回调。
 
 **起始版本：** 20
 

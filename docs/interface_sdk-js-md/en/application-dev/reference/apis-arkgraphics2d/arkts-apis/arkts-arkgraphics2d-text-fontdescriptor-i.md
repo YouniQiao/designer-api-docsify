@@ -56,7 +56,7 @@ Family name of the font. Any string is acceptable. The default value is an empty
 fontFeatures?: Array<string>
 ```
 
-Font features.
+Array of OpenType feature tags supported by the font. The default value is an empty array. Each element in the array is a feature tag string (such as 'liga' for standard ligatures and 'kern' for kerning adjustment),indicating the font features supported by the font.
 
 **Type:** Array&lt;string&gt;
 
@@ -160,7 +160,7 @@ Whether the font is italic. The value **0** means that the font is not italic, a
 languages?: Array<string>
 ```
 
-Font languages.
+List of languages supported by the font. The default value is an empty array. Each element in the array is a language tag string in BCP 47 format (such as 'en' and 'zh-Hans'), indicating the writing languages supported by the font.
 
 **Type:** Array&lt;string&gt;
 

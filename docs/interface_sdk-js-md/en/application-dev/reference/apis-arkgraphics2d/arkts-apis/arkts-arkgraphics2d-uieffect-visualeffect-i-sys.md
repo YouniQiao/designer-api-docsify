@@ -1,6 +1,6 @@
 # VisualEffect
 
-The VisualEffect of Component.
+VisualEffect class, used to apply background color blending, border lighting, color gradient, and other effects to a component. Before calling VisualEffect methods, you need to first create a VisualEffect instance through createEffect.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ The VisualEffect of Component.
 backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 ```
 
-A backgroundColorEffect effect is added to the Component.
+A blender for changing the background color of the component. Currently, only the brightness blender is supported.
 
 **Since:** 12
 
@@ -34,13 +34,13 @@ A backgroundColorEffect effect is added to the Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blender | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The blender to blend backgroundColor. |
+| blender | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The blender for blending the background color. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | VisualEffects for the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the VisualEffect with the background color change effect attached. |
 
 **Example**
 
@@ -65,7 +65,7 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
       borderWidth: double): VisualEffect
 ```
 
-Sets the border light effect.
+Adds a 3D lighting effect to the border of a rounded rectangle component.
 
 **Since:** 20
 
@@ -81,16 +81,16 @@ Sets the border light effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lightPosition | common2D.Point3d | Yes |  |
-| lightColor | common2D.Color | Yes |  |
-| lightIntensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes |  |
-| borderWidth | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes |  |
+| lightPosition | common2D.Point3d | Yes | The 3D position of the light source in the component space. [-1, -1, 0] is the top-left corner of the component, [1, 1, 0] is the bottom-right corner of the component. The larger the z-axis component, the farther the light source is from the component plane, and the larger the illuminated area. The x component range is [-10, 10], the y component range is [-10, 10], and the z component range is [0, 10]. Values outside the range will be automatically clamped. |
+| lightColor | common2D.Color | Yes | The color of the light source. Each component range is [0, 1]. Values outside the range will be automatically clamped. |
+| lightIntensity | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The intensity of the light source. The value range is [0, 1]. A larger value indicates a brighter light source. Values outside the range will be automatically clamped. |
+| borderWidth | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The illuminated width of the component border. The value range is [0.0, 30.0]. Values outside the range will be automatically clamped. Setting it to 0.0 results in no lighting effect on the component border; a larger value results in a wider illuminated area. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the VisualEffect that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the VisualEffect with the border lighting effect attached. |
 
 **Error codes:**
 
@@ -154,7 +154,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
       alphaMask?: Mask): VisualEffect
 ```
 
-Sets the color gradient effect, may blend with alpha mask.
+Adds a color gradient effect to the component.
 
 **Since:** 20
 
@@ -170,16 +170,16 @@ Sets the color gradient effect, may blend with alpha mask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colors | Array&lt;Color&gt; | Yes | array of colors. |
-| positions | Array&lt;common2D.Point&gt; | Yes | the centers of colors. |
-| strengths | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes | the weights of color Mixing. |
-| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the mask determines the alpha of the effect. |
+| colors | Array&lt;Color&gt; | Yes | The color array for multi-color gradient. The array length range is [0, 12], and each color value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
+| positions | Array&lt;common2D.Point&gt; | Yes | The position array, corresponding to the positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
+| strengths | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes | The strength array, corresponding to the intensity of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
+| alphaMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The alpha mask corresponding to the colors. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the transparency distribution of the color gradient effect (such as local transparency or dynamic transparency effects). If not set, the transparency of the color gradient effect is entirely determined by the colors parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the VisualEffect that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the VisualEffect with the color gradient effect attached. |
 
 **Error codes:**
 
@@ -231,9 +231,9 @@ struct ColorGradientExample {
 distortionCollapse(distortionParam: DistortionParam): VisualEffect
 ```
 
-Sets distortion collapse effect.
+Adds a nonlinear deformation effect to the component. Typical application scenarios include page collapse animations, window close effects, card flip animations, scene transition effects, etc.
 
-NOTE1. This visual effect supports drawing outside the bounds of the control,but it is still subject to the clipping (Clip) of the parent control.2. Because it contains a foreground Filter, some visual effects of the component itself and its child components(e.g., BrightnessBlender or systemMaterial) are incompatible when not used in combination with the EffectComponent.3. It supports distorting the system material, but when used in combination with the EffectComponent,it will cause the background of the system material to be distorted.4. When calling distortionCollapse, an offscreen canvas equal in size to the deformed area will be created.The content of the current component (including child components) is then drawn onto this offscreen canvas,and the existing content on the canvas is drawn with deformation. When using this implementation without combining with the EffectComponent, interfaces that require screen capture, such as systemMaterial,backgroundEffect, brightness, and blur, will not be able to capture the correct screen.
+NOTE1. This visual effect supports drawing outside the bounds of the control,but it is still subject to the clipping (Clip) of the parent control.2. Because it contains a foreground Filter, some visual effects of the component itself and its child components(e.g., BrightnessBlender or systemMaterial) are incompatible when not used in combination with the EffectComponent.3. It supports distorting the system material, but when used in combination with the EffectComponent,it will cause the background of the system material to be distorted.4. When calling distortionCollapse, an offscreen canvas equal in size to the deformed area will be created.The content of the current component (including child components) is then drawn onto this offscreen canvas,and the existing content on the canvas is drawn with deformation.5. When using this implementation without combining with the EffectComponent, interfaces that require screen capture, such as systemMaterial, backgroundEffect, brightness, and blur, will not be able to capture the correct screen.
 
 **Since:** 26.0.0
 
@@ -251,13 +251,13 @@ NOTE1. This visual effect supports drawing outside the bounds of the control,but
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distortionParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the distortion params of distortion effect. |
+| distortionParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The parameters of the nonlinear deformation effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the VisualEffect that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the VisualEffect with the nonlinear deformation effect attached. |
 
 ## liquidMaterial
 
@@ -266,7 +266,7 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
       brightnessParam?: BrightnessParam): VisualEffect
 ```
 
-Sets the liquid material effect.
+Adds a material effect to the component. The material effect simulates the optical properties(refraction, reflection) and dynamic perturbation effects of physical materials to achieve visual representations of glass, metal, and other materials. It can be used for scenarios such as glass-textured UI,fluid material animation, frosted glass effects, etc.
 
 **Since:** 22
 
@@ -282,16 +282,16 @@ Sets the liquid material effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the liquid material effect parameters. |
-| useEffectMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the mask determines the use effect flag. |
-| distortMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the mask determines the distort of the effect. |
-| brightnessParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the background brightness params of material effect. |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The material-related variables used to control the material display, including the material switch, refraction coefficient, reflection coefficient, and perturbation coefficient. |
+| useEffectMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Declares whether to use blur caching. A Mask instance created with createUseEffectMask(true) uses blur caching, suitable for scenarios that need to reuse blur results to improve performance; a Mask instance created with createUseEffectMask(false) does not use blur caching, suitable for scenarios where blur effects change frequently. |
+| distortMask | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The perturbation texture required for the material perturbation effect. The image texture of the Mask instance created from a pixelMap determines the pattern and direction of the perturbation effect. A Mask instance can be created through the createPixelMapMask method. When the material's perturbation coefficient (distortFactor) is not 0, this parameter must be set; otherwise, there will be no perturbation effect. When the perturbation coefficient is 0 or this parameter is not set, there is no perturbation effect. The default is not set. |
+| brightnessParam | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Adds a brightening effect to the material. Pass this parameter when you need to enhance the visual brightness of the material (such as highlight display, glow effects). If not set, no brightening effect is added by default, and the material maintains its original brightness. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the VisualEffect that the current effect have been added. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Returns the VisualEffect with the material effect attached. |
 
 **Error codes:**
 

@@ -54,12 +54,12 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle1: notificationManager.DistributedBundleEnableInfo = {
-    bundleName: "bundleName1",
+    bundleName: 'bundleName1',
     uid: 1,
     enable: true
 };
 let bundle2: notificationManager.DistributedBundleEnableInfo = {
-    bundleName: "bundleName2",
+    bundleName: 'bundleName2',
     uid: 2,
     enable: true
 };
@@ -67,9 +67,9 @@ let bundles: Array<notificationManager.DistributedBundleEnableInfo> = [
     bundle1,bundle2
 ]
 
-let deviceType: string = "liteWearable";
+let deviceType: string = 'liteWearable';
 notificationManager.setDistributedEnableByBundles(bundles, deviceType).then(() => {
-    console.info("setDistributedEnableByBundles success");
+    console.info('setDistributedEnableByBundles success');
 }).catch((err: BusinessError) => {
     console.error(`setDistributedEnableByBundles failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -81,12 +81,12 @@ ArkTS-Sta示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle1: notificationManager.DistributedBundleEnableInfo = {
-    bundleName: "bundleName1",
+    bundleName: 'bundleName1',
     uid: 1,
     enable: true
 };
 let bundle2: notificationManager.DistributedBundleEnableInfo = {
-    bundleName: "bundleName2",
+    bundleName: 'bundleName2',
     uid: 2,
     enable: true
 };
@@ -94,9 +94,9 @@ let bundles: Array<notificationManager.DistributedBundleEnableInfo> = [
     bundle1,bundle2
 ]
 
-let deviceType: string = "liteWearable";
+let deviceType: string = 'liteWearable';
 notificationManager.setDistributedEnableByBundles(bundles, deviceType).then(() => {
-    console.info("setDistributedEnableByBundles success");
+    console.info('setDistributedEnableByBundles success');
 }).catch((err: Error) => {
     let error: BusinessError = err as BusinessError;
     console.error(`setDistributedEnableByBundles failed, code is ${error.code}, message is ${error.message}`);

@@ -51,6 +51,6 @@ function isIdleStateSync(bundleName: string): boolean
 ```TypeScript
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 
-let isIdleState: boolean = usageStatistics.isIdleStateSync("com.ohos.camera");
+let isIdleState: boolean = usageStatistics.isIdleStateSync('com.ohos.camera');
 ```
 

@@ -47,11 +47,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   // 12345678为示例deviceId，应用开发时可通过queryDevices查询到相应设备的deviceId作为入参
-  deviceManager.bindDriverWithDeviceId(12345678, (error : BusinessError, data : number) => {
+  deviceManager.bindDriverWithDeviceId(12345678, (error: BusinessError, data: number) => {
     console.error(`Device is disconnected`);
   }).then((data: deviceManager.RemoteDeviceDriver) => {
     console.info(`bindDriverWithDeviceId success, Device_Id is ${data.deviceId}.
-    remote is ${data.remote != null ? data.remote.getDescriptor() : "null"}`);
+    remote is ${data.remote != null ? data.remote.getDescriptor(): "null"}`);
   }, (error: BusinessError) => {
     console.error(`bindDriverWithDeviceId async fail. Code is ${error.code}, message is ${error.message}`);
   });

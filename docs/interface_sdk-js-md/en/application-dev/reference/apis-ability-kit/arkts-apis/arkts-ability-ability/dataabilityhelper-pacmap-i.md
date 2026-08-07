@@ -25,7 +25,7 @@ Indicates the parameter of the PacMap type.If a custom Sequenceable object is pu
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Model restriction:** 
-- API version 7 to 10: This API can be used only in the FA model.
+- API version 11 and later: This API can be used in both the stage model and FA model.
 
 <!--Device-PacMap-[key: string]: number | string | boolean | Array<string | number | boolean> | null--><!--Device-PacMap-[key: string]: number | string | boolean | Array<string | number | boolean> | null-End-->
 

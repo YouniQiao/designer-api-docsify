@@ -54,7 +54,7 @@ let subscribeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("subscribe success");
+    console.info('subscribe success');
   }
 }
 let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
@@ -75,7 +75,7 @@ let subscribeCallback = (err: BusinessError | null) => {
   if (err) {
     console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("subscribe success");
+    console.info('subscribe success');
   }
 }
 let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
@@ -148,7 +148,7 @@ let subscribeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("subscribe success");
+    console.info('subscribe success');
   }
 }
 let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
@@ -159,7 +159,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 };
 // 不会对bundleNames进行校验，开发者自己确定需要订阅哪些bundleName
 let info: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ["bundleName1","bundleName2"]
+  bundleNames: ['bundleName1','bundleName2']
 };
 notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
 ```
@@ -174,7 +174,7 @@ let subscribeCallback = (err: BusinessError | null) => {
   if (err) {
     console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("subscribe success");
+    console.info('subscribe success');
   }
 }
 let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
@@ -185,7 +185,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 };
 //不会对bundleNames进行校验，开发者自己确定需要订阅哪些bundleName
 let info: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ["bundleName1","bundleName2"]
+  bundleNames: ['bundleName1','bundleName2']
 };
 notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
 ```
@@ -254,7 +254,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   onConsume: onConsumeCallback
 };
 notificationSubscribe.subscribe(subscriber).then(() => {
-  console.info("subscribe success");
+  console.info('subscribe success');
 }).catch((err: BusinessError) => {
   console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -270,7 +270,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   onConsume: onConsumeCallback
 };
 notificationSubscribe.subscribe(subscriber).then(() => {
-  console.info("subscribe success");
+  console.info('subscribe success');
 }).catch((err: Error): void => {
   let error: BusinessError = err as BusinessError;
   console.error(`subscribe failed, code is ${error.code}, message is ${error.message}`);

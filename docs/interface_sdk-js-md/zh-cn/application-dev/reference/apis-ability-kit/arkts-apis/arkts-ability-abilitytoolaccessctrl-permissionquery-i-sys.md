@@ -92,6 +92,26 @@ operationInfo: OperationInfo[]
 
 **系统接口：** 此接口为系统接口。
 
+## remoteInfo
+
+```TypeScript
+remoteInfo?: RemoteInfo
+```
+
+远端设备信息。
+
+**类型：** RemoteInfo
+
+**起始版本：** 26.1.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+<!--Device-PermissionQuery-remoteInfo?: RemoteInfo--><!--Device-PermissionQuery-remoteInfo?: RemoteInfo-End-->
+
+**系统能力：** SystemCapability.Security.Asset
+
+**系统接口：** 此接口为系统接口。
+
 ## ticketExpireTimeMs
 
 ```TypeScript

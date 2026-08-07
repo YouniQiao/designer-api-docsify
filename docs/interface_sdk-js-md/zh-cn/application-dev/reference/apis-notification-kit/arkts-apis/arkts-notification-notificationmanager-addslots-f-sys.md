@@ -51,7 +51,7 @@ let addSlotsCallBack = (err: BusinessError): void => {
     if (err) {
         console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("addSlots success");
+        console.info('addSlots success');
     }
 }
 // 通知slot对象
@@ -75,7 +75,7 @@ let addSlotsCallBack = (err: BusinessError | null): void => {
     if (err) {
         console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("addSlots success");
+        console.info('addSlots success');
     }
 }
 // 通知slot对象
@@ -151,7 +151,7 @@ let notificationSlotArray: notificationManager.NotificationSlot[] = new Array();
 notificationSlotArray[0] = notificationSlot;
 
 notificationManager.addSlots(notificationSlotArray).then(() => {
-    console.info("addSlots success");
+    console.info('addSlots success');
 }).catch((err: BusinessError) => {
     console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -172,7 +172,7 @@ let notificationSlotArray: notificationManager.NotificationSlot[] = [
 ]
 
 notificationManager.addSlots(notificationSlotArray).then(() => {
-    console.info("addSlots success");
+    console.info('addSlots success');
 }).catch((err: Error): void => {
     let error: BusinessError = err as BusinessError;
     console.error(`addSlots failed, code is ${error.code}, message is ${error.message}`);

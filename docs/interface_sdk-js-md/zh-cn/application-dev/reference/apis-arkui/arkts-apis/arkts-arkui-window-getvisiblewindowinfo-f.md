@@ -59,7 +59,7 @@ try {
       console.info(`globalRect:${JSON.stringify(windowInfo.globalRect)}`);
     });
   }).catch((err: BusinessError) => {
-    console.error('Failed to getWindowInfo. Cause: ' + JSON.stringify(err));
+    console.error(`Failed to getWindowInfo. Cause code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
   console.error(`Failed to get visible window info. Cause code: ${exception.code}, message: ${exception.message}`);

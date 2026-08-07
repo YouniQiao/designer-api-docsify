@@ -55,10 +55,10 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let deviceType: string = "phone";
+let deviceType: string = 'phone';
 let enable: boolean = true;
 notificationManager.setSmartReminderEnabled(deviceType, enable).then(() => {
-    console.info("setSmartReminderEnabled success");
+    console.info('setSmartReminderEnabled success');
 }).catch((err: BusinessError) => {
     console.error(`setSmartReminderEnabled failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -69,10 +69,10 @@ ArkTS-Sta示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let deviceType: string = "phone";
+let deviceType: string = 'phone';
 let enable: boolean = true;
 notificationManager.setSmartReminderEnabled(deviceType, enable).then(() => {
-    console.info("setSmartReminderEnabled success");
+    console.info('setSmartReminderEnabled success');
 }).catch((err: Error): void => {
     let error: BusinessError = err as BusinessError;
     console.error(`setSmartReminderEnabled failed, code is ${error.code}, message is ${error.message}`);

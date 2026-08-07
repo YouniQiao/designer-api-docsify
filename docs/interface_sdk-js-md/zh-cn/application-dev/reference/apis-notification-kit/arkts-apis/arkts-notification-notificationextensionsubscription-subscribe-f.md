@@ -67,7 +67,7 @@ let infos: notificationExtensionSubscription.NotificationExtensionSubscriptionIn
   }
 ];
 notificationExtensionSubscription.subscribe(infos).then(() => {
-  console.info("subscribe success");
+  console.info('subscribe success');
 }).catch((err: Error) => {
   let error = err as BusinessError
   console.error(`subscribe fail, code is ${error.code}, message is ${error.message}`);

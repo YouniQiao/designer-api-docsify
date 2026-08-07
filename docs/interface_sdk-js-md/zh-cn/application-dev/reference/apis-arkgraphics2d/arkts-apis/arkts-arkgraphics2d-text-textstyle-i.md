@@ -1,6 +1,7 @@
 # TextStyle
 
-文本样式。
+文本样式，用于控制文本的视觉表现属性，包括字体、颜色、字号、间距、装饰线和阴影等。TextStyle通过[ParagraphBuilder]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的  
+[pushStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法应用到后续添加的文本内容，与[ParagraphStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_（控制段落级别属性）配合使用。同一段落中可通过多次pushStyle实现对不同文本片段应用不同样式。
 
 **起始版本：** 12
 
@@ -16,7 +17,7 @@
 backgroundRect?: RectStyle
 ```
 
-文本矩形框样式。
+文本矩形框样式。当需要为文本添加背景矩形框（如设置背景色、圆角等）时传入。
 
 **类型：** RectStyle
 
@@ -76,7 +77,7 @@ baseline?: TextBaseline
 baselineShift?: double
 ```
 
-文本下划线的偏移距离，浮点数，单位为物理像素px，默认为0.0。
+文本基线的垂直偏移距离，浮点数，单位为物理像素px，默认为0.0。
 
 **类型：** double
 
@@ -136,7 +137,7 @@ decoration?: Decoration
 ellipsis?: string
 ```
 
-省略号文本，表示省略号生效后使用该字段值替换省略号部分。
+省略号文本，表示省略号生效后使用该字段值替换省略号部分，默认为空字符串，即使用系统默认省略号…（U+2026）。与ParagraphStyle的tab属性共同配置时，tab属性无效。
 
 **类型：** string
 
@@ -198,7 +199,7 @@ fontEdging?: drawing.FontEdging
 fontFamilies?: Array<string>
 ```
 
-字体家族名称列表，默认为空，匹配系统字体。
+字体家族名称列表，默认为空，匹配系统字体。使用自定义字体时，需将加载字体时指定的名称填入此列表中。当与fontTypefaces同时设置时，fontTypefaces优先级更高，fontFamilies不生效。
 
 **类型：** Array&lt;string&gt;
 
@@ -218,7 +219,7 @@ fontFamilies?: Array<string>
 fontFeatures?: Array<FontFeature>
 ```
 
-文本字体特征数组。
+文本字体特征数组。当需要启用或禁用特定字体特性（如连字、字距调整等）时传入。
 
 **类型：** Array&lt;FontFeature&gt;
 
@@ -278,7 +279,9 @@ fontStyle?: FontStyle
 fontTypefaces?: Array<drawing.Typeface>
 ```
 
-字体对象数组
+指定排版字体对象数组，用于优先使用指定的字体对象进行文本塑形，跳过字体匹配流程。当数组中某个字体对象无法塑形部分文字时，未能塑形的文字将使用系统字体进行塑形。默认为空数组，表示不指定字体对象，使用默认字体匹配流程。
+
+当fontTypefaces与[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.fontFamilies同时设置时，fontTypefaces优先级更高。
 
 **类型：** Array&lt;drawing.Typeface&gt;
 
@@ -300,7 +303,7 @@ fontTypefaces?: Array<drawing.Typeface>
 fontVariations?: Array<FontVariation>
 ```
 
-可变字体属性数组。
+可变字体属性数组。当需要调整可变字体的可变轴参数（如字重轴、字宽轴等）时传入。
 
 **类型：** Array&lt;FontVariation&gt;
 
@@ -320,7 +323,7 @@ fontVariations?: Array<FontVariation>
 fontWeight?: FontWeight
 ```
 
-字重，默认为W400。 目前只有系统默认字体支持字重的调节，其他字体设置字重值小于semi-bold（即W600）时字体粗细无变化，当设置字重值大于等于semi-bold（即W600）时可能会触发伪加粗效果。
+字重，默认为W400。 在\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_之前，仅系统字体中的可变字体支持字重调节；从\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_开始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于semi-bold（即W600）时字体粗细无变化，设置字重值大于等于semi-bold（即W600）时可能会触发伪加粗效果。
 
 **类型：** FontWeight
 
@@ -380,7 +383,7 @@ true表示将行间距平分至行的顶部与底部，false则不平分，默�
 heightOnly?: boolean
 ```
 
-true表示根据字体大小和heightScale设置文本框的高度，false表示根据行高和行距，默认为false。
+true表示根据字体大小和heightScale设置文本框的高度，false表示根据行高和行距设置文本框高度，默认为false。
 
 **类型：** boolean
 
@@ -520,7 +523,7 @@ locale?: string
 textShadows?: Array<TextShadow>
 ```
 
-文本阴影数组。
+文本阴影数组。当需要为文本添加阴影效果时传入。
 
 **类型：** Array&lt;TextShadow&gt;
 

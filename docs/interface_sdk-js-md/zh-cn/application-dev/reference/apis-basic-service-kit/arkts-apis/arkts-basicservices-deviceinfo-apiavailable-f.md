@@ -35,7 +35,7 @@ function apiAvailable(version: string | number): boolean
 ```TypeScript
 import { deviceInfo } from '@kit.BasicServicesKit';
 
-// Check API 26.0.0 (String format for API 26.0.0+ represents both OpenHarmony and Distribution OS)
+// 检查API版本是否大于等于26.0.0（返回true表示当前设备API版本满足要求）
 if (deviceInfo.apiAvailable('26.0.0')) {
   // 需要版本隔离的方法
 }

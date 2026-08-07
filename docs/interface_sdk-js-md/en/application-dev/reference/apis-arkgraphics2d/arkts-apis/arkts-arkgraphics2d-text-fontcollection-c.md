@@ -1,6 +1,9 @@
 # FontCollection
 
-Implements a collection of fonts.
+Represents a font collection, which manages the font resources required for text typesetting. FontCollection provides font matching and glyph lookup capabilities for [ParagraphBuilder]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, and serves as a fundamental component of the text typesetting pipeline. It provides a global instance (  
+[getGlobalInstance]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_) and local instances (  
+[getLocalInstance]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_). Fonts loaded by the global instance are shared within the app, making it suitable for common app scenarios. Local instances are independent of each other, and fonts loaded by a local instance take effect only for that instance without affecting others, making them recommended for widget scenarios. Custom fonts can be loaded through  
+[loadFontSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ or [loadFont]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.
 
 **Since:** 12
 
@@ -16,7 +19,7 @@ Implements a collection of fonts.
 clearCaches(): void
 ```
 
-Clears the font cache. (The font cache has a memory limit and a clearing mechanism. It occupies limited memory.You are not advised to clear it unless otherwise required.)
+Clears the font typesetting cache. The font typesetting cache has a memory limit and an automatic clearing mechanism. It occupies limited memory. You are not advised to clear it unless there are special memory requirements.
 
 **Since:** 12
 
@@ -70,7 +73,7 @@ Obtains a global **FontCollection** instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FontCollection** instance. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Global FontCollection instance object of the app, which can be used to manage font loading, unloading, typesetting, and other operations. |
 
 **Example**
 
@@ -119,7 +122,7 @@ Obtains the local **FontCollection** instance. This API is recommended for widge
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FontCollection** instance. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Local FontCollection instance object, recommended for widget scenarios. It can be used to manage font loading, unloading, and typesetting operations. |
 
 **Example**
 
@@ -291,8 +294,8 @@ Loads a custom font. This API returns the result synchronously. In this API, **n
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the font. Any string is acceptable. |
-| path | string \| Resource | Yes | Path of the font file to be loaded. The path must be in the format of " **file://** + Absolute path of the font file" or **\_\_\_ESCAPED\_DOLLAR\_\_\_rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
+| path | string \| Resource | Yes | Path of the font file to load. Two formats are supported: "file:// + absolute path of the font file" or \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('font file path'). |
+| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
 
 **Error codes:**
 
@@ -377,8 +380,8 @@ in **[TextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_**. The supported font file
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the font. Any string is acceptable. |
-| path | string \| Resource | Yes | Path of the font file to be loaded. The path must be in the format of " **file://** + Absolute path of the font file" or **\_\_\_ESCAPED\_DOLLAR\_\_\_rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
+| path | string \| Resource | Yes | Path of the font file to load. Two formats are supported: "file:// + absolute path of the font file" or \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile('font file path'). |
+| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
 
 **Return value:**
 

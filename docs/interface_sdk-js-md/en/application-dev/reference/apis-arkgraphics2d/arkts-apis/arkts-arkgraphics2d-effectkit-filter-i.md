@@ -1,6 +1,6 @@
 # Filter
 
-A class used to add a specified effect to an image. Before calling any method of Filter, use createEffect to create a Filter instance.
+An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects,you need to call getEffectPixelMap to obtain the processed image.
 
 **Since:** 9
 
@@ -22,7 +22,11 @@ ArkTS-Sta:
 blur(radius: double): Filter
 ```
 
-Adds the blur effect to the filter linked list, and returns the head node of the linked list.
+Adds the blur effect to the effect chain and returns the instance of the chain. The shader tile mode uses DECAL. To specify the tile mode, use the blur(radius: double, tileMode: TileMode) API. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
+    **NOTE**  
+    
+    This API provides the blur effect for static images. To provide the real-time blur effect for components,  
+use dynamic blur.
 
 **Since:** 9
 
@@ -40,13 +44,13 @@ Adds the blur effect to the filter linked list, and returns the head node of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Blur radius, in pixels. The blur effect is proportional to the configured value. A larger value indicates a more obvious effect. |
+| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Blur radius, in px. Value range: [0, +∞). A larger blur radius produces a more pronounced blur effect. Negative values produce no effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Final image effect. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
 
 **Example**
 
@@ -123,7 +127,11 @@ ArkTS-Sta:
 blur(radius: double, tileMode: TileMode): Filter
 ```
 
-Adds the blur effect to the filter linked list, and returns the head node of the linked list.
+Adds the blur effect to the effect chain and returns the instance of the chain. It supports selecting the shader effect tile mode. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
+    **NOTE**  
+    
+    This API provides the blur effect for static images. To provide the real-time blur effect for components,  
+use dynamic blur.
 
 **Since:** 14
 
@@ -137,14 +145,14 @@ Adds the blur effect to the filter linked list, and returns the head node of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Blur radius, in pixels. The blur effect is proportional to the configured value. A larger value indicates a more obvious effect. |
-| tileMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Tile mode of the shader effect. The blur effect of image edges is affected. Currently, only CPU rendering is supported. Therefore, the tile mode supports only DECAL. |
+| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Blur radius, in px. Value range: [0, +∞). A larger blur radius produces a more pronounced blur effect. No effect is applied when a negative value is passed in. |
+| tileMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Shader tile mode, which affects the blur effect at the image edges. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Final image effect. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a Filter instance with the added effects, for continuing to add effects or obtaining the processed image. |
 
 **Example**
 
@@ -221,7 +229,7 @@ ArkTS-Sta:
 brightness(bright: double): Filter
 ```
 
-Adds the brightness effect to the filter linked list, and returns the head node of the linked list.
+Adds the brightness effect to the effect chain and returns the instance of the chain. This method achieves a brightness effect by adjusting the image brightness. It is commonly used in scenarios such as dark image brightening, image preview brightness enhancement, and night mode image adaptation.
 
 **Since:** 9
 
@@ -239,13 +247,13 @@ Adds the brightness effect to the filter linked list, and returns the head node 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bright | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Brightness value, ranging from 0 to 1. When the value is 0, the image brightness remains unchanged. |
+| bright | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Brightness level. The value range is [0, 1]. The value 0 means the image remains unchanged, and 1 means the image brightness is increased to the maximum. If the value is out of range, it is automatically corrected to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Final image effect. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
 
 **Example**
 
@@ -316,7 +324,11 @@ struct Index {
 getEffectPixelMap(): Promise<image.PixelMap>
 ```
 
-Obtains image.PixelMap of the source image to which the filter linked list is added. This API uses a promise to return the result.
+Obtains image.PixelMap of the source image to which the effect chain has been added. CPU rendering is used by default. This API uses a promise to return the result. To specify the rendering mode, use the getEffectPixelMap(useCpuRender: boolean) API. It is commonly used in scenarios where the processed image needs to be saved or displayed.
+    **NOTE**  
+    
+    This method uses CPU rendering by default. The shader tile mode supports only DECAL, and other modes  
+(CLAMP, REPEAT, MIRROR) are not supported. To use GPU rendering or learn about the impact of rendering modes on TileMode, see TileMode and getEffectPixelMap(useCpuRender: boolean).
 
 **Since:** 11
 
@@ -334,7 +346,7 @@ Obtains image.PixelMap of the source image to which the filter linked list is ad
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; |  Promise used to return image.PixelMap of the source image. |
+| Promise&lt;image.PixelMap&gt; |  Promise used to return the image.PixelMap of the source image with the effect chain applied. |
 
 **Example**
 
@@ -364,7 +376,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>
 ```
 
-Gets the PixelMap where all filter effects have been added to the image.
+Obtains image.PixelMap of the source image with the linked list effect. The rendering mode (CPU rendering or GPU rendering) can be specified. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -382,13 +394,13 @@ Gets the PixelMap where all filter effects have been added to the image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| useCpuRender | boolean | Yes | Whether to use cpu render. |
+| useCpuRender | boolean | Yes | Specifies the rendering mode. The value true means CPU rendering, and false means GPU rendering. When GPU rendering is used, the support scope of the shader effect tile mode TileMode differs from that of CPU rendering. For details, see TileMode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; |  returns the PixelMap generated. |
+| Promise&lt;image.PixelMap&gt; |  Promise used to return image.PixelMap of the source image. |
 
 **Example**
 
@@ -418,7 +430,10 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getPixelMap(): image.PixelMap
 ```
 
-Obtains image.PixelMap of the source image to which the filter linked list is added.
+Obtains image.PixelMap of the source image to which the effect chain has been added. It is commonly used in scenarios where the processed image needs to be saved or displayed.
+    **NOTE**  
+    
+    This API is supported since API version 9 and deprecated since API version 11. Use getEffectPixelMap instead.
 
 **Since:** 9
 
@@ -436,7 +451,7 @@ Obtains image.PixelMap of the source image to which the filter linked list is ad
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | image.PixelMap. |
+| image.PixelMap | image.PixelMap of the source image with the effect chain applied. |
 
 **Example**
 
@@ -465,7 +480,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 grayscale(): Filter
 ```
 
-Adds the grayscale effect to the filter linked list, and returns the head node of the linked list.
+Adds the grayscale effect to the effect chain and returns the instance of the chain. This method converts a color image into a grayscale image by calculating the grayscale value through weighted RGB values. It is commonly used in scenarios such as black-and-white style photo generation, image preprocessing decolorization,and grayscale icon creation.
 
 **Since:** 9
 
@@ -483,7 +498,7 @@ Adds the grayscale effect to the filter linked list, and returns the head node o
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Final image effect. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
 
 **Example**
 
@@ -553,7 +568,7 @@ struct Index {
 invert(): Filter
 ```
 
-Adds the inversion effect to the filter linked list, and returns the head node of the linked list.
+Adds the invert effect to the effect chain and returns the instance of the chain. This method inverts the RGB color values of the image. It is commonly used in scenarios such as negative film effect, image artistic processing, and night mode adaptation.
 
 **Since:** 12
 
@@ -567,7 +582,7 @@ Adds the inversion effect to the filter linked list, and returns the head node o
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Final image effect. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
 
 **Example**
 
@@ -643,7 +658,7 @@ ArkTS-Sta:
 setColorMatrix(colorMatrix: Array<double>): Filter
 ```
 
-Adds a custom effect to the filter linked list, and returns the head node of the linked list.
+Performs color transformation on the image using a custom color matrix, adds the effect to the effect chain,and returns the instance of the chain. It is commonly used in scenarios such as implementing custom color effects not supported by preset filters, such as vintage tones and warm/cool tone adjustments.
 
 **Since:** 12
 
@@ -657,13 +672,13 @@ Adds a custom effect to the filter linked list, and returns the head node of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMatrix | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes | Custom color matrix. A 5 x 4 matrix can be created. The value range of the matrix element is [0, 1], where 0 indicates that the color channel is not involved in the calculation, and 1 indicates that the color channel is involved in the calculation and retains the original weight. |
+| colorMatrix | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes | Custom color matrix. A 4x5 matrix used to create an effect filter. The array length must be 20. The first four columns correspond to the transformation coefficients of the R, G, B, and A channels, and the fifth column is the constant offset value. It is recommended that the element values be in the range [-1, 1]. Values outside this range may cause color value overflow or unexpected effects. If the array length is not 20, null is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Final image effect. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Filter instance with effects added, which can be used to add more effects or obtain the processed image. |
 
 **Error codes:**
 

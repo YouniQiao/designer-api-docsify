@@ -59,7 +59,7 @@ let templates: Array<notificationManager.DoNotDisturbProfile> = [
   }
 ]
 notificationManager.removeDoNotDisturbProfile(templates).then(() => {
-  console.info("removeDoNotDisturbProfile success.");
+  console.info('removeDoNotDisturbProfile success.');
 }).catch((err: BusinessError) => {
   console.error(`removeDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -77,7 +77,7 @@ let templates: Array<notificationManager.DoNotDisturbProfile> = [
   }
 ]
 notificationManager.removeDoNotDisturbProfile(templates).then(() => {
-  console.info("removeDoNotDisturbProfile success.");
+  console.info('removeDoNotDisturbProfile success.');
 }).catch((err: Error): void => {
   let error: BusinessError = err as BusinessError;
   console.error(`removeDoNotDisturbProfile failed, code is ${error.code}, message is ${error.message}`);
@@ -148,7 +148,7 @@ let templates: Array<notificationManager.DoNotDisturbProfile> = [
   }
 ]
 notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
-  console.info("removeDoNotDisturbProfile success.");
+  console.info('removeDoNotDisturbProfile success.');
 }).catch((err: BusinessError) => {
   console.error(`removeDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
 });

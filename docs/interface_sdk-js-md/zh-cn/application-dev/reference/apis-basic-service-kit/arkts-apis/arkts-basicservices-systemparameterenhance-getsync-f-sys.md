@@ -50,11 +50,13 @@ function getSync(key: string, def?: string): string
 **示例：**
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 try {
   let info: string = systemParameterEnhance.getSync('const.ohos.apiversion');
-  console.info(JSON.stringify(info));
+  console.info('getSync result: ' + info);
 } catch (e) {
-  console.error('getSync unexpected error: ' + e);
+  console.error(`getSync failed. Code: ${(e as BusinessError).code}, message: ${(e as BusinessError).message}`);
 }
 ```
 

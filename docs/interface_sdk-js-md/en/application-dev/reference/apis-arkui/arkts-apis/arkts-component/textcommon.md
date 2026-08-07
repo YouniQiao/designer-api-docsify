@@ -73,6 +73,7 @@
 | [TextDataDetectorType](textcommon-textdatadetectortype-e.md) | Defines the text data detector type. |
 | [TextDeleteDirection](textcommon-textdeletedirection-e.md) | Defines delete text direction. |
 | [TextDirection](textcommon-textdirection-e.md) | Defines text direction. |
+| [TextEncoding](textcommon-textencoding-e.md) | Enumerates the text encoding types supported by ArkUI text layout query APIs. |
 | [TextMenuShowMode](textcommon-textmenushowmode-e.md) | Defines text menu show mode. |
 | [TextVerticalAlign](textcommon-textverticalalign-e.md) | Vertical Alignment of text. |
 

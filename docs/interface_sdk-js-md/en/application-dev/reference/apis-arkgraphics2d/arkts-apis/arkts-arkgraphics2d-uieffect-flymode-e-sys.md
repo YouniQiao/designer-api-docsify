@@ -1,6 +1,6 @@
 # FlyMode (System API)
 
-FlyMode enumeration description
+Fly-in or fly-out deformation scene mode enumeration.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ FlyMode enumeration description
 BOTTOM = 0
 ```
 
-BOTTOM fly mode.
+Fly-in or fly-out deformation from the bottom.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ BOTTOM fly mode.
 TOP = 1
 ```
 
-TOP fly mode.
+Fly-in or fly-out deformation from the top.
 
 **Since:** 12
 

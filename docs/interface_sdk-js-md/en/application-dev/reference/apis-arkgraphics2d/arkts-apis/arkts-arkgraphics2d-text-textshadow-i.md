@@ -1,6 +1,6 @@
 # TextShadow
 
-Describes the text shadow.
+Represents a text shadow.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Blur radius, a floating-point value in physical pixels (px), with a default valu
 color?: common2D.Color
 ```
 
-Color of the text shadow. The default value is black (255, 0, 0, 0).
+Color of the text shadow. The default value is black Color(255, 0, 0, 0).
 
 **Type:** common2D.Color
 
@@ -56,7 +56,7 @@ Color of the text shadow. The default value is black (255, 0, 0, 0).
 point?: common2D.Point
 ```
 
-Shadow offset position of the font based on the current text, in which the horizontal and vertical coordinates are greater than or equal to 0, with the unit being physical pixels (px).
+Offset position of the text shadow relative to the current text. The horizontal and vertical coordinates must be greater than or equal to 0, in physical pixels (px). The default value is common2D.Point(0, 0).
 
 **Type:** common2D.Point
 

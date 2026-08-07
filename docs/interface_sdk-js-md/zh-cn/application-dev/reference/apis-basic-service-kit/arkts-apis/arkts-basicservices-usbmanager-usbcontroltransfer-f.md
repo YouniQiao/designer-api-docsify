@@ -40,7 +40,6 @@ function usbControlTransfer(pipe: USBDevicePipe, requestparam: USBDeviceRequestP
 **示例：**
 
 ```TypeScript
-import { BusinessError } from '@ohos.base';
 // 控制传输参数：根据USB协议规范、设备描述符或设备规格文档设置各字段值
 // bmRequestType：请求控制类型，常见取值示例：0x00（标准请求，主机向设备）、0x20（类请求，主机向设备）、0x40（厂商请求，主机向设备）、0x80（标准请求，设备向主机）
 // bRequest：具体控制请求命令（如获取描述符、设置地址等）
@@ -76,7 +75,7 @@ async function usbControlTransfer() {
   }
   usbManager.usbControlTransfer(devicePipe, param).then((ret: int) => {
     console.info(`usbControlTransfer = ${ret}`);
-  }).catch((error: BusinessError) => {
+  }).catch((error) => {
     console.error(`usbControlTransfer failed: ${error.code}, message: ${error.message}`);
   }).finally(() => {
     usbManager.closePipe(devicePipe);

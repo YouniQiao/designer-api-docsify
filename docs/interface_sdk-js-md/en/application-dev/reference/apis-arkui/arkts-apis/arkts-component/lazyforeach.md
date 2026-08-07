@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [LazyForEach](lazyforeach-lazyforeach-f.md#lazyforeach) | Defines LazyForEach Component. It requires call setLazyForEachOptions at start of component attribute set-up,and it requires call applyAttributeFinish at end of component attribute set-up. |
+| [LazyForEach](lazyforeach-lazyforeach-f.md#lazyforeach) | Defines LazyForEach Component. It requires calling setLazyForEachOptions at start of component attribute set-up,and it requires calling applyAttributesFinish at end of component attribute set-up. |
 
 ### Interfaces
 

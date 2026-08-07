@@ -18,7 +18,7 @@
 cubicRate: double
 ```
 
-灰度调整的三阶系数。 取值范围[-20, 20]。
+灰度调整的三阶系数。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
 **类型：** double
 
@@ -40,7 +40,7 @@ cubicRate: double
 degree: double
 ```
 
-灰度调整的比例。 取值范围[-20, 20]。
+灰度调整的比例。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
 **类型：** double
 
@@ -62,7 +62,7 @@ degree: double
 fraction: double
 ```
 
-提亮效果的混合比例。 取值范围[0, 1]，超出边界会在实现时自动截断。
+提亮效果的混合比例。 取值范围为[0, 1]，超出边界会在实现时自动截断。
 
 **类型：** double
 
@@ -84,7 +84,7 @@ fraction: double
 linearRate: double
 ```
 
-灰度调整的线性系数。 取值范围[-20, 20]。
+灰度调整的线性系数。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
 **类型：** double
 
@@ -106,7 +106,7 @@ linearRate: double
 negativeCoefficient: [double, double, double]
 ```
 
-基于基准饱和度的RGB负向调整参数。 每个number的取值范围[-20, 20]。
+基于基准饱和度的RGB负向调整参数。 每个number的取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
 **类型：** [double, double, double]
 
@@ -128,7 +128,7 @@ negativeCoefficient: [double, double, double]
 positiveCoefficient: [double, double, double]
 ```
 
-基于基准饱和度的RGB正向调整参数。 每个number的取值范围[-20, 20]。
+基于基准饱和度的RGB正向调整参数。 每个number的取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
 **类型：** [double, double, double]
 
@@ -150,7 +150,7 @@ positiveCoefficient: [double, double, double]
 quadraticRate: double
 ```
 
-灰度调整的二阶系数。 取值范围[-20, 20]。
+灰度调整的二阶系数。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
 
 **类型：** double
 
@@ -172,7 +172,7 @@ quadraticRate: double
 saturation: double
 ```
 
-提亮的基准饱和度。 取值范围[0, 20]。
+提亮的基准饱和度。 取值范围为[0, 20]，超出边界会在实现时自动截断。
 
 **类型：** double
 

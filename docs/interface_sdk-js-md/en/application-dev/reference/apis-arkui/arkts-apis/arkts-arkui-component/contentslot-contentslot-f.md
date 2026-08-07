@@ -41,7 +41,7 @@ export declare function ContentSlot(
 ): ContentSlotAttribute
 ```
 
-Defines ContentSlot Component.It requires call setContentSlotOptions at start of the component attribute set-up,and it requires call applyAttributeFinish at the end of the component attribute set-up.
+Defines ContentSlot Component.It requires calling setContentSlotOptions at start of the component attribute set-up,and it requires calling applyAttributesFinish at the end of the component attribute set-up.
 
 **Since:** 26.1.0
 

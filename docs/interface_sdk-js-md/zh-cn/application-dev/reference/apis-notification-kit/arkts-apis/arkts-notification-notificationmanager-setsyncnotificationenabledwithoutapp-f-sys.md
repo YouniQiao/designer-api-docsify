@@ -57,7 +57,7 @@ let setSyncNotificationEnabledWithoutAppCallback = (err: BusinessError): void =>
     if (err) {
         console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("setSyncNotificationEnabledWithoutApp success");
+        console.info('setSyncNotificationEnabledWithoutApp success');
     }
 }
 notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable, setSyncNotificationEnabledWithoutAppCallback);
@@ -75,7 +75,7 @@ let setSyncNotificationEnabledWithoutAppCallback = (err: BusinessError | null): 
     if (err) {
         console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("setSyncNotificationEnabledWithoutApp success");
+        console.info('setSyncNotificationEnabledWithoutApp success');
     }
 }
 notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable, setSyncNotificationEnabledWithoutAppCallback);

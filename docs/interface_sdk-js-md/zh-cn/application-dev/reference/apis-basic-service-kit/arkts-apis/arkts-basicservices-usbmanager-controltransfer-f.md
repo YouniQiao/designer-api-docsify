@@ -43,7 +43,6 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 **示例：**
 
 ```TypeScript
-import { BusinessError } from '@ohos.base';
 let param: usbManager.USBControlParams = {
   request: 0x06,
   reqType: 0x80,
@@ -72,7 +71,7 @@ async function controlTransfer() {
   }
   usbManager.controlTransfer(devicePipe, param).then((ret: number) => {
     console.info(`controlTransfer = ${ret}`);
-  }).catch((error: BusinessError) => {
+  }).catch((error) => {
     console.error(`Failed to transfer. Code: ${error.code}, message: ${error.message}`);
   }).finally(() => {
     usbManager.closePipe(devicePipe);

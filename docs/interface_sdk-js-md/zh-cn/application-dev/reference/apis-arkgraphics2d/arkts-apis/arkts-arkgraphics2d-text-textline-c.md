@@ -140,7 +140,7 @@ struct Index {
 createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine | undefined
 ```
 
-创建一个截断的文本行对象
+创建一个截断的文本行对象。
 
 **起始版本：** 23
 
@@ -154,15 +154,15 @@ createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | double | 是 | 截断后的行宽度 |
-| ellipsisMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 省略的类型，当前不支持中部省略 |
-| ellipsis | string | 是 | 用于省略的文字 |
+| width | double | 是 | 截断后的行宽度，浮点数，单位为物理像素px。 |
+| ellipsisMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 截断的类型，当前仅支持头部截断START和尾部截断END。 |
+| ellipsis | string | 是 | 截断的标记字符串。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Truncated text line object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 截断的文本行对象。 |
 
 ## enumerateCaretOffsets
 
@@ -332,8 +332,7 @@ getImageBounds(): common2D.Rect
     
     示意图展示了字符串为"j"或"E"的图像边界。  
     
-    !  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
+    !\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
 
 **起始版本：** 18
 
@@ -349,7 +348,7 @@ getImageBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | Image boundary of a text line, in physical pixels (px). |
+| common2D.Rect | 文本行的图像边界，单位为物理像素px。 |
 
 **示例：**
 
@@ -427,7 +426,7 @@ getStringIndexForPosition(point: common2D.Point): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | common2D.Point | 是 | 要查找索引的位置。 |
+| point | common2D.Point | 是 | 要查找字符索引的坐标位置，坐标相对于文本行的左上角原点，单位为物理像素px。其中x为水平坐标，y为垂直坐标。 |
 
 **返回值：**
 
@@ -519,8 +518,7 @@ getTypographicBounds(): TypographicBounds
     
     示意图展示了字符串为" a b "的排版边界。  
     
-    !  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
+    !\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
     
     示意图展示了字符串为"j"或"E"的排版边界。  
     

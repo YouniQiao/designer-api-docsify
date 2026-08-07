@@ -1,6 +1,6 @@
 # WaterRippleMode (System API)
 
-WaterRippleMode enumeration description
+Water ripple scene mode enumeration.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ WaterRippleMode enumeration description
 SMALL2MEDIUM_RECV = 0
 ```
 
-SMALL2MEDIUM\_RECV mode.
+Phone tapping 2in1 device (receiving end).
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ SMALL2MEDIUM\_RECV mode.
 SMALL2MEDIUM_SEND = 1
 ```
 
-SMALL2MEDIUM\_SEND mode.
+Phone tapping 2in1 device (sending end).
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ SMALL2MEDIUM\_SEND mode.
 SMALL2SMALL = 2
 ```
 
-SMALL2SMALL mode.
+Phone tapping phone.
 
 **Since:** 12
 
@@ -72,7 +72,7 @@ SMALL2SMALL mode.
 MINI_RECV = 3
 ```
 
-MINI\_RECV mode.
+2in1 device sharing with other devices (keyboard and mouse sharing scenario).
 
 **Since:** 17
 

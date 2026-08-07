@@ -1,6 +1,6 @@
 # AxisModel
 
-Type of axis.
+定义焦点轴事件的轴类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Type of axis.
 ABS_X = 0
 ```
 
-ABS\_X axis type.
+游戏手柄X轴。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ ABS\_X axis type.
 ABS_Y = 1
 ```
 
-ABS\_Y axis type.
+游戏手柄Y轴。
 
 **起始版本：** 23
 
@@ -52,7 +52,7 @@ ABS\_Y axis type.
 ABS_Z = 2
 ```
 
-ABS\_Z axis type.
+游戏手柄Z轴。
 
 **起始版本：** 23
 
@@ -70,7 +70,7 @@ ABS\_Z axis type.
 ABS_RZ = 3
 ```
 
-ABS\_RZ axis type.
+游戏手柄RZ轴。
 
 **起始版本：** 23
 
@@ -88,7 +88,7 @@ ABS\_RZ axis type.
 ABS_GAS = 4
 ```
 
-ABS\_GAS axis type.
+游戏手柄GAS轴。
 
 **起始版本：** 23
 
@@ -106,7 +106,7 @@ ABS\_GAS axis type.
 ABS_BRAKE = 5
 ```
 
-ABS\_BRAKE axis type.
+游戏手柄BRAKE轴。
 
 **起始版本：** 23
 
@@ -124,7 +124,7 @@ ABS\_BRAKE axis type.
 ABS_HAT0X = 6
 ```
 
-ABS\_HAT0X axis type.
+游戏手柄HAT0X轴。
 
 **起始版本：** 23
 
@@ -142,7 +142,7 @@ ABS\_HAT0X axis type.
 ABS_HAT0Y = 7
 ```
 
-ABS\_HAT0Y axis type.
+游戏手柄HAT0Y轴。
 
 **起始版本：** 23
 
@@ -160,7 +160,7 @@ ABS\_HAT0Y axis type.
 ABS_RX = 8
 ```
 
-ABS\_RX axis type.
+游戏手柄RX轴。
 
 **起始版本：** 23
 
@@ -178,7 +178,7 @@ ABS\_RX axis type.
 ABS_RY = 9
 ```
 
-ABS\_RY axis type.
+游戏手柄RY轴。
 
 **起始版本：** 23
 
@@ -196,7 +196,7 @@ ABS\_RY axis type.
 ABS_THROTTLE = 10
 ```
 
-ABS\_THROTTLE axis type.
+游戏手柄THROTTLE轴。
 
 **起始版本：** 23
 
@@ -214,7 +214,7 @@ ABS\_THROTTLE axis type.
 ABS_RUDDER = 11
 ```
 
-ABS\_RUDDER axis type.
+游戏手柄RUDDER轴。
 
 **起始版本：** 23
 
@@ -232,7 +232,7 @@ ABS\_RUDDER axis type.
 ABS_WHEEL = 12
 ```
 
-ABS\_WHEEL axis type.
+游戏手柄WHEEL轴。
 
 **起始版本：** 23
 
@@ -250,7 +250,7 @@ ABS\_WHEEL axis type.
 ABS_HAT1X = 13
 ```
 
-ABS\_HAT1X axis type.
+游戏手柄HAT1X轴。
 
 **起始版本：** 23
 
@@ -268,7 +268,7 @@ ABS\_HAT1X axis type.
 ABS_HAT1Y = 14
 ```
 
-ABS\_HAT1Y axis type.
+游戏手柄HAT1Y轴。
 
 **起始版本：** 23
 
@@ -286,7 +286,7 @@ ABS\_HAT1Y axis type.
 ABS_HAT2X = 15
 ```
 
-ABS\_HAT2X axis type.
+游戏手柄HAT2X轴。
 
 **起始版本：** 23
 
@@ -304,7 +304,7 @@ ABS\_HAT2X axis type.
 ABS_HAT2Y = 16
 ```
 
-ABS\_HAT2Y axis type.
+游戏手柄HAT2Y轴。
 
 **起始版本：** 23
 
@@ -322,7 +322,7 @@ ABS\_HAT2Y axis type.
 ABS_HAT3X = 17
 ```
 
-ABS\_HAT3X axis type.
+游戏手柄HAT3X轴。
 
 **起始版本：** 23
 
@@ -340,7 +340,7 @@ ABS\_HAT3X axis type.
 ABS_HAT3Y = 18
 ```
 
-ABS\_HAT3Y axis type.
+游戏手柄HAT3Y轴。
 
 **起始版本：** 23
 

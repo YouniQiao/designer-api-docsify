@@ -22,3 +22,11 @@ function voltage(): int
 | --- | --- |
 | int | 返回当前设备电池的电压，单位微伏。 |
 
+**示例：**
+
+```TypeScript
+// ArkTS-Sta示例
+let result = batteryInfo.voltage();
+console.info("The result is: " + result);
+```
+

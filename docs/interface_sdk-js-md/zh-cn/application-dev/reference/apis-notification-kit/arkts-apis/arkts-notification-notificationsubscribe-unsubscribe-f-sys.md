@@ -49,11 +49,11 @@ let unsubscribeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`unsubscribe failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("unsubscribe success");
+    console.info('unsubscribe success');
   }
 }
 let onDisconnectCallback = () => {
-  console.info("subscribe disconnect");
+  console.info('subscribe disconnect');
 }
 let subscriber: notificationSubscribe.NotificationSubscriber = {
   onDisconnect: onDisconnectCallback
@@ -70,11 +70,11 @@ let unsubscribeCallback = (err: BusinessError | null) => {
   if (err) {
     console.error(`unsubscribe failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("unsubscribe success");
+    console.info('unsubscribe success');
   }
 }
 let onDisconnectCallback = () => {
-  console.info("subscribe disconnect");
+  console.info('subscribe disconnect');
 }
 let subscriber: notificationSubscribe.NotificationSubscriber = {
   onDisconnect: onDisconnectCallback
@@ -134,13 +134,13 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let onDisconnectCallback = () => {
-  console.info("subscribe disconnect");
+  console.info('subscribe disconnect');
 }
 let subscriber: notificationSubscribe.NotificationSubscriber = {
   onDisconnect: onDisconnectCallback
 };
 notificationSubscribe.unsubscribe(subscriber).then(() => {
-  console.info("unsubscribe success");
+  console.info('unsubscribe success');
 }).catch((err: BusinessError) => {
   console.error(`unsubscribe fail, code is ${err.code}, message is ${err.message}`);
 });
@@ -150,13 +150,13 @@ ArkTS-Sta示例：
 
 ```TypeScript
 let onDisconnectCallback = () => {
-  console.info("subscribe disconnect");
+  console.info('subscribe disconnect');
 }
 let subscriber: notificationSubscribe.NotificationSubscriber = {
   onDisconnect: onDisconnectCallback
 };
 notificationSubscribe.unsubscribe(subscriber).then(() => {
-  console.info("unsubscribe success");
+  console.info('unsubscribe success');
 }).catch((err: Error): void => {
   let error: BusinessError = err as BusinessError;
   console.error(`unsubscribe fail, code is ${error.code}, message is ${error.message}`);

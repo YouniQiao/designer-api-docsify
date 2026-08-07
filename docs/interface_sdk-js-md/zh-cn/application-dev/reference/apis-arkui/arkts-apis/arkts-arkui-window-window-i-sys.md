@@ -757,7 +757,7 @@ ArkTS-Dyn示例：
 
 ```TypeScript
 // EntryAbility.ets
-import { UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage) {
@@ -895,7 +895,7 @@ hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 
 ```TypeScript
 // EntryAbility.ets
-import { UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
@@ -1101,9 +1101,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let promise = windowClass.isMainWindowFullScreenAcrossDisplays();
-  promise.then((data: boolean)=> {
+  promise.then((data: boolean) => {
       console.info(`Succeeded in using isMainWindowFullScreenAcrossDisplays function. Data: ${data}`);
-  }).catch((err: BusinessError)=>{
+  }).catch((err: BusinessError) => {
       console.error(`Failed to use isMainWindowFullScreenAcrossDisplays function. code:${err.code}, message:${err.message}.`);
   });
 } catch (exception) {
@@ -1537,9 +1537,9 @@ export default class EntryAbility extends UIAbility {
           let targetWindow: window.Window = windowClass;
           let properties = targetWindow.getWindowProperties();
           let targetId = properties.id;
-          windowClass.raiseAboveTarget(targetId).then(()=> {
+          windowClass.raiseAboveTarget(targetId).then(() => {
             console.info('Succeeded in raising the subWindow to target subWindow top.');
-          }).catch((err: BusinessError)=>{
+          }).catch((err: BusinessError) => {
             console.error(`Failed to raise the subWindow to target subWindow top. Cause code: ${err.code}, message: ${err.message}`);
           });
         });

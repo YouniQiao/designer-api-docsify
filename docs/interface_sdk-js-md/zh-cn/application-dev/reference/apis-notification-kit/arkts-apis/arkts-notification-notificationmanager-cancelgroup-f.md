@@ -48,7 +48,7 @@ let cancelGroupCallback = (err: BusinessError): void => {
     console.info(`Succeeded in canceling group.`);
   }
 }
-let groupName: string = "GroupName";
+let groupName: string = 'GroupName';
 notificationManager.cancelGroup(groupName, cancelGroupCallback);
 ```
 
@@ -64,7 +64,7 @@ let cancelGroupCallback = (err: BusinessError | null): void => {
     console.info(`Succeeded in canceling group.`);
   }
 }
-let groupName: string = "GroupName";
+let groupName: string = 'GroupName';
 notificationManager.cancelGroup(groupName, cancelGroupCallback);
 ```
 
@@ -115,7 +115,7 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let groupName: string = "GroupName";
+let groupName: string = 'GroupName';
 notificationManager.cancelGroup(groupName).then(() => {
   console.info(`Succeeded in canceling group.`);
 }).catch((err: BusinessError) => {
@@ -128,7 +128,7 @@ ArkTS-Sta示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let groupName: string = "GroupName";
+let groupName: string = 'GroupName';
 notificationManager.cancelGroup(groupName).then(() => {
   console.info(`Succeeded in canceling group.`);
 }).catch((err: Error): void => {

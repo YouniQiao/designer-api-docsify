@@ -73,6 +73,7 @@
 | [TextDataDetectorType](arkts-arkui-textdatadetectortype-e.md) | Defines the text data detector type. |
 | [TextDeleteDirection](arkts-arkui-textdeletedirection-e.md) | Defines the direction for deleting text. |
 | [TextDirection](arkts-arkui-textdirection-e.md) | Enumerates the text layout directions. |
+| [TextEncoding](arkts-arkui-textencoding-e.md) | Enumerates the text encoding types supported by text layout query APIs. |
 | [TextMenuShowMode](arkts-arkui-textmenushowmode-e.md) | Enumerates the text menu display modes. |
 | [TextVerticalAlign](arkts-arkui-textverticalalign-e.md) | Defines the vertical alignment mode of text. The default value is **BASELINE** (aligning along the baseline). |
 

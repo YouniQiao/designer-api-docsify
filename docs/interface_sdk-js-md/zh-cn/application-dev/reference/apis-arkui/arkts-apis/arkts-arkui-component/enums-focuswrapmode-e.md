@@ -1,6 +1,6 @@
 # FocusWrapMode
 
-Focus wrap mode of a list or grid when moving focus using the arrow keys.
+交叉轴方向键走焦模式枚举。
 
 **起始版本：** 26.0.0
 
@@ -16,7 +16,7 @@ Focus wrap mode of a list or grid when moving focus using the arrow keys.
 DEFAULT = 0
 ```
 
-No wrap when moving focus using the arrow keys.
+交叉轴方向键不允许换行。
 
 **起始版本：** 26.0.0
 
@@ -34,7 +34,9 @@ No wrap when moving focus using the arrow keys.
 WRAP_WITH_ARROW = 1
 ```
 
-Auto wrap when moving focus using the arrow keys.
+交叉轴方向键允许换行。
+
+不规则单元格场景下，交叉轴方向键走焦时优先走到同一行的可获焦item。
 
 **起始版本：** 26.0.0
 

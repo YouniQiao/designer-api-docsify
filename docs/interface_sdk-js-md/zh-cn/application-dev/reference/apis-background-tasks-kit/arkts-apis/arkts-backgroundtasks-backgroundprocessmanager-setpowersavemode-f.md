@@ -53,11 +53,15 @@ function setPowerSaveMode(pid: int, powerSaveMode: PowerSaveMode): Promise<void>
 import { BusinessError } from '@kit.BasicServicesKit';
 import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 
-let pid = 33333;
+let pid = 33333;  // 请开发者替换为实际的进程号
 try {
-    backgroundProcessManager.setPowerSaveMode(pid, backgroundProcessManager.PowerSaveMode.EFFICIENCY_MODE); 
+  backgroundProcessManager.setPowerSaveMode(pid, backgroundProcessManager.PowerSaveMode.EFFICIENCY_MODE).then(() => {
+    console.info('setPowerSaveMode promise');
+  }).catch((err: BusinessError) => {
+    console.error(`setPowerSaveMode failed, promise errCode: ${err.code}, message: ${err.message}`);
+  });
 } catch (error) {
-    console.error(`setPowerSaveMode failed, errCode: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+  console.error(`setPowerSaveMode failed, errCode: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
 

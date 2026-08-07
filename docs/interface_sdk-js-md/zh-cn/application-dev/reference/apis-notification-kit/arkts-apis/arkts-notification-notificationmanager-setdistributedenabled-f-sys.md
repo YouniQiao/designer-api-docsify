@@ -55,7 +55,7 @@ export default class EntryAbility extends UIAbility {
   onForeground(): void {
     try {
       let isEnable: boolean = true;
-      let deviceType: string = "wearable";
+      let deviceType: string = 'wearable';
       notificationManager.setDistributedEnabled(isEnable, deviceType).then(() => {
         console.info('setDistributedEnabled succeeded.');
       }).catch((err: BusinessError) => {
@@ -81,7 +81,7 @@ export default class EntryAbility extends UIAbility {
   onForeground(): void {
     try {
       let isEnable: boolean = true;
-      let deviceType: string = "wearable";
+      let deviceType: string = 'wearable';
       notificationManager.setDistributedEnabled(isEnable, deviceType).then(() => {
         console.info('setDistributedEnabled succeeded.');
       }).catch((err: Error) => {

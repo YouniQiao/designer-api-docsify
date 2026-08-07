@@ -22,3 +22,11 @@ function technology(): string
 | --- | --- |
 | string | 返回当前设备电池的技术型号。 |
 
+**示例：**
+
+```TypeScript
+// ArkTS-Sta示例
+let result = batteryInfo.technology();
+console.info("The result is: " + result);
+```
+

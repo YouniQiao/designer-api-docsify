@@ -3,18 +3,18 @@
 Describes the typographic boundaries of a text line. These boundaries depend on the typographic font and font size,but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves.
     **NOTE**  
     
-    The following figure shows the layout parameters of a text line: width (width of the text line including the left  
-    and right spaces), ascent (highest point of the rising height), descent (lowest point of the falling height),  
-    leading (line spacing), top (highest point of the current line), baseline (character baseline), bottom (lowest  
-    point of the current line), and next line top (highest point of the next line).  
+    The figure shows the text line typesetting parameters: width (the width of the text line including left and right  
+    spaces), ascent (the highest point of the ascent), descent (the lowest point of the descent), leading (line  
+    spacing), top (the highest point of the current line), baseline (the character baseline), bottom (the lowest  
+    point of the current line), and next line top (the highest point of the next line).  
     
     !\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
     
-    The following figure shows the typographic boundaries of the string " a b ".  
+    The figure shows the typesetting boundaries for the string " a b ".  
     
     !\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_  
     
-    The following figure shows the typographic boundaries of the strings "j" and "E".  
+    The figure shows the typesetting boundaries for the string "j" or "E".  
     
     !  
     \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_

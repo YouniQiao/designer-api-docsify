@@ -6,7 +6,7 @@
 function isFontSupported(fontURL: string | Resource): boolean
 ```
 
-Checks whether the system supports the specified font file.
+Checks whether the system supports the specified font file. You can use this API to verify the availability of a font file before loading a custom font, preventing text rendering exceptions caused by unsupported fonts.
 
 **Since:** 23
 

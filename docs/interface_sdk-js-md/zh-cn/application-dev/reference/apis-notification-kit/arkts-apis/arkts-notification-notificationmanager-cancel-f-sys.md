@@ -54,11 +54,11 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName"
+  bundle: 'bundleName'
 };
 let id: number = 1;
 notificationManager.cancel(bundle, id).then(() => {
-  console.info("cancel success");
+  console.info('cancel success');
 }).catch((err: BusinessError) => {
   console.error(`cancel failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -71,11 +71,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
     // 需根据实际情况进行替换
-    bundle: "bundleName1"
+    bundle: 'bundleName1'
 };
 let id: int = 1;
 notificationManager.cancel(bundle, id).then(() => {
-  console.info("cancel success");
+  console.info('cancel success');
 }).catch((err: Error): void => {
   let error: BusinessError = err as BusinessError;
   console.error(`cancel failed, code is ${error.code}, message is ${error.message}`);

@@ -47,3 +47,33 @@ function updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: in
 | [32600002](../errorcode-useriam.md#32600002-模板未找到) | The template is not found. |
 | [32600003](../errorcode-useriam.md#32600003-业务id无效) | The business ID is invalid. |
 
+**示例：**
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const templateId = new Uint8Array([1, 2, 3]);
+companionDeviceAuth.updateEnabledBusinessIds(templateId, [companionDeviceAuth.BusinessId.DEFAULT])
+  .then(() => {
+    console.info('business scope updated');
+  })
+  .catch((err: BusinessError) => {
+    console.error(`error has been captured. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+const templateId = new Uint8Array([1, 2, 3]);
+companionDeviceAuth.updateEnabledBusinessIds(templateId, [companionDeviceAuth.BusinessId.DEFAULT])
+  .then(() => {
+    console.info('business scope updated');
+  })
+  .catch((err) => {
+    console.error(`error has been captured: code: ${err.code}, message: ${err.message}`);
+  })
+```
+

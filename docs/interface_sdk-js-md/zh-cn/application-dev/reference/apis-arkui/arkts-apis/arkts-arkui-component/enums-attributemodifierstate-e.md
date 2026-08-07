@@ -22,6 +22,8 @@ Normal state.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-AttributeModifierState-NORMAL = 0--><!--Device-AttributeModifierState-NORMAL = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -37,6 +39,8 @@ Pressed state.
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AttributeModifierState-PRESSED = 1--><!--Device-AttributeModifierState-PRESSED = 1-End-->
 
@@ -54,6 +58,8 @@ Focused state.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-AttributeModifierState-FOCUSED = 1 << 1--><!--Device-AttributeModifierState-FOCUSED = 1 << 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -69,6 +75,8 @@ Disabled state.
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AttributeModifierState-DISABLED = 1 << 2--><!--Device-AttributeModifierState-DISABLED = 1 << 2-End-->
 
@@ -86,7 +94,27 @@ Selected state.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-AttributeModifierState-SELECTED = 1 << 3--><!--Device-AttributeModifierState-SELECTED = 1 << 3-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## HOVERED
+
+```TypeScript
+HOVERED = 1 << 4
+```
+
+Hovered state.
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AttributeModifierState-HOVERED = 1 << 4--><!--Device-AttributeModifierState-HOVERED = 1 << 4-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

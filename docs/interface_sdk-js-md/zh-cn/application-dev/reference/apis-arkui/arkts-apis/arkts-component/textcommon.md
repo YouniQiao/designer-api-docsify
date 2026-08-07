@@ -73,6 +73,7 @@
 | [TextDataDetectorType](textcommon-textdatadetectortype-e.md) | 文本识别实体类型。 |
 | [TextDeleteDirection](textcommon-textdeletedirection-e.md) | 定义删除文本方向。 |
 | [TextDirection](textcommon-textdirection-e.md) | 文本排版方向。 |
+| [TextEncoding](textcommon-textencoding-e.md) | 枚举ArkUI文本布局查询接口支持的文本编码类型。 |
 | [TextMenuShowMode](textcommon-textmenushowmode-e.md) | 菜单的显示模式。 |
 | [TextVerticalAlign](textcommon-textverticalalign-e.md) | 文本垂直对齐的方式。默认值BASELINE，沿基线对齐。 |
 

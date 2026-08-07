@@ -56,7 +56,7 @@ fontFamily?: string
 fontFeatures?: Array<string>
 ```
 
-字体支持的font feature列表
+字体支持的OpenType特性标签数组，默认为空数组。数组中每个元素为特性标签字符串（如'liga'表示标准连字、'kern'表示字距调整），表示该字体支持的字体特性。
 
 **类型：** Array&lt;string&gt;
 
@@ -160,7 +160,7 @@ italic?: int
 languages?: Array<string>
 ```
 
-字体支持的language列表
+字体支持的语言列表，默认为空数组。数组中每个元素为BCP 47格式的语言标签字符串（如'en'、'zh-Hans'），表示该字体支持的书写语言。
 
 **类型：** Array&lt;string&gt;
 

@@ -43,3 +43,30 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 | [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 | [32600002](../errorcode-useriam.md#32600002-template-not-found) | The local user is not found. |
 
+**Example**
+
+```TypeScript
+import { osAccount, BusinessError } from '@kit.BasicServicesKit';
+
+const localUserId = 100;
+try {
+  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+  const continuousAuthParam: companionDeviceAuth.ContinuousAuthParam = {
+    templateId: new Uint8Array([])
+  };
+  const handler = (isAuthPassed: boolean, authTrustLevel?: osAccount.AuthTrustLevel): void => {
+    console.info('continuous auth changed');
+    console.info(`isAuthPassed: ${isAuthPassed}`);
+    if (authTrustLevel !== undefined) {
+      console.info(`authTrustLevel: ${authTrustLevel}`);
+    }
+  };
+
+  statusMonitor.onContinuousAuthChange(continuousAuthParam, handler);
+  statusMonitor.offContinuousAuthChange(handler);
+} catch (error) {
+  const message = (error as BusinessError).message;
+  console.error(`error has been captured: message:${message}`);
+}
+```
+

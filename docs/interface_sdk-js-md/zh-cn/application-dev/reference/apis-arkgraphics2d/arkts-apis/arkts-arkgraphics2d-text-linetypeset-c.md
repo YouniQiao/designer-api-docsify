@@ -1,6 +1,6 @@
 # LineTypeset
 
-保存着文本内容以及样式的载体，可以用于计算单行排版信息。
+保存文本内容及样式的载体，可用于计算单行排版信息。
 
 下列API示例中都需先使用[ParagraphBuilder]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_类的  
 [buildLineTypeset()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口获取到LineTypeset对象实例，再通过此实例调用对应方法。

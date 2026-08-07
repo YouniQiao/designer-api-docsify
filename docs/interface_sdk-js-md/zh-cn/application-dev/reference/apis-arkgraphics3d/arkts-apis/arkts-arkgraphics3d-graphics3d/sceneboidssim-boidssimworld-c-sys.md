@@ -1,6 +1,8 @@
 # BoidsSimWorld（系统接口）
 
 群组模拟世界接口. 提供群组模拟的播放控制和组件管理.
+    **说明：**  
+    使用以下接口前，需先通过[BoidsSimPlugin.getDefaultBoidsSimWorld]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取群组模拟世界实例。
 
 **起始版本：** 26.0.0
 

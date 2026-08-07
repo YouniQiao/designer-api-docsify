@@ -54,10 +54,10 @@ ArkTS-Dyn示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // 此处应改为开发者需要设定稍后提醒通知的唯一标识
-let hashCode: string = "hashCode";
+let hashCode: string = 'hashCode';
 let delayTime: number = 60;
 notificationManager.snoozeNotification(hashCode, delayTime).then(() => {
-  console.info("snoozeNotification success.")
+  console.info('snoozeNotification success.')
 }).catch((err: BusinessError):void => {
   console.error(`snoozeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -69,10 +69,10 @@ ArkTS-Sta示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // 此处应改为开发者需要设定稍后提醒通知的唯一标识
-let hashCode: string = "hashCode";
+let hashCode: string = 'hashCode';
 let delayTime: long = 60;
 notificationManager.snoozeNotification(hashCode, delayTime).then(() => {
-  console.info("snoozeNotification success.")
+  console.info('snoozeNotification success.')
 }).catch((err: Error):void => {
   let error: BusinessError = err as BusinessError;
   console.error(`snoozeNotification failed, code is ${error.code}, message is ${error.message}`);

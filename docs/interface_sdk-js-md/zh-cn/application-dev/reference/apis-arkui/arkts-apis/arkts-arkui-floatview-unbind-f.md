@@ -41,3 +41,34 @@ function unbind(floatViewController: FloatViewController,
 | [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) | The floating ball state does not support this operation. Possible cause: 1. The floating ball has started but not stopped yet. 2. The floatingBallController has not been bound. |
 | [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | The floatView state does not support this operation. Possible cause: 1. The float view has started but not stopped yet. 2. The floatViewController has not been bound. 3. The floatViewController and the floatingBallController are not bound together. |
 
+**示例：**
+
+```TypeScript
+// Entry.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+import { floatingBall } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  private floatingBallController: floatingBall.FloatingBallController | undefined = undefined;
+  private floatViewController: floatView.FloatViewController | undefined = undefined;
+  // 创建控制器
+  // ...
+  public unbindController(): void {
+    try {
+      // 使用绑定时传入的闪控窗和闪控球控制器
+      if (this.floatViewController && this.floatingBallController) {
+        floatView.unbind(this.floatViewController!, this.floatingBallController!).then(() => {
+          console.info('Succeeded in unbinding float view and floating ball.');
+        }).catch((err: BusinessError): void => {
+          console.error(`Failed to unbind float view and floating ball. Cause:${err.code}, message:${err.message}`);
+        });
+      }
+    } catch(e) {
+      console.error(`Failed to unbind float view and floating ball. Cause:${e.code}, message:${e.message}`);
+    }
+  }
+}
+```
+

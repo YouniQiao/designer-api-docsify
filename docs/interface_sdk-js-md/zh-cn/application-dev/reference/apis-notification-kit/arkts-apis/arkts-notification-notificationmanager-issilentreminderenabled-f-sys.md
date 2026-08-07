@@ -53,7 +53,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.isSilentReminderEnabled(bundle).then((data: notificationManager.SwitchState) => {
     hilog.info(0x0000, 'testTag', '%{public}s', `isSilentReminderEnabled success, switchState:  ${JSON.stringify(data)}.`);
@@ -66,7 +66,7 @@ ArkTS-Sta示例：
 
 ```TypeScript
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 try {
     notificationManager.isSilentReminderEnabled(bundle).then((data: notificationManager.SwitchState) => {

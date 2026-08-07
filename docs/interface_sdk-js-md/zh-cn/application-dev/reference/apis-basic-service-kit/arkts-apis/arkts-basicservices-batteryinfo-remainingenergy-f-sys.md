@@ -24,3 +24,11 @@ function remainingEnergy(): int
 | --- | --- |
 | int | 返回当前设备电池的剩余容量，单位毫安时。 |
 
+**示例：**
+
+```TypeScript
+// ArkTS-Sta示例
+let result = batteryInfo.remainingEnergy();
+console.info("The result is: " + result);
+```
+

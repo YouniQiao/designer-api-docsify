@@ -52,7 +52,7 @@ image: Image | null
 sampler?: Sampler
 ```
 
-纹理采样器.
+纹理贴图采样器，默认使用放大、缩小和mipmap过滤模式为线性过滤（LINEAR），纹理贴图U、V、W方向的寻址模式为重复（REPEAT）。
 
 **类型：** Sampler
 

@@ -6,7 +6,7 @@
 function createFilter(): Filter
 ```
 
-Create a Filter to add multiple effects to the component.
+Creates a Filter instance for adding multiple filter effects to a component.
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ Create a Filter to add multiple effects to the component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the head node of Filter. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a Filter instance, which supports adding multiple filter effects. |
 
 **Example**
 

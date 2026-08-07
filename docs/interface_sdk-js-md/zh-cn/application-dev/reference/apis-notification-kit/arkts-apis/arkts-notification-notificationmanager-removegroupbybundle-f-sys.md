@@ -51,12 +51,12 @@ let removeGroupByBundleCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("removeGroupByBundle success");
+        console.info('removeGroupByBundle success');
     }
 }
 
-let bundleOption: notificationManager.BundleOption = { bundle: "Bundle" };
-let groupName: string = "GroupName";
+let bundleOption: notificationManager.BundleOption = { bundle: 'Bundle' };
+let groupName: string = 'GroupName';
 
 notificationManager.removeGroupByBundle(bundleOption, groupName, removeGroupByBundleCallback);
 ```
@@ -70,12 +70,12 @@ let removeGroupByBundleCallback = (err: BusinessError | null): void => {
     if (err) {
         console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("removeGroupByBundle success");
+        console.info('removeGroupByBundle success');
     }
 }
 
-let bundleOption: notificationManager.BundleOption = { bundle: "bundleName1" };
-let groupName: string = "GroupName";
+let bundleOption: notificationManager.BundleOption = { bundle: 'bundleName1' };
+let groupName: string = 'GroupName';
 
 notificationManager.removeGroupByBundle(bundleOption, groupName, removeGroupByBundleCallback);
 ```
@@ -133,11 +133,11 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let bundleOption: notificationManager.BundleOption = { bundle: "Bundle" };
-let groupName: string = "GroupName";
+let bundleOption: notificationManager.BundleOption = { bundle: 'Bundle' };
+let groupName: string = 'GroupName';
 
 notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
-    console.info("removeGroupByBundle success");
+    console.info('removeGroupByBundle success');
 }).catch((err: BusinessError) => {
     console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -149,12 +149,12 @@ ArkTS-Sta示例：
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // 需根据实际情况进行替换
-let bundleOption: notificationManager.BundleOption = { bundle: "bundleName1" };
+let bundleOption: notificationManager.BundleOption = { bundle: 'bundleName1' };
 // 需根据实际情况进行替换
-let groupName: string = "GroupName";
+let groupName: string = 'GroupName';
 
 notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
-    console.info("removeGroupByBundle success");
+    console.info('removeGroupByBundle success');
 }).catch((err: Error): void => {
     let error: BusinessError = err as BusinessError;
     console.error(`removeGroupByBundle failed, code is ${error.code}, message is ${error.message}`);
