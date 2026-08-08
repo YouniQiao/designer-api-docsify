@@ -1,6 +1,6 @@
 # TabBarOptions
 
-页签容器数组。
+页签选项。
 
 **起始版本：** 12
 
@@ -33,8 +33,8 @@ TabBarOptions的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| TabBarSymbol | 是 | 页签内的图片内容。 |
+| icon | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| TabBarSymbol | 是 | 页签内的图标内容。 |
 | text | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 页签内的文字内容。 |
-| unselectedColor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 未选择时的页签颜色，默认值：#99182431。 |
-| selectedColor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 被选择时的页签颜色，默认值：#FF007DFF。 |
+| unselectedColor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 未选择时的页签颜色，默认值为#99182431。 |
+| selectedColor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 已选择时的页签颜色，默认值为#FF007DFF。 |
 

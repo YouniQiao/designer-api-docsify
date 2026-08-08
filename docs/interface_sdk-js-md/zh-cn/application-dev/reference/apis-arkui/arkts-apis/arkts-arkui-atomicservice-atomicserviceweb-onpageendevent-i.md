@@ -1,6 +1,6 @@
 # OnPageEndEvent
 
-定义网页加载结束时触发的函数。
+定义网页加载结束时触发该回调。
 
 **起始版本：** 12
 
@@ -16,7 +16,7 @@
 url: string
 ```
 
-The url of page.
+页面的URL地址。
 
 **类型：** string
 

@@ -7,11 +7,6 @@ function requestEnableNotification(callback: AsyncCallback<void>): void
 ```
 
 当前应用请求通知使能。使用callback异步回调。
-    **说明：**  
-    
-    从API version 9开始支持，从API version 12开始废弃，建议使用有context入参的  
-    [requestEnableNotification]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    替代。
 
 **起始版本：** 9
 
@@ -163,10 +158,6 @@ function requestEnableNotification(): Promise<void>
 ```
 
 当前应用请求通知使能。使用Promise异步回调。
-    **说明：**  
-    
-    从API version 9开始支持，从API version 12开始废弃，建议使用有context入参的  
-    [requestEnableNotification]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
 
 **起始版本：** 9
 

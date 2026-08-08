@@ -78,8 +78,6 @@ readonly creatorInstanceKey?: number
 
 创建者实例键值。
 
-从API version 12开始支持，从API version 15开始废弃，建议使用appInstanceKey替代。
-
 **类型：** number
 
 **起始版本：** 12

@@ -76,7 +76,7 @@ Notification classification. Not supported currently.
 readonly creatorInstanceKey?: number
 ```
 
-Creator instance key. This parameter is supported since API version 12 and deprecated since API version 15. You are advised to use **appInstanceKey** instead.
+Creator instance key.
 
 **Type:** number
 

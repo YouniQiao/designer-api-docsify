@@ -1,8 +1,6 @@
 # BundleOption
 
-    **NOTE**  
-    This API is supported since API version 7 and deprecated since API version 9.  
-You are advised to use [notificationManager.BundleOption]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+Describes the **BundleOption** information, that is, the bundle information of an application.
 
 **Since:** 7
 

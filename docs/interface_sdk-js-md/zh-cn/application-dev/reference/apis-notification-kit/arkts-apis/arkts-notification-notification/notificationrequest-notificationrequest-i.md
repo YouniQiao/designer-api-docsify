@@ -631,8 +631,6 @@ slotType?: notification.SlotType
 
 通知渠道类型，默认值为OTHER\_TYPES。
 
-从API version 7开始支持，从API version 11开始废弃，建议使用notificationSlotType替代。
-
 **类型：** notification.SlotType
 
 **起始版本：** 7

@@ -1,10 +1,5 @@
 # @system.notification
 
-> **说明：**
- >
- > - 从API Version 7 开始，该接口不再维护，推荐使用新接口[@ohos.notification (Notification模块)](arkts-notification.md)。
-
-
 ## 汇总
 
 ### 类

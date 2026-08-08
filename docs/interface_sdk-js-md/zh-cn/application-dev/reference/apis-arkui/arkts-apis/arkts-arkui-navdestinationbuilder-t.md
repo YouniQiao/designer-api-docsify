@@ -4,7 +4,7 @@
 export type NavDestinationBuilder = (name: string, param?: Object) => void
 ```
 
-NavDestination组件内容。
+用于创建NavDestination组件内容的构建器类型。
 
 **起始版本：** 12
 

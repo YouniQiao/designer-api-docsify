@@ -16,7 +16,7 @@
 error: WebResourceError
 ```
 
-Web resource error of event.
+网页加载资源错误的封装信息 。
 
 **类型：** WebResourceError
 
@@ -36,7 +36,7 @@ Web resource error of event.
 request: WebResourceRequest
 ```
 
-Web resource request of event.
+网页请求的封装信息。
 
 **类型：** WebResourceRequest
 

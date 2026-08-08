@@ -619,9 +619,6 @@ slotType?: notification.SlotType
 
 Notification slot type. The default value is **OTHER\_TYPES**.
 
-This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use  
-**notificationSlotType** instead.
-
 **Type:** notification.SlotType
 
 **Since:** 7

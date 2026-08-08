@@ -1,6 +1,6 @@
 # LaunchController（系统接口）
 
-拉起原子化服务控制器。
+拉起原子化服务的控制器。
 
 **起始版本：** 12
 
@@ -18,7 +18,7 @@
 public launchAtomicService: LaunchAtomicServiceCallback
 ```
 
-Function to launch atomicservice.
+拉起原子化服务。
 
 **起始版本：** 12
 

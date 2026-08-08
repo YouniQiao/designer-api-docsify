@@ -1,6 +1,6 @@
 # OnMessageEvent
 
-定义页面回退或销毁时触发该回调。
+定义页面返回或销毁时触发该回调。
 
 **起始版本：** 12
 
@@ -16,7 +16,7 @@
 data: object[]
 ```
 
-The message data list.
+消息列表。
 
 **类型：** object[]
 

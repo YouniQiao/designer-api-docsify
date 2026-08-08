@@ -16,7 +16,7 @@
 onChange?: Callback<boolean>
 ```
 
-Side bar status change callback.
+侧边栏显示隐藏回调。
 
 **类型：** Callback&lt;boolean&gt;
 
@@ -36,7 +36,7 @@ Side bar status change callback.
 sideBarBackground?: ResourceColor
 ```
 
-Side bar Background.
+设置侧边栏的背景颜色。
 
 **类型：** ResourceColor
 
@@ -56,7 +56,7 @@ Side bar Background.
 sideBarIcon?: Resource | SymbolGlyphModifier
 ```
 
-Side bar icon.
+侧边栏的展开图标。
 
 **类型：** Resource \| SymbolGlyphModifier
 

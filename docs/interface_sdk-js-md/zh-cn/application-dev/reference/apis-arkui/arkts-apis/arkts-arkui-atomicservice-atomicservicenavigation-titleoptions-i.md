@@ -16,7 +16,7 @@
 backgroundColor?: ResourceColor
 ```
 
-Background color.
+标题栏背景颜色。
 
 **类型：** ResourceColor
 
@@ -36,7 +36,7 @@ Background color.
 barStyle?: BarStyle
 ```
 
-Set title bar style.
+设置标题栏样式。
 
 **类型：** BarStyle
 
@@ -58,7 +58,7 @@ Set title bar style.
 isBlurEnabled?: boolean
 ```
 
-Whether to enable the blur effect.
+标题栏是否模糊。
 
 **类型：** boolean
 
@@ -80,7 +80,7 @@ Whether to enable the blur effect.
 titleBarType?: TitleBarType
 ```
 
-Set title bar type.
+设置标题栏类型。
 
 **类型：** TitleBarType
 
@@ -102,7 +102,7 @@ Set title bar type.
 titleIcon?: Resource | SymbolGlyphModifier
 ```
 
-Set title bar icon.
+设置标题栏的图标。
 
 **类型：** Resource \| SymbolGlyphModifier
 

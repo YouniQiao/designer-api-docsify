@@ -51,7 +51,7 @@ createSubWindow(name: string): Promise<Window>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The subWindow has been created and can not be created again. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The subWindow has been created and cannot be created again. |
 
 ## createSubWindow
 
@@ -87,7 +87,7 @@ createSubWindow(name: string, callback: AsyncCallback<Window>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The subWindow has been created and can not be created again. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The subWindow has been created and cannot be created again. |
 
 ## createSubWindowWithOptions
 
@@ -132,7 +132,7 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The subWindow has been created and can not be created again. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The subWindow has been created and cannot be created again. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
 
 ## getMainWindow

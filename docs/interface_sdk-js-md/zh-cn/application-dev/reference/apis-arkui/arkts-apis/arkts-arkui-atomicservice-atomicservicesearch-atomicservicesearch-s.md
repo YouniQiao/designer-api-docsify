@@ -1,6 +1,9 @@
 # AtomicServiceSearch
 
 AtomicServiceSearch为开发者提供满足定制化需求的功能，内容包括默认显示的搜索区、可自定义的选择区和功能区（最多两个）。
+    **说明：**  
+    
+    该组件从API version 18开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 18
 
@@ -18,7 +21,7 @@ AtomicServiceSearch为开发者提供满足定制化需求的功能，内容包�
 controller?: SearchController
 ```
 
-Set the Search component controller.
+Search组件控制器，用于设置输入光标的位置、退出编辑态等操作。默认值为undefined。
 
 **类型：** SearchController
 
@@ -38,7 +41,7 @@ Set the Search component controller.
 operation?: OperationParams
 ```
 
-Function settings in the selection area (right).
+功能区（右侧）的功能设置项。默认值为undefined。
 
 **类型：** OperationParams
 
@@ -58,7 +61,7 @@ Function settings in the selection area (right).
 placeholder?: ResourceStr
 ```
 
-Indicates default prompt text displayed in the search box.The default value is Search, which supports globalization.
+搜索框内默认显示的提示文本。默认值为Search。
 
 **类型：** ResourceStr
 
@@ -80,7 +83,7 @@ Indicates default prompt text displayed in the search box.The default value is S
 search?: SearchParams
 ```
 
-Events and styles supported by the search area.
+search搜索区可支持的事件及样式。默认值为undefined。
 
 **类型：** SearchParams
 
@@ -102,7 +105,7 @@ Events and styles supported by the search area.
 select?: SelectParams
 ```
 
-Contents, events, and styles of the select area.
+select选择区的内容、事件及样式。默认值为undefined。
 
 **类型：** SelectParams
 
@@ -124,7 +127,7 @@ Contents, events, and styles of the select area.
 value?: ResourceStr
 ```
 
-Sets the search text content that is currently displayed.
+设置当前显示的搜索文本内容。默认值为空字符串。
 
 **类型：** ResourceStr
 

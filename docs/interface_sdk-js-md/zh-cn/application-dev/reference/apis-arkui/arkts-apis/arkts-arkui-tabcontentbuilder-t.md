@@ -4,7 +4,7 @@
 export type TabContentBuilder = () => void
 ```
 
-内容视图容器。
+内容视图构建器，用于构建TabContent页签内容的函数。
 
 **起始版本：** 12
 

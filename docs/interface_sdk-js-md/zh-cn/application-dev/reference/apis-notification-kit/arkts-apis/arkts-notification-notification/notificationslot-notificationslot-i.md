@@ -1,9 +1,6 @@
 # NotificationSlot
 
 描述通知渠道，不同通知渠道对应的通知提醒方式不同。
-    **说明：**  
-    
-    本模块首批接口从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 7
 
@@ -101,8 +98,6 @@ level?: notification.SlotLevel
 ```
 
 通知级别。
-
-从API version 7开始支持，从API version 20开始废弃，建议使用notificationLevel替代。
 
 **类型：** notification.SlotLevel
 
@@ -236,8 +231,6 @@ type?: notification.SlotType
 ```
 
 渠道类型。
-
-从API version 7开始支持，从API version 11开始废弃，建议使用notificationType替代。
 
 **类型：** notification.SlotType
 

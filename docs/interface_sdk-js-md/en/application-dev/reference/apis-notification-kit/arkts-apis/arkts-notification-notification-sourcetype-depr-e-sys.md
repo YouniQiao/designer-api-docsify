@@ -1,8 +1,6 @@
 # SourceType (System API)
 
-    **NOTE**\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_  
-    This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
-    notificationManager.SourceType instead.
+Defines the notification source type.
 
 **Since:** 8
 

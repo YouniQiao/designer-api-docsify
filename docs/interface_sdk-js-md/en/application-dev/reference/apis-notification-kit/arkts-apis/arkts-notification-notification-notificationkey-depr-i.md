@@ -1,7 +1,6 @@
 # NotificationKey
 
-    **NOTE**  
-    This API is supported since API version 7 and deprecated since API version 9.
+Notification key.
 
 **Since:** 7
 

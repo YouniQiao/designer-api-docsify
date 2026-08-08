@@ -1,7 +1,10 @@
 # AtomicServiceNavigation
 
-作为Page页面的根容器使用，其内部默认包含了标题栏、内容区，其中内容区默认首页显示导航内容或非首页显示（  
-[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子组件），首页和非首页通过路由进行切换。
+作为Page页面的根容器使用，其内部默认包含了标题栏、内容区。其中，内容区在首页默认显示导航内容，在非首页显示  
+[NavDestination]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子组件，首页和非首页通过路由进行切换。
+    **说明：**  
+    
+    该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 12
 
@@ -19,7 +22,7 @@
 navDestinationBuilder?: NavDestinationBuilder
 ```
 
-The builder of navDestination.
+创建NavDestination组件所需要的Builder数据。默认值为空，即无内容展示。
 
 **起始版本：** 12
 
@@ -39,7 +42,7 @@ The builder of navDestination.
 gradientBackground?: GradientBackground
 ```
 
-设置导航栏渐变色背景，作用区域包含标题栏和内容栏。
+渐变背景色选项。设置时各字段的默认值见GradientBackground。
 
 **类型：** GradientBackground
 
@@ -61,7 +64,7 @@ gradientBackground?: GradientBackground
 hideTitleBar?: boolean
 ```
 
-Hide navigation title bar.
+设置是否隐藏标题栏。默认为false。false表示显示标题栏，true表示隐藏标题栏。
 
 **类型：** boolean
 
@@ -83,7 +86,7 @@ Hide navigation title bar.
 menus?: CustomBuilder | Array<NavigationMenuItem>
 ```
 
-The layout style users defined and inserted.
+宽屏场景下用户自定义插入的布局样式。默认值为空，不显示任何样式。屏幕宽度低于600vp为非宽屏场景，大于等于600vp为宽屏场景。
 
 **类型：** CustomBuilder \| Array&lt;NavigationMenuItem&gt;
 
@@ -105,7 +108,7 @@ The layout style users defined and inserted.
 minContentWidth?: Dimension
 ```
 
-Sets the minimum width of content.
+设置导航栏内容区最小宽度（双栏模式下生效）。默认值为360vp。
 
 **类型：** Dimension
 
@@ -127,7 +130,7 @@ Sets the minimum width of content.
 mode?: NavigationMode
 ```
 
-Sets the mode of navigation.
+设置导航栏的显示模式。默认值为Auto。支持Stack、Split与Auto模式。
 
 **类型：** NavigationMode
 
@@ -149,7 +152,7 @@ Sets the mode of navigation.
 modeChangeCallback?: Callback<NavigationMode>
 ```
 
-Trigger callback when navigation mode changes.
+当Navigation首次显示或者单双栏状态发生变化时触发该回调。默认值为空。
 
 **类型：** Callback&lt;NavigationMode&gt;
 
@@ -169,7 +172,7 @@ Trigger callback when navigation mode changes.
 navBarWidth?: Length
 ```
 
-Sets the width of navigation bar.
+设置导航栏宽度。默认值为240vp。仅在Navigation组件分栏时生效。
 
 **类型：** Length
 
@@ -194,7 +197,7 @@ navBarWidthRange?: [
   ]
 ```
 
-Sets the minimum width and the maximum width of navigation bar.
+设置导航栏最小和最大宽度（双栏模式下生效）。默认值：最小为240vp，最大为组件宽度的40%，且不大于432vp，如果只设置一个值，则未设置的值按照默认值计算。单位：vp。
 
 **类型：** [     Dimension,     Dimension   ]
 
@@ -216,7 +219,7 @@ Sets the minimum width and the maximum width of navigation bar.
 navPathStack?: NavPathStack
 ```
 
-the information of route page.Providers methods for controlling destination page in the stack.
+路由栈信息。默认值为new NavPathStack()。
 
 **类型：** NavPathStack
 
@@ -238,7 +241,7 @@ the information of route page.Providers methods for controlling destination page
 navigationContent?: Callback<void>
 ```
 
-the content of Navigation.
+Navigation容器内容。默认值为空，无内容展示。
 
 **类型：** Callback&lt;void&gt;
 
@@ -260,7 +263,7 @@ the content of Navigation.
 sideBarContent?: Callback<void>
 ```
 
-Set side bar content.
+侧边栏的内容。默认值为空。
 
 **类型：** Callback&lt;void&gt;
 
@@ -282,7 +285,7 @@ Set side bar content.
 sideBarOptions?: SideBarOptions
 ```
 
-Set side bar options.
+侧边栏的功能选项。默认值为{ sideBarBackground: \$r('sys.color.ohos\_id\_color\_sub\_background'), sideBarIcon: \$r('sys.symbol.open\_sidebar') }。
 
 **类型：** SideBarOptions
 
@@ -304,7 +307,7 @@ Set side bar options.
 stateChangeCallback?: Callback<boolean>
 ```
 
-Trigger callback when the visibility of navigation bar change.
+导航栏显示状态切换时触发该回调。true表示导航栏显示，false表示导航栏隐藏。默认值为空。
 
 **类型：** Callback&lt;boolean&gt;
 
@@ -324,7 +327,7 @@ Trigger callback when the visibility of navigation bar change.
 title?: ResourceStr
 ```
 
-Sets the Navigation title.
+设置页面标题。默认值为空字符串。当titleOptions的titleBarType字段设置为TitleBarType.ROUND\_ICON或者TitleBarType.SQUARED\_ICON，且设置了titleIcon时，title标题内容将不会显示。
 
 **类型：** ResourceStr
 
@@ -346,7 +349,7 @@ Sets the Navigation title.
 titleOptions?: TitleOptions
 ```
 
-The color of Navigation's TitleBar.
+标题栏选项。默认值为{ isBlurEnabled: true }。当titleBarType字段设置为TitleBarType.ROUND\_ICON或者TitleBarType.SQUARED\_ICON，且设置了titleIcon时，title标题内容将不会显示。
 
 **类型：** TitleOptions
 

@@ -340,7 +340,7 @@ fontFeature?: ResourceStr
 hideSelectionMenu?: boolean
 ```
 
-是否不弹出系统文本选择菜单。
+是否隐藏系统文本选择菜单。
 
 设置为true时，单击输入框光标、长按输入框、双击输入框、三击输入框或者右键输入框，不弹出系统文本选择菜单。设置为false时，弹出系统文本选择菜单。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
 
@@ -406,7 +406,7 @@ letterSpacing?: number | string | Resource
 maxFontSize?: number | string | Resource
 ```
 
-设置文本最大显示字号。需要配合minFontSize以及布局大小限制使用，单独设置不生效。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+设置文本最大显示字号。需要配合minFontSize以及布局大小限制使用，单独设置不生效。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。取值为number类型时，单位：fp。
 
 **类型：** number \| string \| Resource
 
@@ -446,7 +446,7 @@ maxLength?: number
 minFontSize?: number | string | Resource
 ```
 
-设置文本最小显示字号。需要配合maxFontSize以及布局大小限制使用，单独设置不生效。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+设置文本最小显示字号。需要配合maxFontSize以及布局大小限制使用，单独设置不生效。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。取值为number类型时，单位：fp。
 
 **类型：** number \| string \| Resource
 
@@ -466,7 +466,7 @@ minFontSize?: number | string | Resource
 onCopy?: Callback<string>
 ```
 
-进行复制操作时，触发该回调。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+进行复制操作时，触发该回调，string为被复制的文本内容。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
 
 **类型：** Callback&lt;string&gt;
 
@@ -486,7 +486,7 @@ onCopy?: Callback<string>
 onCut?: Callback<string>
 ```
 
-进行剪切操作时，触发该回调。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+进行剪切操作时，触发该回调，string为被剪切的文本内容。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
 
 **类型：** Callback&lt;string&gt;
 
@@ -506,7 +506,7 @@ onCut?: Callback<string>
 onDidDelete?: Callback<DeleteValue>
 ```
 
-在删除完成时，触发该回调。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+在删除完成时触发该回调，在onWillDelete之后触发。当onWillDelete返回false拦截删除操作时，该回调不触发。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
 
 **类型：** Callback&lt;DeleteValue&gt;
 
@@ -526,7 +526,7 @@ onDidDelete?: Callback<DeleteValue>
 onDidInsert?: Callback<InsertValue>
 ```
 
-在输入完成时，触发该回调。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+在输入完成时触发该回调，在onWillInsert之后触发。当onWillInsert返回false拦截插入操作时，该回调不触发。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。当enablePreviewText为true时，不触发本回调。
 
 **类型：** Callback&lt;InsertValue&gt;
 
@@ -566,7 +566,7 @@ onEditChange?: Callback<boolean>
 onSubmit?: Callback<string> | SearchSubmitCallback
 ```
 
-点击搜索图标、搜索按钮或者按下软键盘搜索按钮时触发该回调。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+点击搜索图标、搜索按钮或者按下软键盘搜索按钮时触发该回调。string为当前搜索框中输入的文本内容。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
 
 **类型：** Callback&lt;string&gt; \| SearchSubmitCallback
 
@@ -606,7 +606,7 @@ onWillDelete?: Callback<DeleteValue, boolean>
 onWillInsert?: Callback<InsertValue, boolean>
 ```
 
-在将要输入时，触发该回调。true表示将输入内容正常插入结果字符串，false表示不插入。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+在将要输入时，触发该回调。true表示将输入内容正常插入结果字符串，false表示不插入。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。当enablePreviewText为true时，不触发本回调。
 
 **类型：** Callback&lt;InsertValue, boolean&gt;
 
@@ -646,7 +646,7 @@ placeholder文本颜色。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
 placeholderFont?: Font
 ```
 
-设置placeholder文本样式，包括字体大小，字体粗细，字体族，字体风格。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+设置placeholder文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
 
 **类型：** Font
 
@@ -686,11 +686,11 @@ pressedBackgroundColor?: ResourceColor
 searchButton?: SearchButtonParams
 ```
 
-设置搜索框末尾搜索按钮。点击搜索按钮，同时触发onSubmit与onClick回调。
+设置搜索框末尾搜索按钮。点击搜索按钮，触发onSubmit回调。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_
 
--value：搜索框末尾搜索按钮文本内容。
+-searchButtonValue: 搜索框末尾搜索按钮文本内容。
 
--option: 配置搜索框文本样式。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+-options: 配置搜索框文本样式。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_。
 
 **类型：** SearchButtonParams
 
@@ -734,7 +734,7 @@ searchIcon?: IconOptions | SymbolGlyphModifier
 searchKey?: ResourceStr
 ```
 
-用作找到一个唯一的search组件。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+用作标识内部search组件的唯一键值，便于外部通过该键值引用或查找对应的Search组件。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
 
 **类型：** ResourceStr
 
@@ -754,7 +754,7 @@ searchKey?: ResourceStr
 selectedBackgroundColor?: ResourceColor
 ```
 
-文本选中底板颜色。默认为20%不透明度。
+文本选中底板颜色。默认值：系统默认底板颜色，20%不透明度。
 
 **类型：** ResourceColor
 
@@ -794,7 +794,7 @@ textAlign?: TextAlign
 textFont?: Font
 ```
 
-设置搜索框内输入文本样式，包括字体大小，字体粗细，字体族，字体风格。目前仅支持默认字体族。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+设置搜索框内输入文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
 
 **类型：** Font
 
@@ -814,7 +814,7 @@ textFont?: Font
 textIndent?: Dimension
 ```
 
-首行文本缩进。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。
+首行文本缩进。默认值：\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_。单位：vp。
 
 **类型：** Dimension
 

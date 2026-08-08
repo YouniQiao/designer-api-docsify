@@ -1,6 +1,6 @@
 # OnLoadInterceptEvent
 
-当资源加载被拦截时，加载拦截事件。
+定义Web组件加载url之前触发的加载拦截事件。
 
 **起始版本：** 12
 
@@ -16,7 +16,7 @@
 data: WebResourceRequest
 ```
 
-Web resource request of event.
+网页请求的封装信息。
 
 **类型：** WebResourceRequest
 

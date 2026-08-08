@@ -78,7 +78,7 @@ readonly bundle: string
 readonly instanceKey?: number
 ```
 
-应用实例键值。从API version 12开始支持，从API version 15开始废弃，建议使用appInstanceKey替代。
+应用实例键值。
 
 **类型：** number
 

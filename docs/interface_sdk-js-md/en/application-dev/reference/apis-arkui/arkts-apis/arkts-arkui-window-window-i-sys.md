@@ -491,10 +491,10 @@ Checks whether the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ has its screen rotation lo
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function setRotationLocked can not work correctly due to limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getRotationLocked can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| 1300029 | This window type is invalid. |
+| 1300029 | This window type is invalid. Possible cause: A non-system window calls this API. |
 
 **Example**
 
@@ -2435,7 +2435,7 @@ Allows a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to lock or unlock its own screen-rot
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function setRotationLocked can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| 1300029 | This window type is invalid. |
+| 1300029 | This window type is invalid. Possible cause: A non-system window calls this API. |
 
 **Example**
 

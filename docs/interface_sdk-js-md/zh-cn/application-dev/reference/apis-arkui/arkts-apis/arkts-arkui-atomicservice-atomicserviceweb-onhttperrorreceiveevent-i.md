@@ -1,6 +1,6 @@
 # OnHttpErrorReceiveEvent
 
-定义网页收到加载资源加载HTTP错误时触发。
+定义网页加载资源遇到HTTP错误时触发该回调。
 
 **起始版本：** 12
 
@@ -16,7 +16,7 @@
 request: WebResourceRequest
 ```
 
-Web resource request of event.
+网页请求的封装信息。
 
 **类型：** WebResourceRequest
 
@@ -36,7 +36,7 @@ Web resource request of event.
 response: WebResourceResponse
 ```
 
-Web resource response of event.
+资源响应的封装信息。
 
 **类型：** WebResourceResponse
 

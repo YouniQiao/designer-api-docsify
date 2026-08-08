@@ -4,7 +4,7 @@
 export type OnContentWillChangeCallback = (currentIndex: number, comingIndex: number) => boolean
 ```
 
-页面内容发生变化时触发的回调函数。
+页面内容即将发生变化时触发的回调函数，用于拦截页面切换，开发者可通过返回值控制是否允许切换。
 
 **起始版本：** 12
 

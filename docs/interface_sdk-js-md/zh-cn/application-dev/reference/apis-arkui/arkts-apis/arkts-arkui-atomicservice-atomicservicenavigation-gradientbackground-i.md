@@ -1,6 +1,6 @@
 # GradientBackground
 
-供开发者设置品牌渐变色。
+品牌渐变色选项。
 
 **起始版本：** 18
 
@@ -16,7 +16,7 @@
 alpha?: GradientAlpha
 ```
 
-the opacity of background colors.
+设置渐变色显示区域的不透明度。
 
 **类型：** GradientAlpha
 
@@ -36,7 +36,7 @@ the opacity of background colors.
 backgroundTheme?: BackgroundTheme
 ```
 
-the theme color of Background.
+导航栏背景底色。
 
 **类型：** BackgroundTheme
 
@@ -56,7 +56,7 @@ the theme color of Background.
 mixMode?: MixMode
 ```
 
-the blend mode of background color.
+同时设置primaryColor和secondaryColor时此参数生效。表示双色渐变下两种颜色的融合方式。
 
 **类型：** MixMode
 
@@ -76,7 +76,7 @@ the blend mode of background color.
 primaryColor: ResourceColor
 ```
 
-the primaryColor of Background.
+单色渐变色彩值和双色渐变第一色彩值。
 
 **类型：** ResourceColor
 
@@ -96,7 +96,7 @@ the primaryColor of Background.
 secondaryColor?: ResourceColor
 ```
 
-the secondaryColor of Background.
+双色渐变色第二色彩值。
 
 **类型：** ResourceColor
 

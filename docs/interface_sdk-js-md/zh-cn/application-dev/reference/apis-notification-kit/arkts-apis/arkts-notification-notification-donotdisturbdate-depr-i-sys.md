@@ -1,8 +1,6 @@
 # DoNotDisturbDate（系统接口）
 
-    **说明：**  
-    从 API version 8开始支持，从API version 9开始废弃。建议使用  
-[notificationManager.DoNotDisturbDate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_替代。
+免打扰时间选项。
 
 **起始版本：** 8
 

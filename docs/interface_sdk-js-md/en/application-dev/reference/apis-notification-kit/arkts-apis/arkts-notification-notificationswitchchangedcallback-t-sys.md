@@ -23,5 +23,5 @@ Registers the callback for notification switch state changes set by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackData | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback that returns the notification switch state change information set by [notificationManager.setNotificationSwitch]\_\_\_JSDOC\_LINK\_USD\_0\_\_\_ API.  |
+| callbackData | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback that returns the notification switch state change information set by [notificationManager.setNotificationSwitch] \_\_\_JSDOC\_LINK\_USD\_0\_\_\_ API.  |
 

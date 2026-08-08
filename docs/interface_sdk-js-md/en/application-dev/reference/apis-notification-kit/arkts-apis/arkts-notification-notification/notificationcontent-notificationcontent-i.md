@@ -18,9 +18,6 @@ contentType?: notification.ContentType
 
 Notification content type.
 
-This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use  
-**notificationContentType** instead.
-
 **Type:** notification.ContentType
 
 **Since:** 7

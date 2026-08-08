@@ -78,7 +78,7 @@ Bundle name of the application.
 readonly instanceKey?: number
 ```
 
-Key value of an application instance. This parameter is supported since API version 12 and deprecated since API version 15.You are advised to use **appInstanceKey** instead.
+Key value of an application instance.
 
 **Type:** number
 

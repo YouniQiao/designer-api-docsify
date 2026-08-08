@@ -1,6 +1,9 @@
 # InterstitialDialogAction
 
-InterstitialDialogAction弹框在原子化服务中用于在保持当前的上下文环境时，临时展示用户需关注的信息或待处理的操作，用户点击弹框的不同区域可以触发相应的动作。
+InterstitialDialogAction弹框在原子化服务中用于在保持当前的上下文环境时，临时展示用户需关注的信息或待处理的操作，用户点击弹框的不同区域可以触发对应的回调动作。
+    **说明：**  
+    
+    该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 12
 
@@ -34,7 +37,7 @@ closeDialog(): void
 constructor(dialogOptions: DialogOptions)
 ```
 
-InterstitialDialogAction的构造函数
+InterstitialDialogAction的构造函数。
 
 **起始版本：** 12
 

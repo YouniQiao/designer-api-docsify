@@ -1,8 +1,6 @@
 # RemoveReason (System API)
 
-    **NOTE**\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_  
-    This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
-    notificationManager.RemoveReason instead.
+Reason for removing the notification.
 
 **Since:** 7
 

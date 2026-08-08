@@ -1,10 +1,12 @@
 # FullScreenLaunchComponent
 
-全屏启动原子化服务组件，当被拉起方授权使用方可以嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。
+全屏启动原子化服务组件，当提供方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。
     **说明：**  
     
-    如果需要在该组件中实现可嵌入式运行的原子化服务，必须继承自[EmbeddableUIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    。否则，系统无法保证原子化服务功能正常。
+    该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。  
+    
+    当需要在该组件中实现可嵌入式运行的原子化服务，必须继承自[EmbeddableUIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。  
+    否则，系统无法保证原子化服务功能正常。
 
 **起始版本：** 23
 
@@ -22,7 +24,7 @@
 build(): void
 ```
 
-The method to build component.
+构建组件的方法。
 
 **起始版本：** 23
 
@@ -40,7 +42,7 @@ The method to build component.
 content: ContentBuilder
 ```
 
-Sets the component content.
+设置组件内容。
 
 **起始版本：** 23
 
@@ -58,7 +60,7 @@ Sets the component content.
 appId: string
 ```
 
-Indicates atomic service appId.
+表示原子化服务appId。
 
 **类型：** string
 
@@ -76,7 +78,7 @@ Indicates atomic service appId.
 onError?: ErrorCallback
 ```
 
-Callback triggered when an error occurs during running of the started ExtensionAbility.It is supported only when the atomic service runs in embedded mode,with the parameter being of type BusinessError.
+在启动的ExtensionAbility运行过程中发生错误时触发回调。仅在原子服务以嵌入式模式运行时支持，参数类型为BusinessError。
 
 **类型：** ErrorCallback
 
@@ -94,7 +96,7 @@ Callback triggered when an error occurs during running of the started ExtensionA
 onReceive?: Callback<Record<string, RecordData>>
 ```
 
-Indicates the callback of onReceive.
+表示onReceive的回调。
 
 **类型：** Callback&lt;Record&lt;string, RecordData&gt;&gt;
 
@@ -112,7 +114,7 @@ Indicates the callback of onReceive.
 onTerminated?: Callback<TerminationInfo>
 ```
 
-Callback triggered when the EmbeddableUIAbility is terminated to receive the information about the termination. It is supported only when the atomic service runs in embedded mode,with the parameter being of type TerminationInfo.
+当EmbeddableUIAbility被终止时触发回调，用于接收终止信息。仅在原子化服务以嵌入式模式运行时支持该回调，参数类型为TerminationInfo。
 
 **类型：** Callback&lt;TerminationInfo&gt;
 
@@ -130,7 +132,7 @@ Callback triggered when the EmbeddableUIAbility is terminated to receive the inf
 options?: AtomicServiceOptions
 ```
 
-Indicates the atomic service start options.
+表示原子化服务启动选项。
 
 **类型：** AtomicServiceOptions
 

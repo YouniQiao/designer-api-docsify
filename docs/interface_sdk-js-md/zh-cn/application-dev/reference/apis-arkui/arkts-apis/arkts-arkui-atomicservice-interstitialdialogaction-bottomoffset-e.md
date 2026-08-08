@@ -21,7 +21,7 @@
 OFFSET_FOR_BAR = 0
 ```
 
-dialog distance relative to the bottom in the presence of tabs.
+存在菜单栏情况下与窗口底部的距离。设置后弹框距离底部88vp。
 
 **起始版本：** 12
 
@@ -39,7 +39,7 @@ dialog distance relative to the bottom in the presence of tabs.
 OFFSET_FOR_NONE = 1
 ```
 
-dialog is the distance relative to the bottom without tabs.
+不存在菜单栏情况下与窗口底部的距离。默认值，设置后弹框距离底部44vp。
 
 **起始版本：** 12
 

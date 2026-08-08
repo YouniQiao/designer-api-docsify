@@ -1,6 +1,9 @@
 # AtomicServiceMenuBar（系统接口）
 
-依赖当前元服务的上下文，创建AtomicServiceMenuBar对象，用于操控右上角菜单功能胶囊的显示与隐藏。
+依赖当前原子化服务的UI上下文，创建AtomicServiceMenuBar对象，用于操控右上角菜单功能胶囊的显隐状态。
+    **说明：**  
+    
+    该组件从API version 23开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 23
 
@@ -38,7 +41,7 @@ AtomicServiceMenuBar的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前元服务的上下文信息。 |
+| uiContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前原子化服务的UI上下文信息。 |
 
 ## setVisible
 
@@ -46,7 +49,7 @@ AtomicServiceMenuBar的构造函数。
 public setVisible(visible: boolean): void
 ```
 
-设置当前元服务菜单功能胶囊的显隐状态。
+设置当前原子化服务菜单功能胶囊的显隐状态。
 
 **起始版本：** 23
 

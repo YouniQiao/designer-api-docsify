@@ -14,8 +14,6 @@ Checks whether the device supports cross-device notifications. This API uses an 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [notificationManager.isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md#isdistributedenabled)(deviceType:
-
 <!--Device-notificationManager-function isDistributedEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isDistributedEnabled(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -66,8 +64,6 @@ Checks whether the device supports cross-device notifications. This API uses a p
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
-
-**Substitutes:** [notificationManager.isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md#isdistributedenabled)(deviceType:
 
 <!--Device-notificationManager-function isDistributedEnabled(): Promise<boolean>--><!--Device-notificationManager-function isDistributedEnabled(): Promise<boolean>-End-->
 

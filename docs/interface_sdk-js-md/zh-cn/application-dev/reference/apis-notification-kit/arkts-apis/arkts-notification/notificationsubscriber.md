@@ -7,7 +7,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [BadgeEnabledChangedCallback](notificationsubscriber-badgeenabledchangedcallback-i-sys.md) | 注册应用角标使能状态变化的回调函数类型。type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) =   void |
+| [BadgeEnabledChangedCallback](notificationsubscriber-badgeenabledchangedcallback-i-sys.md) | 注册应用角标使能状态变化的回调函数类型。 |
 | [BadgeNumberCallbackData](notificationsubscriber-badgenumbercallbackdata-i-sys.md) | 应用角标数量变化的回调函数类型。 |
 | [EnabledNotificationCallbackData](notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | 应用使能状态变化的回调函数类型。 |
 | [EnabledPriorityNotificationByBundleCallbackData](notificationsubscriber-enabledprioritynotificationbybundlecallbackdata-i-sys.md) | 应用通知优先级开关状态。 |

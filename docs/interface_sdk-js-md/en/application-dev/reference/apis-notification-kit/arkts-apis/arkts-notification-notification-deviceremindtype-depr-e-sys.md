@@ -1,8 +1,6 @@
 # DeviceRemindType (System API)
 
-    **NOTE**\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_  
-    This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
-    notificationManager.DeviceRemindType instead.
+Defines the notification reminder type.
 
 **Since:** 8
 

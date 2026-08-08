@@ -36,7 +36,7 @@ error?: Callback<string>
 inputFilterValue: ResourceStr
 ```
 
-正则表达式。
+正则表达式。仅支持单个字符匹配，不支持字符串匹配。
 
 **类型：** ResourceStr
 

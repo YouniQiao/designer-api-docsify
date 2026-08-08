@@ -18,8 +18,6 @@ contentType?: notification.ContentType
 
 通知内容类型。
 
-从API version 7开始支持，从API version 11开始废弃，建议使用notificationContentType替代。
-
 **类型：** notification.ContentType
 
 **起始版本：** 7

@@ -21,5 +21,5 @@ export declare type LaunchAtomicServiceCallback = (appId: string, options?: Atom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appId | string | 是 | 原子化服务的appId。  |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 拉起原子化服务参数。  |
+| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 拉起原子化服务的参数。不填时使用默认参数拉起原子化服务。  |
 

@@ -5,7 +5,7 @@
 | 名称 | 值 | 说明 |  
 | - | - | - |  
 | TOP | 0 | 设置主标题位于副标题之上。默认值。 |  
-| BOTTOM | 1 | 设置副标题位于主标题之上。 |
+| BOTTOM | 1 | 设置主标题位于副标题之下。 |
 
 **起始版本：** 12
 
@@ -21,7 +21,7 @@
 TOP = 0
 ```
 
-The main title is above the text content.
+设置主标题位于副标题之上。默认值。
 
 **起始版本：** 12
 
@@ -39,7 +39,7 @@ The main title is above the text content.
 BOTTOM = 1
 ```
 
-The main title is below the text content.
+设置主标题位于副标题之下。
 
 **起始版本：** 12
 

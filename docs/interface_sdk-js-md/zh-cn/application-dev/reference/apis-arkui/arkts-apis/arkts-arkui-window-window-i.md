@@ -193,7 +193,7 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. The subWindow has been created and can not be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows, subwindows, and floating windows are supported; 2. When SubWindowOptions.zLevelAboveParentLoosened is true, only main windows are supported. |
 
@@ -1675,7 +1675,7 @@ isReceiveDragEventEnabled(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work because the current device does not support this ability. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function cannot work because the current device does not support this ability. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
@@ -1707,7 +1707,7 @@ isSeparationTouchEnabled(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work because the current device does not support this ability. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function cannot work because the current device does not support this ability. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
@@ -3031,7 +3031,7 @@ off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function off('uiExtensionSecureLimitChange') can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function off('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
@@ -4498,7 +4498,7 @@ UIExtension in window secure limit change callback off.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function off('uiExtensionSecureLimitChange') can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function off('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
@@ -4819,7 +4819,7 @@ on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function on('uiExtensionSecureLimitChange') can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function on('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
@@ -6374,7 +6374,7 @@ UIExtension in window secure limit change callback on.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function on('uiExtensionSecureLimitChange') can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function on('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
@@ -8631,7 +8631,7 @@ setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work because the current device does not support this ability. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function cannot work because the current device does not support this ability. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error |
 
@@ -8805,7 +8805,7 @@ setSeparationTouchEnabled(enabled: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work because the current device does not support this ability. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function cannot work because the current device does not support this ability. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal IPC error |
 
@@ -11159,9 +11159,9 @@ showWindow(options: ShowWindowOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function showWindow can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function showWindow cannot work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Modal subwindow and dialog window can not set focusOnShow. |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Modal subwindow and dialog window cannot set focusOnShow. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter validation error. Possible cause: 1. The value of the parameter is out of the allowed range; 2. The length of the parameter exceeds the allowed length; 3. The parameter format is incorrect. |
 
 ## snapshot

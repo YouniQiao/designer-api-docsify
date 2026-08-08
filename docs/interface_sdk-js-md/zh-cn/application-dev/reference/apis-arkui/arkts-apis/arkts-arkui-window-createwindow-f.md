@@ -39,8 +39,8 @@ function createWindow(config: Configuration, callback: AsyncCallback<Window>): v
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow can not work correctly due to limited device capabilities.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation. Possible cause: The window has been created and can not be created again. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow cannot work correctly due to limited device capabilities.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration is invalid.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
 | [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
@@ -158,8 +158,8 @@ function createWindow(config: Configuration): Promise<Window>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow can not work correctly due to limited device capabilities.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation. Possible cause: The window has been created and can not be created again. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow cannot work correctly due to limited device capabilities.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration is invalid.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
 | [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |

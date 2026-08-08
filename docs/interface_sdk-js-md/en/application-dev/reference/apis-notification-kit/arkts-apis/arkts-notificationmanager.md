@@ -230,7 +230,7 @@ The APIs of this module follow the following workflow of notifications: Authoriz
 | [ButtonOptions](arkts-notification-notificationmanager-buttonoptions-i-sys.md) | Provides the button information of the notification. |
 | [DistributedBundleEnableInfo](arkts-notification-notificationmanager-distributedbundleenableinfo-i-sys.md) | Describes the bundle information of an application that enables cross-device collaboration. |
 | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Defines the DND time. |
-| [DoNotDisturbProfile](arkts-notification-notificationmanager-donotdisturbprofile-i-sys.md) |  |
+| [DoNotDisturbProfile](arkts-notification-notificationmanager-donotdisturbprofile-i-sys.md) | Do Not Disturb profile. |
 | [NotificationCheckInfo](arkts-notification-notificationmanager-notificationcheckinfo-i-sys.md) | Describes the parameters of check notifications. |
 | [NotificationCheckResult](arkts-notification-notificationmanager-notificationcheckresult-i-sys.md) | Describes the result of check notifications. |
 | [NotificationReminderInfo](arkts-notification-notificationmanager-notificationreminderinfo-i-sys.md) | Describes the information about the application reminder. |

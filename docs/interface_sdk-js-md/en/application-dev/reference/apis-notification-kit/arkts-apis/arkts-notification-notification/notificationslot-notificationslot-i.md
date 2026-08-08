@@ -99,9 +99,6 @@ level?: notification.SlotLevel
 
 Notification level.
 
-This parameter is supported since API version 7 and deprecated since API version 20. It is recommended to use  
-**notificationLevel** instead.
-
 **Type:** notification.SlotLevel
 
 **Since:** 7
@@ -235,9 +232,6 @@ type?: notification.SlotType
 ```
 
 Channel type.
-
-This parameter is supported since API version 7 and deprecated since API version 11. It is recommended to use  
-**notificationType** instead.
 
 **Type:** notification.SlotType
 

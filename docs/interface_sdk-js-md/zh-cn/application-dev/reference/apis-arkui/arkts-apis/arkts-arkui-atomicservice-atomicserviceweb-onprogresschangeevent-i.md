@@ -16,7 +16,7 @@
 newProgress: number
 ```
 
-The new progress of the page.
+新的加载进度，取值范围为0到100的整数。单位：%。
 
 **类型：** number
 
