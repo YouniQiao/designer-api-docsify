@@ -36,13 +36,15 @@ off(type: 'frame', callback?: Callback<IntervalInfo>): void
 **示例：**
 
 ```TypeScript
+// 定义回调函数
 let callback = (frameInfo: displaySync.IntervalInfo) => {
     console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
 }
 
+// 注册回调函数
 backDisplaySync?.on("frame", callback)
 
-// 取消订阅函数
+// 取消回调函数
 backDisplaySync?.off("frame", callback)
 ```
 
@@ -107,11 +109,12 @@ on(type: 'frame', callback: Callback<IntervalInfo>): void
 **示例：**
 
 ```TypeScript
+// 定义回调函数
 let callback = (frameInfo: displaySync.IntervalInfo) => {
     console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
 }
 
-// 注册订阅函数
+// 注册回调函数
 backDisplaySync?.on("frame", callback)
 ```
 
@@ -179,14 +182,18 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 **示例：**
 
 ```TypeScript
-let range : ExpectedFrameRateRange = {
-  expected: 10,
-  min:0,
-  max:120
+// 定义期望帧率范围
+let range: ExpectedFrameRateRange = {
+  expected: 10, // 期望帧率
+  min: 0, // 最小帧率
+  max: 120 // 最大帧率
 };
 
-// 设置DisplaySync期望的帧率
+// 设置DisplaySync期望帧率范围
 backDisplaySync?.setExpectedFrameRateRange(range)
+
+// 生效期望帧率范围
+backDisplaySync?.start()
 ```
 
 ## start
@@ -208,21 +215,24 @@ start(): void
 **示例：**
 
 ```TypeScript
-let range : ExpectedFrameRateRange = {
-  expected: 10,
-  min:0,
-  max:120
+// 定义期望帧率范围
+let range: ExpectedFrameRateRange = {
+  expected: 10, // 期望帧率
+  min: 0, // 最小帧率
+  max: 120 // 最大帧率
 };
-
+// 设置DisplaySync期望帧率范围
 backDisplaySync?.setExpectedFrameRateRange(range)
 
+// 定义回调函数
 let callback = (frameInfo: displaySync.IntervalInfo) => {
     console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
 }
 
+// 注册回调函数
 backDisplaySync?.on("frame", callback)
 
-// 开始每帧回调
+// 生效期望帧率范围并且开始每帧回调
 backDisplaySync?.start()
 ```
 
@@ -271,25 +281,30 @@ stop(): void
 **示例：**
 
 ```TypeScript
-let range : ExpectedFrameRateRange = {
-  expected: 10,
-  min:0,
-  max:120
+// 定义期望帧率范围
+let range: ExpectedFrameRateRange = {
+  expected: 10, // 期望帧率
+  min: 0, // 最小帧率
+  max: 120 // 最大帧率
 };
 
+// 设置DisplaySync期望帧率范围
 backDisplaySync?.setExpectedFrameRateRange(range)
 
+// 定义回调函数
 let callback = (frameInfo: displaySync.IntervalInfo) => {
     console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
 }
 
+// 注册回调函数
 backDisplaySync?.on("frame", callback)
 
+// 生效期望帧率范围并且开始每帧回调
 backDisplaySync?.start()
 
 // ...
 
-// 停止每帧回调
+// 停止生效期望帧率范围并且停止每帧回调
 backDisplaySync?.stop()
 ```
 

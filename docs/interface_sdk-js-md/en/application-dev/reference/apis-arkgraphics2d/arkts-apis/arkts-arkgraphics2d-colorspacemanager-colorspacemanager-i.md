@@ -1,7 +1,8 @@
 # ColorSpaceManager
 
-Implements management of color space objects.Before calling any of the following APIs, you must use  
-[create()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a color space manager.
+Implements management of color space objects.
+
+Before calling any of the following APIs, you must use [create()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a color space manager.
 
 **Since:** 9
 

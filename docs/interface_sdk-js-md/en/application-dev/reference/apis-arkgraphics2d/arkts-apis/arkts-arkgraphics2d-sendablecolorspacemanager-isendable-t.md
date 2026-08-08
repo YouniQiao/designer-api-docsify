@@ -4,7 +4,7 @@
 type ISendable = lang.ISendable
 ```
 
-The ISendable type is redefined to align with the API specifications of the current module.
+The ISendable type alias is defined to align with the API specifications of the current module.
 
 **Since:** 12
 

@@ -8,9 +8,9 @@ function finishTask(taskInfo: TaskInfo): void
 
 结束后台加载任务。
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 

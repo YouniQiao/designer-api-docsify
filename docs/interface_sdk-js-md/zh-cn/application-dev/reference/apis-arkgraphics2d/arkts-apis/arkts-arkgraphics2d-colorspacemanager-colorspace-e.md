@@ -18,8 +18,6 @@ UNKNOWN = 0
 
 未知的色域类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 9
 
 **ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
@@ -41,8 +39,6 @@ RGB色域为Adobe RGB(1998)类型。
 转换函数为Adobe RGB(1998)类型。
 
 编码范围为Full类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 9
 
@@ -66,8 +62,6 @@ RGB色域为DCI-P3类型。
 
 编码范围为Full类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 9
 
 **ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
@@ -84,13 +78,11 @@ RGB色域为DCI-P3类型。
 DISPLAY_P3 = 3
 ```
 
-RGB色域为DCI-P3类型。
+RGB色域为Display P3类型。
 
-转换函数为Gamma 2.6类型。
+转换函数为SRGB类型。
 
 编码范围为Full类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 9
 
@@ -116,8 +108,6 @@ RGB色域为SRGB类型。
 
 系统默认色域类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 9
 
 **ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
@@ -139,8 +129,6 @@ RGB色域为BT709类型。
 转换函数为BT709类型。
 
 编码范围为Full类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -164,8 +152,6 @@ RGB色域为BT601\_P类型。
 
 编码范围为Full类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -187,8 +173,6 @@ RGB色域为BT601\_N类型。
 转换函数为BT709类型。
 
 编码范围为Full类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -212,8 +196,6 @@ RGB色域为BT2020类型。
 
 编码范围为Full类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -235,8 +217,6 @@ RGB色域为BT2020类型。
 转换函数为PQ类型。
 
 编码范围为Full类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -260,8 +240,6 @@ RGB色域为Display P3类型。
 
 编码范围为Full类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -283,8 +261,6 @@ RGB色域为Display P3类型。
 转换函数为PQ类型。
 
 编码范围为Full类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -308,8 +284,6 @@ RGB色域为Adobe RGB(1998)类型。
 
 编码范围为Limit类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -331,8 +305,6 @@ RGB色域为Display P3类型。
 转换函数为SRGB类型。
 
 编码范围为Limit类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -356,8 +328,6 @@ RGB色域为SRGB类型。
 
 编码范围为Limit类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -379,8 +349,6 @@ RGB色域为BT709类型。
 转换函数为BT709类型。
 
 编码范围为Limit类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -404,8 +372,6 @@ RGB色域为BT601\_P类型。
 
 编码范围为Limit类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -427,8 +393,6 @@ RGB色域为BT601\_N类型。
 转换函数为BT709类型。
 
 编码范围为Limit类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -452,8 +416,6 @@ RGB色域为BT2020类型。
 
 编码范围为Limit类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -475,8 +437,6 @@ RGB色域为BT2020类型。
 转换函数为PQ类型。
 
 编码范围为Limit类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -500,8 +460,6 @@ RGB色域为Display P3类型。
 
 编码范围为Limit类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -524,8 +482,6 @@ RGB色域为Display P3类型。
 
 编码范围为Limit类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -546,8 +502,6 @@ RGB色域为Display P3类型。
 
 转换函数为Linear类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -567,8 +521,6 @@ LINEAR_SRGB = 24
 RGB色域为SRGB类型。
 
 转换函数为Linear类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -592,8 +544,6 @@ RGB色域为BT709类型。
 
 转换函数为Linear类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -613,8 +563,6 @@ LINEAR_BT2020 = 25
 RGB色域为BT2020类型。
 
 转换函数为Linear类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -640,8 +588,6 @@ RGB色域为SRGB类型。
 
 编码范围为Full类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -666,8 +612,6 @@ RGB色域为Display P3类型。
 
 编码范围为Full类型。
 
-从API version 12开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 11
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
@@ -684,13 +628,13 @@ RGB色域为Display P3类型。
 DISPLAY_P3_HLG = P3_HLG
 ```
 
+与P3\_HLG相同。
+
 RGB色域为Display P3类型。
 
 转换函数为HLG类型。
 
 编码范围为Full类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -715,8 +659,6 @@ RGB色域为Display P3类型。
 转换函数为PQ类型。
 
 编码范围为Full类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -773,8 +715,6 @@ CUSTOM = 5
 ```
 
 用户自定义色域类型。
-
-从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 9
 

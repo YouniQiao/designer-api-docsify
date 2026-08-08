@@ -18,8 +18,6 @@ UNKNOWN = 0
 
 Unknown type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -41,8 +39,6 @@ Adobe RGB (1998).
 The conversion function is of the Adobe RGB (1998) type.
 
 The encoding range is of the Full type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 9
 
@@ -66,8 +62,6 @@ The conversion function is of the Gamma 2.6 type.
 
 The encoding range is of the Full type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -84,13 +78,11 @@ This API can be used in atomic services since API version 12.
 DISPLAY_P3 = 3
 ```
 
-DCI-P3.
+Display P3.
 
-The conversion function is of the Gamma 2.6 type.
+The conversion function is of the SRGB type.
 
 The encoding range is of the Full type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 9
 
@@ -116,8 +108,6 @@ The encoding range is of the Full type.
 
 This is the default color space type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -139,8 +129,6 @@ BT709.
 The conversion function is of the BT709 type.
 
 The encoding range is of the Full type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -164,8 +152,6 @@ The conversion function is of the BT709 type.
 
 The encoding range is of the Full type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -187,8 +173,6 @@ BT601\_N.
 The conversion function is of the BT709 type.
 
 The encoding range is of the Full type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -212,8 +196,6 @@ The conversion function is of the HLG type.
 
 The encoding range is of the Full type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -235,8 +217,6 @@ BT2020.
 The conversion function is of the PQ type.
 
 The encoding range is of the Full type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -260,8 +240,6 @@ The conversion function is of the HLG type.
 
 The encoding range is of the Full type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -283,8 +261,6 @@ Display P3.
 The conversion function is of the PQ type.
 
 The encoding range is of the Full type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -308,8 +284,6 @@ The conversion function is of the Adobe RGB (1998) type.
 
 The encoding range is of the Limit type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -331,8 +305,6 @@ Display P3.
 The conversion function is of the SRGB type.
 
 The encoding range is of the Limit type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -356,8 +328,6 @@ The conversion function is of the SRGB type.
 
 The encoding range is of the Limit type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -379,8 +349,6 @@ BT709.
 The conversion function is of the BT709 type.
 
 The encoding range is of the Limit type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -404,8 +372,6 @@ The conversion function is of the BT709 type.
 
 The encoding range is of the Limit type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -427,8 +393,6 @@ BT601\_N.
 The conversion function is of the BT709 type.
 
 The encoding range is of the Limit type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -452,8 +416,6 @@ The conversion function is of the HLG type.
 
 The encoding range is of the Limit type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -475,8 +437,6 @@ BT2020.
 The conversion function is of the PQ type.
 
 The encoding range is of the Limit type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -500,8 +460,6 @@ The conversion function is of the HLG type.
 
 The encoding range is of the Limit type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -524,8 +482,6 @@ The conversion function is of the PQ type.
 
 The encoding range is of the Limit type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -546,8 +502,6 @@ Display P3.
 
 The conversion function is of the Linear type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -567,8 +521,6 @@ LINEAR_SRGB = 24
 SRGB.
 
 The conversion function is of the Linear type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -592,8 +544,6 @@ BT709.
 
 The conversion function is of the Linear type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -613,8 +563,6 @@ LINEAR_BT2020 = 25
 BT2020.
 
 The conversion function is of the Linear type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -640,8 +588,6 @@ The conversion function is of the SRGB type.
 
 The encoding range is of the Full type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -666,8 +612,6 @@ The conversion function is of the SRGB type.
 
 The encoding range is of the Full type.
 
-This API can be used in atomic services since API version 12.
-
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -684,13 +628,13 @@ This API can be used in atomic services since API version 12.
 DISPLAY_P3_HLG = P3_HLG
 ```
 
+Same as that of P3\_HLG.
+
 Display P3.
 
 The conversion function is of the HLG type.
 
 The encoding range is of the Full type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -715,8 +659,6 @@ Display P3.
 The conversion function is of the PQ type.
 
 The encoding range is of the Full type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 11
 
@@ -773,8 +715,6 @@ CUSTOM = 5
 ```
 
 Custom type.
-
-This API can be used in atomic services since API version 12.
 
 **Since:** 9
 

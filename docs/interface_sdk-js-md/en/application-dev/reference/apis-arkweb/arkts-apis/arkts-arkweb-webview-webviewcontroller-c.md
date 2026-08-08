@@ -933,7 +933,7 @@ Asynchronously executes AI page command operations.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-| 17100024 | Command format error. The command parameter does not conform to the JSON format requirements. |
+| [17100024](../errorcode-webview.md#17100024-aipagecommand-format-error) | Command format error. The command parameter does not conform to the JSON format requirements. |
 
 ## forward
 

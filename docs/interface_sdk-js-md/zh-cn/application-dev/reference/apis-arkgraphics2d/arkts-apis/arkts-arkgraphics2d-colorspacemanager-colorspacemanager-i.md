@@ -1,6 +1,8 @@
 # ColorSpaceManager
 
-当前色域对象实例。下列API示例中都需先使用[create()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取到ColorSpaceManager实例，再通过此实例调用对应方法。
+当前色域对象实例。
+
+下列API示例中都需先使用[create()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取到ColorSpaceManager实例，再通过此实例调用对应方法。
 
 **起始版本：** 9
 

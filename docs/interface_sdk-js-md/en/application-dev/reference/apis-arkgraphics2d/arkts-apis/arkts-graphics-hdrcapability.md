@@ -1,6 +1,6 @@
-# @ohos.graphics.hdrCapability
+# @ohos.graphics.hdrCapability(HDR Capability)
 
-The hdrCapability module provides enums related to the High Dynamic Range (HDR) capability.
+The hdrCapability module provides enums related to the High Dynamic Range (HDR) capability. The HDR technology significantly expands the dynamic range and color expressiveness of images. It is applicable to scenarios such as video playback and image display. It addresses the issues of overexposure in bright areas and loss of details in dark areas in traditional SDR in high-contrast scenarios, delivering a more authentic and richer visual experience.
 
 **Since:** 11
 

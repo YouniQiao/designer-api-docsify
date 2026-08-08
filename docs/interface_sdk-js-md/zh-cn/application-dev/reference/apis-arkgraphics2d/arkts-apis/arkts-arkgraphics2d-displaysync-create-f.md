@@ -25,6 +25,7 @@ function create(): DisplaySync
 **示例：**
 
 ```TypeScript
+// 创建DisplaySync对象
 let backDisplaySync: displaySync.DisplaySync = displaySync.create();
 ```
 
